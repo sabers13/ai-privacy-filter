@@ -40,5 +40,9 @@ All notable changes to this project are documented here.
   from `AIPF_FORBIDDEN_FILE`; prints `file:line` and never the matched value.
 - `Makefile` targets for setup, test, lint, the stub pipeline targets, release
   checks, gitleaks and the forbidden-string scan.
+- T04 synthetic corpus: a seeded Faker `de_DE` generator in
+  `data/make_synthetic.py` and 240 stratified records (dev 80, test 160) in
+  `data/synthetic/`, with character-exact `gold_spans` plus `gold_category` and
+  `gold_urgency` for detection and triage evaluation.
 - CI workflow for ruff, mypy and pytest without live markers.
 - Apache-2.0 licence, `NOTICE`, `THIRD_PARTY.md` and this changelog.
