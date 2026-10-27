@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:28:27Z",
+  "draft_sha256": "4e1dbe6c019d2eda6d64f9d1a940a6be790b0d28fa1d990e044ff6b68671fd4e",
+  "enquiry_id": "syn-test-0064",
+  "error_kind": null,
+  "latency_ms": 5290,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Herrgott, ich verstehe. Ein solcher Vorschlag ist ein Treppenhaus von Gelegenheit. Würden Sie bitte unsere Webseite oder das E-Mail-Adressbuch besuchen, um die Möglichkeit zu überprüfen und Ihre Fragen zu stellen? Vielen Dank für Ihr Interesse und unsere Besten-Ausstellungen.",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "595653fa8fe4516873b8c8a6e72cb9b18371d19f9a4f980594ba9198ccdd824a",
+  "response_sha256": "e96adba82ed1b4ce833a03f448f6a8d73601513863e505c0bcecc6e8681d0d0c",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"QUOTE_REQUEST\",\n  \"urgency\": \"NORMAL\",\n  \"reply_draft\": \"Herrgott, ich verstehe. Ein solcher Vorschlag ist ein Treppenhaus von Gelegenheit. Würden Sie bitte unsere Webseite oder das E-Mail-Adressbuch besuchen, um die Möglichkeit zu überprüfen und Ihre Fragen zu stellen? Vielen Dank für Ihr Interesse und unsere Besten-Ausstellungen.\"\n}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 406,
+    "output_tokens": 99,
+    "reasoning_tokens": null,
+    "total_tokens": 505
+  }
+}

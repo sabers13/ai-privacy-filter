@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:27:26Z",
+  "draft_sha256": "6183f3d7e1a1c22a6031643e21930f9c9325732bafde14250f1ab4ce04e9f567",
+  "enquiry_id": "syn-test-0003",
+  "error_kind": null,
+  "latency_ms": 4292,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Vielen Dank für Ihre Bewerbung als Datenanalystin. Ich verweise meinen Einladungen in der Tat mit höchstem Interesse und geheckeles dringend mit Ihren Forderungen ein. Soll ich Ihnen Ihren Bericht mit der Kündigungszusage einsenden?",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "d26a6bc231deb655ff6eaadbf9558eb98a18c783cee35c9f4bdcba5089660624",
+  "response_sha256": "e6b57833d9cf6dd5f9a2ac280e2dce072d20400d75b8cc02485052e3e303fc25",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"JOB_APPLICATION\",\n  \"urgency\": \"NORMAL\",\n  \"reply_draft\": \"Vielen Dank für Ihre Bewerbung als Datenanalystin. Ich verweise meinen Einladungen in der Tat mit höchstem Interesse und geheckeles dringend mit Ihren Forderungen ein. Soll ich Ihnen Ihren Bericht mit der Kündigungszusage einsenden?\"\n}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 433,
+    "output_tokens": 86,
+    "reasoning_tokens": null,
+    "total_tokens": 519
+  }
+}

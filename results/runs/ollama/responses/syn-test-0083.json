@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:27:47Z",
+  "draft_sha256": "587f36f106afa4ba462266a68d9ce5842a87e962b90caff83aadbf46b1c1ea44",
+  "enquiry_id": "syn-test-0083",
+  "error_kind": null,
+  "latency_ms": 4934,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Ich rechne mit der Erreichung dieser Nachricht direkt und danke Ihnen für die Angebot der Datenanalyst-Stelle. [PERSON_1] \ndas vorbereitete Bewerbungsletter \n[EMAIL_1] \ndanke für Ihre Unterstützung und bitte bestätigen Sie meine Bewerbung.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "0b86cdf9e421d4d7037dbe86695c0532fc10ee8ff0f6ee71f361e3d0e08fa45b",
+  "response_sha256": "94afafe2f2b0e2d1dea92e6c31908607eb5f4eed46f206f262b779a32afbd658",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"JOB_APPLICATION\",\n  \"urgency\": \"HIGH\",\n  \"reply_draft\": \"Ich rechne mit der Erreichung dieser Nachricht direkt und danke Ihnen für die Angebot der Datenanalyst-Stelle. [PERSON_1] \\ndas vorbereitete Bewerbungsletter \\n[EMAIL_1] \\ndanke für Ihre Unterstützung und bitte bestätigen Sie meine Bewerbung.\"\n}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 434,
+    "output_tokens": 93,
+    "reasoning_tokens": null,
+    "total_tokens": 527
+  }
+}

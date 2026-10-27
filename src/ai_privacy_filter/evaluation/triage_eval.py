@@ -890,7 +890,9 @@ def compute_metrics(*, run_dir: Path, root: Path) -> dict[str, Any]:
             subset=subset,
             redactions=redactions,
             entry=entry if isinstance(entry, dict) else {},
-            rubric=rubric,
+            rubric=(
+                rubric if isinstance(rubric, dict) and rubric.get("backend") == str(name) else None
+            ),
         )
         for name, entry in backends.items()
     }

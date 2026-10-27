@@ -176,6 +176,19 @@ def test_load_detection_reads_the_page_shape(tmp_path: Path) -> None:
     assert block == {"synthetic": {"a": 1}, "germeval": {"b": 2}}
 
 
+def test_load_detection_reads_the_t11_pair(tmp_path: Path) -> None:
+    (tmp_path / "results").mkdir()
+    (tmp_path / "results" / "detection_synthetic.json").write_text(
+        json.dumps({"dataset": "synthetic_test", "baselines": {"B2": {}}}), encoding="utf-8"
+    )
+    (tmp_path / "results" / "detection_germeval.json").write_text(
+        json.dumps({"dataset": "germeval_test", "baselines": {"B2": {}}}), encoding="utf-8"
+    )
+    block = page_data.load_detection(tmp_path)
+    assert block["synthetic"]["dataset"] == "synthetic_test"
+    assert block["germeval"]["dataset"] == "germeval_test"
+
+
 def _make_dev_repo(tmp_path: Path) -> Path:
     root = tmp_path / "repo"
     (root / "scripts").mkdir(parents=True)

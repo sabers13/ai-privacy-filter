@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:26:28Z",
+  "draft_sha256": "773e7d00f10cd7ca98267a8d602f7d99430105cdd64b49e73c8c2fb61903f278",
+  "enquiry_id": "syn-test-0041",
+  "error_kind": null,
+  "latency_ms": 4742,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Vielen Dank für Ihre Anfrage. Wir schlagen Ihnen folgendes Angebot vor: zwei neue Besprechungsräume mit hochwertigen technischen Geräten inklusive Einführung und Leitung zu [IBAN_1]. Preis: [COST], Lieferzeit: [DELIVERY_TIME]. Für weitere Fragen stehen wir Ihnen gerne per [EMAIL_1] zur Verfügung.",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "a761403513da287acff1d48d70b6765c10efe3e66068db3077086fc6a9966343",
+  "response_sha256": "f8cb0bfa5cadeac52c9a5ddddee453e9a835da063a44fd0641cc1d45d22b525e",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"QUOTE_REQUEST\", \"urgency\": \"LOW\", \"reply_draft\": \"Vielen Dank für Ihre Anfrage. Wir schlagen Ihnen folgendes Angebot vor: zwei neue Besprechungsräume mit hochwertigen technischen Geräten inklusive Einführung und Leitung zu [IBAN_1]. Preis: [COST], Lieferzeit: [DELIVERY_TIME]. Für weitere Fragen stehen wir Ihnen gerne per [EMAIL_1] zur Verfügung.\"}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 424,
+    "output_tokens": 102,
+    "reasoning_tokens": null,
+    "total_tokens": 526
+  }
+}

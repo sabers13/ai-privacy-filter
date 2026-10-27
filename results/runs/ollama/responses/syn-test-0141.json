@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:26:51Z",
+  "draft_sha256": "0a0e7d303808c3ba115fd43c31f99d1c7981ecec5073f5ebf6bc8209abc38e61",
+  "enquiry_id": "syn-test-0141",
+  "error_kind": null,
+  "latency_ms": 2347,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Sehr geehrte Damen und Herren, ",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "22ae43503c363071c892ac8f79316def0e5b7ef309c7852b9a25f572ed952d94",
+  "response_sha256": "7391389adf314372ada73da2b7b00f8911bc531fbf85ff5bb438d6c3d5a3e25e",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"QUOTE_REQUEST\",\n  \"urgency\": \"LOW\",\n  \"reply_draft\": \"Sehr geehrte Damen und Herren, \"\n  }",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 407,
+    "output_tokens": 37,
+    "reasoning_tokens": null,
+    "total_tokens": 444
+  }
+}

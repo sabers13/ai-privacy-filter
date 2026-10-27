@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:27:15Z",
+  "draft_sha256": "93c1171f4134959c0b5a46d04b1378e638d5ddac413c81ecfb141be215c7faf2",
+  "enquiry_id": "syn-test-0102",
+  "error_kind": null,
+  "latency_ms": 3082,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Danke für Hinterfragen über den Kustomerentbindungskanal. Fahren wir mal mal ab.",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "5e6f884f480c08a2bef66b34b1b98356db3d26ac5eee8efa4bc24d955046e241",
+  "response_sha256": "13539ce909a3f9883a84adfefbcc9b8ef7cfe4220b2644cab36a5a6c65ddaac7",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"QUOTE_REQUEST\",\n  \"urgency\": \"LOW\",\n  \"reply_draft\": \"Danke für Hinterfragen über den Kustomerentbindungskanal. Fahren wir mal mal ab.\"\n}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 445,
+    "output_tokens": 48,
+    "reasoning_tokens": null,
+    "total_tokens": 493
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:27:05Z",
+  "draft_sha256": "07452b1e7703d0fb690e728b088d42ee221578cd45ce4e6991ab334fa82627d7",
+  "enquiry_id": "syn-test-0042",
+  "error_kind": null,
+  "latency_ms": 4298,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "OTHER",
+    "reply_draft": "Vielen Dank für die Nachricht. Ich habe den Störungsbereich überprüft und festgestellt, daß die Probleme derzeit nicht behoben werden können. Bitte kontaktieren Sie uns über [EMAIL_1] für Erreichbarkeit. Falls Sie Fragen haben oder Hilfe benötigen, kontaktieren Sie uns gerne.",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "6a20cee5545a4cbfb59840f73aa4e2b8dd1786bfa6e4a3a8b4ca094c2e6a4ba0",
+  "response_sha256": "d7d2113f1551066d1e9b5c81fdcf6b1ed49bee6d5ac9c74d6b1cc29ff774ab5a",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"OTHER\", \"urgency\": \"LOW\", \"reply_draft\": \"Vielen Dank für die Nachricht. Ich habe den Störungsbereich überprüft und festgestellt, daß die Probleme derzeit nicht behoben werden können. Bitte kontaktieren Sie uns über [EMAIL_1] für Erreichbarkeit. Falls Sie Fragen haben oder Hilfe benötigen, kontaktieren Sie uns gerne.\"}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 426,
+    "output_tokens": 89,
+    "reasoning_tokens": null,
+    "total_tokens": 515
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:27:38Z",
+  "draft_sha256": "e92971d4d2afb4fe35194d423be6e48e82f32366beba81b8ee6d319df7f24dbb",
+  "enquiry_id": "syn-test-0043",
+  "error_kind": null,
+  "latency_ms": 5500,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Vielen Dank für Ihr Aufschreiben und Ihre Anbietung. Ich mache mich kurz am Rande dieser wichtigen Aufgabe bereit. Die Kürze ist nun angenommen, und ich freue mich auf schnellstmögliche Beratung. Bis dahin bestätige ich Ihre Anfrage. Wäre zu Ihnen vorübergehend gekommen. Danke.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "f11c09c9d7d5abf1d38f3babc904905685d89c7acde1613048305f1ba1189789",
+  "response_sha256": "0b8fe74843463a504b0d3a309c6fee7ba5e5620494e9216b6e7b1b7c0d32d422",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"JOB_APPLICATION\",\n  \"urgency\": \"HIGH\",\n  \"reply_draft\": \"Vielen Dank für Ihr Aufschreiben und Ihre Anbietung. Ich mache mich kurz am Rande dieser wichtigen Aufgabe bereit. Die Kürze ist nun angenommen, und ich freue mich auf schnellstmögliche Beratung. Bis dahin bestätige ich Ihre Anfrage. Wäre zu Ihnen vorübergehend gekommen. Danke.\" }",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 417,
+    "output_tokens": 106,
+    "reasoning_tokens": null,
+    "total_tokens": 523
+  }
+}

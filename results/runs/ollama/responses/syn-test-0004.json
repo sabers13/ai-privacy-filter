@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:28:09Z",
+  "draft_sha256": "7b1a939aca0b51f8165da63ae7b67dd8ca11756202d7354c3e5a75500928cc03",
+  "enquiry_id": "syn-test-0004",
+  "error_kind": null,
+  "latency_ms": 6519,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "PARTNERSHIP",
+    "reply_draft": "Vielen Dank für Ihre Anfrage. Eine gemeinsame Workshop-Reihe für Ihre Team haben wir schon vorab [ZUERSTELTE_SIE_ZUM_SEMINAR_ANGEHELT_BEIDEN] gelernt und es war eine großartige Idee. Wenn Sie noch Fragen haben oder uns etwas Ändern vorschlagen, wir freuen uns, wenn Sie uns direkt kontaktieren. [KONTAKTTAGE/NACHREISES_ERINNERKEHR]",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "25e9873506eb5f57661092fded02a1e1ccb2d6a207659dc4dc87ae9aea84a8e6",
+  "response_sha256": "530ccad03b78c06ff31522ec725a368d7e550b4bd25be1065a4718d8a5514641",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"PARTNERSHIP\",\n  \"urgency\": \"NORMAL\",\n  \"reply_draft\": \"Vielen Dank für Ihre Anfrage. Eine gemeinsame Workshop-Reihe für Ihre Team haben wir schon vorab [ZUERSTELTE_SIE_ZUM_SEMINAR_ANGEHELT_BEIDEN] gelernt und es war eine großartige Idee. Wenn Sie noch Fragen haben oder uns etwas Ändern vorschlagen, wir freuen uns, wenn Sie uns direkt kontaktieren. [KONTAKTTAGE/NACHREISES_ERINNERKEHR]\"\n}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 448,
+    "output_tokens": 128,
+    "reasoning_tokens": null,
+    "total_tokens": 576
+  }
+}

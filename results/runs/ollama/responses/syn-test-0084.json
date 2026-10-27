@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:28:29Z",
+  "draft_sha256": "2f9e59abf44a6941437a0e2b7db5a8f7e20552e01e6cb1d581a92d558d0c68fd",
+  "enquiry_id": "syn-test-0084",
+  "error_kind": null,
+  "latency_ms": 2805,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "PARTNERSHIP",
+    "reply_draft": "Hallo [PERSON_1], [ORG_1],",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "f5889c0ae7e3426714f34f3ab2fbc7879edb30cd7ade7b7ddfcff424cf577476",
+  "response_sha256": "dea0be6dd8b5e6b2634e0a0940b416702d3bdead1d70badb9e9a6b3a6c01a586",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"PARTNERSHIP\",\n  \"urgency\": \"NORMAL\",\n  \"reply_draft\": \"Hallo [PERSON_1], [ORG_1],\"\n\n  }",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 423,
+    "output_tokens": 40,
+    "reasoning_tokens": null,
+    "total_tokens": 463
+  }
+}

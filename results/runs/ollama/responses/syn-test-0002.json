@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:26:54Z",
+  "draft_sha256": "999b82c1e33b3d5400a760c018c2a463438b7292201879ad8c3b31981b028241",
+  "enquiry_id": "syn-test-0002",
+  "error_kind": null,
+  "latency_ms": 3259,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Vielen Dank für Ihr Feedback. Ich werde das Problem morgen bei uns verifizieren. Kein Druckfakt aufweisen. Viel Erfolg mit der Anmeldung.",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "1887c03b3b5714c6104b83d9c9f4647c62fd7bb6644cea389deb6267347bb3a9",
+  "response_sha256": "385f1ab55ce6a7a8049e61687432da912172e4b32712fa43cee576a117a9506d",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"QUOTE_REQUEST\", \"urgency\": \"LOW\", \"reply_draft\": \"Vielen Dank für Ihr Feedback. Ich werde das Problem morgen bei uns verifizieren. Kein Druckfakt aufweisen. Viel Erfolg mit der Anmeldung.\"}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 414,
+    "output_tokens": 60,
+    "reasoning_tokens": null,
+    "total_tokens": 474
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:28:21Z",
+  "draft_sha256": "796e6491a00380d824dda714c1d716831b03906d79ddc633afad0ddcd82baae6",
+  "enquiry_id": "syn-test-0044",
+  "error_kind": null,
+  "latency_ms": 4963,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Hallo [PERSON_1],vielen Dank für Euren Kontakt! Prüfen wir gerne anhand unserer Verfügbarkeit und Angebotserfolgen, ob eine gemeinsame [WERB_1] anstößt. Wir freuen uns auf ein erstes Gespräch! Wir entschuldigen uns für die Unvereinbarkeit. [EMAIL_1] für [ORG_1].",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "843e6cadc63006abc17abb7694b9df3c35cdc42a091218e318ae194f7fcc4613",
+  "response_sha256": "527b678c87c1d45967fdbc22e9448537d3148fb720fe0871433c567b8bd9af0a",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"QUOTE_REQUEST\",\"urgency\":\"NORMAL\",\"reply_draft\":\"Hallo [PERSON_1],vielen Dank für Euren Kontakt! Prüfen wir gerne anhand unserer Verfügbarkeit und Angebotserfolgen, ob eine gemeinsame [WERB_1] anstößt. Wir freuen uns auf ein erstes Gespräch! Wir entschuldigen uns für die Unvereinbarkeit. [EMAIL_1] für [ORG_1].\"}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 407,
+    "output_tokens": 98,
+    "reasoning_tokens": null,
+    "total_tokens": 505
+  }
+}

@@ -122,8 +122,15 @@ def select_examples(
     *,
     root: Path,
     backend: str,
+    pattern_ids: Sequence[str] = (),
 ) -> tuple[list[Enquiry], list[str], dict[str, list[Span]]]:
-    """Return ``(examples, notes, misses_by_id)`` in page order."""
+    """Return ``(examples, notes, misses_by_id)`` in page order.
+
+    ``pattern_ids`` are the example ids from T11's miss-pattern table. When one
+    is inside the fixed subset and the detector still misses its gold span, it is
+    chosen first so the page shows a documented miss pattern rather than an
+    arbitrary one.
+    """
     responses, misses = _eligible(subset, root, backend)
     by_id = {enquiry.id: enquiry for enquiry in subset}
     eligible = [enquiry for enquiry in subset if enquiry.id in responses]
@@ -135,11 +142,24 @@ def select_examples(
             miss_by_category[enquiry.gold_category].append(enquiry.id)
 
     deliberate: list[str] = []
+    used_categories: set[Category] = set()
+    for identifier in pattern_ids:
+        if len(deliberate) >= MAX_MISS_EXAMPLES:
+            break
+        candidate = by_id.get(identifier)
+        if candidate is None or candidate.id not in responses or not misses[candidate.id]:
+            continue
+        if candidate.gold_category in used_categories:
+            continue
+        deliberate.append(candidate.id)
+        used_categories.add(candidate.gold_category)
     for category in CATEGORY_ORDER:
         if len(deliberate) >= MAX_MISS_EXAMPLES:
             break
-        if miss_by_category[category]:
-            deliberate.append(miss_by_category[category][0])
+        if category in used_categories or not miss_by_category[category]:
+            continue
+        deliberate.append(miss_by_category[category][0])
+        used_categories.add(category)
 
     chosen: list[str] = []
     for category in CATEGORY_ORDER:
@@ -174,7 +194,8 @@ def select_examples(
             "the page shows it as-is"
         )
     else:
-        notes.append(f"{found_misses} deliberate detection misses from the fixed subset")
+        source = "T11 miss patterns" if pattern_ids else "the fixed subset"
+        notes.append(f"{found_misses} deliberate detection misses from {source}")
     notes.append(
         "examples are three per category from the fixed 40-enquiry subset; "
         "category and urgency are the backend answer, misses are gold spans the "
@@ -188,9 +209,12 @@ def build_examples(
     *,
     root: Path,
     backend: str,
+    pattern_ids: Sequence[str] = (),
 ) -> tuple[list[dict[str, Any]], list[str]]:
     """Build the 15 page examples in contract shape."""
-    selected, notes, misses = select_examples(subset, root=root, backend=backend)
+    selected, notes, misses = select_examples(
+        subset, root=root, backend=backend, pattern_ids=pattern_ids
+    )
     examples: list[dict[str, Any]] = []
     for enquiry in selected:
         stored = _load_response(root, backend, enquiry.id)
@@ -222,31 +246,64 @@ def build_examples(
     return examples, notes
 
 
-def load_detection(root: Path, explicit: Path | None = None) -> dict[str, Any]:
-    """Load the T11 detection block from a metrics file.
+def _detection_block(payload: Mapping[str, Any]) -> dict[str, Any] | None:
+    """Return a page-shaped detection block from one JSON document, if any."""
+    block = payload.get("detection")
+    if isinstance(block, dict) and {"synthetic", "germeval"} <= set(block):
+        return {"synthetic": block["synthetic"], "germeval": block["germeval"]}
+    if {"synthetic", "germeval"} <= set(payload):
+        return {"synthetic": payload["synthetic"], "germeval": payload["germeval"]}
+    return None
 
-    Accepted shapes: a page-shaped ``{"detection": {"synthetic", "germeval"}}``
-    file, a file with the two top-level keys, or a T11 ``metrics.json`` whose
-    top level carries those keys under ``detection``.
+
+def load_detection(root: Path, explicit: Path | None = None) -> dict[str, Any]:
+    """Load the T11 detection blocks.
+
+    T11 writes ``results/detection_synthetic.json`` and
+    ``results/detection_germeval.json`` (and copies them into its run
+    directory). A single page-shaped file with a ``detection`` object or the two
+    top-level keys is also accepted.
     """
-    candidates: list[Path] = []
     if explicit is not None:
-        candidates.append(explicit)
-    else:
-        candidates.extend(sorted(root.glob("results/runs/*-detection-*/metrics.json")))
-        candidates.append(root / "results" / "detection" / "metrics.json")
-        candidates.append(root / "results" / "metrics.json")
-    for path in candidates:
-        if not path.is_file():
-            continue
-        payload = _read_json(path)
-        block = payload.get("detection")
-        if isinstance(block, dict) and {"synthetic", "germeval"} <= set(block):
-            return {"synthetic": block["synthetic"], "germeval": block["germeval"]}
-        if {"synthetic", "germeval"} <= set(payload):
-            return {"synthetic": payload["synthetic"], "germeval": payload["germeval"]}
+        if explicit.is_dir():
+            synthetic = explicit / "detection_synthetic.json"
+            germeval = explicit / "detection_germeval.json"
+            if synthetic.is_file() and germeval.is_file():
+                return {
+                    "synthetic": _read_json(synthetic),
+                    "germeval": _read_json(germeval),
+                }
+        elif explicit.is_file():
+            payload = _read_json(explicit)
+            block = _detection_block(payload)
+            if block is not None:
+                return block
+            sibling = explicit.parent / "detection_germeval.json"
+            if explicit.name == "detection_germeval.json":
+                sibling = explicit.parent / "detection_synthetic.json"
+            if sibling.is_file():
+                other = _read_json(sibling)
+                if explicit.name == "detection_germeval.json":
+                    return {"synthetic": other, "germeval": payload}
+                return {"synthetic": payload, "germeval": other}
+        raise FileNotFoundError(f"no detection pair at {explicit.name}")
+
+    directories: list[Path] = [root / "results"]
+    directories.extend(sorted(root.glob("results/runs/*-detection-*")))
+    directories.append(root / "results" / "detection")
+    for directory in directories:
+        synthetic = directory / "detection_synthetic.json"
+        germeval = directory / "detection_germeval.json"
+        if synthetic.is_file() and germeval.is_file():
+            return {"synthetic": _read_json(synthetic), "germeval": _read_json(germeval)}
+        metrics = directory / "metrics.json"
+        if metrics.is_file():
+            block = _detection_block(_read_json(metrics))
+            if block is not None:
+                return block
     raise FileNotFoundError(
-        "no detection metrics found; T11 must land results/runs/<run-id>-detection-*/metrics.json"
+        "no detection metrics found; T11 must land detection_synthetic.json and "
+        "detection_germeval.json under results/"
     )
 
 
@@ -300,7 +357,17 @@ def export_page(
         raise FileNotFoundError("run has no metrics.json")
     triage_metrics = _read_json(metrics_path)
     detection = load_detection(root, detection_path)
-    examples, notes = build_examples(subset, root=root, backend=backend)
+    synthetic = detection.get("synthetic")
+    pattern_ids: list[str] = []
+    if isinstance(synthetic, dict):
+        patterns = synthetic.get("miss_patterns")
+        if isinstance(patterns, list):
+            pattern_ids = [
+                str(pattern["example_id"])
+                for pattern in patterns
+                if isinstance(pattern, dict) and isinstance(pattern.get("example_id"), str)
+            ]
+    examples, notes = build_examples(subset, root=root, backend=backend, pattern_ids=pattern_ids)
     if len(examples) != EXAMPLES_COUNT:
         raise ValueError(
             f"page export produced {len(examples)} examples, expected {EXAMPLES_COUNT}"

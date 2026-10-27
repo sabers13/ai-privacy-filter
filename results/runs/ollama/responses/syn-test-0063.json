@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:27:42Z",
+  "draft_sha256": "1ef0c909a7d45c18759838fbada3b9950f7c23361aab590929151a5acb00626a",
+  "enquiry_id": "syn-test-0063",
+  "error_kind": null,
+  "latency_ms": 4105,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Entschuldigung, aber wir wurden Ihre Bewerbung in ein paar Minuten erhalten. Vielen Dank vorher! Unser Anfahrtsempfänger wird schnellstmäßig mit Ihren unterlagen beginnen. Bitte freuen Sie sich auf weitere Details.",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "d26a6bc231deb655ff6eaadbf9558eb98a18c783cee35c9f4bdcba5089660624",
+  "response_sha256": "d7ed2f410f44a048a53934827b39bb1bfb471578f368f82b94d567ac1f544a9f",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"JOB_APPLICATION\",\n  \"urgency\": \"NORMAL\",\n  \"reply_draft\": \"Entschuldigung, aber wir wurden Ihre Bewerbung in ein paar Minuten erhalten. Vielen Dank vorher! Unser Anfahrtsempfänger wird schnellstmäßig mit Ihren unterlagen beginnen. Bitte freuen Sie sich auf weitere Details.\"\n}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 433,
+    "output_tokens": 79,
+    "reasoning_tokens": null,
+    "total_tokens": 512
+  }
+}

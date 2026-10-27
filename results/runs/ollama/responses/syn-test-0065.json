@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:28:58Z",
+  "draft_sha256": "3f2fb9af0090566f5d97a70216c26cc39d09567a55914b8bdc65fe44506812a2",
+  "enquiry_id": "syn-test-0065",
+  "error_kind": null,
+  "latency_ms": 5035,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Herzlich willkommen, [PERSON_1]!\nIch entspreche Ihnen gerne der nachfolgenden Fragen zu unserem Schulungsprogramm und warte, bis wir eine präzise Angebotsanalyse durchgeführt haben.\n\nSoll ich Ihnen [URL_1] entnehmen und [EMAIL_1] über den [QUOTE_1] informieren?\nLieber [PLATEFORM_1]?",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "8bf8ae950de0ffe8b4b5b9c9fd35c0ce876873fb1021f8026e1a202bdfd17d00",
+  "response_sha256": "b452cb7743813d01e49f79f725a36673ab47ab50af7b8cb32892bbd53ac431f0",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"QUOTE_REQUEST\",\n  \"urgency\": \"LOW\",\n  \"reply_draft\": \"Herzlich willkommen, [PERSON_1]!\\nIch entspreche Ihnen gerne der nachfolgenden Fragen zu unserem Schulungsprogramm und warte, bis wir eine präzise Angebotsanalyse durchgeführt haben.\\n\\nSoll ich Ihnen [URL_1] entnehmen und [EMAIL_1] über den [QUOTE_1] informieren?\\nLieber [PLATEFORM_1]?\"\n}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 400,
+    "output_tokens": 115,
+    "reasoning_tokens": null,
+    "total_tokens": 515
+  }
+}

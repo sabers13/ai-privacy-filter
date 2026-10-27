@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:27:09Z",
+  "draft_sha256": "cec3f0c43a01be1eece52c8ab11672af5d4878f8fac2833ab868832b974d5a07",
+  "enquiry_id": "syn-test-0062",
+  "error_kind": null,
+  "latency_ms": 4224,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Hallo, [PERSON_1]! Vielen Dank für die Anfrage. Ich werde dieses Problem sofort in Erwägung ziehen und in den nächsten Wochen [REPLY_1]. Bitte behütet [EMAIL_2] und lassen Sie mir weitere Informationen geben. ",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "b392b5721c64fe20eb5e2b4cc3e50326a58ca6e056ccc726cc9cb732718bbf80",
+  "response_sha256": "695a26b27f9367f4919c93936f7dc6ae48749f84ed89b9b3b221a988c97320d3",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\n  \"category\": \"QUOTE_REQUEST\",\n  \"urgency\": \"LOW\",\n  \"reply_draft\": \"Hallo, [PERSON_1]! Vielen Dank für die Anfrage. Ich werde dieses Problem sofort in Erwägung ziehen und in den nächsten Wochen [REPLY_1]. Bitte behütet [EMAIL_2] und lassen Sie mir weitere Informationen geben. \"\n}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 429,
+    "output_tokens": 82,
+    "reasoning_tokens": null,
+    "total_tokens": 511
+  }
+}

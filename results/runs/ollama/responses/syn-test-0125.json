@@ -1,0 +1,29 @@
+{
+  "backend": "ollama",
+  "created_at": "2026-10-27T13:29:11Z",
+  "draft_sha256": "17ad3837f25383e3359d043a1c42558725013ea01311e50c1b62ec008505997c",
+  "enquiry_id": "syn-test-0125",
+  "error_kind": null,
+  "latency_ms": 4911,
+  "leaked_types": [],
+  "model": "qwen2.5:1.5b",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Entschuldigung, mein Interesse an [ANS1] [ANS2] Sie haben erhalten. Ich freue mich, Ihnen zur [ANS1] [ANS2] [ANS3] [ANS4] einzugehen. Wir bedanken mich für Ihr Verständnis und freuen uns auf Ihre Anfrage. Gleichfalls steht die Rechnung an Ihr [ANS5] bereit.",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "f3901d2f518786ecd20abff39797c1109fe9557a0d730ddfe854b28e1251dd9b",
+  "response_sha256": "d149956129cc7530288a5fa86a6752c4773bd89efa3da7e5b489db826d260c15",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"QUOTE_REQUEST\", \"urgency\": \"LOW\", \"reply_draft\": \"Entschuldigung, mein Interesse an [ANS1] [ANS2] Sie haben erhalten. Ich freue mich, Ihnen zur [ANS1] [ANS2] [ANS3] [ANS4] einzugehen. Wir bedanken mich für Ihr Verständnis und freuen uns auf Ihre Anfrage. Gleichfalls steht die Rechnung an Ihr [ANS5] bereit.\"}",
+  "usage": {
+    "cached_tokens": 312,
+    "input_tokens": 416,
+    "output_tokens": 104,
+    "reasoning_tokens": null,
+    "total_tokens": 520
+  }
+}

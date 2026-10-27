@@ -278,3 +278,30 @@ One run on 2026-10-27 under the shared lock, private env loaded, 3 passed in
 Logs: `results/runs/canary/`. The Codex argv record shows
 `<canary-root>/<tempdir>`; those are the random scratch paths with the path
 itself redacted. No rerun was needed, so there is exactly one run per backend.
+
+## Triage run
+
+`scripts/run_triage.py` is the live entry point behind `make live`. It reads the
+fixed 40-enquiry subset from `METHOD.md` section 8 and calls each requested
+backend once per enquiry, in the listed order. `claude-cli`, `codex-cli` and
+`byok` are the primary set; `ollama` is optional and runs last through the T07
+tunnel.
+
+```sh
+set -a; . ~/.config/ai-privacy-filter/private.env; set +a
+AIPF_LOCK_DIR=/path/to/shared/state make live
+AIPF_LOCK_DIR=/path/to/shared/state uv run python scripts/run_triage.py \
+    --live --backends ollama --run-id <same-run-id> --resume
+```
+
+`AIPF_LOCK_DIR` is the shared state directory that holds
+`aipf-lock-live-llm` and `aipf-lock-server`; both are outside the repository.
+The live lock is held for every real call and released in `finally`. The Ollama
+stage also takes the server lock and is time-boxed to 90 minutes.
+
+Responses are stored under `results/runs/<backend>/responses/` with the raw
+text (placeholders only), the parsed payload, latency, usage and a SHA-256
+hash; `index.json` pins every response hash. The run record, `metrics.json`,
+`report.md` and the text-free `scoring/` files live under
+`results/runs/<run-id>/`. `make reproduce` rebuilds the numbers with no network
+and no model call.

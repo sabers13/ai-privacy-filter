@@ -1,7 +1,7 @@
 {
   "artifacts_sha256": {
-    "metrics.json": "1bbe74a3f7245a7152722577090394694032b43824af15bdfbf608cdbf17d652",
-    "report.md": "1ac3030a7636c8e042c2d8ee932898a39485ad6b7c47b6e24e8129fc317d96d2"
+    "metrics.json": "6f0649c7d8488648c5aeb3d9b82888b88957df9e55b9359e738f1f3727caf614",
+    "report.md": "b4a4a00f5ae095ed6f2da413001380cfb9fc164fb3e4e3d23e539900f8f906ff"
   },
   "backends": {
     "byok": {
@@ -30,17 +30,27 @@
       "model": null,
       "model_hashed": false,
       "timeout_s": 120
+    },
+    "ollama": {
+      "availability_reason": null,
+      "available": true,
+      "calls": 40,
+      "expected": 40,
+      "model": "qwen2.5:1.5b",
+      "model_hashed": false,
+      "timeout_s": 90
     }
   },
   "command": [
     "run_triage",
     "--live",
     "--backends",
-    "claude-cli,codex-cli,byok",
+    "ollama",
     "--run-id",
-    "20261027T131500Z-triage-a1ad8ff"
+    "20261027T131500Z-triage-a1ad8ff",
+    "--resume"
   ],
-  "commit": "d994a11b88ab1393b33c420fb92beee5fc56835a",
+  "commit": "5521590c6739ed24bf8db11a893e858955cd6757",
   "config_sha256": "ae9f6d0268cf3d57427813508fd082fdc3fb28922a0e36e0d94084859d11a873",
   "data_sha256": {
     "synthetic_dev": "fed4fc6f6bb146d9310ce7c20d2c63b67516dcb030fec3443de347eaa76a5100",
@@ -56,10 +66,18 @@
     "spacy": "3.8.18",
     "spacy_model": "de_core_news_lg-3.8.0"
   },
-  "extensions": [],
-  "finished_at": "2026-10-27T13:23:25Z",
+  "extensions": [
+    {
+      "at": "2026-10-27T13:25:59Z",
+      "backends_added": [
+        "ollama"
+      ],
+      "reason": "optional backend run after the primary page export"
+    }
+  ],
+  "finished_at": "2026-10-27T13:29:14Z",
   "method_approval": null,
-  "method_git_blob": "3fe5fc05c9c72a4708e34cba1c0506b7330f1193",
+  "method_git_blob": null,
   "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
   "mode": "test",
   "rerun_reason": null,
@@ -114,7 +132,7 @@
     ]
   },
   "supersedes": null,
-  "updated_at": "2026-10-27T13:23:25Z",
+  "updated_at": "2026-10-27T13:29:14Z",
   "warmup": {
     "byok": {
       "error_kind": null,
@@ -132,6 +150,12 @@
       "error_kind": null,
       "latency_ms": 32195,
       "model": null,
+      "prompt_sha256": "22ae43503c363071c892ac8f79316def0e5b7ef309c7852b9a25f572ed952d94"
+    },
+    "ollama": {
+      "error_kind": null,
+      "latency_ms": 10315,
+      "model": "qwen2.5:1.5b",
       "prompt_sha256": "22ae43503c363071c892ac8f79316def0e5b7ef309c7852b9a25f572ed952d94"
     }
   }
