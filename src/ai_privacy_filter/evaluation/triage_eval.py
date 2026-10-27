@@ -912,6 +912,13 @@ def _pct(metric: Mapping[str, Any]) -> str:
 
 def render_report(metrics: Mapping[str, Any]) -> str:
     """Render the human-readable triage report; counts and types only."""
+    subset = metrics.get("subset")
+    count = int(subset.get("count", 0)) if isinstance(subset, dict) else 0
+    scope = (
+        "The fixed 40-enquiry subset from METHOD.md section 8."
+        if count == 40
+        else f"The run's selected subset ({count} enquiries)."
+    )
     lines: list[str] = [
         "# Triage report",
         "",
@@ -920,9 +927,10 @@ def render_report(metrics: Mapping[str, Any]) -> str:
         f"Method SHA-256: `{metrics.get('method_sha256')}`  ",
         f"Commit: `{metrics.get('commit')}`",
         "",
-        "The fixed 40-enquiry subset from METHOD.md section 8. Accuracy uses 40 as the",
-        "denominator for every available backend. A failure, guard block or leak counts",
-        "as an incorrect answer and is reported separately.",
+        scope,
+        f"Accuracy uses {count} as the denominator for every available backend.",
+        "A failure, guard block or leak counts as an incorrect answer and is",
+        "reported separately.",
         "",
         "## Backend quality",
         "",
