@@ -1,0 +1,516 @@
+{
+  "id": "enquiry-triage",
+  "name": "Enquiry triage",
+  "active": true,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "enquiry",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a01",
+      "name": "Enquiry webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        0
+      ],
+      "webhookId": "a3f6c1d2-5b4e-4a7c-9f10-2d8e6b3a4c01"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.AIPF_GATE_URL }}/redact",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: $json.body.text }) }}",
+        "options": {
+          "timeout": 180000
+        }
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a02",
+      "name": "Pseudonymise",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -100,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.AIPF_GATE_URL }}/process",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: $('Enquiry webhook').first().json.body.text, backend: $env.AIPF_BACKEND || 'byok' }) }}",
+        "options": {
+          "timeout": 180000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a03",
+      "name": "Triage via gate",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        100,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0b5b5e3c-5f6f-4f0e-9b7a-6c0a1d2e3f01",
+              "leftValue": "={{ $json.statusCode }}",
+              "rightValue": 200,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a04",
+      "name": "Guard ok?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        300,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const enquiry = $('Enquiry webhook').first().json.body;\nconst process = $('Triage via gate').first().json.body;\nconst id = String(enquiry.id || '');\nif (!/^[A-Za-z0-9._-]+$/.test(id)) {\n  throw new Error('enquiry id must match [A-Za-z0-9._-]+');\n}\nreturn [{ json: {\n  id,\n  status: 'awaiting_approval',\n  form_url: $execution.resumeFormUrl,\n  redacted_text: process.redacted_text,\n  category: process.triage.category,\n  urgency: process.triage.urgency,\n  backend: process.triage.backend,\n} }];"
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a05",
+      "name": "Prepare pending",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        520,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "mode": "each",
+        "binaryPropertyName": "data",
+        "options": {
+          "format": true
+        }
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a06",
+      "name": "Convert pending",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.2,
+      "position": [
+        740,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/data/pending/{{ $('Prepare pending').first().json.id }}.json",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a07",
+      "name": "Write pending",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        960,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.AIPF_GATE_URL }}/restore",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ ticket: $('Pseudonymise').first().json.ticket, text: $('Triage via gate').first().json.body.triage.reply_draft }) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a08",
+      "name": "Restore draft",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1180,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const process = $('Triage via gate').first().json.body;\nconst restored = $('Restore draft').first().json;\nconst pending = $('Prepare pending').first().json;\nreturn [{ json: {\n  ...pending,\n  redacted_draft: process.triage.reply_draft,\n  restored_draft: restored.text,\n  unknown_placeholders: restored.unknown_placeholders,\n} }];"
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a09",
+      "name": "Prepare review",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1400,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "resume": "form",
+        "formTitle": "Approve reply",
+        "formDescription": "Review the pseudonymised enquiry and the restored draft. No original values were sent to the model.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Decision",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "approve"
+                  },
+                  {
+                    "option": "edit"
+                  },
+                  {
+                    "option": "reject"
+                  }
+                ]
+              },
+              "defaultValue": "approve",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Category",
+              "fieldType": "text",
+              "defaultValue": "={{ $json.category }}",
+              "requiredField": false
+            },
+            {
+              "fieldLabel": "Urgency",
+              "fieldType": "text",
+              "defaultValue": "={{ $json.urgency }}",
+              "requiredField": false
+            },
+            {
+              "fieldLabel": "Redacted text",
+              "fieldType": "textarea",
+              "defaultValue": "={{ $json.redacted_text }}",
+              "requiredField": false
+            },
+            {
+              "fieldLabel": "Reply draft",
+              "fieldType": "textarea",
+              "defaultValue": "={{ $json.restored_draft }}",
+              "requiredField": false
+            }
+          ]
+        },
+        "formRespondMode": "onReceived"
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a0a",
+      "name": "Approve reply",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1620,
+        -160
+      ],
+      "webhookId": "b7e2d4f6-1a3c-4b5d-8e90-7f6a5b4c3d02"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const review = $('Prepare review').first().json;\nconst submission = $json;\nconst rawDecision = submission.Decision !== undefined ? submission.Decision : submission.decision;\nconst decision = String(rawDecision || 'approve').toLowerCase();\nif (!['approve', 'edit', 'reject'].includes(decision)) {\n  throw new Error('unknown decision');\n}\nconst edited = submission['Reply draft'] !== undefined ? submission['Reply draft'] : submission.reply;\nconst finalReply = decision === 'reject' ? null : (decision === 'edit' ? String(edited || '').trim() : review.restored_draft);\nif (decision !== 'reject' && !finalReply) {\n  throw new Error('reply draft is empty');\n}\nreturn [{ json: {\n  ...review,\n  decision,\n  final_reply: finalReply,\n  approved: decision !== 'reject',\n  decided_at: new Date().toISOString(),\n} }];"
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a0b",
+      "name": "Build result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1840,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "mode": "each",
+        "binaryPropertyName": "data",
+        "options": {
+          "format": true
+        }
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a0c",
+      "name": "Convert result",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.2,
+      "position": [
+        2060,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/data/out/{{ $('Build result').first().json.id }}.json",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a0d",
+      "name": "Write result",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        2280,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const enquiry = $('Enquiry webhook').first().json.body;\nconst gate = $('Triage via gate').first().json;\nconst id = String(enquiry.id || '');\nif (!/^[A-Za-z0-9._-]+$/.test(id)) {\n  throw new Error('enquiry id must match [A-Za-z0-9._-]+');\n}\nreturn [{ json: {\n  id,\n  status: gate.statusCode === 422 ? 'blocked' : 'gate_error',\n  gate_status: gate.statusCode,\n  leaked_types: (gate.body && gate.body.detail && gate.body.detail.leaked_types) || [],\n} }];"
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a0e",
+      "name": "Prepare blocked record",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        520,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "mode": "each",
+        "binaryPropertyName": "data",
+        "options": {
+          "format": true
+        }
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a0f",
+      "name": "Convert blocked record",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.2,
+      "position": [
+        740,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "=/data/pending/{{ $('Prepare blocked record').first().json.id }}.json",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "5f0a2b70-0d1a-4a6e-9e1e-1c9f0e6b7a10",
+      "name": "Write blocked record",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        960,
+        180
+      ]
+    }
+  ],
+  "connections": {
+    "Enquiry webhook": {
+      "main": [
+        [
+          {
+            "node": "Pseudonymise",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pseudonymise": {
+      "main": [
+        [
+          {
+            "node": "Triage via gate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Triage via gate": {
+      "main": [
+        [
+          {
+            "node": "Guard ok?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guard ok?": {
+      "main": [
+        [
+          {
+            "node": "Prepare pending",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Prepare blocked record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare pending": {
+      "main": [
+        [
+          {
+            "node": "Convert pending",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert pending": {
+      "main": [
+        [
+          {
+            "node": "Write pending",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write pending": {
+      "main": [
+        [
+          {
+            "node": "Restore draft",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Restore draft": {
+      "main": [
+        [
+          {
+            "node": "Prepare review",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare review": {
+      "main": [
+        [
+          {
+            "node": "Approve reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Approve reply": {
+      "main": [
+        [
+          {
+            "node": "Build result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build result": {
+      "main": [
+        [
+          {
+            "node": "Convert result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert result": {
+      "main": [
+        [
+          {
+            "node": "Write result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare blocked record": {
+      "main": [
+        [
+          {
+            "node": "Convert blocked record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert blocked record": {
+      "main": [
+        [
+          {
+            "node": "Write blocked record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "tags": []
+}

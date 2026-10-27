@@ -13,9 +13,11 @@ PUBLIC_DOCS = [
     REPO_ROOT / "THIRD_PARTY.md",
     REPO_ROOT / "CHANGELOG.md",
     REPO_ROOT / "docs" / "contracts.md",
+    REPO_ROOT / "docs" / "n8n.md",
     REPO_ROOT / "docs" / "task-notes" / "T01.md",
     REPO_ROOT / "docs" / "task-notes" / "T02.md",
     REPO_ROOT / "docs" / "task-notes" / "T03.md",
+    REPO_ROOT / "docs" / "task-notes" / "T13.md",
 ]
 
 BANNED = [
@@ -43,6 +45,8 @@ def test_readme_states_the_limits() -> None:
     assert "apache-2.0" in text
 
 
-def test_readme_says_the_foundation_is_not_evaluated() -> None:
+def test_readme_points_at_measured_results() -> None:
+    """T11/T12 replaced the "not evaluated yet" foundation status."""
     text = " ".join((REPO_ROOT / "README.md").read_text(encoding="utf-8").lower().split())
-    assert "has been evaluated yet" in text
+    assert "results/" in text
+    assert "test splits" in text

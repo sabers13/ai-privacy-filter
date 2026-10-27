@@ -1,0 +1,16 @@
+.git
+.gitignore
+.venv
+.n8n-data
+.mypy_cache
+.pytest_cache
+.ruff_cache
+.hypothesis
+data/external
+results
+dist
+build
+*.egg-info
+__pycache__
+*.py[cod]
+.opencode

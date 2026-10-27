@@ -7,6 +7,7 @@ stubs on ``main``. All text is synthetic.
 
 from __future__ import annotations
 
+import hashlib
 import logging
 
 import pytest
@@ -110,6 +111,25 @@ def test_expired_ticket_is_gone(harness: Harness, clock: FakeClock) -> None:
         response = client.post("/restore", json={"ticket": ticket, "text": "[PERSON_1]"})
     assert response.status_code == 410
     assert len(store) == 0
+
+
+def test_e2e_mode_logs_only_the_outbound_hash(
+    harness: Harness, monkeypatch: pytest.MonkeyPatch, caplog: pytest.LogCaptureFixture
+) -> None:
+    """The e2e proof line carries a digest of the outbound text, never the text."""
+    monkeypatch.setenv("AIPF_E2E_MODE", "1")
+    with (
+        caplog.at_level(logging.INFO, logger="ai_privacy_filter.api"),
+        _client(harness) as client,
+    ):
+        response = client.post("/process", json={"text": TEXT})
+    assert response.status_code == 200, response.text
+    outbound = str(response.json()["redacted_text"])
+    digest = hashlib.sha256(outbound.encode("utf-8")).hexdigest()
+    assert f"outbound_sha256={digest}" in caplog.text
+    for needle, _ in ENTITIES:
+        assert needle not in caplog.text
+    assert "[PERSON_1]" not in caplog.text
 
 
 def test_process_returns_triage_plus_what_left_the_machine(harness: Harness) -> None:

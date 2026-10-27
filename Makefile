@@ -19,7 +19,7 @@ help:
 	@echo "make lint            ruff check, ruff format --check, mypy --strict on src"
 	@echo "make reproduce       rebuild detection results and triage metrics from stored data"
 	@echo "make live            make real LLM calls (takes the live-llm lock; set AIPF_LOCK_DIR)"
-	@echo "make e2e             run the end-to-end check (stub until T13)"
+	@echo "make e2e             run the n8n end-to-end check (compose, live-LLM lock)"
 	@echo "make page-data       export results/page/{examples,results}.json from the latest run"
 	@echo "make release-check   local release gates: lint, test, forbidden scan, secrets"
 	@echo "make secrets         run gitleaks over the working tree and git history"
@@ -49,8 +49,7 @@ live:
 	$(PY) scripts/run_triage.py --live
 
 e2e:
-	@echo "e2e: stub only; the n8n end-to-end run lands in T13" >&2
-	@exit 1
+	scripts/e2e/run.sh
 
 page-data:
 	$(PY) scripts/page_export.py

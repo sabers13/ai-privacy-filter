@@ -19,7 +19,7 @@ this file.
 | mypy | MIT | static typing |
 | gitleaks | MIT | secret scan (developer machine only) |
 | GermEval 2014 NER (Benikova, Biemann, Reznicek, LREC 2014) | CC BY 4.0 | held-out detection evaluation only; downloaded by `data/get_germeval.py`, not redistributed, no sentences shown (T05) |
-| n8n (self-hosted) | Sustainable Use License | local workflow orchestration (planned, T13) |
+| n8n (self-hosted) | Sustainable Use License | local workflow orchestration (T13) |
 | Ollama | MIT | optional local model runtime (T07) |
 | Qwen2.5 1.5B Instruct | Apache-2.0 | optional local triage model via Ollama (T07); downloaded at run time, not redistributed |
 | SaberOps worker adapters (portions) | Apache-2.0 | origin of the backend adapter pattern; attribution headers retained (T06) |

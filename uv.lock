@@ -29,6 +29,7 @@ dev = [
     { name = "pytest" },
     { name = "pytest-cov" },
     { name = "pytest-socket" },
+    { name = "pyyaml" },
     { name = "ruff" },
 ]
 
@@ -51,6 +52,7 @@ dev = [
     { name = "pytest", specifier = ">=8,<9" },
     { name = "pytest-cov", specifier = ">=5,<8" },
     { name = "pytest-socket", specifier = ">=0.7,<1" },
+    { name = "pyyaml", specifier = ">=6,<7" },
     { name = "ruff", specifier = ">=0.7,<1" },
 ]
 

@@ -1,9 +1,10 @@
 # Secret-scan configuration.
 #
 # The tracked tree and its history are scanned with the default rule set. The
-# only exclusion is the git-ignored external data directory: GermEval 2014
-# sentences cite public web pages whose query strings contain "key=", which the
-# generic-api-key rule mistakes for a credential. No tracked file is excluded.
+# exclusions are the git-ignored external data directory and n8n's own local
+# state: GermEval 2014 sentences cite public web pages whose query strings
+# contain "key=", and n8n's compiled editor assets contain credential-schema
+# names such as "linkedin-client-secret". No tracked file is excluded.
 
 title = "ai-privacy-filter"
 
@@ -13,3 +14,7 @@ useDefault = true
 [[allowlists]]
 description = "git-ignored external evaluation data (never committed)"
 paths = ['''data/external/''']
+
+[[allowlists]]
+description = "git-ignored local n8n state (never committed)"
+paths = ['''\.n8n-data/''']

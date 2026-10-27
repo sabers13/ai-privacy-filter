@@ -6,6 +6,25 @@ All notable changes to this project are documented here.
 
 ### Added
 
+- T13 n8n triage workflow: `workflows/enquiry-triage.json` posts an enquiry to
+  the gate, branches on the guard verdict, shows a review form with the
+  pseudonymised text, category, urgency and restored draft, and writes the
+  approve/edit/reject result to `/data/out/<id>.json`. No credentials are in
+  the export.
+- T13 compose stack: the gate is built from this tree and n8n is pinned by tag
+  and digest, published only on `127.0.0.1:5678`, with a git-ignored
+  `./.n8n-data` volume, diagnostics and personalisation off, and
+  `AIPF_GATE_URL` passed in.
+- T13 end-to-end check: `make e2e` starts both services on a private podman
+  socket, sets up the throwaway owner in headless Chromium, imports and
+  activates the workflow, posts five synthetic dev-split enquiries, completes
+  the review forms and validates the output files. It asserts that no gold
+  value appears in the outbound text or the gate log, and that each outbound
+  hash matches the gate's `outbound_sha256` e2e log line.
+- T13 canvas screenshot at `results/page/n8n-workflow.png` (1280 px, light
+  theme, no review data or local paths).
+- `AIPF_E2E_MODE=1` adds one digest-only log line (`outbound_sha256`) to the
+  gate; it never logs the text.
 - T12 live triage stage: `triage.build_prompt`, `parse_triage` and `classify`
   run the full detect -> pseudonymise -> guard -> backend -> restore pipeline
   over the fixed 40-enquiry subset from `METHOD.md` section 8. `make live`

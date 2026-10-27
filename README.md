@@ -6,14 +6,14 @@ in it; the filter puts the details back for a human to review.
 
 **Status: foundation (T01), detection core (T02), pseudonymisation (T03),
 synthetic corpus (T04), GermEval loader (T05), real LLM backends (T06), optional
-Ollama runtime (T07) and the HTTP service with the CLI (T08).** The package
-layout, the pydantic contracts, detection, placeholder mapping, restoration, the
+Ollama runtime (T07), the HTTP service with the CLI (T08), live triage (T12) and
+the n8n review workflow with its end-to-end check (T13).** The package layout,
+the pydantic contracts, detection, placeholder mapping, restoration, the
 outbound guard, the deterministic fake backend, the dataset loaders, the four LLM
-backends, the FastAPI service, the `aipf` command line, CI and the local checks
-exist. The triage prompt (T06/T12) is still a typed stub that raises
-`NotImplementedError` until its task lands, so `/process` answers 501 with the
-owning task while `/health`, `/redact` and `/restore` work today. Detection
-numbers have not been measured yet, so nothing here has been evaluated yet.
+backends, the FastAPI service, the `aipf` command line, live triage on the fixed
+subset, the local n8n stack, CI and the local checks exist. Detection numbers and
+triage numbers come from the synthetic and GermEval test splits and are recorded
+in `results/`; the page data is exported from the latest accepted run.
 
 ## How it is meant to work
 
@@ -55,8 +55,11 @@ stored responses with no network and no model call. `make live` runs the fixed
 40-enquiry triage subset against the real backends and holds the shared live-LLM
 lock; set `AIPF_LOCK_DIR` to the mission state directory so lanes serialise.
 `make page-data` writes `results/page/examples.json` and
-`results/page/results.json` from the latest accepted run. `make e2e` is still a
-stub until T13.
+`results/page/results.json` from the latest accepted run. `make e2e` runs the
+local n8n workflow end to end: it starts the gate and n8n, posts five synthetic
+dev-split enquiries, completes the review forms in headless Chromium and checks
+the restored output files. It needs Docker or podman, the private runtime
+environment and the live-LLM lock.
 
 ## HTTP service
 
@@ -110,6 +113,9 @@ docs/contracts.md        contract reference
 docs/backends.md         backend isolation, exact CLI argv and error kinds
 docs/task-notes/         per-task decisions and verification notes
 ops/ollama-remote/       optional Ollama runtime on a separate host (T07)
+compose.yaml             local gate and n8n end-to-end stack (T13)
+workflows/               exported n8n workflow (T13)
+scripts/e2e/             compose and headless-browser e2e harness (T13)
 data/SOURCES.md          model and runtime sources with licences
 results/                 measured results committed by task
 scripts/                 forbidden-string and secret scans

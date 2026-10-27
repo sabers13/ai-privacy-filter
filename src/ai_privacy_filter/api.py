@@ -34,6 +34,7 @@ with the owning task until those land; tests inject deterministic stand-ins.
 
 from __future__ import annotations
 
+import hashlib
 import logging
 import os
 from collections.abc import Mapping
@@ -64,6 +65,7 @@ DEFAULT_PORT: Final = 8765
 TICKET_TTL_S: Final = DEFAULT_TTL_S
 MAX_TEXT_CHARS: Final = 20_000
 BIND_ENV: Final = "AIPF_BIND"
+E2E_MODE_ENV: Final = "AIPF_E2E_MODE"
 
 BAD_REQUEST: Final = 400
 UNPROCESSABLE: Final = 422
@@ -222,6 +224,11 @@ def create_app(
             sum(outcome.spans_summary.values()),
             outcome.triage.latency_ms,
         )
+        if os.environ.get(E2E_MODE_ENV) == "1":
+            # End-to-end proof only: the hash lets the harness tie the exact
+            # outbound string to the gate log without logging any text.
+            outbound_hash = hashlib.sha256(outcome.redacted_text.encode("utf-8")).hexdigest()
+            logger.info("process: outbound_sha256=%s", outbound_hash)
         return ProcessResponse(
             triage=outcome.triage,
             redacted_text=outcome.redacted_text,
