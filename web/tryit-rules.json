@@ -1,0 +1,82 @@
+{
+  "note": "B0 is the fixed regex-only baseline. It has no PERSON or ORG rule. Longest match wins, then the fixed type priority, then leftmost. Every span has score 1.0 and source b0:<rule>.",
+  "overlap": "longest match first, then type priority, then leftmost",
+  "rules": [
+    {
+      "name": "email",
+      "pattern": "(?<![\\w.+\\-])[A-Za-z0-9._%+!#$&'*/=?^`{|}~\\-]+@(?:[A-Za-z0-9](?:[A-Za-z0-9\\-]*[A-Za-z0-9])?\\.)+[A-Za-z]{2,}(?![\\w\\-])",
+      "type": "EMAIL",
+      "validation": "none"
+    },
+    {
+      "name": "url",
+      "pattern": "(?<![\\w@/])(?:https?://|www\\.)[^\\s<>\\\"']+",
+      "type": "URL",
+      "validation": "trim_trailing_punctuation"
+    },
+    {
+      "name": "iban",
+      "pattern": "(?<![\\w])DE\\d{2}(?: ?\\d{4}){4} ?\\d{2}(?!\\d)",
+      "type": "IBAN",
+      "validation": "iban_mod97"
+    },
+    {
+      "name": "phone",
+      "pattern": "(?<![\\w+])(?:\\+49|0049|\\(?0)[\\d ()/\\-]{4,}\\d(?![\\w])",
+      "type": "PHONE",
+      "validation": "phone_min_6_significant_digits"
+    },
+    {
+      "name": "vat_id",
+      "pattern": "(?<![\\w])DE\\d{9}(?!\\d)",
+      "type": "VAT_ID",
+      "validation": "none"
+    },
+    {
+      "name": "postcode_city",
+      "pattern": "(?<![\\w])\\d{5} (?:[A-ZÄÖÜ][\\wäöüß.\\-]*)(?: [A-ZÄÖÜ][\\wäöüß.\\-]*)*(?![\\w])",
+      "type": "POSTCODE_CITY",
+      "validation": "none"
+    },
+    {
+      "name": "address_street",
+      "pattern": "(?<![\\w\\-])[A-ZÄÖÜ][\\wäöüß.\\-]*(?: [\\wäöüß.\\-]+)?(?:[Ss]traße|[Ss]trasse|[Ss]tr\\.|[Ww]eg|[Pp]latz|[Aa]llee|[Rr]ing|[Gg]asse|[Dd]amm|[Uu]fer|[Bb]erg|[Ss]teig|[Pp]fad|[Hh]of|[Mm]arkt|[Cc]haussee|[Zz]eile|[Ww]inkel|[Bb]ogen)\\s+\\d{1,4}[A-Za-z]?(?![\\w\\-])",
+      "type": "ADDRESS_STREET",
+      "validation": "none"
+    },
+    {
+      "name": "date_of_birth",
+      "pattern": "(?<!\\d)\\d{1,2}\\.\\d{1,2}\\.\\d{4}(?!\\d)",
+      "type": "DATE_OF_BIRTH",
+      "validation": "birth_cue_within_40"
+    }
+  ],
+  "schema_version": 1,
+  "source": "eval/baselines.py",
+  "type_priority": [
+    "EMAIL",
+    "IBAN",
+    "URL",
+    "VAT_ID",
+    "PHONE",
+    "ADDRESS_STREET",
+    "POSTCODE_CITY",
+    "DATE_OF_BIRTH",
+    "ORG",
+    "PERSON"
+  ],
+  "validations": {
+    "birth_cue_within_40": {
+      "cues": [
+        "geboren",
+        "geburtsdatum",
+        "geburtstag",
+        "geb."
+      ],
+      "window": 40
+    },
+    "iban_mod97": "move the first four characters to the end, letters to 10-35, mod 97 equals 1",
+    "phone_min_6_significant_digits": "drop a +49/0049 country code and one leading 0, then count digits; at least 6 must remain",
+    "trim_trailing_punctuation": ".,;:!?)]}"
+  }
+}

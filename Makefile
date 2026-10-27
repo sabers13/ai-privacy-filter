@@ -17,7 +17,7 @@ help:
 	@echo "make test            run the test suite (live and e2e markers excluded)"
 	@echo "make test-local      prove the local filter path needs no network (sockets disabled)"
 	@echo "make lint            ruff check, ruff format --check, mypy --strict on src"
-	@echo "make reproduce       rebuild result files from stored responses (stub until T11)"
+	@echo "make reproduce       rebuild and byte-compare the committed detection results"
 	@echo "make live            make real LLM calls (stub until T12; takes the live-llm lock)"
 	@echo "make e2e             run the end-to-end check (stub until T13)"
 	@echo "make page-data       export page JSON from results (stub until T12)"
@@ -42,8 +42,7 @@ lint:
 	$(UV) run mypy --strict src
 
 reproduce:
-	@echo "reproduce: stub only; the deterministic rebuild lands in T11" >&2
-	@exit 1
+	$(PY) -m eval.detection --reproduce
 
 live:
 	@echo "live: stub only; real LLM runs land in T12 (needs the live-llm lock)" >&2
@@ -62,7 +61,7 @@ release-check: lint test test-local scan-forbidden secrets
 		echo "release-check: data/external is tracked; it must stay git-ignored" >&2; \
 		exit 1; \
 	fi
-	@echo "release-check: local gates green (live, e2e, reproduce and page-data are still stubs)"
+	@echo "release-check: local gates green (live, e2e and page-data are still stubs)"
 
 secrets-install:
 	@mkdir -p "$(HOME)/.local/bin"

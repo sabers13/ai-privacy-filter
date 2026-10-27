@@ -88,6 +88,26 @@ All notable changes to this project are documented here.
 - Backend tests with recorded synthetic fixtures: exact argv, isolation cleanup,
   schema validation, error kinds and the quota rules. One `live` canary per
   backend, run once under the shared live-LLM lock.
+- T11 detection evaluation: `eval/baselines.py` is the single source of the B0
+  regex rules (also written to `web/tryit-rules.json`), `eval/detection.py` runs
+  B0, B1 and B2 once on synthetic test and GermEval 2014 test behind the
+  `scripts/method_guard.py` access claim, and `eval/scoring.py` applies the
+  METHOD.md containment, compatibility and precision rules to every baseline.
+  Wilson intervals and an enquiry-cluster bootstrap are in `eval/stats.py`.
+- T11 result files: `results/detection_synthetic.json`,
+  `results/detection_germeval.json`, `results/leak_rate.json`,
+  `results/restore.json`, `results/SUMMARY.md` and `results/SHA256SUMS`, plus the
+  run record, per-enquiry scoring (no text) and the append-only
+  `docs/eval-reruns.md` row. `results/METHOD_HASH` pins the protocol.
+- Dev-only B2 tuning record in `results/tuning/`; the frozen profile is in
+  `eval/configs.json` with its hash in every result file. No test number was
+  used to choose it.
+- `make reproduce` recomputes every detection result from the committed corpus
+  and the checksum-verified GermEval download with the network blocked, then
+  compares the files byte for byte. `tests/test_eval_results.py` parses
+  `SUMMARY.md` back and checks every number against the JSON, verifies the
+  hashes and asserts that no GermEval sentence or token run appears in
+  `results/`.
 
 ## [0.1.0] - 2026-10-27
 

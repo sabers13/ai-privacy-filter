@@ -1,0 +1,51 @@
+{
+  "candidates": [
+    {
+      "dev_recall_pct": {
+        "germeval/ORG": 69.2,
+        "germeval/PERSON": 88.5,
+        "synthetic/ADDRESS_STREET": 100.0,
+        "synthetic/EMAIL": 100.0,
+        "synthetic/IBAN": 100.0,
+        "synthetic/ORG": 100.0,
+        "synthetic/PERSON": 100.0,
+        "synthetic/PHONE": 100.0,
+        "synthetic/POSTCODE_CITY": 100.0
+      },
+      "macro_precision_pct": 93.0,
+      "overmask_enquiry_pct": 0.0,
+      "profile": "balanced",
+      "r_min_pct": 69.2
+    },
+    {
+      "dev_recall_pct": {
+        "germeval/ORG": 69.4,
+        "germeval/PERSON": 89.2,
+        "synthetic/ADDRESS_STREET": 100.0,
+        "synthetic/EMAIL": 100.0,
+        "synthetic/IBAN": 100.0,
+        "synthetic/ORG": 100.0,
+        "synthetic/PERSON": 100.0,
+        "synthetic/PHONE": 100.0,
+        "synthetic/POSTCODE_CITY": 100.0
+      },
+      "macro_precision_pct": 92.9,
+      "overmask_enquiry_pct": 0.0,
+      "profile": "strict",
+      "r_min_pct": 69.4
+    }
+  ],
+  "data_sha256": {
+    "germeval_manifest": "9bf93fedb4b57e38a48b546d67e82f4f2d9ff3367339035e9aed83e1728389f1",
+    "synthetic_dev": "fed4fc6f6bb146d9310ce7c20d2c63b67516dcb030fec3443de347eaa76a5100",
+    "synthetic_test": "1751adafa08dc54c7389c044651b1337f4d7d8dcc6e75ec947e7f53b3ddb133b"
+  },
+  "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
+  "schema_version": 1,
+  "selection_rule": "highest minimum of the nine dev recalls; ties by lower enquiry-level over-masking, higher macro precision, then balanced before strict",
+  "winner": {
+    "profile": "strict",
+    "r_min_pct": 69.4,
+    "within_noise_of": []
+  }
+}

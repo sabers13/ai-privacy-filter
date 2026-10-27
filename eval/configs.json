@@ -1,0 +1,7 @@
+{
+  "chosen_on": "synthetic dev + GermEval dev only",
+  "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
+  "profile": "strict",
+  "schema_version": 1,
+  "selection_rule": "highest minimum of the nine dev recalls; ties by lower enquiry-level over-masking, higher macro precision, then balanced before strict"
+}

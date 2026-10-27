@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "declared_before": "the first dev tuning run, before any test-split number",
+  "knobs": [
+    {
+      "name": "profile",
+      "values": ["balanced", "strict"],
+      "source": "src/ai_privacy_filter/recognizers/base.py"
+    }
+  ],
+  "candidates": [
+    {"profile": "balanced", "description": "the shipped default profile"},
+    {"profile": "strict", "description": "lower score threshold, shorter phones, looser IBAN separators, lone first names"}
+  ]
+}
