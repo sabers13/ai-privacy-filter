@@ -552,6 +552,13 @@ def run_triage(
                         leaked=leaked_types(result.text, enquiry.gold_spans),
                     ),
                 )
+                terminal = result.error_kind in {
+                    "quota_exhausted",
+                    "auth_error",
+                    "billing_error",
+                    "not_installed",
+                    "not_configured",
+                }
                 if result.error_kind == "quota_exhausted":
                     summary["quota"].append(name)
                     _write_json(
@@ -563,7 +570,11 @@ def run_triage(
                             "completed_calls": calls,
                         },
                     )
+                if terminal:
+                    summary["failures"].append({"backend": name, "error_kind": result.error_kind})
                 calls += 1
+                if terminal:
+                    break
                 continue
 
             parsed = result.parsed
@@ -658,11 +669,14 @@ def run_triage(
     (run_dir / "report.md").write_text(render_report(metrics), encoding="utf-8")
     _write_scoring(run_dir, metrics)
 
-    record["status"] = "aborted" if summary["quota"] else "complete"
+    incomplete = bool(summary["quota"] or summary["failures"])
+    record["status"] = "aborted" if incomplete else "complete"
     record["updated_at"] = utc_now()
     record["finished_at"] = utc_now()
     if summary["quota"]:
         record["abort_reason"] = "quota_exhausted"
+    elif summary["failures"]:
+        record["abort_reason"] = "backend_terminal_error"
     record["artifacts_sha256"] = {
         "metrics.json": sha256_file(run_dir / "metrics.json"),
         "report.md": sha256_file(run_dir / "report.md"),

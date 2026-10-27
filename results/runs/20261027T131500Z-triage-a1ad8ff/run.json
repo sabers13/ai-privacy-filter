@@ -1,0 +1,105 @@
+{
+  "artifacts_sha256": {},
+  "backends": {
+    "claude-cli": {
+      "availability_reason": null,
+      "available": true,
+      "calls": 0,
+      "expected": 40,
+      "model": null,
+      "model_hashed": false,
+      "timeout_s": 120
+    }
+  },
+  "command": [
+    "run_triage",
+    "--live",
+    "--backends",
+    "claude-cli,codex-cli,byok",
+    "--run-id",
+    "20261027T131500Z-triage-a1ad8ff"
+  ],
+  "commit": "d994a11b88ab1393b33c420fb92beee5fc56835a",
+  "config_sha256": "ae9f6d0268cf3d57427813508fd082fdc3fb28922a0e36e0d94084859d11a873",
+  "data_sha256": {
+    "synthetic_dev": "fed4fc6f6bb146d9310ce7c20d2c63b67516dcb030fec3443de347eaa76a5100",
+    "synthetic_test": "1751adafa08dc54c7389c044651b1337f4d7d8dcc6e75ec947e7f53b3ddb133b"
+  },
+  "dirty": false,
+  "environment": {
+    "faker": "40.43.0",
+    "package_version": "0.1.0",
+    "platform": "linux-x86_64",
+    "presidio": "2.2.366",
+    "python": "3.12.3",
+    "spacy": "3.8.18",
+    "spacy_model": "de_core_news_lg-3.8.0"
+  },
+  "extensions": [],
+  "finished_at": null,
+  "method_approval": null,
+  "method_git_blob": "3fe5fc05c9c72a4708e34cba1c0506b7330f1193",
+  "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
+  "mode": "test",
+  "rerun_reason": null,
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "stage": "triage",
+  "started_at": "2026-10-27T13:05:28Z",
+  "status": "running",
+  "subset": {
+    "count": 40,
+    "ids": [
+      "syn-test-0001",
+      "syn-test-0021",
+      "syn-test-0041",
+      "syn-test-0061",
+      "syn-test-0081",
+      "syn-test-0101",
+      "syn-test-0121",
+      "syn-test-0141",
+      "syn-test-0002",
+      "syn-test-0022",
+      "syn-test-0042",
+      "syn-test-0062",
+      "syn-test-0082",
+      "syn-test-0102",
+      "syn-test-0122",
+      "syn-test-0142",
+      "syn-test-0003",
+      "syn-test-0023",
+      "syn-test-0043",
+      "syn-test-0063",
+      "syn-test-0083",
+      "syn-test-0103",
+      "syn-test-0123",
+      "syn-test-0143",
+      "syn-test-0004",
+      "syn-test-0024",
+      "syn-test-0044",
+      "syn-test-0064",
+      "syn-test-0084",
+      "syn-test-0104",
+      "syn-test-0124",
+      "syn-test-0144",
+      "syn-test-0005",
+      "syn-test-0025",
+      "syn-test-0045",
+      "syn-test-0065",
+      "syn-test-0085",
+      "syn-test-0105",
+      "syn-test-0125",
+      "syn-test-0145"
+    ]
+  },
+  "supersedes": null,
+  "updated_at": "2026-10-27T13:05:28Z",
+  "warmup": {
+    "claude-cli": {
+      "error_kind": null,
+      "latency_ms": 4562,
+      "model": "claude-opus-5-5",
+      "prompt_sha256": "22ae43503c363071c892ac8f79316def0e5b7ef309c7852b9a25f572ed952d94"
+    }
+  }
+}

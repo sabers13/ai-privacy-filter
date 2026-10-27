@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:05:44Z",
+  "draft_sha256": "85887ed9503d0ccff8353bad37d3bde43a4587ec2f1d92aa9e8b568390aaeb8a",
+  "enquiry_id": "syn-test-0021",
+  "error_kind": null,
+  "latency_ms": 5339,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Guten Tag [PERSON_1],\n\nvielen Dank für Ihre Anfrage zur Ausstattung Ihrer zwei Besprechungsräume. Wir prüfen Ihr Anliegen und senden Ihnen die gewünschten Informationen zu Preisen und Lieferzeiten so bald wie möglich zu. Falls Sie bereits konkrete Vorstellungen zum Umfang der Ausstattung haben, teilen Sie uns diese gerne mit, damit wir Ihnen ein passendes Angebot erstellen können.\n\nMit freundlichen Grüßen",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "53ae16d58e02c4ab5c3228cb4680b3bfd14ac0fa2befec8c83e0e53ce42c9ddd",
+  "response_sha256": "db412cd24cd9875aa8cda68995a9ea1d5e8745823c32b69c0087d80f048383bf",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"QUOTE_REQUEST\", \"urgency\": \"NORMAL\", \"reply_draft\": \"Guten Tag [PERSON_1],\\n\\nvielen Dank für Ihre Anfrage zur Ausstattung Ihrer zwei Besprechungsräume. Wir prüfen Ihr Anliegen und senden Ihnen die gewünschten Informationen zu Preisen und Lieferzeiten so bald wie möglich zu. Falls Sie bereits konkrete Vorstellungen zum Umfang der Ausstattung haben, teilen Sie uns diese gerne mit, damit wir Ihnen ein passendes Angebot erstellen können.\\n\\nMit freundlichen Grüßen\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 252,
+    "reasoning_tokens": null,
+    "total_tokens": 254
+  }
+}
