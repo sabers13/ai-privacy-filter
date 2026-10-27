@@ -38,6 +38,18 @@ All notable changes to this project are documented here.
 - Unit tests per recognizer with positive and negative cases, hypothesis property
   tests that every span offset slices to `span.text`, merge determinism tests and
   an offline test that blocks sockets while detecting.
+- T10 evaluation protocol: `METHOD.md` fixes the data splits, the dev-only
+  tuning rule, the B0/B1/B2 baselines, the gold-span matching and containment
+  rules, Wilson 95 % intervals, leak and over-masking rates, restore exactness,
+  the fixed 40-enquiry triage subset with its ids, median latency and the
+  `METHOD.md` hash rerun workflow.
+- `scripts/method_guard.py`: refuses a test-split run when a stage reruns
+  without `--rerun-reason`, when `METHOD.md` changed without
+  `--method-approval`, or when a prior claim or run record is malformed. It
+  writes a durable claim before any test record is read.
+- `tests/test_method.py` pins the corpus hashes, the documented gold counts and
+  the fixed subset ids to the committed data; `tests/test_method_guard.py`
+  covers the allow/refuse paths and exit codes.
 - T03 pseudonymisation: `pseudonymise.redact` replaces `Span` values with
   `[TYPE_n]` placeholders numbered per type in order of first appearance, reuses
   one placeholder for values equal after case and whitespace normalisation, and
