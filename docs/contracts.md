@@ -1,0 +1,218 @@
+# Contracts
+
+These models are defined once in `src/ai_privacy_filter/models.py` and used by
+every later task. They are frozen pydantic v2 models with `extra="forbid"`.
+
+## Entities and spans
+
+`EntityType` is a string enum with exactly these members:
+
+`PERSON`, `ORG`, `EMAIL`, `PHONE`, `IBAN`, `ADDRESS_STREET`, `POSTCODE_CITY`,
+`URL`, `VAT_ID`, `DATE_OF_BIRTH`.
+
+`Span`:
+
+| field | type | notes |
+|---|---|---|
+| `start` | `int` | inclusive character offset, `>= 0` |
+| `end` | `int` | exclusive character offset, `>= start` |
+| `type` | `EntityType` | |
+| `text` | `str` | expected to equal `source_text[start:end]` |
+| `score` | `float` | `0.0 .. 1.0` |
+| `source` | `str` | recognizer or backend that produced the span |
+
+The model cannot check `text` against the source because it never receives the
+source. Detection tests assert `source_text[span.start : span.end] == span.text`.
+
+## Redaction and restore
+
+`RedactionResult`:
+
+| field | type | notes |
+|---|---|---|
+| `redacted_text` | `str` | text with placeholders |
+| `mapping` | `dict[str, str]` | placeholder to original, **in memory only** |
+| `spans` | `list[Span]` | spans that were replaced |
+
+`mapping` uses `repr=False`, so printing the model does not print personal data.
+It must never be logged, persisted or put in a response body.
+
+`RestoreResult`:
+
+| field | type | notes |
+|---|---|---|
+| `text` | `str` | draft with originals put back |
+| `unknown_placeholders` | `list[str]` | placeholders with no mapping entry, left as written |
+
+## Guard
+
+`GuardVerdict`:
+
+| field | type | notes |
+|---|---|---|
+| `ok` | `bool` | `True` only when no original value occurs in the outbound text |
+| `leaked_types` | `list[EntityType]` | types only, never values |
+
+Validation rejects `ok=True` together with a non-empty `leaked_types`. On
+`ok=False` the caller aborts before any LLM call.
+
+## Triage
+
+`Category`: `QUOTE_REQUEST`, `SUPPORT`, `JOB_APPLICATION`, `PARTNERSHIP`, `OTHER`.
+
+`Urgency`: `LOW`, `NORMAL`, `HIGH`.
+
+`TriageResult`:
+
+| field | type | notes |
+|---|---|---|
+| `category` | `Category` | |
+| `urgency` | `Urgency` | |
+| `reply_draft` | `str` | written against placeholders by the model |
+| `backend` | `str` | backend name, e.g. `fake` |
+| `model` | `str \| None` | provider model id when known |
+| `latency_ms` | `int` | measured wall-clock time, `>= 0` |
+
+`triage.TRIAGE_SCHEMA` is the JSON schema every backend answers against:
+required `category`, `urgency`, `reply_draft`, no additional properties.
+
+## Backends
+
+`LLMBackend` (`src/ai_privacy_filter/backends/base.py`) is a runtime-checkable
+protocol:
+
+```python
+class LLMBackend(Protocol):
+    name: str
+
+    def is_available(self) -> bool: ...
+
+    def complete_json(
+        self, prompt: str, schema: dict[str, Any], timeout_s: int = 30
+    ) -> BackendResult: ...
+```
+
+`BackendResult`:
+
+| field | type | notes |
+|---|---|---|
+| `text` | `str` | raw model text |
+| `parsed` | `dict \| None` | validated JSON object on success |
+| `model` | `str \| None` | provider model id |
+| `latency_ms` | `int` | `>= 0` |
+| `usage` | `dict \| None` | provider token usage, including reasoning tokens when reported |
+| `error_kind` | `str \| None` | `None` on success; otherwise the failure kind |
+
+Provider failures are returned, not raised: a backend failure must not abort the
+caller with an exception.
+
+### Fake backend
+
+`FakeBackend` is fully implemented in T01. It reads the SHA-256 digest of the
+prompt, picks a category and urgency from it, fills a German template with the
+first placeholder found in the prompt (or `Ihnen`), and returns JSON matching
+`TRIAGE_SCHEMA`. The same prompt always yields the same result, including
+latency. It makes no network call and needs no model download.
+
+## Enquiries
+
+`Enquiry`:
+
+| field | type | notes |
+|---|---|---|
+| `id` | `str` | non-empty |
+| `split` | `"dev" \| "test"` | |
+| `style` | `str` | e.g. `formal_letter`, `web_form` |
+| `text` | `str` | synthetic only |
+| `gold_spans` | `list[Span]` | character-exact |
+| `gold_category` | `Category` | |
+| `gold_urgency` | `Urgency` | |
+
+## Page data
+
+Written by `scripts/page_export.py` in a later task and read by the site page.
+
+`examples.json` is an array of `PageExample`:
+
+| field | type |
+|---|---|
+| `id` | `str` |
+| `original` | `str` |
+| `redacted` | `str` |
+| `reply_draft_redacted` | `str` |
+| `reply_draft_restored` | `str` |
+| `spans` | `list[Span]` |
+| `misses` | `list[Span]` |
+| `category` | `Category` |
+| `urgency` | `Urgency` |
+| `backend` | `str` |
+| `mock` | `bool \| None` (`true` for T09 mock data, `false` for real results) |
+
+Shape:
+
+```json
+[
+  {
+    "id": "example-001",
+    "original": "Guten Tag, mein Name ist [PERSON_1] ...",
+    "redacted": "Guten Tag, mein Name ist [PERSON_1] ...",
+    "reply_draft_redacted": "Guten Tag [PERSON_1], ...",
+    "reply_draft_restored": "Guten Tag [PERSON_1], ...",
+    "spans": [],
+    "misses": [],
+    "category": "QUOTE_REQUEST",
+    "urgency": "NORMAL",
+    "backend": "fake",
+    "mock": true
+  }
+]
+```
+
+`results.json` is `PageResults`:
+
+| field | type |
+|---|---|
+| `detection.germeval` | `dict` |
+| `detection.synthetic` | `dict` |
+| `triage.per_backend` | `dict` |
+| `meta.version` | `str` |
+| `meta.commit` | `str` |
+| `meta.generated_at` | ISO-8601 datetime |
+| `meta.sha256` | `str` |
+| `meta.mock` | `bool \| None` |
+
+Shape:
+
+```json
+{
+  "detection": {"germeval": {}, "synthetic": {}},
+  "triage": {"per_backend": {}},
+  "meta": {
+    "version": "0.1.0",
+    "commit": "0000000",
+    "generated_at": "2026-10-27T00:00:00Z",
+    "sha256": "0",
+    "mock": true
+  }
+}
+```
+
+## Stub status after T01
+
+| module | state | lands in |
+|---|---|---|
+| `models.py` | complete | T01 |
+| `backends/fake.py` | complete | T01 |
+| `backends/registry.py` | registration works, backends stubs | T06 fills the backends |
+| `detect.py` | raises `NotImplementedError` | T02 |
+| `pseudonymise.py`, `guard.py` | raise `NotImplementedError` | T03 |
+| `triage.py` | schema fixed, functions raise `NotImplementedError` | T06/T12 |
+| `api.py` | raises `NotImplementedError` | T08 |
+| `cli.py` | parser works, execution raises `NotImplementedError` | T08/T13 |
+| `backends/byok.py`, `claude_cli.py`, `codex_cli.py`, `quota.py` | raise `NotImplementedError` | T06 |
+
+## Wording rules
+
+Documentation and UI say *pseudonymises*, *runs entirely on your machine* and
+*not legal advice*. Numbers are reported as measured, including misses and failed
+backends.

@@ -1,0 +1,29 @@
+# External data and secrets never enter the repository.
+data/external/
+.env
+*.local.*
+
+# Raw private material must never be committed, even under results.
+results/runs/**/raw-private*
+
+# Local tool state.
+.n8n-data/
+.opencode/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Editor and OS noise.
+.DS_Store
+.idea/
+.vscode/
