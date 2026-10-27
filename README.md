@@ -66,6 +66,9 @@ data/                    dataset loaders and source provenance; data/external/ i
 docs/contracts.md        contract reference
 docs/backends.md         backend isolation, exact CLI argv and error kinds
 docs/task-notes/         per-task decisions and verification notes
+ops/ollama-remote/       optional Ollama runtime on a separate host (T07)
+data/SOURCES.md          model and runtime sources with licences
+results/                 measured results committed by task
 scripts/                 forbidden-string and secret scans
 tests/                   contract, backend, stub and scan tests
 ```

@@ -1,0 +1,115 @@
+{
+  "task": "T07",
+  "generated_at": "2026-10-27T12:55:00Z",
+  "outcome": "ok",
+  "host": {
+    "description": "4 vCPU, 3.3 GiB RAM, no GPU",
+    "vcpu": 4,
+    "ram_mib": 3397,
+    "gpu": false,
+    "platform": "x86_64 linux"
+  },
+  "install": {
+    "method": "install.sh piped over ssh; runs as a normal user, no sudo",
+    "version": "0.40.11",
+    "archive": "ollama-linux-amd64.tar.zst",
+    "sha256": "7bedab90dd122661be78798e9f0edf37fccf0cccf2699d2c58ea1a3afdc04b6d",
+    "checksum_status": "verified against published sha256sum.txt",
+    "install_root": "~/aipf-ollama",
+    "unit": "aipf-ollama.service",
+    "unit_scope": "systemd --user",
+    "unit_state_after_install": "active (running)",
+    "linger": true,
+    "service_settings": {
+      "OLLAMA_HOST": "127.0.0.1:11434",
+      "OLLAMA_MODELS": "~/aipf-ollama/models",
+      "OLLAMA_NUM_PARALLEL": "1",
+      "OLLAMA_MAX_LOADED_MODELS": "1",
+      "OLLAMA_KEEP_ALIVE": "10m",
+      "OLLAMA_CONTEXT_LENGTH": "4096"
+    }
+  },
+  "model": {
+    "requested": "qwen2.5:1.5b",
+    "used": "qwen2.5:1.5b",
+    "digest_id": "65ec06548149",
+    "size_on_disk_mb": 986,
+    "licence": "Apache-2.0",
+    "licence_source": "data/SOURCES.md"
+  },
+  "tunnel": {
+    "local_endpoint": "127.0.0.1:11435",
+    "remote_endpoint": "127.0.0.1:11434",
+    "ssh_options": "ExitOnForwardFailure=yes, ServerAliveInterval=15",
+    "tmux_session": "aipf-tunnel",
+    "v1_models_ok": true,
+    "v1_models_ids": ["qwen2.5:1.5b"]
+  },
+  "smoke": {
+    "description": "one German triage chat completion through the tunnel at http://127.0.0.1:11435/v1, OpenAI-compatible, per-request x-opencode-session header, max_tokens=300, JSON-schema response format",
+    "http_status": 200,
+    "response_format": "json_schema",
+    "prompt_tokens": 193,
+    "completion_tokens": 133,
+    "total_tokens": 326,
+    "elapsed_s": 8.88,
+    "tokens_per_s": 14.98,
+    "schema_valid": true,
+    "example": {
+      "category": "JOB_APPLICATION",
+      "urgency": "NORMAL",
+      "reply_draft": "Guten Tag, [NAME_1]. Wir freuen uns über Ihre Anfrage und sind bereit, Ihnen eine Konditionelle Angebotserstellung für die Reinigung Ihrer Büroräume in [POSTCODE_CITY_1] zu bereiten. Bitte kontaktieren Sie uns per E-Mail an [EMAIL_1] um weitere Informationen zu erhalten. Wir freuen uns auf Ihre Anfrage und werden uns bei Ihnen sehr gerne angeschlossen fühlen. Vielen Dank für Ihre Aufmerksamkeit und bester Arbeit!"
+    },
+    "quality_notes": [
+      "The JSON matches the schema, but the category is wrong: the enquiry asks for a cleaning quote (QUOTE_REQUEST) and the model answered JOB_APPLICATION.",
+      "The reply_draft carries the input placeholders but also invents [NAME_1], which was not in the prompt. Restore and guard steps must reject unknown placeholders.",
+      "German register is shaky ('Konditionelle Angebotserstellung', 'bester Arbeit'). Acceptable for a 1.5B model, not for unattended replies."
+    ]
+  },
+  "backend_check": {
+    "description": "the same request driven through ai_privacy_filter.backends.byok.BYOKBackend.for_ollama after T06 landed, not just curl",
+    "available": true,
+    "error_kind": null,
+    "model": "qwen2.5:1.5b",
+    "latency_ms": 9203,
+    "input_tokens": 196,
+    "output_tokens": 141,
+    "tokens_per_s": 15.32,
+    "schema_valid": true,
+    "example": {
+      "category": "SUPPORT",
+      "urgency": "LOW",
+      "reply_draft_omitted": "transcript not quoted here: it mixed German, one Chinese sentence and invented placeholders"
+    },
+    "quality_notes": [
+      "The backend path works end to end for T12: availability true, no error kind, schema-valid JSON in 9.2 s.",
+      "Answer quality is poor: wrong category again (SUPPORT for a quote request), LOW urgency, invented placeholders ([Buero_Reinigung_Erstellung_Genossenschaft], [Triage-Assistent Name]) and one Chinese sentence.",
+      "The restore step must reject unknown placeholders, and T12 should not treat local-model categories as trustworthy without scoring."
+    ]
+  },
+  "memory": {
+    "idle_rss_mib": 26.5,
+    "loaded_rss_mib": 27.8,
+    "service_cgroup_peak_mib": 1432.4,
+    "service_cgroup_current_mib": 1342.0,
+    "free_used_before_mib": 1047,
+    "free_used_after_mib": 2251,
+    "used_delta_mib": 1204,
+    "swap_total_mib": 3,
+    "swap_used_mib": 0,
+    "oom": false,
+    "notes": "peak is the systemd user-unit cgroup memory peak, which includes the model runner child process; the serve process alone stays under 30 MiB"
+  },
+  "fallback": {
+    "used": false,
+    "reason": "no OOM, 8.9 s per answer (limit 60 s), so qwen2.5:1.5b stays the default"
+  },
+  "time_box": {
+    "limit_minutes": 90,
+    "used_minutes": 25
+  },
+  "privacy": {
+    "host_details_recorded": false,
+    "note": "connection details come only from AIPF_OLLAMA_SSH at run time; neither the scripts nor this file carry a host, IP, user or local path"
+  }
+}

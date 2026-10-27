@@ -85,3 +85,36 @@ uv run python data/get_germeval.py --verify-only
 Outputs, all under `data/external/germeval/` and never committed:
 `NER-de-train.tsv`, `NER-de-dev.tsv`, `NER-de-test.tsv`, `parsed/<split>.jsonl`,
 `parsed/<split>.stats.json` and `manifest.json`.
+
+## Model and runtime sources
+
+Primary sources for the model and runtime used by the optional local path, with
+the licence terms that apply. Accessed 2026-10-27.
+
+### Ollama 0.40.11
+
+- Release artefacts and published checksums:
+  <https://github.com/ollama/ollama/releases/tag/v0.40.11>
+  (`ollama-linux-amd64.tar.zst`, `sha256sum.txt`).
+- Licence: MIT.
+- Use here: optional local model runtime on a separate host, reached over an SSH
+  tunnel (T07). The binary is downloaded on that host at install time, not
+  redistributed with this repository.
+- Checksum recorded at install time:
+  `7bedab90dd122661be78798e9f0edf37fccf0cccf2699d2c58ea1a3afdc04b6d`
+  (verified against the published `sha256sum.txt`).
+
+### Qwen2.5 1.5B Instruct
+
+- Model page: <https://ollama.com/library/qwen2.5> and
+  <https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct>.
+- Licence: Apache-2.0. The Hugging Face model card metadata and the Ollama
+  library page both state that every Qwen2.5 size except 3B and 72B is released
+  under Apache-2.0. Quoted from the Ollama library page: "all models except the
+  3B and 72B are released under the Apache 2.0 license, while the 3B and 72B
+  models are under the Qwen license."
+- Use here: default local triage model (`qwen2.5:1.5b`, 986 MB on disk) for the
+  optional Ollama path. Apache-2.0 permits this use, including commercial use,
+  without a separate agreement.
+- Fallback considered: `qwen2.5:0.5b`, same licence family and Apache-2.0. Not
+  needed in the T07 measurement.

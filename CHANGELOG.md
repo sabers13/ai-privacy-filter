@@ -65,4 +65,8 @@ All notable changes to this project are documented here.
   `data/synthetic/`, with character-exact `gold_spans` plus `gold_category` and
   `gold_urgency` for detection and triage evaluation.
 - CI workflow for ruff, mypy and pytest without live markers.
+- `ops/ollama-remote/`: host-agnostic scripts for an optional Ollama runtime on
+  a separate machine (pinned install with checksum verification, model pull,
+  loopback SSH tunnel, schema-checked smoke request, guarded teardown), with one
+  measured run recorded in `results/ollama_server.json`.
 - Apache-2.0 licence, `NOTICE`, `THIRD_PARTY.md` and this changelog.
