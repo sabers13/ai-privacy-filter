@@ -26,7 +26,9 @@ jobs:
         run: uv run ruff format --check .
       - name: Mypy
         run: uv run mypy --strict src
-      - name: Tests (no live markers)
-        run: uv run pytest -m "not live and not e2e"
+      - name: Tests (no live markers, 85% coverage floor)
+        run: >-
+          uv run pytest -m "not live and not e2e"
+          --cov=ai_privacy_filter --cov-report=term-missing --cov-fail-under=85
       - name: No-network proof
         run: uv run pytest tests/test_local_only.py --disable-socket

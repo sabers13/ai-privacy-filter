@@ -1,0 +1,324 @@
+# Project facts - machine-readable summary for review and publication.
+#
+# Every number below points at a committed result file. Update this file only
+# from verified outputs; do not type a number that no results file supports.
+# "target" or "pending" marks anything that is not a measured result.
+
+project:
+  name: AI Privacy Filter
+  version: "1.0.0"
+  tag: v1.0.0
+  status: local-release
+  licence: Apache-2.0
+  language: Python
+  python: "3.12"
+  summary: >-
+    Pseudonymises personal data in customer enquiries on the local machine,
+    guards the outbound text, asks an AI backend for a category, urgency and
+    draft reply, and restores the values for human review.
+  scope: pseudonymisation, not anonymisation
+  legal_note: not legal advice
+  publication: local-only (no remote, no push, no deployment)
+  page: sabers13.github.io/ai-privacy-filter (local site branch main, unpublished)
+
+repository:
+  project_repo: ai-privacy-filter
+  page_repo: sabers13.github.io
+  branch: fm/aipf-t15
+  base_branch: main
+  base_commit: 898bdc2ef9e0917cd36175fd429c7d01d2af30b8
+  release_tag: v1.0.0
+  release_tag_location: local only
+  remotes: none
+  tracked_germeval_files: 0
+
+data:
+  synthetic:
+    generator: data/make_synthetic.py
+    seed_policy: fixed, committed
+    splits:
+      dev: 80
+      test: 160
+    gold_spans_test: 1074
+    evidence: data/SOURCES.md
+  germeval:
+    dataset: GermEval 2014 NER
+    licence: CC BY 4.0
+    redistribution: not redistributed, downloaded by data/get_germeval.py
+    tracked: false
+    test_sentences: 5100
+    test_person_gold: 1639
+    test_org_gold: 1150
+    evidence: data/SOURCES.md
+  real_person_examples: 0
+
+stack:
+  detection: Microsoft Presidio 2.2.366 + spaCy 3.8.18 + de_core_news_lg 3.8.0
+  service: FastAPI on 127.0.0.1:8765
+  workflow: n8n 2.45.4 (pinned by tag and digest) on 127.0.0.1:5678
+  optional_local_model: Ollama with qwen2.5:1.5b
+  test_runner: pytest
+  lint: ruff + mypy --strict on src
+  secret_scan: gitleaks 8.30.1
+
+verification:
+  date: "2026-10-27"
+  head: fm/aipf-t15
+  tests_passed: 653
+  tests_deselected: 3
+  coverage_floor_pct: 85
+  coverage_actual_pct: 87.8
+  commands:
+    - "make setup && make test"
+    - "make reproduce"
+    - "make coverage"
+    - "make lint test"
+    - "make secrets"
+    - "make scan-forbidden"
+    - "scripts/clean_clone_check.sh"
+  evidence: results/RELEASE_CHECK.md
+
+headline_numbers:
+  - label: synthetic gold spans protected by B2
+    display: "99.5%"
+    value: 99.5
+    detail: "1069 / 1074"
+    interval95: [98.9, 99.8]
+    evidence: results/SUMMARY.md
+  - label: synthetic enquiries with at least one leaked gold value (B2)
+    display: "1.9%"
+    value: 1.9
+    detail: "3 / 160"
+    interval95: [0.6, 5.4]
+    evidence: results/leak_rate.json
+  - label: synthetic over-masking at enquiry level (B2)
+    display: "0.0%"
+    value: 0.0
+    detail: "0 / 160 enquiries; 0 / 19824 replaced characters"
+    interval95: [0.0, 2.3]
+    evidence: results/detection_synthetic.json
+  - label: GermEval 2014 test PERSON+ORG recall (B2)
+    display: "78.4%"
+    value: 78.4
+    detail: "2186 / 2789"
+    interval95: [76.8, 79.9]
+    evidence: results/detection_germeval.json
+  - label: GermEval 2014 test PERSON+ORG recall (B1 Presidio defaults)
+    display: "77.6%"
+    value: 77.6
+    detail: "2164 / 2789"
+    interval95: [76.0, 79.1]
+    evidence: results/detection_germeval.json
+  - label: GermEval 2014 test PERSON+ORG recall (B0 regex-only)
+    display: "0%"
+    value: 0.0
+    detail: "0 / 2789"
+    interval95: [0.0, 0.1]
+    evidence: results/detection_germeval.json
+  - label: restore round-trip exactness on synthetic test (B2)
+    display: "160/160"
+    value: 100.0
+    detail: "160 / 160 enquiries"
+    interval95: [97.7, 100.0]
+    evidence: results/restore.json
+  - label: best joint category-and-urgency accuracy on the fixed triage subset
+    display: "70.0%"
+    value: 70.0
+    detail: "claude-cli 28 / 40"
+    interval95: [54.6, 81.9]
+    evidence: results/runs/20261027T131500Z-triage-a1ad8ff/report.md
+  - label: triage calls with a leaked value
+    display: "0"
+    value: 0
+    detail: "0 leaks in 160 calls across the four backends"
+    evidence: results/runs/20261027T131500Z-triage-a1ad8ff/report.md
+  - label: hosted drafts restored exactly
+    display: "120/120"
+    value: 100.0
+    detail: "40 / 40 for each hosted backend"
+    interval95: [91.2, 100.0]
+    evidence: results/runs/20261027T131500Z-triage-a1ad8ff/report.md
+
+detection:
+  synthetic:
+    b0:
+      name: regex-only
+      protected: 612
+      gold: 1074
+      recall_pct: 57.0
+      leak: "160 / 160"
+      leak_rate_pct: 100.0
+      evidence: results/detection_synthetic.json
+    b1:
+      name: Presidio defaults + German spaCy
+      protected: 575
+      gold: 1074
+      recall_pct: 53.5
+      leak: "145 / 160"
+      leak_rate_pct: 90.6
+      interval95: [85.1, 94.2]
+      over_masking_character_pct: 6.2
+      evidence: results/detection_synthetic.json
+    b2:
+      name: full detector, strict profile
+      protected: 1069
+      gold: 1074
+      recall_pct: 99.5
+      interval95: [98.9, 99.8]
+      leak: "3 / 160"
+      leak_rate_pct: 1.9
+      leak_interval95: [0.6, 5.4]
+      over_masking_enquiry_pct: 0.0
+      over_masking_interval95: [0.0, 2.3]
+      over_masking_extra_chars: 0
+      over_masking_replaced_chars: 19824
+      restore_exact: "160 / 160"
+      evidence: results/detection_synthetic.json
+      summary: results/SUMMARY.md
+      leak_file: results/leak_rate.json
+      restore_file: results/restore.json
+  germeval:
+    b0:
+      micro_protected: 0
+      micro_gold: 2789
+      micro_recall_pct: 0.0
+    b1:
+      micro_protected: 2164
+      micro_gold: 2789
+      micro_recall_pct: 77.6
+      interval95: [76.0, 79.1]
+    b2:
+      person: "1438 / 1639"
+      person_recall_pct: 87.7
+      person_interval95: [86.1, 89.2]
+      org: "748 / 1150"
+      org_recall_pct: 65.0
+      org_interval95: [62.2, 67.7]
+      micro: "2186 / 2789"
+      micro_recall_pct: 78.4
+      micro_interval95: [76.8, 79.9]
+    evidence: results/detection_germeval.json
+
+triage:
+  subset: fixed 40 enquiries from METHOD.md section 8
+  run_id: 20261027T131500Z-triage-a1ad8ff
+  commit: a1ad8ff6f37c87b46add16466367879bc5e8ae34
+  evidence: results/runs/20261027T131500Z-triage-a1ad8ff/report.md
+  per_backend:
+    claude-cli:
+      joint: "28 / 40"
+      joint_pct: 70.0
+      joint_interval95: [54.6, 81.9]
+      category: "35 / 40"
+      category_pct: 87.5
+      urgency: "33 / 40"
+      urgency_pct: 82.5
+      median_latency_ms: 5222.0
+      restore_exact: "40 / 40"
+      leaks: 0
+      errors: 0
+    byok:
+      joint: "27 / 40"
+      joint_pct: 67.5
+      joint_interval95: [52.0, 79.9]
+      category: "32 / 40"
+      category_pct: 80.0
+      urgency: "35 / 40"
+      urgency_pct: 87.5
+      median_latency_ms: 4785.5
+      restore_exact: "40 / 40"
+      leaks: 0
+      errors: 0
+    codex-cli:
+      joint: "25 / 40"
+      joint_pct: 62.5
+      joint_interval95: [47.0, 75.8]
+      category: "32 / 40"
+      category_pct: 80.0
+      urgency: "33 / 40"
+      urgency_pct: 82.5
+      median_latency_ms: 6667.5
+      restore_exact: "40 / 40"
+      leaks: 0
+      errors: 0
+    ollama:
+      model: qwen2.5:1.5b
+      joint: "15 / 40"
+      joint_pct: 37.5
+      joint_interval95: [24.2, 53.0]
+      category: "23 / 40"
+      category_pct: 57.5
+      urgency: "23 / 40"
+      urgency_pct: 57.5
+      median_latency_ms: 4295.0
+      restore_exact: "27 / 40"
+      invented_placeholder_drafts: 13
+      leaks: 0
+      errors: 0
+      evidence: results/ollama_outcome.json
+
+n8n:
+  workflow: workflows/enquiry-triage.json
+  compose: compose.yaml
+  image: docker.io/n8nio/n8n:2.45.4 pinned by digest
+  published: 127.0.0.1:5678 only
+  e2e_enquiries: 5
+  e2e_review_forms: 5
+  e2e_decisions: [approve, edit, reject, approve, approve]
+  e2e_outputs: 5
+  clean_runs: 2
+  screenshot: results/page/n8n-workflow.png
+  evidence: docs/n8n.md
+
+page_data:
+  examples: 15
+  examples_per_category: 3
+  restored_drafts: 13
+  guard_blocked_examples: 2
+  labelled_misses: 4
+  misses_in_examples: 3
+  mock: false
+  evidence: results/page/examples.json
+  results: results/page/results.json
+
+third_party:
+  project_licence: Apache-2.0
+  notice: NOTICE
+  inventory: THIRD_PARTY.md
+  components:
+    Microsoft Presidio: MIT
+    spaCy: MIT
+    de_core_news_lg 3.8.0: MIT
+    Faker: MIT
+    FastAPI: MIT
+    uvicorn: BSD-3-Clause
+    pydantic: MIT
+    httpx: BSD-3-Clause
+    pytest: MIT
+    pytest-cov: MIT
+    pytest-socket: MIT
+    hypothesis: MIT
+    ruff: MIT
+    mypy: MIT
+    gitleaks: MIT
+    GermEval 2014 NER: CC BY 4.0
+    n8n: Sustainable Use License
+    Ollama: MIT
+    Qwen2.5 1.5B Instruct: Apache-2.0
+    SaberOps worker adapters (portions): Apache-2.0
+  page_names_all_components: true
+
+claims:
+  allowed:
+    - "Pseudonymises personal data in customer email before a model call"
+    - "Filtering runs entirely on your machine, proved with sockets disabled"
+    - "Measured on synthetic German enquiries and GermEval 2014 test only"
+    - "Local n8n review workflow demonstrated end to end on synthetic data"
+    - "Optional small local model run on own hardware via Ollama"
+  not_made:
+    - "GDPR compliance or legal advice"
+    - "Anonymisation or a claim that text is anonymous"
+    - "Production accuracy, production latency or cost savings"
+    - "Real customer data or real people's data"
+    - "A hosted or published service"
+    - "Native n8n production hardening (auth, retries, queueing)"

@@ -6,6 +6,30 @@ All notable changes to this project are documented here.
 
 ### Added
 
+- T15 release documentation: a plain-language `README.md` with the problem,
+  pipeline, headline results and their 95% intervals, quick start, backend and
+  data-handling table (including the Codex read limit and the local Ollama
+  result), n8n review section, limits, credits and the release-gate summary; a
+  page-example screenshot at `docs/assets/page-example.png`.
+- `project-facts.yml`: machine-readable project, repository, data, verification,
+  detection, triage, n8n, page-data, licence and claims facts. Every headline
+  number carries its value, interval, detail and result-file path.
+- `scripts/clean_clone_check.sh` and `make clean-clone`: clone the repository
+  locally, check out a revision, remove every `AIPF_*` variable, run
+  `make setup test reproduce`, verify `results/SHA256SUMS`, and prove that
+  reproduction changed no tracked result file.
+- `make coverage`: the test suite with an 85% branch-coverage floor on `src/`;
+  CI now enforces the same floor.
+- `tests/test_project_facts.py`: checks every evidence path, checks that every
+  bolded number in the README links to a result file, and pins the required
+  sections of `project-facts.yml`.
+- `tests/test_page_data.py` coverage for the page exporter: compatible and
+  partial span coverage, example selection, blocked examples, detection loading
+  and results hashing.
+- `results/RELEASE_CHECK.md`: the six release gates, their commands and their
+  outputs for `v1.0.0`.
+- `v1.0.0` annotated tag, created locally only.
+
 - T13 n8n triage workflow: `workflows/enquiry-triage.json` posts an enquiry to
   the gate, branches on the guard verdict, shows a review form with the
   pseudonymised text, category, urgency and restored draft, and writes the
@@ -154,6 +178,16 @@ All notable changes to this project are documented here.
   `SUMMARY.md` back and checks every number against the JSON, verifies the
   hashes and asserts that no GermEval sentence or token run appears in
   `results/`.
+
+### Fixed
+
+- `scripts/scan_forbidden.py`: `scan_history()` now captures `git log -p` as
+  bytes and decodes with `errors="replace"`, so a repository whose history
+  contains a binary blob (the site repository's font files) no longer crashes
+  with `UnicodeDecodeError`. The regression test commits a non-UTF-8 blob and a
+  leak in the same history.
+- `make reproduce` is byte-for-byte idempotent: a successful reproduction keeps
+  the recorded `generated_at` timestamp instead of rewriting the stored run.
 
 ### Changed
 

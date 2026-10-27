@@ -242,9 +242,12 @@ def test_run_triage_dev_writes_responses_and_reproduces(tmp_path: Path) -> None:
     assert (run_dir / "scoring" / "fake.json").is_file()
     assert (root / "results" / "runs" / "fake" / "index.json").is_file()
 
+    recorded_at = metrics["generated_at"]
     rebuilt, match = reproduce(root=root, run_dir=run_dir)
     assert match is True
     assert rebuilt["per_backend"]["fake"]["success"] == 3
+    assert rebuilt["generated_at"] == recorded_at
+    assert json.loads((run_dir / "metrics.json").read_text(encoding="utf-8")) == rebuilt
 
 
 def test_redact_and_placeholder_metrics_round_trip() -> None:

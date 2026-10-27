@@ -1057,6 +1057,10 @@ def reproduce(*, root: Path, run_dir: Path) -> tuple[dict[str, Any], bool]:
     stored = _read_json(stored_path) if stored_path.is_file() else None
     metrics = compute_metrics(run_dir=run_dir, root=root)
     match = _same_numbers(stored, metrics)
+    if match and isinstance(stored, dict) and isinstance(stored.get("generated_at"), str):
+        # A reproduction is not a new measurement. Keeping the recorded
+        # timestamp makes ``make reproduce`` byte-for-byte idempotent.
+        metrics["generated_at"] = stored["generated_at"]
     _write_json(stored_path, metrics)
     (run_dir / "report.md").write_text(render_report(metrics), encoding="utf-8")
     _write_scoring(run_dir, metrics)

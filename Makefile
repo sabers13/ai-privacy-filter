@@ -9,19 +9,21 @@ SPACY_MODEL_URL := https://github.com/explosion/spacy-models/releases/download/$
 GITLEAKS_VERSION := 8.30.1
 GITLEAKS := $(HOME)/.local/bin/gitleaks
 
-.PHONY: help setup test test-local lint reproduce live e2e page-data release-check \
-	secrets secrets-install scan-forbidden
+.PHONY: help setup test test-local coverage lint reproduce live e2e page-data \
+	release-check clean-clone secrets secrets-install scan-forbidden
 
 help:
 	@echo "make setup           install dependencies and the pinned German spaCy model"
 	@echo "make test            run the test suite (live and e2e markers excluded)"
 	@echo "make test-local      prove the local filter path needs no network (sockets disabled)"
+	@echo "make coverage        run the tests with the 85% branch-coverage floor on src"
 	@echo "make lint            ruff check, ruff format --check, mypy --strict on src"
 	@echo "make reproduce       rebuild detection results and triage metrics from stored data"
 	@echo "make live            make real LLM calls (takes the live-llm lock; set AIPF_LOCK_DIR)"
 	@echo "make e2e             run the n8n end-to-end check (compose, live-LLM lock)"
 	@echo "make page-data       export results/page/{examples,results}.json from the latest run"
 	@echo "make release-check   local release gates: lint, test, forbidden scan, secrets"
+	@echo "make clean-clone     clone locally and prove setup/test/reproduce from a clean tree"
 	@echo "make secrets         run gitleaks over the working tree and git history"
 	@echo "make secrets-install install pinned gitleaks $(GITLEAKS_VERSION) into ~/.local/bin"
 	@echo "make scan-forbidden  scan for forbidden strings and private identifiers"
@@ -35,6 +37,10 @@ test:
 
 test-local:
 	$(UV) run pytest tests/test_local_only.py --disable-socket
+
+coverage:
+	$(UV) run pytest -m "not live and not e2e" \
+		--cov=ai_privacy_filter --cov-report=term-missing --cov-fail-under=85
 
 lint:
 	$(UV) run ruff check .
@@ -59,7 +65,10 @@ release-check: lint test test-local scan-forbidden secrets
 		echo "release-check: data/external is tracked; it must stay git-ignored" >&2; \
 		exit 1; \
 	fi
-	@echo "release-check: local gates green (live, e2e and page-data are still stubs)"
+	@echo "release-check: local gates green (live and e2e need the private environment)"
+
+clean-clone:
+	scripts/clean_clone_check.sh
 
 secrets-install:
 	@mkdir -p "$(HOME)/.local/bin"

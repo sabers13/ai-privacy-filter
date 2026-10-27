@@ -23,13 +23,17 @@ FORBIDDEN_WORD = "acme" + "corp"
 
 
 def _run(
-    root: Path, *, extra_env: dict[str, str] | None = None, history: bool = False
+    root: Path,
+    *,
+    extra_env: dict[str, str] | None = None,
+    history: bool = False,
+    extra_args: tuple[str, ...] = (),
 ) -> subprocess.CompletedProcess[str]:
     env = dict(os.environ)
     env.pop("AIPF_FORBIDDEN_FILE", None)
     if extra_env:
         env.update(extra_env)
-    command = [sys.executable, str(SCRIPT), "--root", str(root), "--quiet"]
+    command = [sys.executable, str(SCRIPT), "--root", str(root), "--quiet", *extra_args]
     if not history:
         command.append("--no-history")
     return subprocess.run(command, capture_output=True, text=True, env=env, check=False)
@@ -144,6 +148,73 @@ def test_history_scan_finds_added_lines(tmp_path: Path) -> None:
     assert "history " in completed.stdout
     assert "leak.txt:1:" in completed.stdout
     assert PRIVATE_IP not in completed.stdout
+
+
+def test_history_scan_survives_binary_blobs(tmp_path: Path) -> None:
+    """A non-UTF-8 blob in history must not abort the text scan (see site repo)."""
+    repo = tmp_path / "repo"
+    repo.mkdir()
+
+    def git(*args: str) -> None:
+        subprocess.run(
+            ["git", "-C", str(repo), *args],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+
+    git("init", "-q")
+    git("config", "user.email", "test@example.invalid")
+    git("config", "user.name", "test")
+
+    # Latin-1 bytes and a lone 0xff are not valid UTF-8. Git treats the blob as
+    # text (no NUL byte), so ``git log -p`` emits the raw bytes.
+    binary = repo / "font.pfb"
+    binary.write_bytes(b"%%Fake font\xa9\xff\xfe\xa9\n")
+    git("add", "font.pfb")
+    git("commit", "-q", "-m", "add binary font")
+
+    leak_file = repo / "leak.txt"
+    leak_file.write_text(f"host {PRIVATE_IP}\n", encoding="utf-8")
+    git("add", "leak.txt")
+    git("commit", "-q", "-m", "add leak")
+    leak_file.write_text("clean now\n", encoding="utf-8")
+
+    completed = _run(repo, history=True)
+    assert completed.returncode == 1, completed.stderr
+    assert "UnicodeDecodeError" not in completed.stderr
+    assert "leak.txt:1:" in completed.stdout
+    assert PRIVATE_IP not in completed.stdout
+
+
+def test_path_limits_the_worktree_and_history_scan(tmp_path: Path) -> None:
+    repo = tmp_path / "repo"
+    repo.mkdir()
+
+    def git(*args: str) -> None:
+        subprocess.run(
+            ["git", "-C", str(repo), *args],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+
+    git("init", "-q")
+    git("config", "user.email", "test@example.invalid")
+    git("config", "user.name", "test")
+    (repo / "page").mkdir()
+    (repo / "page" / "clean.txt").write_text("nothing here\n", encoding="utf-8")
+    (repo / "other").mkdir()
+    (repo / "other" / "leak.txt").write_text(f"host {PRIVATE_IP}\n", encoding="utf-8")
+    git("add", ".")
+    git("commit", "-q", "-m", "add both")
+
+    failed = _run(repo, history=True)
+    assert failed.returncode == 1
+    assert "other/leak.txt" in failed.stdout
+
+    scoped = _run(repo, history=True, extra_args=("--path", "page"))
+    assert scoped.returncode == 0, scoped.stdout
 
 
 def test_repository_itself_is_clean() -> None:

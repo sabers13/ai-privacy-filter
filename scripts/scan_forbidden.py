@@ -103,7 +103,16 @@ def _is_skipped(relative: Path) -> bool:
     return any(str(relative).startswith(prefix) for prefix in SKIP_PREFIXES)
 
 
-def iter_files(root: Path) -> Iterator[Path]:
+def _under_paths(relative: Path, paths: Sequence[str]) -> bool:
+    if not paths:
+        return True
+    value = relative.as_posix()
+    return any(
+        value == path.rstrip("/") or value.startswith(path.rstrip("/") + "/") for path in paths
+    )
+
+
+def iter_files(root: Path, paths: Sequence[str] = ()) -> Iterator[Path]:
     """Yield regular text files under ``root``, skipping vendored and generated trees."""
     for dirpath, dirnames, filenames in os.walk(root):
         current = Path(dirpath)
@@ -117,6 +126,8 @@ def iter_files(root: Path) -> Iterator[Path]:
             except ValueError:
                 continue
             if path.is_symlink() or not path.is_file() or _is_skipped(relative):
+                continue
+            if not _under_paths(relative, paths):
                 continue
             if path.stat().st_size > MAX_BYTES:
                 continue
@@ -141,9 +152,9 @@ def scan_text(text: str, rules: Sequence[Rule]) -> list[tuple[int, str]]:
     return hits
 
 
-def scan_worktree(root: Path, rules: Sequence[Rule]) -> list[str]:
+def scan_worktree(root: Path, rules: Sequence[Rule], *, paths: Sequence[str] = ()) -> list[str]:
     reports: list[str] = []
-    for path in iter_files(root):
+    for path in iter_files(root, paths):
         text = read_text(path)
         if text is None:
             continue
@@ -153,7 +164,13 @@ def scan_worktree(root: Path, rules: Sequence[Rule]) -> list[str]:
     return reports
 
 
-def scan_history(root: Path, rules: Sequence[Rule], *, all_refs: bool = False) -> list[str]:
+def scan_history(
+    root: Path,
+    rules: Sequence[Rule],
+    *,
+    all_refs: bool = False,
+    paths: Sequence[str] = (),
+) -> list[str]:
     """Scan added lines in ``git log -p``; return ``history <commit>:<path>:<line>`` reports.
 
     The default scope is ``HEAD``: the gate checks the branch under review, not
@@ -162,11 +179,13 @@ def scan_history(root: Path, rules: Sequence[Rule], *, all_refs: bool = False) -
     """
 
     revision = ["--all"] if all_refs else ["HEAD"]
+    command = ["git", "-C", str(root), "log", "-p", *revision, "--no-color", "--no-ext-diff"]
+    if paths:
+        command.extend(["--", *paths])
     try:
         completed = subprocess.run(
-            ["git", "-C", str(root), "log", "-p", *revision, "--no-color", "--no-ext-diff"],
+            command,
             capture_output=True,
-            text=True,
             check=False,
             timeout=120,
         )
@@ -175,11 +194,17 @@ def scan_history(root: Path, rules: Sequence[Rule], *, all_refs: bool = False) -
     if completed.returncode != 0:
         return []
 
+    # ``git log -p`` can carry binary blobs (fonts, images) whose bytes are not
+    # UTF-8. Decoding with replacement keeps the scan running: the replacement
+    # characters cannot themselves form a rule match, so no binary content is
+    # reported and the text lines around it are still scanned.
+    history_text = completed.stdout.decode("utf-8", errors="replace")
+
     reports: list[str] = []
     commit = "unknown"
     path = "unknown"
     new_line = 0
-    for line in completed.stdout.splitlines():
+    for line in history_text.splitlines():
         if line.startswith("commit "):
             commit = line.removeprefix("commit ").strip()
             continue
@@ -215,6 +240,13 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
         action="store_true",
         help="scan history on every local branch and tag instead of HEAD only",
     )
+    parser.add_argument(
+        "--path",
+        action="append",
+        default=[],
+        metavar="PATH",
+        help="limit the worktree and history scan to this path (repeatable)",
+    )
     return parser.parse_args(argv)
 
 
@@ -242,9 +274,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             file=sys.stderr,
         )
 
-    reports = scan_worktree(root, rules)
+    reports = scan_worktree(root, rules, paths=args.path)
     if not args.no_history:
-        reports.extend(scan_history(root, rules, all_refs=args.all_refs))
+        reports.extend(scan_history(root, rules, all_refs=args.all_refs, paths=args.path))
 
     for report in reports:
         print(report)

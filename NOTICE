@@ -13,7 +13,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Portions of the LLM backend layer (to be added in a later task) are adapted from
-the SaberOps project and remain under the Apache License, Version 2.0.
+Portions of the LLM backend layer are adapted from the SaberOps project and
+remain under the Apache License, Version 2.0. Attribution headers are retained
+in the ported modules.
 
 Third-party components and their licences are listed in THIRD_PARTY.md.
