@@ -74,14 +74,14 @@ secrets-install:
 
 secrets:
 	@if [ -x "$(GITLEAKS)" ]; then \
-		"$(GITLEAKS)" dir . --redact --no-banner && \
-		"$(GITLEAKS)" git . --redact --no-banner; \
+		"$(GITLEAKS)" dir . --config .gitleaks.toml --redact --no-banner && \
+		"$(GITLEAKS)" git . --config .gitleaks.toml --redact --no-banner; \
 	elif command -v gitleaks >/dev/null 2>&1; then \
-		gitleaks dir . --redact --no-banner && \
-		gitleaks git . --redact --no-banner; \
+		gitleaks dir . --config .gitleaks.toml --redact --no-banner && \
+		gitleaks git . --config .gitleaks.toml --redact --no-banner; \
 	elif command -v podman >/dev/null 2>&1; then \
 		podman run --rm -v "$$PWD:/repo:ro" -w /repo \
-			"ghcr.io/gitleaks/gitleaks:v$(GITLEAKS_VERSION)" dir . --redact --no-banner; \
+			"ghcr.io/gitleaks/gitleaks:v$(GITLEAKS_VERSION)" dir . --config .gitleaks.toml --redact --no-banner; \
 	else \
 		echo "secrets: gitleaks not found; run make secrets-install or install podman" >&2; \
 		exit 1; \

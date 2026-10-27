@@ -18,7 +18,7 @@ this file.
 | ruff | MIT | lint and format |
 | mypy | MIT | static typing |
 | gitleaks | MIT | secret scan (developer machine only) |
-| GermEval 2014 NER (Benikova, Biemann, Reznicek, LREC 2014) | CC BY 4.0 | held-out detection evaluation only; not redistributed; no sentences shown (planned, T05) |
+| GermEval 2014 NER (Benikova, Biemann, Reznicek, LREC 2014) | CC BY 4.0 | held-out detection evaluation only; downloaded by `data/get_germeval.py`, not redistributed, no sentences shown (T05) |
 | n8n (self-hosted) | Sustainable Use License | local workflow orchestration (planned, T13) |
 | Ollama | MIT | optional local model runtime (planned, T07) |
 

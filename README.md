@@ -37,6 +37,10 @@ make test-local  # run the local filter path with sockets disabled (no-network p
 make lint    # ruff and mypy --strict on src/
 ```
 
+The GermEval 2014 evaluation data is optional. Fetch and verify it with
+`uv run python data/get_germeval.py`; it stays under the git-ignored
+`data/external/` directory and never enters the repository.
+
 Re-run `make setup` after changing dependencies: `uv sync` owns the virtual
 environment and installs the separately pinned model again.
 
@@ -57,6 +61,7 @@ their tasks land; they exit non-zero with a message.
 
 ```text
 src/ai_privacy_filter/   package source (contracts, stubs, fake backend)
+data/                    dataset loader and source provenance; data/external/ is git-ignored
 docs/contracts.md        contract reference
 docs/task-notes/         per-task decisions and verification notes
 scripts/                 forbidden-string and secret scans

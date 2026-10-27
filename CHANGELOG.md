@@ -23,6 +23,17 @@ All notable changes to this project are documented here.
   with sockets disabled, as evidence for the "runs entirely on your machine"
   claim. The detector leg is skipped until T02 lands.
 - CI runs the no-network module with `--disable-socket` as a separate step.
+- T05 GermEval 2014 loader: `data/get_germeval.py` downloads the CC BY 4.0
+  train/dev/test TSVs into git-ignored `data/external/germeval/`, verifies pinned
+  SHA-256 and byte sizes, and parses sentences with outer-level spans.
+  `data/SOURCES.md` records URLs, retrieval date, licence and checksums.
+- GermEval label mapping in `src/ai_privacy_filter/datasets/germeval.py`: `PER`
+  to `PERSON` and `ORG` to `ORG` for the primary metric, `LOC` to `LOCATION`
+  reported separately, `OTH` to `OTHER`, and `deriv`/`part` variants as separate
+  unscored classes.
+- `.gitleaks.toml` keeps the git-ignored GermEval text out of the generic API-key
+  rule, because its citation URLs contain `key=` query strings; every tracked
+  file is still scanned.
 
 ## [0.1.0] - 2026-10-27
 
