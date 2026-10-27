@@ -5,12 +5,15 @@ before the text reaches an AI model. The model drafts a reply with placeholders
 in it; the filter puts the details back for a human to review.
 
 **Status: foundation (T01), pseudonymisation (T03), synthetic corpus (T04),
-GermEval loader (T05) and real LLM backends (T06).** The package layout, the
-pydantic contracts, placeholder mapping, restoration, the outbound guard, the
-deterministic fake backend, the dataset loaders, the four LLM backends, CI and the
-local checks exist. The detector, the HTTP service, the CLI and the triage prompt
-are typed stubs that raise `NotImplementedError` until their tasks land. Detection
-numbers have not been measured yet, so nothing here has been evaluated yet.
+GermEval loader (T05), real LLM backends (T06) and the HTTP service with the CLI
+(T08).** The package layout, the pydantic contracts, placeholder mapping,
+restoration, the outbound guard, the deterministic fake backend, the dataset
+loaders, the four LLM backends, the FastAPI service, the `aipf` command line, CI
+and the local checks exist. The detector (T02) and the triage prompt (T06/T12)
+are still typed stubs that raise `NotImplementedError` until their tasks land, so
+`/redact` and `/process` answer 501 with the owning task while `/health` and
+`/restore` work today. Detection numbers have not been measured yet, so nothing
+here has been evaluated yet.
 
 ## How it is meant to work
 
@@ -48,6 +51,38 @@ environment and installs the separately pinned model again.
 Other targets (`reproduce`, `live`, `e2e`, `page-data`) are honest stubs until
 their tasks land; they exit non-zero with a message.
 
+## HTTP service
+
+```sh
+uv run aipf serve                  # http://127.0.0.1:8765
+AIPF_BIND=0.0.0.0:8765 uv run aipf serve   # reachable from a container
+```
+
+| endpoint | body | answer |
+|---|---|---|
+| `GET /health` | – | `{status, version}` |
+| `POST /redact` | `{text}` | `{redacted_text, spans_summary, ticket, expires_in_s}` |
+| `POST /restore` | `{ticket, text}` | `{text, unknown_placeholders}`; 410 when the ticket is unknown or expired |
+| `POST /process` | `{text, backend?}` | `{triage, redacted_text, spans_summary}`; 422 with entity types only when the guard blocks, and then no model call happens |
+
+The ticket stands in for the placeholder mapping, which stays in this process
+for 15 minutes and is never logged, persisted or returned. `redacted_text` in the
+`/process` answer is exactly what was sent to the model, so a reviewer can see
+what left the machine. CORS is off and the default bind is loopback only.
+
+The CLI runs the same pipeline locally:
+
+```sh
+uv run aipf redact "Guten Tag, mein Name ist Erika Mustermann."   # pseudonymised text on stdout
+uv run aipf redact --show-mapping "..."                           # mapping on stderr (personal data)
+uv run aipf process "..." --backend fake --restore                # triage result as JSON
+uv run aipf eval --results results/results.json                   # summarise stored results
+```
+
+`aipf process` prints the reply draft with placeholders unless `--restore` asks
+for the original values back. Exit codes: 0 success, 1 runtime failure, 2 refused
+(guard block, unknown backend, empty text).
+
 ## What this repository does not claim
 
 - This is pseudonymisation: personal data is replaced with placeholders, and the
@@ -61,7 +96,7 @@ their tasks land; they exit non-zero with a message.
 ## Layout
 
 ```text
-src/ai_privacy_filter/   package source (contracts, backends, pipeline stubs)
+src/ai_privacy_filter/   package source (contracts, filter, service, CLI, backends)
 data/                    dataset loaders and source provenance; data/external/ is git-ignored
 docs/contracts.md        contract reference
 docs/backends.md         backend isolation, exact CLI argv and error kinds
@@ -70,7 +105,7 @@ ops/ollama-remote/       optional Ollama runtime on a separate host (T07)
 data/SOURCES.md          model and runtime sources with licences
 results/                 measured results committed by task
 scripts/                 forbidden-string and secret scans
-tests/                   contract, backend, stub and scan tests
+tests/                   contract, service, CLI and scan tests
 ```
 
 ## Licence

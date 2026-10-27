@@ -6,6 +6,24 @@ All notable changes to this project are documented here.
 
 ### Added
 
+- T08 HTTP service: `create_app` serves `GET /health`, `POST /redact`,
+  `POST /restore` and `POST /process` over the frozen contracts. `/redact`
+  returns a short-lived ticket instead of the placeholder mapping, `/restore`
+  puts values back from that ticket and answers 410 once it expired, and
+  `/process` returns the `TriageResult` next to the exact `redacted_text` that
+  was sent to the model. A guard failure answers 422 with entity types only and
+  makes no model call.
+- T08 ticket store: `tickets.TicketStore` keeps placeholder mappings in process
+  memory for 15 minutes, is bounded and thread-safe, and never writes, logs or
+  persists a value.
+- T08 CLI: `aipf redact|process|eval|serve`. `redact` prints the pseudonymised
+  text and a span count, `process` prints the triage result as JSON, `eval`
+  summarises a stored results file, and `serve` binds `127.0.0.1:8765` unless
+  `AIPF_BIND=host:port` overrides it. The placeholder mapping is printed only
+  with `--show-mapping`.
+- T08 privacy guards in the service: logs carry lengths, entity counts and
+  backend names only, validation errors do not echo the request body, and CORS
+  is not enabled.
 - T03 pseudonymisation: `pseudonymise.redact` replaces `Span` values with
   `[TYPE_n]` placeholders numbered per type in order of first appearance, reuses
   one placeholder for values equal after case and whitespace normalisation, and

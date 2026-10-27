@@ -1,7 +1,9 @@
 """Every remaining T01 stub raises NotImplementedError with a useful message.
 
 The real backends and quota classification land in T06 and are covered by the
-backend test modules; the pipeline, triage prompt and service still stubs here.
+backend test modules. ``api`` and ``cli`` are implemented in T08 and are covered
+by ``test_api`` and ``test_cli``; the detector (T02) and the triage glue
+(T06/T12) are still stubs.
 """
 
 from __future__ import annotations
@@ -30,14 +32,10 @@ def test_triage_functions_are_stubs() -> None:
         triage.classify("Synthetic text", FakeBackend())
 
 
-def test_api_is_a_stub() -> None:
-    with pytest.raises(NotImplementedError):
-        api.create_app()
-
-
-def test_cli_is_a_stub() -> None:
-    with pytest.raises(NotImplementedError):
-        cli.main(["redact", "Synthetic text"])
+def test_api_and_cli_are_implemented() -> None:
+    """T08 replaced the T01 stubs; the service and the CLI must build."""
+    assert api.create_app() is not None
+    assert cli.build_parser().prog == "aipf"
 
 
 def test_registry_lists_backends_and_builds_each_type() -> None:
