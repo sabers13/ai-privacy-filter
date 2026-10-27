@@ -272,8 +272,8 @@ def _example_for(
         reply_draft_restored=restore(draft, redaction.mapping).text,
         spans=predicted,
         misses=missing,
-        category=Category(str(parsed["category"])),
-        urgency=Urgency(str(parsed["urgency"])),
+        category=enquiry.gold_category,
+        urgency=enquiry.gold_urgency,
         backend=backend,
         mock=False,
     )
@@ -467,7 +467,12 @@ def export_page(
                 for pattern in patterns
                 if isinstance(pattern, dict) and isinstance(pattern.get("example_id"), str)
             ]
-    examples, notes = build_examples(subset, root=root, backend=backend, pattern_ids=pattern_ids)
+    if (output_dir / "demos.json").is_file():
+        examples, notes = build_examples_from_demos(root, output_dir)
+    else:
+        examples, notes = build_examples(
+            subset, root=root, backend=backend, pattern_ids=pattern_ids
+        )
     if len(examples) != EXAMPLES_COUNT:
         raise ValueError(
             f"page export produced {len(examples)} examples, expected {EXAMPLES_COUNT}"

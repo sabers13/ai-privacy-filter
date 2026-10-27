@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:37:05Z",
+  "draft_sha256": "852a5b3d9780295564a634664031cff8f3ee2170dfc65a35f98df7005f263c5b",
+  "enquiry_id": "syn-test-0005",
+  "error_kind": null,
+  "latency_ms": 5457,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Hallo [PERSON_2],\n\nvielen Dank für dein Interesse an unserem Schulungsprogramm. Gerne senden wir dir weitere Informationen zu, ganz unverbindlich und ohne Anmeldung. Wenn du bestimmte Fragen hast, kannst du dich jederzeit bei uns melden.\n\nLiebe Grüße\n[PERSON_1]",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "f581cfc86d613996f8afacbd25def519d582f117d903816e58d29f75790fe822",
+  "response_sha256": "8db13e3dc326f46c641b51ac77e24bc62579ce49736fd5806add413a7735d91f",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"LOW\", \"reply_draft\": \"Hallo [PERSON_2],\\n\\nvielen Dank für dein Interesse an unserem Schulungsprogramm. Gerne senden wir dir weitere Informationen zu, ganz unverbindlich und ohne Anmeldung. Wenn du bestimmte Fragen hast, kannst du dich jederzeit bei uns melden.\\n\\nLiebe Grüße\\n[PERSON_1]\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 301,
+    "reasoning_tokens": null,
+    "total_tokens": 303
+  }
+}

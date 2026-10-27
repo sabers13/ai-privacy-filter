@@ -92,9 +92,14 @@ def main(argv: list[str] | None = None) -> int:
         else:
             print(f"page_export: {exc}", file=sys.stderr)
             return 1
-    print(
-        f"page_export: wrote {examples_path.relative_to(root)} and {results_path.relative_to(root)}"
-    )
+
+    def _display(path: Path) -> str:
+        try:
+            return str(path.relative_to(root))
+        except ValueError:
+            return path.name
+
+    print(f"page_export: wrote {_display(examples_path)} and {_display(results_path)}")
     for note in notes:
         print(f"page_export: {note}")
     return 0
