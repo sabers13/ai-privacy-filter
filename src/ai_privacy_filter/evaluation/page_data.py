@@ -246,6 +246,82 @@ def build_examples(
     return examples, notes
 
 
+def _example_for(
+    enquiry: Enquiry,
+    stored: Mapping[str, Any],
+    *,
+    backend: str,
+) -> dict[str, Any] | None:
+    parsed = stored.get("parsed")
+    if not isinstance(parsed, dict):
+        return None
+    draft = parsed.get("reply_draft")
+    if not isinstance(draft, str) or not draft.strip():
+        return None
+    if parsed.get("category") not in {member.value for member in Category}:
+        return None
+    if parsed.get("urgency") not in {member.value for member in Urgency}:
+        return None
+    predicted, missing = detection_for(enquiry)
+    redaction = redact(enquiry.text, predicted)
+    example = PageExample(
+        id=enquiry.id,
+        original=enquiry.text,
+        redacted=redaction.redacted_text,
+        reply_draft_redacted=draft,
+        reply_draft_restored=restore(draft, redaction.mapping).text,
+        spans=predicted,
+        misses=missing,
+        category=Category(str(parsed["category"])),
+        urgency=Urgency(str(parsed["urgency"])),
+        backend=backend,
+        mock=False,
+    )
+    return example.model_dump(mode="json")
+
+
+def build_examples_from_demos(
+    root: Path, output_dir: Path
+) -> tuple[list[dict[str, Any]], list[str]]:
+    """Build the examples from ``results/page/demos.json`` when it exists."""
+    manifest_path = output_dir / "demos.json"
+    manifest = _read_json(manifest_path)
+    items = manifest.get("items")
+    if not isinstance(items, list):
+        raise ValueError("demos.json has no items")
+    rows = {
+        enquiry.id: enquiry
+        for enquiry in load_split(root / "data" / "synthetic" / "test.jsonl", "test")
+    }
+    examples: list[dict[str, Any]] = []
+    backends: set[str] = set()
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        identifier = item.get("id")
+        if not isinstance(identifier, str) or identifier not in rows:
+            continue
+        stored = _read_json(root / "results" / "page" / "responses" / f"{identifier}.json")
+        if stored.get("status") != STATUS_OK:
+            continue
+        backend = str(item.get("backend") or manifest.get("backend") or "claude-cli")
+        example = _example_for(rows[identifier], stored, backend=backend)
+        if example is None:
+            continue
+        examples.append(example)
+        backends.add(backend)
+    misses = sum(1 for example in examples if example.get("misses"))
+    notes = [
+        f"{len(examples)} page examples generated with {', '.join(sorted(backends))}",
+        f"{misses} deliberate detection misses in the page set",
+        "examples are three per category; misses are gold spans the displayed "
+        "detector did not cover",
+    ]
+    if misses < 2:
+        notes.append("fewer than two miss examples were available; the page shows the set as-is")
+    return examples, notes
+
+
 def _detection_block(payload: Mapping[str, Any]) -> dict[str, Any] | None:
     """Return a page-shaped detection block from one JSON document, if any."""
     block = payload.get("detection")
@@ -393,6 +469,7 @@ def example_ids(examples: Iterable[Mapping[str, Any]]) -> list[str]:
 
 __all__ = [
     "build_examples",
+    "build_examples_from_demos",
     "build_results",
     "example_ids",
     "export_page",
