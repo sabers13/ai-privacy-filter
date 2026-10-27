@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from ai_privacy_filter import api, cli, detect, guard, pseudonymise, triage
+from ai_privacy_filter import api, cli, detect, triage
 from ai_privacy_filter.backends import registry
 from ai_privacy_filter.backends.byok import BYOKBackend
 from ai_privacy_filter.backends.claude_cli import ClaudeCLIBackend
@@ -18,21 +18,6 @@ BACKEND_STUBS = [BYOKBackend(), ClaudeCLIBackend(), CodexCLIBackend()]
 def test_detect_is_a_stub() -> None:
     with pytest.raises(NotImplementedError):
         detect.detect("Synthetic text")
-
-
-def test_redact_is_a_stub() -> None:
-    with pytest.raises(NotImplementedError):
-        pseudonymise.redact("Synthetic text", [])
-
-
-def test_restore_is_a_stub() -> None:
-    with pytest.raises(NotImplementedError):
-        pseudonymise.restore("Synthetic text", {})
-
-
-def test_guard_is_a_stub() -> None:
-    with pytest.raises(NotImplementedError):
-        guard.guard("Synthetic text", {})
 
 
 def test_triage_functions_are_stubs() -> None:

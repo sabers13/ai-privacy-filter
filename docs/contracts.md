@@ -37,6 +37,18 @@ source. Detection tests assert `source_text[span.start : span.end] == span.text`
 `mapping` uses `repr=False`, so printing the model does not print personal data.
 It must never be logged, persisted or put in a response body.
 
+`pseudonymise.redact` numbers placeholders `[TYPE_n]` per type, in order of first
+appearance, and reuses one placeholder for equal values. Equality is NFC,
+case-folded and whitespace-collapsed, so `Max  Müller` and `MAX MÜLLER` share
+`[PERSON_1]`. When spans overlap, the earlier, longer span wins; empty,
+whitespace-only and out-of-range spans are ignored. The mapping keeps the first
+written form of a value.
+
+`pseudonymise.restore` accepts placeholders whose case, inner spacing or
+zero-padding changed (`[ person _ 01 ]` restores as `[PERSON_1]`). Placeholders
+with no mapping entry are left exactly as written and listed once each in
+`unknown_placeholders`.
+
 `RestoreResult`:
 
 | field | type | notes |
@@ -55,6 +67,12 @@ It must never be logged, persisted or put in a response body.
 
 Validation rejects `ok=True` together with a non-empty `leaked_types`. On
 `ok=False` the caller aborts before any LLM call.
+
+`guard.guard` compares every mapped original in its normalised form (case-folded,
+whitespace-collapsed) against the outbound text. For `PHONE` and `IBAN` it also
+compares the ASCII digits only, with at least four digits, so reformatting does
+not hide a leak. `guard.require_clean` raises `guard.GuardBlockedError` instead of
+returning, so a pipeline cannot call the model by accident.
 
 ## Triage
 
@@ -205,7 +223,7 @@ Shape:
 | `backends/fake.py` | complete | T01 |
 | `backends/registry.py` | registration works, backends stubs | T06 fills the backends |
 | `detect.py` | raises `NotImplementedError` | T02 |
-| `pseudonymise.py`, `guard.py` | raise `NotImplementedError` | T03 |
+| `pseudonymise.py`, `guard.py` | complete | T03 |
 | `triage.py` | schema fixed, functions raise `NotImplementedError` | T06/T12 |
 | `api.py` | raises `NotImplementedError` | T08 |
 | `cli.py` | parser works, execution raises `NotImplementedError` | T08/T13 |

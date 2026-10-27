@@ -9,12 +9,13 @@ SPACY_MODEL_URL := https://github.com/explosion/spacy-models/releases/download/$
 GITLEAKS_VERSION := 8.30.1
 GITLEAKS := $(HOME)/.local/bin/gitleaks
 
-.PHONY: help setup test lint reproduce live e2e page-data release-check \
+.PHONY: help setup test test-local lint reproduce live e2e page-data release-check \
 	secrets secrets-install scan-forbidden
 
 help:
 	@echo "make setup           install dependencies and the pinned German spaCy model"
 	@echo "make test            run the test suite (live and e2e markers excluded)"
+	@echo "make test-local      prove the local filter path needs no network (sockets disabled)"
 	@echo "make lint            ruff check, ruff format --check, mypy --strict on src"
 	@echo "make reproduce       rebuild result files from stored responses (stub until T11)"
 	@echo "make live            make real LLM calls (stub until T12; takes the live-llm lock)"
@@ -31,6 +32,9 @@ setup:
 
 test:
 	$(UV) run pytest -m "not live and not e2e"
+
+test-local:
+	$(UV) run pytest tests/test_local_only.py --disable-socket
 
 lint:
 	$(UV) run ruff check .
@@ -53,7 +57,7 @@ page-data:
 	@echo "page-data: stub only; export lands with T12/T14" >&2
 	@exit 1
 
-release-check: lint test scan-forbidden secrets
+release-check: lint test test-local scan-forbidden secrets
 	@if git ls-files --error-unmatch data/external >/dev/null 2>&1; then \
 		echo "release-check: data/external is tracked; it must stay git-ignored" >&2; \
 		exit 1; \

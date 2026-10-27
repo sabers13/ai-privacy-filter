@@ -1,0 +1,2446 @@
+{
+  "version": 1,
+  "note": "Synthetic German enquiry texts for T03 round-trip and guard tests. Values come from Faker de_DE with a fixed seed; no real people, companies or infrastructure.",
+  "texts": [
+    {
+      "id": "syn-01-01",
+      "style": "formal_letter",
+      "category": "quote_request",
+      "text": "Sehr geehrte Damen und Herren,\n\nmein Name ist Andrei Ehlert-Grein Groth von Gute GmbH & Co. KGaA. Wir benötigen ein Angebot über 12 Einheiten. Sie erreichen mich unter 0170 56245510 oder andrei.ehlert.grein.groth@beispiel.example.\n\nMit freundlichen Grüßen\nAndrei Ehlert-Grein Groth\nSofie-Hethur-Ring 3414, 59591 Reutlingen\n",
+      "spans": [
+        {
+          "start": 46,
+          "end": 71,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 76,
+          "end": 96,
+          "type": "ORG",
+          "text": "Gute GmbH & Co. KGaA",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 168,
+          "end": 181,
+          "type": "PHONE",
+          "text": "0170 56245510",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 187,
+          "end": 229,
+          "type": "EMAIL",
+          "text": "andrei.ehlert.grein.groth@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 256,
+          "end": 281,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 282,
+          "end": 304,
+          "type": "ADDRESS_STREET",
+          "text": "Sofie-Hethur-Ring 3414",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 306,
+          "end": 322,
+          "type": "POSTCODE_CITY",
+          "text": "59591 Reutlingen",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-01-02",
+      "style": "web_form",
+      "category": "support",
+      "text": "Guten Tag, bei der Bestellung über https://www.beispiel.example/angebot ist ein Fehler aufgetreten. Bitte rufen Sie mich unter 0170 56245510 zurück. Meine Rechnungsadresse lautet Sofie-Hethur-Ring 3414, 59591 Reutlingen. Vielen Dank, Andrei Ehlert-Grein Groth.",
+      "spans": [
+        {
+          "start": 35,
+          "end": 71,
+          "type": "URL",
+          "text": "https://www.beispiel.example/angebot",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 127,
+          "end": 140,
+          "type": "PHONE",
+          "text": "0170 56245510",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 179,
+          "end": 201,
+          "type": "ADDRESS_STREET",
+          "text": "Sofie-Hethur-Ring 3414",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 203,
+          "end": 219,
+          "type": "POSTCODE_CITY",
+          "text": "59591 Reutlingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 234,
+          "end": 259,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-01-03",
+      "style": "email",
+      "category": "job_application",
+      "text": "Bewerbung als Data Analystin\n\nSehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich auf die ausgeschriebene Stelle. Geboren am 15.02.1973 in 59591 Reutlingen. Für eine Rückerstattung nenne ich meine IBAN DE73 9361 3007 6680 1637 34. Sie erreichen mich per E-Mail an andrei.ehlert.grein.groth@beispiel.example.\n\nFreundliche Grüße\nAndrei Ehlert-Grein Groth",
+      "spans": [
+        {
+          "start": 130,
+          "end": 140,
+          "type": "DATE_OF_BIRTH",
+          "text": "15.02.1973",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 144,
+          "end": 160,
+          "type": "POSTCODE_CITY",
+          "text": "59591 Reutlingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 207,
+          "end": 234,
+          "type": "IBAN",
+          "text": "DE73 9361 3007 6680 1637 34",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 269,
+          "end": 311,
+          "type": "EMAIL",
+          "text": "andrei.ehlert.grein.groth@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 332,
+          "end": 357,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-01-04",
+      "style": "formal_letter",
+      "category": "partnership",
+      "text": "Sehr geehrte Damen und Herren,\n\nwir, die Gute GmbH & Co. KGaA, möchten eine Zusammenarbeit vorschlagen. Unsere Umsatzsteuer-Identifikationsnummer lautet DE965564920, unsere Website ist https://www.beispiel.example/angebot. Ansprechpartner ist Andrei Ehlert-Grein Groth, telefonisch erreichbar unter 0170 56245510.\n\nMit freundlichen Grüßen\nGute GmbH & Co. KGaA\n",
+      "spans": [
+        {
+          "start": 41,
+          "end": 61,
+          "type": "ORG",
+          "text": "Gute GmbH & Co. KGaA",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 153,
+          "end": 164,
+          "type": "VAT_ID",
+          "text": "DE965564920",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 185,
+          "end": 221,
+          "type": "URL",
+          "text": "https://www.beispiel.example/angebot",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 243,
+          "end": 268,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 299,
+          "end": 312,
+          "type": "PHONE",
+          "text": "0170 56245510",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 339,
+          "end": 359,
+          "type": "ORG",
+          "text": "Gute GmbH & Co. KGaA",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-01-05",
+      "style": "web_form",
+      "category": "quote_request",
+      "text": "Anfrage: Bitte senden Sie das Angebot an andrei.ehlert.grein.groth@beispiel.example. Rückfragen richten Sie bitte ebenfalls an andrei.ehlert.grein.groth@beispiel.example oder telefonisch an Andrei Ehlert-Grein Groth unter 0170 56245510.",
+      "spans": [
+        {
+          "start": 41,
+          "end": 83,
+          "type": "EMAIL",
+          "text": "andrei.ehlert.grein.groth@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 127,
+          "end": 169,
+          "type": "EMAIL",
+          "text": "andrei.ehlert.grein.groth@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 190,
+          "end": 215,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 222,
+          "end": 235,
+          "type": "PHONE",
+          "text": "0170 56245510",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-01-06",
+      "style": "formal_letter",
+      "category": "support",
+      "text": "Sehr geehrte Damen und Herren,\n\nich habe am 15.02.1973 einen Vertrag abgeschlossen und erreiche Sie unter 0170 56245510. Bitte senden Sie die Unterlagen an Sofie-Hethur-Ring 3414, 59591 Reutlingen.\n\nMit freundlichen Grüßen\nAndrei Ehlert-Grein Groth",
+      "spans": [
+        {
+          "start": 44,
+          "end": 54,
+          "type": "DATE_OF_BIRTH",
+          "text": "15.02.1973",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 106,
+          "end": 119,
+          "type": "PHONE",
+          "text": "0170 56245510",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 156,
+          "end": 178,
+          "type": "ADDRESS_STREET",
+          "text": "Sofie-Hethur-Ring 3414",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 180,
+          "end": 196,
+          "type": "POSTCODE_CITY",
+          "text": "59591 Reutlingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 223,
+          "end": 248,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-01-07",
+      "style": "web_form",
+      "category": "other",
+      "text": "Hallo, ich möchte mich über das Angebot auf https://www.beispiel.example/angebot informieren. Bitte kontaktieren Sie Andrei Ehlert-Grein Groth per E-Mail an andrei.ehlert.grein.groth@beispiel.example.",
+      "spans": [
+        {
+          "start": 44,
+          "end": 80,
+          "type": "URL",
+          "text": "https://www.beispiel.example/angebot",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 117,
+          "end": 142,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 157,
+          "end": 199,
+          "type": "EMAIL",
+          "text": "andrei.ehlert.grein.groth@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-01-08",
+      "style": "email",
+      "category": "job_application",
+      "text": "Sehr geehrte Damen und Herren,\n\nAndrei Ehlert-Grein Groth bewirbt sich bei Gute GmbH & Co. KGaA. Telefonisch erreichbar unter 0170 56245510. Die Bewerbungsunterlagen finden Sie unter https://www.beispiel.example/angebot.\n\nMit freundlichen Grüßen\nAndrei Ehlert-Grein Groth",
+      "spans": [
+        {
+          "start": 32,
+          "end": 57,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 75,
+          "end": 95,
+          "type": "ORG",
+          "text": "Gute GmbH & Co. KGaA",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 126,
+          "end": 139,
+          "type": "PHONE",
+          "text": "0170 56245510",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 183,
+          "end": 219,
+          "type": "URL",
+          "text": "https://www.beispiel.example/angebot",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 246,
+          "end": 271,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-01-09",
+      "style": "formal_letter",
+      "category": "other",
+      "text": "Sehr geehrte Damen und Herren,\n\nanbei meine Anfrage. Absender: Gute GmbH & Co. KGaA, Sofie-Hethur-Ring 3414, 59591 Reutlingen. Rücksendung bitte an andrei.ehlert.grein.groth@beispiel.example. Gezeichnet: Andrei Ehlert-Grein Groth.",
+      "spans": [
+        {
+          "start": 63,
+          "end": 83,
+          "type": "ORG",
+          "text": "Gute GmbH & Co. KGaA",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 85,
+          "end": 107,
+          "type": "ADDRESS_STREET",
+          "text": "Sofie-Hethur-Ring 3414",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 109,
+          "end": 125,
+          "type": "POSTCODE_CITY",
+          "text": "59591 Reutlingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 148,
+          "end": 190,
+          "type": "EMAIL",
+          "text": "andrei.ehlert.grein.groth@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 204,
+          "end": 229,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-01-10",
+      "style": "email",
+      "category": "quote_request",
+      "text": "Betreff: Angebot über 12 Stück\n\nGuten Tag,\n\nbitte kalkulieren Sie 12 Stück. Die Lieferung erfolgt an Sofie-Hethur-Ring 3414, 59591 Reutlingen. Die Zahlung geht auf die IBAN DE73 9361 3007 6680 1637 34. Unsere USt-IdNr. lautet DE965564920. Kontakt: 0170 56245510, Andrei Ehlert-Grein Groth.",
+      "spans": [
+        {
+          "start": 101,
+          "end": 123,
+          "type": "ADDRESS_STREET",
+          "text": "Sofie-Hethur-Ring 3414",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 125,
+          "end": 141,
+          "type": "POSTCODE_CITY",
+          "text": "59591 Reutlingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 173,
+          "end": 200,
+          "type": "IBAN",
+          "text": "DE73 9361 3007 6680 1637 34",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 226,
+          "end": 237,
+          "type": "VAT_ID",
+          "text": "DE965564920",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 248,
+          "end": 261,
+          "type": "PHONE",
+          "text": "0170 56245510",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 263,
+          "end": 288,
+          "type": "PERSON",
+          "text": "Andrei Ehlert-Grein Groth",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-01",
+      "style": "formal_letter",
+      "category": "quote_request",
+      "text": "Sehr geehrte Damen und Herren,\n\nmein Name ist Dipl.-Ing. Tassilo Pieper B.Eng. von Ruppert Steinberg GbR. Wir benötigen ein Angebot über 250 Einheiten. Sie erreichen mich unter +49 30 71985856 oder dipl.ing.tassilo.pieper.b.eng@beispiel.example.\n\nMit freundlichen Grüßen\nDipl.-Ing. Tassilo Pieper B.Eng.\nStrohring 66, 78880 Chemnitz\n",
+      "spans": [
+        {
+          "start": 46,
+          "end": 78,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 83,
+          "end": 104,
+          "type": "ORG",
+          "text": "Ruppert Steinberg GbR",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 177,
+          "end": 192,
+          "type": "PHONE",
+          "text": "+49 30 71985856",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 198,
+          "end": 244,
+          "type": "EMAIL",
+          "text": "dipl.ing.tassilo.pieper.b.eng@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 271,
+          "end": 303,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 304,
+          "end": 316,
+          "type": "ADDRESS_STREET",
+          "text": "Strohring 66",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 318,
+          "end": 332,
+          "type": "POSTCODE_CITY",
+          "text": "78880 Chemnitz",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-02",
+      "style": "web_form",
+      "category": "support",
+      "text": "Guten Tag, bei der Bestellung über https://www.beispiel.example/kontakt ist ein Fehler aufgetreten. Bitte rufen Sie mich unter +49 30 71985856 zurück. Meine Rechnungsadresse lautet Strohring 66, 78880 Chemnitz. Vielen Dank, Dipl.-Ing. Tassilo Pieper B.Eng..",
+      "spans": [
+        {
+          "start": 35,
+          "end": 71,
+          "type": "URL",
+          "text": "https://www.beispiel.example/kontakt",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 127,
+          "end": 142,
+          "type": "PHONE",
+          "text": "+49 30 71985856",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 181,
+          "end": 193,
+          "type": "ADDRESS_STREET",
+          "text": "Strohring 66",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 195,
+          "end": 209,
+          "type": "POSTCODE_CITY",
+          "text": "78880 Chemnitz",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 224,
+          "end": 256,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-03",
+      "style": "email",
+      "category": "job_application",
+      "text": "Bewerbung als Softwareentwickler\n\nSehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich auf die ausgeschriebene Stelle. Geboren am 14.04.2005 in 78880 Chemnitz. Für eine Rückerstattung nenne ich meine IBAN DE08 4390 8890 3072 8234 93. Sie erreichen mich per E-Mail an dipl.ing.tassilo.pieper.b.eng@beispiel.example.\n\nFreundliche Grüße\nDipl.-Ing. Tassilo Pieper B.Eng.",
+      "spans": [
+        {
+          "start": 134,
+          "end": 144,
+          "type": "DATE_OF_BIRTH",
+          "text": "14.04.2005",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 148,
+          "end": 162,
+          "type": "POSTCODE_CITY",
+          "text": "78880 Chemnitz",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 209,
+          "end": 236,
+          "type": "IBAN",
+          "text": "DE08 4390 8890 3072 8234 93",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 271,
+          "end": 317,
+          "type": "EMAIL",
+          "text": "dipl.ing.tassilo.pieper.b.eng@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 338,
+          "end": 370,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-04",
+      "style": "formal_letter",
+      "category": "partnership",
+      "text": "Sehr geehrte Damen und Herren,\n\nwir, die Ruppert Steinberg GbR, möchten eine Zusammenarbeit vorschlagen. Unsere Umsatzsteuer-Identifikationsnummer lautet DE838757092, unsere Website ist https://www.beispiel.example/kontakt. Ansprechpartner ist Dipl.-Ing. Tassilo Pieper B.Eng., telefonisch erreichbar unter +49 30 71985856.\n\nMit freundlichen Grüßen\nRuppert Steinberg GbR\n",
+      "spans": [
+        {
+          "start": 41,
+          "end": 62,
+          "type": "ORG",
+          "text": "Ruppert Steinberg GbR",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 154,
+          "end": 165,
+          "type": "VAT_ID",
+          "text": "DE838757092",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 186,
+          "end": 222,
+          "type": "URL",
+          "text": "https://www.beispiel.example/kontakt",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 244,
+          "end": 276,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 307,
+          "end": 322,
+          "type": "PHONE",
+          "text": "+49 30 71985856",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 349,
+          "end": 370,
+          "type": "ORG",
+          "text": "Ruppert Steinberg GbR",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-05",
+      "style": "web_form",
+      "category": "quote_request",
+      "text": "Anfrage: Bitte senden Sie das Angebot an dipl.ing.tassilo.pieper.b.eng@beispiel.example. Rückfragen richten Sie bitte ebenfalls an dipl.ing.tassilo.pieper.b.eng@beispiel.example oder telefonisch an Dipl.-Ing. Tassilo Pieper B.Eng. unter +49 30 71985856.",
+      "spans": [
+        {
+          "start": 41,
+          "end": 87,
+          "type": "EMAIL",
+          "text": "dipl.ing.tassilo.pieper.b.eng@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 131,
+          "end": 177,
+          "type": "EMAIL",
+          "text": "dipl.ing.tassilo.pieper.b.eng@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 198,
+          "end": 230,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 237,
+          "end": 252,
+          "type": "PHONE",
+          "text": "+49 30 71985856",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-06",
+      "style": "formal_letter",
+      "category": "support",
+      "text": "Sehr geehrte Damen und Herren,\n\nich habe am 14.04.2005 einen Vertrag abgeschlossen und erreiche Sie unter +49 30 71985856. Bitte senden Sie die Unterlagen an Strohring 66, 78880 Chemnitz.\n\nMit freundlichen Grüßen\nDipl.-Ing. Tassilo Pieper B.Eng.",
+      "spans": [
+        {
+          "start": 44,
+          "end": 54,
+          "type": "DATE_OF_BIRTH",
+          "text": "14.04.2005",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 106,
+          "end": 121,
+          "type": "PHONE",
+          "text": "+49 30 71985856",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 158,
+          "end": 170,
+          "type": "ADDRESS_STREET",
+          "text": "Strohring 66",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 172,
+          "end": 186,
+          "type": "POSTCODE_CITY",
+          "text": "78880 Chemnitz",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 213,
+          "end": 245,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-07",
+      "style": "web_form",
+      "category": "other",
+      "text": "Hallo, ich möchte mich über das Angebot auf https://www.beispiel.example/kontakt informieren. Bitte kontaktieren Sie Dipl.-Ing. Tassilo Pieper B.Eng. per E-Mail an dipl.ing.tassilo.pieper.b.eng@beispiel.example.",
+      "spans": [
+        {
+          "start": 44,
+          "end": 80,
+          "type": "URL",
+          "text": "https://www.beispiel.example/kontakt",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 117,
+          "end": 149,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 164,
+          "end": 210,
+          "type": "EMAIL",
+          "text": "dipl.ing.tassilo.pieper.b.eng@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-08",
+      "style": "email",
+      "category": "job_application",
+      "text": "Sehr geehrte Damen und Herren,\n\nDipl.-Ing. Tassilo Pieper B.Eng. bewirbt sich bei Ruppert Steinberg GbR. Telefonisch erreichbar unter +49 30 71985856. Die Bewerbungsunterlagen finden Sie unter https://www.beispiel.example/kontakt.\n\nMit freundlichen Grüßen\nDipl.-Ing. Tassilo Pieper B.Eng.",
+      "spans": [
+        {
+          "start": 32,
+          "end": 64,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 82,
+          "end": 103,
+          "type": "ORG",
+          "text": "Ruppert Steinberg GbR",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 134,
+          "end": 149,
+          "type": "PHONE",
+          "text": "+49 30 71985856",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 193,
+          "end": 229,
+          "type": "URL",
+          "text": "https://www.beispiel.example/kontakt",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 256,
+          "end": 288,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-09",
+      "style": "formal_letter",
+      "category": "other",
+      "text": "Sehr geehrte Damen und Herren,\n\nanbei meine Anfrage. Absender: Ruppert Steinberg GbR, Strohring 66, 78880 Chemnitz. Rücksendung bitte an dipl.ing.tassilo.pieper.b.eng@beispiel.example. Gezeichnet: Dipl.-Ing. Tassilo Pieper B.Eng..",
+      "spans": [
+        {
+          "start": 63,
+          "end": 84,
+          "type": "ORG",
+          "text": "Ruppert Steinberg GbR",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 86,
+          "end": 98,
+          "type": "ADDRESS_STREET",
+          "text": "Strohring 66",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 100,
+          "end": 114,
+          "type": "POSTCODE_CITY",
+          "text": "78880 Chemnitz",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 137,
+          "end": 183,
+          "type": "EMAIL",
+          "text": "dipl.ing.tassilo.pieper.b.eng@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 197,
+          "end": 229,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-02-10",
+      "style": "email",
+      "category": "quote_request",
+      "text": "Betreff: Angebot über 250 Stück\n\nGuten Tag,\n\nbitte kalkulieren Sie 250 Stück. Die Lieferung erfolgt an Strohring 66, 78880 Chemnitz. Die Zahlung geht auf die IBAN DE08 4390 8890 3072 8234 93. Unsere USt-IdNr. lautet DE838757092. Kontakt: +49 30 71985856, Dipl.-Ing. Tassilo Pieper B.Eng..",
+      "spans": [
+        {
+          "start": 103,
+          "end": 115,
+          "type": "ADDRESS_STREET",
+          "text": "Strohring 66",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 117,
+          "end": 131,
+          "type": "POSTCODE_CITY",
+          "text": "78880 Chemnitz",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 163,
+          "end": 190,
+          "type": "IBAN",
+          "text": "DE08 4390 8890 3072 8234 93",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 216,
+          "end": 227,
+          "type": "VAT_ID",
+          "text": "DE838757092",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 238,
+          "end": 253,
+          "type": "PHONE",
+          "text": "+49 30 71985856",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 255,
+          "end": 287,
+          "type": "PERSON",
+          "text": "Dipl.-Ing. Tassilo Pieper B.Eng.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-01",
+      "style": "formal_letter",
+      "category": "quote_request",
+      "text": "Sehr geehrte Damen und Herren,\n\nmein Name ist Anna-Luise Stiffel von Hermann. Wir benötigen ein Angebot über 3 Einheiten. Sie erreichen mich unter 0221/25862380 oder anna.luise.stiffel@beispiel.example.\n\nMit freundlichen Grüßen\nAnna-Luise Stiffel\nUllmannring 72, 89021 Lichtenfels\n",
+      "spans": [
+        {
+          "start": 46,
+          "end": 64,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 69,
+          "end": 76,
+          "type": "ORG",
+          "text": "Hermann",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 147,
+          "end": 160,
+          "type": "PHONE",
+          "text": "0221/25862380",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 166,
+          "end": 201,
+          "type": "EMAIL",
+          "text": "anna.luise.stiffel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 228,
+          "end": 246,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 247,
+          "end": 261,
+          "type": "ADDRESS_STREET",
+          "text": "Ullmannring 72",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 263,
+          "end": 280,
+          "type": "POSTCODE_CITY",
+          "text": "89021 Lichtenfels",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-02",
+      "style": "web_form",
+      "category": "support",
+      "text": "Guten Tag, bei der Bestellung über https://www.beispiel.example/produkte ist ein Fehler aufgetreten. Bitte rufen Sie mich unter 0221/25862380 zurück. Meine Rechnungsadresse lautet Ullmannring 72, 89021 Lichtenfels. Vielen Dank, Anna-Luise Stiffel.",
+      "spans": [
+        {
+          "start": 35,
+          "end": 72,
+          "type": "URL",
+          "text": "https://www.beispiel.example/produkte",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 128,
+          "end": 141,
+          "type": "PHONE",
+          "text": "0221/25862380",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 180,
+          "end": 194,
+          "type": "ADDRESS_STREET",
+          "text": "Ullmannring 72",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 196,
+          "end": 213,
+          "type": "POSTCODE_CITY",
+          "text": "89021 Lichtenfels",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 228,
+          "end": 246,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-03",
+      "style": "email",
+      "category": "job_application",
+      "text": "Bewerbung als Projektassistenz\n\nSehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich auf die ausgeschriebene Stelle. Geboren am 29.10.1952 in 89021 Lichtenfels. Für eine Rückerstattung nenne ich meine IBAN DE41 5231 8333 9874 2865 39. Sie erreichen mich per E-Mail an anna.luise.stiffel@beispiel.example.\n\nFreundliche Grüße\nAnna-Luise Stiffel",
+      "spans": [
+        {
+          "start": 132,
+          "end": 142,
+          "type": "DATE_OF_BIRTH",
+          "text": "29.10.1952",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 146,
+          "end": 163,
+          "type": "POSTCODE_CITY",
+          "text": "89021 Lichtenfels",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 210,
+          "end": 237,
+          "type": "IBAN",
+          "text": "DE41 5231 8333 9874 2865 39",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 272,
+          "end": 307,
+          "type": "EMAIL",
+          "text": "anna.luise.stiffel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 328,
+          "end": 346,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-04",
+      "style": "formal_letter",
+      "category": "partnership",
+      "text": "Sehr geehrte Damen und Herren,\n\nwir, die Hermann, möchten eine Zusammenarbeit vorschlagen. Unsere Umsatzsteuer-Identifikationsnummer lautet DE105284232, unsere Website ist https://www.beispiel.example/produkte. Ansprechpartner ist Anna-Luise Stiffel, telefonisch erreichbar unter 0221/25862380.\n\nMit freundlichen Grüßen\nHermann\n",
+      "spans": [
+        {
+          "start": 41,
+          "end": 48,
+          "type": "ORG",
+          "text": "Hermann",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 140,
+          "end": 151,
+          "type": "VAT_ID",
+          "text": "DE105284232",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 172,
+          "end": 209,
+          "type": "URL",
+          "text": "https://www.beispiel.example/produkte",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 231,
+          "end": 249,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 280,
+          "end": 293,
+          "type": "PHONE",
+          "text": "0221/25862380",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 320,
+          "end": 327,
+          "type": "ORG",
+          "text": "Hermann",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-05",
+      "style": "web_form",
+      "category": "quote_request",
+      "text": "Anfrage: Bitte senden Sie das Angebot an anna.luise.stiffel@beispiel.example. Rückfragen richten Sie bitte ebenfalls an anna.luise.stiffel@beispiel.example oder telefonisch an Anna-Luise Stiffel unter 0221/25862380.",
+      "spans": [
+        {
+          "start": 41,
+          "end": 76,
+          "type": "EMAIL",
+          "text": "anna.luise.stiffel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 120,
+          "end": 155,
+          "type": "EMAIL",
+          "text": "anna.luise.stiffel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 176,
+          "end": 194,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 201,
+          "end": 214,
+          "type": "PHONE",
+          "text": "0221/25862380",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-06",
+      "style": "formal_letter",
+      "category": "support",
+      "text": "Sehr geehrte Damen und Herren,\n\nich habe am 29.10.1952 einen Vertrag abgeschlossen und erreiche Sie unter 0221/25862380. Bitte senden Sie die Unterlagen an Ullmannring 72, 89021 Lichtenfels.\n\nMit freundlichen Grüßen\nAnna-Luise Stiffel",
+      "spans": [
+        {
+          "start": 44,
+          "end": 54,
+          "type": "DATE_OF_BIRTH",
+          "text": "29.10.1952",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 106,
+          "end": 119,
+          "type": "PHONE",
+          "text": "0221/25862380",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 156,
+          "end": 170,
+          "type": "ADDRESS_STREET",
+          "text": "Ullmannring 72",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 172,
+          "end": 189,
+          "type": "POSTCODE_CITY",
+          "text": "89021 Lichtenfels",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 216,
+          "end": 234,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-07",
+      "style": "web_form",
+      "category": "other",
+      "text": "Hallo, ich möchte mich über das Angebot auf https://www.beispiel.example/produkte informieren. Bitte kontaktieren Sie Anna-Luise Stiffel per E-Mail an anna.luise.stiffel@beispiel.example.",
+      "spans": [
+        {
+          "start": 44,
+          "end": 81,
+          "type": "URL",
+          "text": "https://www.beispiel.example/produkte",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 118,
+          "end": 136,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 151,
+          "end": 186,
+          "type": "EMAIL",
+          "text": "anna.luise.stiffel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-08",
+      "style": "email",
+      "category": "job_application",
+      "text": "Sehr geehrte Damen und Herren,\n\nAnna-Luise Stiffel bewirbt sich bei Hermann. Telefonisch erreichbar unter 0221/25862380. Die Bewerbungsunterlagen finden Sie unter https://www.beispiel.example/produkte.\n\nMit freundlichen Grüßen\nAnna-Luise Stiffel",
+      "spans": [
+        {
+          "start": 32,
+          "end": 50,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 68,
+          "end": 75,
+          "type": "ORG",
+          "text": "Hermann",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 106,
+          "end": 119,
+          "type": "PHONE",
+          "text": "0221/25862380",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 163,
+          "end": 200,
+          "type": "URL",
+          "text": "https://www.beispiel.example/produkte",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 227,
+          "end": 245,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-09",
+      "style": "formal_letter",
+      "category": "other",
+      "text": "Sehr geehrte Damen und Herren,\n\nanbei meine Anfrage. Absender: Hermann, Ullmannring 72, 89021 Lichtenfels. Rücksendung bitte an anna.luise.stiffel@beispiel.example. Gezeichnet: Anna-Luise Stiffel.",
+      "spans": [
+        {
+          "start": 63,
+          "end": 70,
+          "type": "ORG",
+          "text": "Hermann",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 72,
+          "end": 86,
+          "type": "ADDRESS_STREET",
+          "text": "Ullmannring 72",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 88,
+          "end": 105,
+          "type": "POSTCODE_CITY",
+          "text": "89021 Lichtenfels",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 128,
+          "end": 163,
+          "type": "EMAIL",
+          "text": "anna.luise.stiffel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 177,
+          "end": 195,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-03-10",
+      "style": "email",
+      "category": "quote_request",
+      "text": "Betreff: Angebot über 3 Stück\n\nGuten Tag,\n\nbitte kalkulieren Sie 3 Stück. Die Lieferung erfolgt an Ullmannring 72, 89021 Lichtenfels. Die Zahlung geht auf die IBAN DE41 5231 8333 9874 2865 39. Unsere USt-IdNr. lautet DE105284232. Kontakt: 0221/25862380, Anna-Luise Stiffel.",
+      "spans": [
+        {
+          "start": 99,
+          "end": 113,
+          "type": "ADDRESS_STREET",
+          "text": "Ullmannring 72",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 115,
+          "end": 132,
+          "type": "POSTCODE_CITY",
+          "text": "89021 Lichtenfels",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 164,
+          "end": 191,
+          "type": "IBAN",
+          "text": "DE41 5231 8333 9874 2865 39",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 217,
+          "end": 228,
+          "type": "VAT_ID",
+          "text": "DE105284232",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 239,
+          "end": 252,
+          "type": "PHONE",
+          "text": "0221/25862380",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 254,
+          "end": 272,
+          "type": "PERSON",
+          "text": "Anna-Luise Stiffel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-01",
+      "style": "formal_letter",
+      "category": "quote_request",
+      "text": "Sehr geehrte Damen und Herren,\n\nmein Name ist Christa-Maria Knappe B.Sc. von Bachmann AG. Wir benötigen ein Angebot über 48 Einheiten. Sie erreichen mich unter 0172-5214115 oder christa.maria.knappe.b.sc@beispiel.example.\n\nMit freundlichen Grüßen\nChrista-Maria Knappe B.Sc.\nAnka-Freudenberger-Platz 84/81, 27618 Cuxhaven\n",
+      "spans": [
+        {
+          "start": 46,
+          "end": 72,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 77,
+          "end": 88,
+          "type": "ORG",
+          "text": "Bachmann AG",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 160,
+          "end": 172,
+          "type": "PHONE",
+          "text": "0172-5214115",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 178,
+          "end": 220,
+          "type": "EMAIL",
+          "text": "christa.maria.knappe.b.sc@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 247,
+          "end": 273,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 274,
+          "end": 304,
+          "type": "ADDRESS_STREET",
+          "text": "Anka-Freudenberger-Platz 84/81",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 306,
+          "end": 320,
+          "type": "POSTCODE_CITY",
+          "text": "27618 Cuxhaven",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-02",
+      "style": "web_form",
+      "category": "support",
+      "text": "Guten Tag, bei der Bestellung über https://www.beispiel.example/team ist ein Fehler aufgetreten. Bitte rufen Sie mich unter 0172-5214115 zurück. Meine Rechnungsadresse lautet Anka-Freudenberger-Platz 84/81, 27618 Cuxhaven. Vielen Dank, Christa-Maria Knappe B.Sc..",
+      "spans": [
+        {
+          "start": 35,
+          "end": 68,
+          "type": "URL",
+          "text": "https://www.beispiel.example/team",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 124,
+          "end": 136,
+          "type": "PHONE",
+          "text": "0172-5214115",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 175,
+          "end": 205,
+          "type": "ADDRESS_STREET",
+          "text": "Anka-Freudenberger-Platz 84/81",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 207,
+          "end": 221,
+          "type": "POSTCODE_CITY",
+          "text": "27618 Cuxhaven",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 236,
+          "end": 262,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-03",
+      "style": "email",
+      "category": "job_application",
+      "text": "Bewerbung als Sachbearbeiter Buchhaltung\n\nSehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich auf die ausgeschriebene Stelle. Geboren am 21.10.1993 in 27618 Cuxhaven. Für eine Rückerstattung nenne ich meine IBAN DE51 4482 7226 9222 6221 67. Sie erreichen mich per E-Mail an christa.maria.knappe.b.sc@beispiel.example.\n\nFreundliche Grüße\nChrista-Maria Knappe B.Sc.",
+      "spans": [
+        {
+          "start": 142,
+          "end": 152,
+          "type": "DATE_OF_BIRTH",
+          "text": "21.10.1993",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 156,
+          "end": 170,
+          "type": "POSTCODE_CITY",
+          "text": "27618 Cuxhaven",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 217,
+          "end": 244,
+          "type": "IBAN",
+          "text": "DE51 4482 7226 9222 6221 67",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 279,
+          "end": 321,
+          "type": "EMAIL",
+          "text": "christa.maria.knappe.b.sc@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 342,
+          "end": 368,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-04",
+      "style": "formal_letter",
+      "category": "partnership",
+      "text": "Sehr geehrte Damen und Herren,\n\nwir, die Bachmann AG, möchten eine Zusammenarbeit vorschlagen. Unsere Umsatzsteuer-Identifikationsnummer lautet DE191737022, unsere Website ist https://www.beispiel.example/team. Ansprechpartner ist Christa-Maria Knappe B.Sc., telefonisch erreichbar unter 0172-5214115.\n\nMit freundlichen Grüßen\nBachmann AG\n",
+      "spans": [
+        {
+          "start": 41,
+          "end": 52,
+          "type": "ORG",
+          "text": "Bachmann AG",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 144,
+          "end": 155,
+          "type": "VAT_ID",
+          "text": "DE191737022",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 176,
+          "end": 209,
+          "type": "URL",
+          "text": "https://www.beispiel.example/team",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 231,
+          "end": 257,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 288,
+          "end": 300,
+          "type": "PHONE",
+          "text": "0172-5214115",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 327,
+          "end": 338,
+          "type": "ORG",
+          "text": "Bachmann AG",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-05",
+      "style": "web_form",
+      "category": "quote_request",
+      "text": "Anfrage: Bitte senden Sie das Angebot an christa.maria.knappe.b.sc@beispiel.example. Rückfragen richten Sie bitte ebenfalls an christa.maria.knappe.b.sc@beispiel.example oder telefonisch an Christa-Maria Knappe B.Sc. unter 0172-5214115.",
+      "spans": [
+        {
+          "start": 41,
+          "end": 83,
+          "type": "EMAIL",
+          "text": "christa.maria.knappe.b.sc@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 127,
+          "end": 169,
+          "type": "EMAIL",
+          "text": "christa.maria.knappe.b.sc@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 190,
+          "end": 216,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 223,
+          "end": 235,
+          "type": "PHONE",
+          "text": "0172-5214115",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-06",
+      "style": "formal_letter",
+      "category": "support",
+      "text": "Sehr geehrte Damen und Herren,\n\nich habe am 21.10.1993 einen Vertrag abgeschlossen und erreiche Sie unter 0172-5214115. Bitte senden Sie die Unterlagen an Anka-Freudenberger-Platz 84/81, 27618 Cuxhaven.\n\nMit freundlichen Grüßen\nChrista-Maria Knappe B.Sc.",
+      "spans": [
+        {
+          "start": 44,
+          "end": 54,
+          "type": "DATE_OF_BIRTH",
+          "text": "21.10.1993",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 106,
+          "end": 118,
+          "type": "PHONE",
+          "text": "0172-5214115",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 155,
+          "end": 185,
+          "type": "ADDRESS_STREET",
+          "text": "Anka-Freudenberger-Platz 84/81",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 187,
+          "end": 201,
+          "type": "POSTCODE_CITY",
+          "text": "27618 Cuxhaven",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 228,
+          "end": 254,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-07",
+      "style": "web_form",
+      "category": "other",
+      "text": "Hallo, ich möchte mich über das Angebot auf https://www.beispiel.example/team informieren. Bitte kontaktieren Sie Christa-Maria Knappe B.Sc. per E-Mail an christa.maria.knappe.b.sc@beispiel.example.",
+      "spans": [
+        {
+          "start": 44,
+          "end": 77,
+          "type": "URL",
+          "text": "https://www.beispiel.example/team",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 114,
+          "end": 140,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 155,
+          "end": 197,
+          "type": "EMAIL",
+          "text": "christa.maria.knappe.b.sc@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-08",
+      "style": "email",
+      "category": "job_application",
+      "text": "Sehr geehrte Damen und Herren,\n\nChrista-Maria Knappe B.Sc. bewirbt sich bei Bachmann AG. Telefonisch erreichbar unter 0172-5214115. Die Bewerbungsunterlagen finden Sie unter https://www.beispiel.example/team.\n\nMit freundlichen Grüßen\nChrista-Maria Knappe B.Sc.",
+      "spans": [
+        {
+          "start": 32,
+          "end": 58,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 76,
+          "end": 87,
+          "type": "ORG",
+          "text": "Bachmann AG",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 118,
+          "end": 130,
+          "type": "PHONE",
+          "text": "0172-5214115",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 174,
+          "end": 207,
+          "type": "URL",
+          "text": "https://www.beispiel.example/team",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 234,
+          "end": 260,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-09",
+      "style": "formal_letter",
+      "category": "other",
+      "text": "Sehr geehrte Damen und Herren,\n\nanbei meine Anfrage. Absender: Bachmann AG, Anka-Freudenberger-Platz 84/81, 27618 Cuxhaven. Rücksendung bitte an christa.maria.knappe.b.sc@beispiel.example. Gezeichnet: Christa-Maria Knappe B.Sc..",
+      "spans": [
+        {
+          "start": 63,
+          "end": 74,
+          "type": "ORG",
+          "text": "Bachmann AG",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 76,
+          "end": 106,
+          "type": "ADDRESS_STREET",
+          "text": "Anka-Freudenberger-Platz 84/81",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 108,
+          "end": 122,
+          "type": "POSTCODE_CITY",
+          "text": "27618 Cuxhaven",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 145,
+          "end": 187,
+          "type": "EMAIL",
+          "text": "christa.maria.knappe.b.sc@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 201,
+          "end": 227,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-04-10",
+      "style": "email",
+      "category": "quote_request",
+      "text": "Betreff: Angebot über 48 Stück\n\nGuten Tag,\n\nbitte kalkulieren Sie 48 Stück. Die Lieferung erfolgt an Anka-Freudenberger-Platz 84/81, 27618 Cuxhaven. Die Zahlung geht auf die IBAN DE51 4482 7226 9222 6221 67. Unsere USt-IdNr. lautet DE191737022. Kontakt: 0172-5214115, Christa-Maria Knappe B.Sc..",
+      "spans": [
+        {
+          "start": 101,
+          "end": 131,
+          "type": "ADDRESS_STREET",
+          "text": "Anka-Freudenberger-Platz 84/81",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 133,
+          "end": 147,
+          "type": "POSTCODE_CITY",
+          "text": "27618 Cuxhaven",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 179,
+          "end": 206,
+          "type": "IBAN",
+          "text": "DE51 4482 7226 9222 6221 67",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 232,
+          "end": 243,
+          "type": "VAT_ID",
+          "text": "DE191737022",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 254,
+          "end": 266,
+          "type": "PHONE",
+          "text": "0172-5214115",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 268,
+          "end": 294,
+          "type": "PERSON",
+          "text": "Christa-Maria Knappe B.Sc.",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-01",
+      "style": "formal_letter",
+      "category": "quote_request",
+      "text": "Sehr geehrte Damen und Herren,\n\nmein Name ist Dr. Helma Keudel von Jockel. Wir benötigen ein Angebot über 1200 Einheiten. Sie erreichen mich unter +49 89 67699287 oder dr.helma.keudel@beispiel.example.\n\nMit freundlichen Grüßen\nDr. Helma Keudel\nHans-Theo-Bähr-Straße 102, 79623 Donaueschingen\n",
+      "spans": [
+        {
+          "start": 46,
+          "end": 62,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 67,
+          "end": 73,
+          "type": "ORG",
+          "text": "Jockel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 147,
+          "end": 162,
+          "type": "PHONE",
+          "text": "+49 89 67699287",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 168,
+          "end": 200,
+          "type": "EMAIL",
+          "text": "dr.helma.keudel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 227,
+          "end": 243,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 244,
+          "end": 269,
+          "type": "ADDRESS_STREET",
+          "text": "Hans-Theo-Bähr-Straße 102",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 271,
+          "end": 291,
+          "type": "POSTCODE_CITY",
+          "text": "79623 Donaueschingen",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-02",
+      "style": "web_form",
+      "category": "support",
+      "text": "Guten Tag, bei der Bestellung über https://www.beispiel.example/impressum ist ein Fehler aufgetreten. Bitte rufen Sie mich unter +49 89 67699287 zurück. Meine Rechnungsadresse lautet Hans-Theo-Bähr-Straße 102, 79623 Donaueschingen. Vielen Dank, Dr. Helma Keudel.",
+      "spans": [
+        {
+          "start": 35,
+          "end": 73,
+          "type": "URL",
+          "text": "https://www.beispiel.example/impressum",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 129,
+          "end": 144,
+          "type": "PHONE",
+          "text": "+49 89 67699287",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 183,
+          "end": 208,
+          "type": "ADDRESS_STREET",
+          "text": "Hans-Theo-Bähr-Straße 102",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 210,
+          "end": 230,
+          "type": "POSTCODE_CITY",
+          "text": "79623 Donaueschingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 245,
+          "end": 261,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-03",
+      "style": "email",
+      "category": "job_application",
+      "text": "Bewerbung als Marketing Managerin\n\nSehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich auf die ausgeschriebene Stelle. Geboren am 16.02.2007 in 79623 Donaueschingen. Für eine Rückerstattung nenne ich meine IBAN DE35 8530 9385 2904 0627 84. Sie erreichen mich per E-Mail an dr.helma.keudel@beispiel.example.\n\nFreundliche Grüße\nDr. Helma Keudel",
+      "spans": [
+        {
+          "start": 135,
+          "end": 145,
+          "type": "DATE_OF_BIRTH",
+          "text": "16.02.2007",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 149,
+          "end": 169,
+          "type": "POSTCODE_CITY",
+          "text": "79623 Donaueschingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 216,
+          "end": 243,
+          "type": "IBAN",
+          "text": "DE35 8530 9385 2904 0627 84",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 278,
+          "end": 310,
+          "type": "EMAIL",
+          "text": "dr.helma.keudel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 331,
+          "end": 347,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-04",
+      "style": "formal_letter",
+      "category": "partnership",
+      "text": "Sehr geehrte Damen und Herren,\n\nwir, die Jockel, möchten eine Zusammenarbeit vorschlagen. Unsere Umsatzsteuer-Identifikationsnummer lautet DE551570701, unsere Website ist https://www.beispiel.example/impressum. Ansprechpartner ist Dr. Helma Keudel, telefonisch erreichbar unter +49 89 67699287.\n\nMit freundlichen Grüßen\nJockel\n",
+      "spans": [
+        {
+          "start": 41,
+          "end": 47,
+          "type": "ORG",
+          "text": "Jockel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 139,
+          "end": 150,
+          "type": "VAT_ID",
+          "text": "DE551570701",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 171,
+          "end": 209,
+          "type": "URL",
+          "text": "https://www.beispiel.example/impressum",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 231,
+          "end": 247,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 278,
+          "end": 293,
+          "type": "PHONE",
+          "text": "+49 89 67699287",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 320,
+          "end": 326,
+          "type": "ORG",
+          "text": "Jockel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-05",
+      "style": "web_form",
+      "category": "quote_request",
+      "text": "Anfrage: Bitte senden Sie das Angebot an dr.helma.keudel@beispiel.example. Rückfragen richten Sie bitte ebenfalls an dr.helma.keudel@beispiel.example oder telefonisch an Dr. Helma Keudel unter +49 89 67699287.",
+      "spans": [
+        {
+          "start": 41,
+          "end": 73,
+          "type": "EMAIL",
+          "text": "dr.helma.keudel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 117,
+          "end": 149,
+          "type": "EMAIL",
+          "text": "dr.helma.keudel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 170,
+          "end": 186,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 193,
+          "end": 208,
+          "type": "PHONE",
+          "text": "+49 89 67699287",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-06",
+      "style": "formal_letter",
+      "category": "support",
+      "text": "Sehr geehrte Damen und Herren,\n\nich habe am 16.02.2007 einen Vertrag abgeschlossen und erreiche Sie unter +49 89 67699287. Bitte senden Sie die Unterlagen an Hans-Theo-Bähr-Straße 102, 79623 Donaueschingen.\n\nMit freundlichen Grüßen\nDr. Helma Keudel",
+      "spans": [
+        {
+          "start": 44,
+          "end": 54,
+          "type": "DATE_OF_BIRTH",
+          "text": "16.02.2007",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 106,
+          "end": 121,
+          "type": "PHONE",
+          "text": "+49 89 67699287",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 158,
+          "end": 183,
+          "type": "ADDRESS_STREET",
+          "text": "Hans-Theo-Bähr-Straße 102",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 185,
+          "end": 205,
+          "type": "POSTCODE_CITY",
+          "text": "79623 Donaueschingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 232,
+          "end": 248,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-07",
+      "style": "web_form",
+      "category": "other",
+      "text": "Hallo, ich möchte mich über das Angebot auf https://www.beispiel.example/impressum informieren. Bitte kontaktieren Sie Dr. Helma Keudel per E-Mail an dr.helma.keudel@beispiel.example.",
+      "spans": [
+        {
+          "start": 44,
+          "end": 82,
+          "type": "URL",
+          "text": "https://www.beispiel.example/impressum",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 119,
+          "end": 135,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 150,
+          "end": 182,
+          "type": "EMAIL",
+          "text": "dr.helma.keudel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-08",
+      "style": "email",
+      "category": "job_application",
+      "text": "Sehr geehrte Damen und Herren,\n\nDr. Helma Keudel bewirbt sich bei Jockel. Telefonisch erreichbar unter +49 89 67699287. Die Bewerbungsunterlagen finden Sie unter https://www.beispiel.example/impressum.\n\nMit freundlichen Grüßen\nDr. Helma Keudel",
+      "spans": [
+        {
+          "start": 32,
+          "end": 48,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 66,
+          "end": 72,
+          "type": "ORG",
+          "text": "Jockel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 103,
+          "end": 118,
+          "type": "PHONE",
+          "text": "+49 89 67699287",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 162,
+          "end": 200,
+          "type": "URL",
+          "text": "https://www.beispiel.example/impressum",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 227,
+          "end": 243,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-09",
+      "style": "formal_letter",
+      "category": "other",
+      "text": "Sehr geehrte Damen und Herren,\n\nanbei meine Anfrage. Absender: Jockel, Hans-Theo-Bähr-Straße 102, 79623 Donaueschingen. Rücksendung bitte an dr.helma.keudel@beispiel.example. Gezeichnet: Dr. Helma Keudel.",
+      "spans": [
+        {
+          "start": 63,
+          "end": 69,
+          "type": "ORG",
+          "text": "Jockel",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 71,
+          "end": 96,
+          "type": "ADDRESS_STREET",
+          "text": "Hans-Theo-Bähr-Straße 102",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 98,
+          "end": 118,
+          "type": "POSTCODE_CITY",
+          "text": "79623 Donaueschingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 141,
+          "end": 173,
+          "type": "EMAIL",
+          "text": "dr.helma.keudel@beispiel.example",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 187,
+          "end": 203,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    },
+    {
+      "id": "syn-05-10",
+      "style": "email",
+      "category": "quote_request",
+      "text": "Betreff: Angebot über 1200 Stück\n\nGuten Tag,\n\nbitte kalkulieren Sie 1200 Stück. Die Lieferung erfolgt an Hans-Theo-Bähr-Straße 102, 79623 Donaueschingen. Die Zahlung geht auf die IBAN DE35 8530 9385 2904 0627 84. Unsere USt-IdNr. lautet DE551570701. Kontakt: +49 89 67699287, Dr. Helma Keudel.",
+      "spans": [
+        {
+          "start": 105,
+          "end": 130,
+          "type": "ADDRESS_STREET",
+          "text": "Hans-Theo-Bähr-Straße 102",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 132,
+          "end": 152,
+          "type": "POSTCODE_CITY",
+          "text": "79623 Donaueschingen",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 184,
+          "end": 211,
+          "type": "IBAN",
+          "text": "DE35 8530 9385 2904 0627 84",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 237,
+          "end": 248,
+          "type": "VAT_ID",
+          "text": "DE551570701",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 259,
+          "end": 274,
+          "type": "PHONE",
+          "text": "+49 89 67699287",
+          "score": 0.99,
+          "source": "fixture"
+        },
+        {
+          "start": 276,
+          "end": 292,
+          "type": "PERSON",
+          "text": "Dr. Helma Keudel",
+          "score": 0.99,
+          "source": "fixture"
+        }
+      ]
+    }
+  ]
+}

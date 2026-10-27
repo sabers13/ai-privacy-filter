@@ -4,10 +4,12 @@ The filter pseudonymises personal data in customer enquiries on your machine
 before the text reaches an AI model. The model drafts a reply with placeholders
 in it; the filter puts the details back for a human to review.
 
-**Status: foundation (T01).** The package layout, the pydantic contracts, the
-deterministic fake backend, CI and the local checks exist. Detection, placeholder
-mapping, the guard, the HTTP service and the CLI are typed stubs that raise
-`NotImplementedError` until their tasks land. Nothing here has been evaluated yet.
+**Status: foundation (T01) and pseudonymisation (T03).** The package layout, the
+pydantic contracts, the deterministic fake backend, CI and the local checks exist.
+Placeholder mapping, restoration and the outbound guard are implemented.
+Detection, the HTTP service, the CLI and the real backends are typed stubs that
+raise `NotImplementedError` until their tasks land. Nothing here has been
+evaluated yet.
 
 ## How it is meant to work
 
@@ -31,6 +33,7 @@ Requires Python 3.12 or newer and [uv](https://docs.astral.sh/uv/).
 ```sh
 make setup   # install dependencies and the pinned German spaCy model
 make test    # unit and contract tests, no network and no live model calls
+make test-local  # run the local filter path with sockets disabled (no-network proof)
 make lint    # ruff and mypy --strict on src/
 ```
 

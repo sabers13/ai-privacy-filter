@@ -26,3 +26,5 @@ jobs:
         run: uv run mypy --strict src
       - name: Tests (no live markers)
         run: uv run pytest -m "not live and not e2e"
+      - name: No-network proof
+        run: uv run pytest tests/test_local_only.py --disable-socket
