@@ -280,6 +280,26 @@ def _example_for(
     return example.model_dump(mode="json")
 
 
+def _blocked_example(enquiry: Enquiry) -> dict[str, Any] | None:
+    """Build a page example for an enquiry whose outbound audit stopped the call."""
+    predicted, missing = detection_for(enquiry)
+    redaction = redact(enquiry.text, predicted)
+    example = PageExample(
+        id=enquiry.id,
+        original=enquiry.text,
+        redacted=redaction.redacted_text,
+        reply_draft_redacted="",
+        reply_draft_restored="",
+        spans=predicted,
+        misses=missing,
+        category=enquiry.gold_category,
+        urgency=enquiry.gold_urgency,
+        backend="guard-blocked",
+        mock=False,
+    )
+    return example.model_dump(mode="json")
+
+
 def build_examples_from_demos(
     root: Path, output_dir: Path
 ) -> tuple[list[dict[str, Any]], list[str]]:
@@ -302,9 +322,13 @@ def build_examples_from_demos(
         if not isinstance(identifier, str) or identifier not in rows:
             continue
         stored = _read_json(root / "results" / "page" / "responses" / f"{identifier}.json")
-        if stored.get("status") != STATUS_OK:
-            continue
         backend = str(item.get("backend") or manifest.get("backend") or "claude-cli")
+        if stored.get("status") != STATUS_OK:
+            example = _blocked_example(rows[identifier])
+            if example is not None:
+                examples.append(example)
+                backends.add("guard-blocked")
+            continue
         example = _example_for(rows[identifier], stored, backend=backend)
         if example is None:
             continue

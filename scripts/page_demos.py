@@ -30,6 +30,7 @@ from ai_privacy_filter.evaluation.corpus import CATEGORY_ORDER, load_split, sha2
 from ai_privacy_filter.evaluation.locks import LIVE_LOCK_NAME, DirectoryLock, LockTimeout
 from ai_privacy_filter.evaluation.page_data import detection_for
 from ai_privacy_filter.evaluation.triage_eval import (
+    STATUS_LEAK,
     STATUS_OK,
     GuardRefused,
     _response_record,
@@ -173,9 +174,33 @@ def main(argv: list[str] | None = None) -> int:
         print(f"page_demos: live lock held; {len(selected)} examples", file=sys.stderr)
         items: list[dict[str, Any]] = []
         for enquiry in selected:
-            stored: dict[str, Any] | None = None
             used_backend = str(args.backend)
-            stored = _call(enquiry, used_backend, run_id=str(args.run_id), timeout_s=args.timeout)
+            blocked = False
+            stored: dict[str, Any] | None = None
+            if enquiry.id in miss_ids:
+                redaction = default_pipeline().redact_text(enquiry.text)
+                prompt = build_prompt(redaction.redacted_text)
+                prompt_leaks = leaked_types(prompt, enquiry.gold_spans)
+                if prompt_leaks:
+                    stored = _response_record(
+                        run_id=str(args.run_id),
+                        backend=used_backend,
+                        enquiry_id=enquiry.id,
+                        status=STATUS_LEAK,
+                        error_kind=STATUS_LEAK,
+                        model=None,
+                        latency_ms=0,
+                        usage=None,
+                        prompt_sha256=sha256_text(prompt),
+                        text=None,
+                        parsed=None,
+                        leaked=prompt_leaks,
+                    )
+                    blocked = True
+            if stored is None:
+                stored = _call(
+                    enquiry, used_backend, run_id=str(args.run_id), timeout_s=args.timeout
+                )
             if stored is None and args.fallback_backend != args.backend:
                 used_backend = str(args.fallback_backend)
                 stored = _call(
@@ -193,12 +218,14 @@ def main(argv: list[str] | None = None) -> int:
                 {
                     "id": enquiry.id,
                     "backend": used_backend,
+                    "blocked": blocked,
                     "deliberate_miss": enquiry.id in miss_ids,
                     "response_sha256": stored["response_sha256"],
                     "prompt_sha256": stored["prompt_sha256"],
                 }
             )
-            print(f"page_demos: {enquiry.id} ok ({used_backend})", file=sys.stderr)
+            state = "blocked (prompt leak)" if blocked else "ok"
+            print(f"page_demos: {enquiry.id} {state} ({used_backend})", file=sys.stderr)
     except LockTimeout as exc:
         print(f"page_demos: {exc}", file=sys.stderr)
         return 1
