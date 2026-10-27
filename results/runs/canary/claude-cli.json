@@ -1,0 +1,45 @@
+{
+  "argv": [
+    "claude",
+    "-p",
+    "--output-format",
+    "json",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--no-session-persistence",
+    "--setting-sources",
+    "",
+    "--settings",
+    "{\"disableAllHooks\":true,\"forceLoginMethod\":\"claudeai\",\"promptSuggestionEnabled\":false}"
+  ],
+  "backend": "claude-cli",
+  "canary_token_absent": true,
+  "env_names": [
+    "CLAUDE_CODE_DISABLE_FAST_MODE",
+    "COLORTERM",
+    "HOME",
+    "LANG",
+    "LOGNAME",
+    "PATH",
+    "SHELL",
+    "TERM",
+    "USER",
+    "XDG_RUNTIME_DIR"
+  ],
+  "error_kind": null,
+  "generated_at": "2026-10-27T11:51:55.796890+00:00",
+  "latency_ms": 11457,
+  "model": "claude-opus-5-5",
+  "no_tool_events": true,
+  "package_version": "0.1.0",
+  "prompt_sha256": "c2840bcb770d33fe866b4f3c21ef060e86a820a35115d115f72c1081ec256497",
+  "schema_valid": true,
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 269,
+    "reasoning_tokens": null,
+    "total_tokens": 271
+  }
+}

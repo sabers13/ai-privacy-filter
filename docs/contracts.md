@@ -122,7 +122,13 @@ class LLMBackend(Protocol):
 | `error_kind` | `str \| None` | `None` on success; otherwise the failure kind |
 
 Provider failures are returned, not raised: a backend failure must not abort the
-caller with an exception.
+caller with an exception. `error_kind` is drawn from a fixed vocabulary
+(`not_installed`, `not_configured`, `timeout`, `auth_error`, `billing_error`,
+`quota_exhausted`, `rate_limited`, `tool_use`, `cli_error`, `http_error`,
+`network_error`, `empty_response`, `invalid_response`, `invalid_json`,
+`schema_error`); `docs/backends.md` defines each one, the exact CLI argv, the
+hermetic environment and the quarantine model (fresh empty temp directory, stdin
+prompt, prompt never in argv).
 
 ### Fake backend
 
@@ -215,19 +221,20 @@ Shape:
 }
 ```
 
-## Stub status after T01
+## Stub status after T06
 
 | module | state | lands in |
 |---|---|---|
 | `models.py` | complete | T01 |
 | `backends/fake.py` | complete | T01 |
-| `backends/registry.py` | registration works, backends stubs | T06 fills the backends |
+| `backends/registry.py` | complete: registered backends, no probing | T01/T06 |
+| `backends/byok.py`, `claude_cli.py`, `codex_cli.py` | complete | T06 |
+| `backends/env.py`, `isolation.py`, `schema.py`, `quota.py` | complete | T06 |
 | `detect.py` | raises `NotImplementedError` | T02 |
 | `pseudonymise.py`, `guard.py` | complete | T03 |
 | `triage.py` | schema fixed, functions raise `NotImplementedError` | T06/T12 |
 | `api.py` | raises `NotImplementedError` | T08 |
 | `cli.py` | parser works, execution raises `NotImplementedError` | T08/T13 |
-| `backends/byok.py`, `claude_cli.py`, `codex_cli.py`, `quota.py` | raise `NotImplementedError` | T06 |
 
 ## Wording rules
 

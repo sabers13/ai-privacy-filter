@@ -1,0 +1,5 @@
+{"type": "thread.started", "thread_id": "00000000-0000-4000-8000-000000000010"}
+{"type": "turn.started"}
+{"type": "item.completed", "item": {"id": "item_0", "type": "reasoning", "text": "Synthetic enquiry, no tools needed."}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "agent_message", "text": "{\"category\": \"SUPPORT\", \"urgency\": \"HIGH\", \"reply_draft\": \"Guten Tag [PERSON_1], danke fuer Ihre Nachricht. Wir melden uns mit einer Loesung.\"}"}}
+{"type": "turn.completed", "usage": {"input_tokens": 900, "cached_input_tokens": 128, "output_tokens": 40, "reasoning_output_tokens": 12}}

@@ -1,8 +1,9 @@
 """Backend registry.
 
-T01 registers the implemented fake backend plus typed placeholders for the
-backends that land in T06. ``available_backends`` lists registrations without
-probing them; probing is a separate, explicit call per backend.
+``get_backend`` constructs one backend by name; ``available_backends`` lists the
+registered names in stable order. Listing does not probe a backend: probing is an
+explicit ``is_available()`` call per backend, so importing the registry never
+touches the network, the CLI binaries or a credential.
 """
 
 from __future__ import annotations
@@ -24,7 +25,11 @@ _REGISTRY: dict[str, Callable[[], LLMBackend]] = {
 
 
 def get_backend(name: str) -> LLMBackend:
-    """Return a new backend instance for ``name``."""
+    """Return a new backend instance for ``name``.
+
+    Raises:
+        ValueError: if ``name`` is not registered.
+    """
     try:
         factory = _REGISTRY[name]
     except KeyError as exc:
@@ -33,5 +38,9 @@ def get_backend(name: str) -> LLMBackend:
 
 
 def available_backends() -> tuple[str, ...]:
-    """Return registered backend names in stable order."""
+    """Return registered backend names in stable order.
+
+    A registered backend is not necessarily usable: call ``is_available()`` on
+    the instance to learn whether its binary or configuration is present.
+    """
     return tuple(_REGISTRY)

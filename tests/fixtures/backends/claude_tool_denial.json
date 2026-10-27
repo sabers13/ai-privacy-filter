@@ -1,0 +1,26 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 1600,
+  "duration_api_ms": 1500,
+  "num_turns": 4,
+  "result": "{\"category\": \"SUPPORT\", \"urgency\": \"HIGH\", \"reply_draft\": \"Guten Tag [PERSON_1], wir pruefen Ihr Anliegen.\"}",
+  "session_id": "00000000-0000-4000-8000-000000000004",
+  "usage": {
+    "input_tokens": 1800,
+    "output_tokens": 60
+  },
+  "modelUsage": {
+    "claude-synthetic-model": {
+      "inputTokens": 1800,
+      "outputTokens": 60
+    }
+  },
+  "permission_denials": [
+    {
+      "tool_name": "Read",
+      "tool_use_id": "toolu_synthetic_01"
+    }
+  ]
+}

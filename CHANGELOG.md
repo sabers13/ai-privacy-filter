@@ -34,6 +34,15 @@ All notable changes to this project are documented here.
 - `.gitleaks.toml` keeps the git-ignored GermEval text out of the generic API-key
   rule, because its citation URLs contain `key=` query strings; every tracked
   file is still scanned.
+- T06 LLM backends ported from SaberOps (Apache-2.0): `claude-cli` and
+  `codex-cli` run the native CLIs with every tool disabled inside a fresh empty
+  temporary directory, on a stdin-fed prompt and a hermetic environment;
+  `byok` speaks OpenAI-compatible chat completions for OpenCode Go and a local
+  Ollama endpoint. Billing pins, native result parsing, quota/rate-limit
+  classification and the exact argv are documented in `docs/backends.md`.
+- Backend tests with recorded synthetic fixtures: exact argv, isolation cleanup,
+  schema validation, error kinds and the quota rules. One `live` canary per
+  backend, run once under the shared live-LLM lock.
 
 ## [0.1.0] - 2026-10-27
 

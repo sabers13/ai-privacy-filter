@@ -1,0 +1,25 @@
+{
+  "backend": "byok",
+  "canary_token_absent": true,
+  "endpoint_host": "configured-private-endpoint",
+  "error_kind": null,
+  "generated_at": "2026-10-27T11:52:08.566051+00:00",
+  "headers": {
+    "authorization": "bearer [redacted]",
+    "user-agent": "ai-privacy-filter/0.1.0",
+    "x-opencode-session": "fresh uuid per enquiry (not logged)"
+  },
+  "latency_ms": 3780,
+  "model": "deepseek-v4.1-flash",
+  "no_tool_events": true,
+  "package_version": "0.1.0",
+  "reasoning_tokens": 246,
+  "schema_valid": true,
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 227,
+    "output_tokens": 323,
+    "reasoning_tokens": 246,
+    "total_tokens": 550
+  }
+}

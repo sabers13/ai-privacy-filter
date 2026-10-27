@@ -1,0 +1,28 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 1420,
+  "duration_api_ms": 1300,
+  "num_turns": 1,
+  "result": "{\"category\": \"QUOTE_REQUEST\", \"urgency\": \"NORMAL\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank fuer Ihre Anfrage. Wir senden Ihnen ein Angebot zu.\"}",
+  "session_id": "00000000-0000-4000-8000-000000000001",
+  "total_cost_usd": 0.0012,
+  "usage": {
+    "input_tokens": 1200,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 64,
+    "output_tokens": 48
+  },
+  "modelUsage": {
+    "claude-synthetic-model": {
+      "inputTokens": 1200,
+      "outputTokens": 48,
+      "cacheReadInputTokens": 64,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0012
+    }
+  },
+  "permission_denials": []
+}

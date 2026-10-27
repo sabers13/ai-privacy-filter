@@ -1,4 +1,8 @@
-"""Every T01 stub raises NotImplementedError with a useful message."""
+"""Every remaining T01 stub raises NotImplementedError with a useful message.
+
+The real backends and quota classification land in T06 and are covered by the
+backend test modules; the pipeline, triage prompt and service still stubs here.
+"""
 
 from __future__ import annotations
 
@@ -10,9 +14,6 @@ from ai_privacy_filter.backends.byok import BYOKBackend
 from ai_privacy_filter.backends.claude_cli import ClaudeCLIBackend
 from ai_privacy_filter.backends.codex_cli import CodexCLIBackend
 from ai_privacy_filter.backends.fake import FakeBackend
-from ai_privacy_filter.backends.quota import classify_quota
-
-BACKEND_STUBS = [BYOKBackend(), ClaudeCLIBackend(), CodexCLIBackend()]
 
 
 def test_detect_is_a_stub() -> None:
@@ -39,25 +40,21 @@ def test_cli_is_a_stub() -> None:
         cli.main(["redact", "Synthetic text"])
 
 
-@pytest.mark.parametrize("backend", BACKEND_STUBS, ids=lambda backend: backend.name)
-def test_backend_stubs(backend: object) -> None:
-    with pytest.raises(NotImplementedError):
-        backend.is_available()  # type: ignore[attr-defined]
-    with pytest.raises(NotImplementedError):
-        backend.complete_json("Synthetic prompt", {}, 5)  # type: ignore[attr-defined]
-
-
-def test_quota_is_a_stub() -> None:
-    with pytest.raises(NotImplementedError):
-        classify_quota("")
-
-
-def test_registry_lists_backends_and_builds_fake() -> None:
+def test_registry_lists_backends_and_builds_each_type() -> None:
     assert registry.available_backends() == ("fake", "byok", "claude-cli", "codex-cli")
-    backend = registry.get_backend("fake")
-    assert isinstance(backend, FakeBackend)
+    assert isinstance(registry.get_backend("fake"), FakeBackend)
+    assert isinstance(registry.get_backend("byok"), BYOKBackend)
+    assert isinstance(registry.get_backend("claude-cli"), ClaudeCLIBackend)
+    assert isinstance(registry.get_backend("codex-cli"), CodexCLIBackend)
 
 
 def test_registry_rejects_unknown_backend() -> None:
     with pytest.raises(ValueError, match="unknown backend"):
         registry.get_backend("nope")
+
+
+@pytest.mark.parametrize("name", ["byok", "claude-cli", "codex-cli"])
+def test_registry_listing_does_not_probe(name: str) -> None:
+    backend = registry.get_backend(name)
+    assert isinstance(backend.name, str)
+    assert callable(backend.is_available)

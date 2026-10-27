@@ -1,0 +1,24 @@
+{
+  "id": "chatcmpl-synthetic-01",
+  "object": "chat.completion",
+  "created": 1770000000,
+  "model": "deepseek-v4.1-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"category\": \"OTHER\", \"urgency\": \"LOW\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank. Wir melden uns zeitnah.\"}",
+        "reasoning_content": "Synthetic reasoning that must never be parsed."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 800,
+    "completion_tokens": 64,
+    "total_tokens": 864,
+    "prompt_tokens_details": {"cached_tokens": 128},
+    "completion_tokens_details": {"reasoning_tokens": 21}
+  }
+}

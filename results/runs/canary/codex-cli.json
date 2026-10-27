@@ -1,0 +1,51 @@
+{
+  "argv": [
+    "codex",
+    "exec",
+    "--json",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--ignore-user-config",
+    "--sandbox",
+    "read-only",
+    "-C",
+    "<canary-root>/<tempdir>",
+    "--output-schema",
+    "<canary-root>/<tempdir>/schema.json",
+    "-c",
+    "forced_login_method=\"chatgpt\"",
+    "-c",
+    "model_provider=\"openai\"",
+    "-c",
+    "service_tier=\"default\"",
+    "-"
+  ],
+  "backend": "codex-cli",
+  "canary_token_absent": true,
+  "env_names": [
+    "COLORTERM",
+    "HOME",
+    "LANG",
+    "LOGNAME",
+    "PATH",
+    "SHELL",
+    "TERM",
+    "USER",
+    "XDG_RUNTIME_DIR"
+  ],
+  "error_kind": null,
+  "generated_at": "2026-10-27T11:52:04.783552+00:00",
+  "latency_ms": 8981,
+  "model": null,
+  "no_tool_events": true,
+  "package_version": "0.1.0",
+  "prompt_sha256": "c2840bcb770d33fe866b4f3c21ef060e86a820a35115d115f72c1081ec256497",
+  "schema_valid": true,
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 18682,
+    "output_tokens": 68,
+    "reasoning_tokens": 0,
+    "total_tokens": 18750
+  }
+}

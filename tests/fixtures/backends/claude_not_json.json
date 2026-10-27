@@ -1,0 +1,15 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 900,
+  "duration_api_ms": 850,
+  "num_turns": 1,
+  "result": "Klar! Hier ist die Antwort: Kategorie QUOTE_REQUEST, Dringlichkeit NORMAL.",
+  "session_id": "00000000-0000-4000-8000-000000000005",
+  "usage": {
+    "input_tokens": 700,
+    "output_tokens": 25
+  },
+  "permission_denials": []
+}

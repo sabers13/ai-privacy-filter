@@ -4,12 +4,13 @@ The filter pseudonymises personal data in customer enquiries on your machine
 before the text reaches an AI model. The model drafts a reply with placeholders
 in it; the filter puts the details back for a human to review.
 
-**Status: foundation (T01) and pseudonymisation (T03).** The package layout, the
-pydantic contracts, the deterministic fake backend, CI and the local checks exist.
-Placeholder mapping, restoration and the outbound guard are implemented.
-Detection, the HTTP service, the CLI and the real backends are typed stubs that
-raise `NotImplementedError` until their tasks land. Nothing here has been
-evaluated yet.
+**Status: foundation (T01), pseudonymisation (T03), synthetic corpus (T04),
+GermEval loader (T05) and real LLM backends (T06).** The package layout, the
+pydantic contracts, placeholder mapping, restoration, the outbound guard, the
+deterministic fake backend, the dataset loaders, the four LLM backends, CI and the
+local checks exist. The detector, the HTTP service, the CLI and the triage prompt
+are typed stubs that raise `NotImplementedError` until their tasks land. Detection
+numbers have not been measured yet, so nothing here has been evaluated yet.
 
 ## How it is meant to work
 
@@ -60,12 +61,13 @@ their tasks land; they exit non-zero with a message.
 ## Layout
 
 ```text
-src/ai_privacy_filter/   package source (contracts, stubs, fake backend)
-data/                    dataset loader and source provenance; data/external/ is git-ignored
+src/ai_privacy_filter/   package source (contracts, backends, pipeline stubs)
+data/                    dataset loaders and source provenance; data/external/ is git-ignored
 docs/contracts.md        contract reference
+docs/backends.md         backend isolation, exact CLI argv and error kinds
 docs/task-notes/         per-task decisions and verification notes
 scripts/                 forbidden-string and secret scans
-tests/                   contract, stub and scan tests
+tests/                   contract, backend, stub and scan tests
 ```
 
 ## Licence
