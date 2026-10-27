@@ -1,7 +1,7 @@
 {
   "artifacts_sha256": {
-    "metrics.json": "6f0649c7d8488648c5aeb3d9b82888b88957df9e55b9359e738f1f3727caf614",
-    "report.md": "b4a4a00f5ae095ed6f2da413001380cfb9fc164fb3e4e3d23e539900f8f906ff"
+    "metrics.json": "ba52ddb8f4f29f838d13c6eafeca1550a3ad1a6165433efbfd53c120b91ba817",
+    "report.md": "9bb4aa2f4d8d43e07abdf35c7b37bed573fff0d2af9f03c3304e2ea8c5636e60"
   },
   "backends": {
     "byok": {
@@ -50,7 +50,7 @@
     "20261027T131500Z-triage-a1ad8ff",
     "--resume"
   ],
-  "commit": "5521590c6739ed24bf8db11a893e858955cd6757",
+  "commit": "a1ad8ff6f37c87b46add16466367879bc5e8ae34",
   "config_sha256": "ae9f6d0268cf3d57427813508fd082fdc3fb28922a0e36e0d94084859d11a873",
   "data_sha256": {
     "synthetic_dev": "fed4fc6f6bb146d9310ce7c20d2c63b67516dcb030fec3443de347eaa76a5100",
@@ -72,6 +72,7 @@
       "backends_added": [
         "ollama"
       ],
+      "commit": "5521590c6739ed24bf8db11a893e858955cd6757",
       "reason": "optional backend run after the primary page export"
     }
   ],

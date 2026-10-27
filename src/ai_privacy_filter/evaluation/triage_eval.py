@@ -381,7 +381,7 @@ def run_triage(
         "status": "running",
         "method_sha256": decision.get("method_sha256"),
         "method_git_blob": decision.get("method_git_blob"),
-        "commit": commit,
+        "commit": existing.get("commit") or commit,
         "dirty": False,
         "config_sha256": config_sha256(effective_timeout),
         "data_sha256": {
@@ -406,6 +406,7 @@ def run_triage(
             {
                 "at": utc_now(),
                 "backends_added": sorted(set(backend_names) - set(existing.get("backends") or {})),
+                "commit": commit,
                 "reason": "optional backend run after the primary page export",
             }
         )

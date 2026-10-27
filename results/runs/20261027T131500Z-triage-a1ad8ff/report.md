@@ -3,7 +3,7 @@
 Run: `20261027T131500Z-triage-a1ad8ff`  
 Stage: `triage`  
 Method SHA-256: `f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86`  
-Commit: `5521590c6739ed24bf8db11a893e858955cd6757`
+Commit: `a1ad8ff6f37c87b46add16466367879bc5e8ae34`
 
 The fixed 40-enquiry subset from METHOD.md section 8.
 Accuracy uses 40 as the denominator for every available backend.
