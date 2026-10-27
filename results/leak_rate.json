@@ -1,0 +1,124 @@
+{
+  "baselines": {
+    "B0": {
+      "guard_block_types": {},
+      "guard_blocks": 0,
+      "leak_rate_pct": 100.0,
+      "leak_wilson_pct": [
+        97.7,
+        100.0
+      ],
+      "leaked_enquiries": 160,
+      "leaked_types": {
+        "ADDRESS_STREET": 33,
+        "IBAN": 18,
+        "ORG": 114,
+        "PERSON": 252
+      },
+      "missed_gold_spans": 421,
+      "partial_gold_spans": 41,
+      "prompt_envelope_sha256": "c55d2bc36196abb447920c5f5b2d746afdc8797b41ff5a0a4c0f466836a77ac5",
+      "records": 160,
+      "residual_gold_chars": {
+        "bootstrap_pct": [
+          38.2,
+          40.9
+        ],
+        "bootstrap_resamples": 10000,
+        "bootstrap_seed": 20261027,
+        "bootstrap_skipped": 0,
+        "rate_pct": 39.5,
+        "total": 19876,
+        "uncovered": 7853
+      }
+    },
+    "B1": {
+      "guard_block_types": {
+        "PERSON": 2
+      },
+      "guard_blocks": 2,
+      "leak_rate_pct": 90.6,
+      "leak_wilson_pct": [
+        85.1,
+        94.2
+      ],
+      "leaked_enquiries": 145,
+      "leaked_types": {
+        "ADDRESS_STREET": 127,
+        "IBAN": 3,
+        "ORG": 55,
+        "PERSON": 14,
+        "PHONE": 20,
+        "POSTCODE_CITY": 136
+      },
+      "missed_gold_spans": 383,
+      "partial_gold_spans": 116,
+      "prompt_envelope_sha256": "c55d2bc36196abb447920c5f5b2d746afdc8797b41ff5a0a4c0f466836a77ac5",
+      "records": 160,
+      "residual_gold_chars": {
+        "bootstrap_pct": [
+          37.8,
+          42.3
+        ],
+        "bootstrap_resamples": 10000,
+        "bootstrap_seed": 20261027,
+        "bootstrap_skipped": 0,
+        "rate_pct": 40.1,
+        "total": 19876,
+        "uncovered": 7971
+      }
+    },
+    "B2": {
+      "guard_block_types": {},
+      "guard_blocks": 0,
+      "leak_rate_pct": 1.9,
+      "leak_wilson_pct": [
+        0.6,
+        5.4
+      ],
+      "leaked_enquiries": 3,
+      "leaked_types": {
+        "POSTCODE_CITY": 3
+      },
+      "missed_gold_spans": 4,
+      "partial_gold_spans": 1,
+      "prompt_envelope_sha256": "c55d2bc36196abb447920c5f5b2d746afdc8797b41ff5a0a4c0f466836a77ac5",
+      "records": 160,
+      "residual_gold_chars": {
+        "bootstrap_pct": [
+          0.0,
+          0.8
+        ],
+        "bootstrap_resamples": 10000,
+        "bootstrap_seed": 20261027,
+        "bootstrap_skipped": 0,
+        "rate_pct": 0.4,
+        "total": 19876,
+        "uncovered": 70
+      }
+    }
+  },
+  "dataset": "synthetic_test",
+  "provenance": {
+    "b2_profile": "strict",
+    "config_sha256": "68a8b18ac97220e2df849ec9dc3014bf5113054a6a2dd87116f535857e2e6dba",
+    "environment": {
+      "faker": "40.43.0",
+      "platform": "linux-x86_64",
+      "presidio": "2.2.366",
+      "python": "3.12.3",
+      "spacy": "3.8.18",
+      "spacy_model": "de_core_news_lg-3.8.0"
+    },
+    "germeval_manifest_sha256": "9bf93fedb4b57e38a48b546d67e82f4f2d9ff3367339035e9aed83e1728389f1",
+    "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
+    "network": "blocked during scoring (after data download and cache warm-up)",
+    "prompt_envelope_sha256": "c55d2bc36196abb447920c5f5b2d746afdc8797b41ff5a0a4c0f466836a77ac5",
+    "synthetic_test_sha256": "1751adafa08dc54c7389c044651b1337f4d7d8dcc6e75ec947e7f53b3ddb133b",
+    "tldextract_cache_file": "de84b5ca2167d4c83e38fb162f2e8738.tldextract.json",
+    "tldextract_cache_sha256": "658f030ec05098967e4f1f4863a5bc8a7844af094fb224b06f079802716349b6",
+    "tldextract_version": "5.4.0"
+  },
+  "records": 160,
+  "schema_version": 1
+}

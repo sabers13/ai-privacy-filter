@@ -1,0 +1,1007 @@
+{
+  "baselines": {
+    "B0": {
+      "description": "The page try-it rule set: fixed patterns, no model, no name list and no PERSON or ORG rule.",
+      "gold_spans": 2789,
+      "ignored_predictions": 0,
+      "key": "B0",
+      "location_incidental": {
+        "coverage_pct": 0.4,
+        "coverage_wilson_pct": [
+          0.2,
+          0.8
+        ],
+        "covered": 6,
+        "gold": 1706,
+        "note": "LOCATION is not a detection target; its class recall is 0% by construction and it is never folded into personal-data recall"
+      },
+      "micro_primary": {
+        "gold": 2789,
+        "protected": 0,
+        "recall_pct": 0.0,
+        "recall_wilson_pct": [
+          0.0,
+          0.1
+        ],
+        "strict_protected": 0,
+        "strict_recall_pct": 0.0,
+        "strict_recall_wilson_pct": [
+          0.0,
+          0.1
+        ]
+      },
+      "name": "B0 — regex-only",
+      "over_masking_secondary": {
+        "bootstrap_skipped": 0,
+        "character_bootstrap_pct": [
+          8.9,
+          48.4
+        ],
+        "character_rate_pct": 26.3,
+        "enquiries_with_extra": 7,
+        "enquiry_rate_pct": 0.1,
+        "enquiry_wilson_pct": [
+          0.1,
+          0.3
+        ],
+        "extra_by_type": {
+          "ADDRESS_STREET": 12,
+          "PHONE": 45
+        },
+        "extra_chars": 57,
+        "false_span_share_pct": 26.7,
+        "false_span_wilson_pct": [
+          10.9,
+          52.0
+        ],
+        "false_spans": 4,
+        "predictions": 15,
+        "records": 5100,
+        "replaced_chars": 217
+      },
+      "per_type": {
+        "ADDRESS_STREET": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": 0.0,
+          "exact_precision_wilson_pct": [
+            0.0,
+            35.4
+          ],
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans)",
+          "partial": 0,
+          "precision_pct": 0.0,
+          "precision_wilson_pct": [
+            0.0,
+            35.4
+          ],
+          "predicted": 7,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "DATE_OF_BIRTH": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "EMAIL": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "IBAN": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "ORG": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 1150,
+          "missed": 1150,
+          "note": "n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": 0.0,
+          "recall_wilson_pct": [
+            0.0,
+            0.3
+          ],
+          "strict_missed": 1150,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": 0.0,
+          "strict_recall_wilson_pct": [
+            0.0,
+            0.3
+          ]
+        },
+        "PERSON": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 1639,
+          "missed": 1639,
+          "note": "n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": 0.0,
+          "recall_wilson_pct": [
+            0.0,
+            0.2
+          ],
+          "strict_missed": 1639,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": 0.0,
+          "strict_recall_wilson_pct": [
+            0.0,
+            0.2
+          ]
+        },
+        "PHONE": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": 0.0,
+          "exact_precision_wilson_pct": [
+            0.0,
+            49.0
+          ],
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans)",
+          "partial": 0,
+          "precision_pct": 0.0,
+          "precision_wilson_pct": [
+            0.0,
+            49.0
+          ],
+          "predicted": 4,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "POSTCODE_CITY": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "URL": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": 0.0,
+          "exact_precision_wilson_pct": [
+            0.0,
+            49.0
+          ],
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans)",
+          "partial": 0,
+          "precision_pct": 0.0,
+          "precision_wilson_pct": [
+            0.0,
+            49.0
+          ],
+          "predicted": 4,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "VAT_ID": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        }
+      },
+      "predicted_spans": 15,
+      "records": 5100
+    },
+    "B1": {
+      "description": "Presidio's default recognizer registry with the pinned German pipeline, no custom recognizers, no cleanup and no merge step.",
+      "gold_spans": 2789,
+      "ignored_predictions": 0,
+      "key": "B1",
+      "location_incidental": {
+        "coverage_pct": 5.6,
+        "coverage_wilson_pct": [
+          4.6,
+          6.8
+        ],
+        "covered": 96,
+        "gold": 1706,
+        "note": "LOCATION is not a detection target; its class recall is 0% by construction and it is never folded into personal-data recall"
+      },
+      "micro_primary": {
+        "gold": 2789,
+        "protected": 2164,
+        "recall_pct": 77.6,
+        "recall_wilson_pct": [
+          76.0,
+          79.1
+        ],
+        "strict_protected": 2118,
+        "strict_recall_pct": 75.9,
+        "strict_recall_wilson_pct": [
+          74.3,
+          77.5
+        ]
+      },
+      "name": "B1 — Presidio defaults + German spaCy",
+      "over_masking_secondary": {
+        "bootstrap_skipped": 0,
+        "character_bootstrap_pct": [
+          21.7,
+          25.4
+        ],
+        "character_rate_pct": 23.6,
+        "enquiries_with_extra": 597,
+        "enquiry_rate_pct": 11.7,
+        "enquiry_wilson_pct": [
+          10.9,
+          12.6
+        ],
+        "extra_by_type": {
+          "ORG": 5645,
+          "PERSON": 2173,
+          "PHONE": 135,
+          "URL": 62
+        },
+        "extra_chars": 8015,
+        "false_span_share_pct": 17.5,
+        "false_span_wilson_pct": [
+          16.1,
+          18.9
+        ],
+        "false_spans": 512,
+        "predictions": 2932,
+        "records": 5100,
+        "replaced_chars": 33990
+      },
+      "per_type": {
+        "ADDRESS_STREET": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "DATE_OF_BIRTH": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "EMAIL": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "IBAN": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "ORG": {
+          "correct": 719,
+          "exact_correct": 692,
+          "exact_precision_pct": 56.7,
+          "exact_precision_wilson_pct": [
+            53.9,
+            59.4
+          ],
+          "gold": 1150,
+          "missed": 376,
+          "note": null,
+          "partial": 29,
+          "precision_pct": 58.9,
+          "precision_wilson_pct": [
+            56.1,
+            61.6
+          ],
+          "predicted": 1221,
+          "protected": 745,
+          "recall_pct": 64.8,
+          "recall_wilson_pct": [
+            62.0,
+            67.5
+          ],
+          "strict_missed": 408,
+          "strict_partial": 24,
+          "strict_protected": 718,
+          "strict_recall_pct": 62.4,
+          "strict_recall_wilson_pct": [
+            59.6,
+            65.2
+          ]
+        },
+        "PERSON": {
+          "correct": 1395,
+          "exact_correct": 1351,
+          "exact_precision_pct": 80.7,
+          "exact_precision_wilson_pct": [
+            78.7,
+            82.5
+          ],
+          "gold": 1639,
+          "missed": 191,
+          "note": null,
+          "partial": 29,
+          "precision_pct": 83.3,
+          "precision_wilson_pct": [
+            81.5,
+            85.0
+          ],
+          "predicted": 1674,
+          "protected": 1419,
+          "recall_pct": 86.6,
+          "recall_wilson_pct": [
+            84.8,
+            88.1
+          ],
+          "strict_missed": 211,
+          "strict_partial": 28,
+          "strict_protected": 1400,
+          "strict_recall_pct": 85.4,
+          "strict_recall_wilson_pct": [
+            83.6,
+            87.0
+          ]
+        },
+        "PHONE": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": 0.0,
+          "exact_precision_wilson_pct": [
+            0.0,
+            20.4
+          ],
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans)",
+          "partial": 0,
+          "precision_pct": 0.0,
+          "precision_wilson_pct": [
+            0.0,
+            20.4
+          ],
+          "predicted": 15,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "POSTCODE_CITY": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "URL": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": 0.0,
+          "exact_precision_wilson_pct": [
+            0.0,
+            14.9
+          ],
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans)",
+          "partial": 0,
+          "precision_pct": 0.0,
+          "precision_wilson_pct": [
+            0.0,
+            14.9
+          ],
+          "predicted": 22,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "VAT_ID": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        }
+      },
+      "predicted_spans": 2932,
+      "records": 5100
+    },
+    "B2": {
+      "description": "Product detector: German NER, Presidio email/URL, every German recognizer, the shared merge rule and the frozen `strict` profile.",
+      "gold_spans": 2789,
+      "ignored_predictions": 0,
+      "key": "B2",
+      "location_incidental": {
+        "coverage_pct": 6.3,
+        "coverage_wilson_pct": [
+          5.3,
+          7.6
+        ],
+        "covered": 108,
+        "gold": 1706,
+        "note": "LOCATION is not a detection target; its class recall is 0% by construction and it is never folded into personal-data recall"
+      },
+      "micro_primary": {
+        "gold": 2789,
+        "protected": 2186,
+        "recall_pct": 78.4,
+        "recall_wilson_pct": [
+          76.8,
+          79.9
+        ],
+        "strict_protected": 2139,
+        "strict_recall_pct": 76.7,
+        "strict_recall_wilson_pct": [
+          75.1,
+          78.2
+        ]
+      },
+      "name": "B2 — full configuration",
+      "over_masking_secondary": {
+        "bootstrap_skipped": 0,
+        "character_bootstrap_pct": [
+          21.7,
+          25.3
+        ],
+        "character_rate_pct": 23.5,
+        "enquiries_with_extra": 615,
+        "enquiry_rate_pct": 12.1,
+        "enquiry_wilson_pct": [
+          11.2,
+          13.0
+        ],
+        "extra_by_type": {
+          "ADDRESS_STREET": 19,
+          "DATE_OF_BIRTH": 18,
+          "ORG": 5660,
+          "PERSON": 2288,
+          "PHONE": 52,
+          "URL": 62
+        },
+        "extra_chars": 8099,
+        "false_span_share_pct": 17.2,
+        "false_span_wilson_pct": [
+          15.8,
+          18.6
+        ],
+        "false_spans": 512,
+        "predictions": 2984,
+        "records": 5100,
+        "replaced_chars": 34493
+      },
+      "per_type": {
+        "ADDRESS_STREET": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": 0.0,
+          "exact_precision_wilson_pct": [
+            0.0,
+            35.4
+          ],
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans)",
+          "partial": 0,
+          "precision_pct": 0.0,
+          "precision_wilson_pct": [
+            0.0,
+            35.4
+          ],
+          "predicted": 7,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "DATE_OF_BIRTH": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": 0.0,
+          "exact_precision_wilson_pct": [
+            0.0,
+            79.3
+          ],
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans)",
+          "partial": 0,
+          "precision_pct": 0.0,
+          "precision_wilson_pct": [
+            0.0,
+            79.3
+          ],
+          "predicted": 1,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "EMAIL": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "IBAN": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "ORG": {
+          "correct": 720,
+          "exact_correct": 694,
+          "exact_precision_pct": 56.8,
+          "exact_precision_wilson_pct": [
+            54.0,
+            59.5
+          ],
+          "gold": 1150,
+          "missed": 372,
+          "note": null,
+          "partial": 30,
+          "precision_pct": 58.9,
+          "precision_wilson_pct": [
+            56.1,
+            61.6
+          ],
+          "predicted": 1222,
+          "protected": 748,
+          "recall_pct": 65.0,
+          "recall_wilson_pct": [
+            62.2,
+            67.7
+          ],
+          "strict_missed": 407,
+          "strict_partial": 23,
+          "strict_protected": 720,
+          "strict_recall_pct": 62.6,
+          "strict_recall_wilson_pct": [
+            59.8,
+            65.4
+          ]
+        },
+        "PERSON": {
+          "correct": 1410,
+          "exact_correct": 1362,
+          "exact_precision_pct": 78.6,
+          "exact_precision_wilson_pct": [
+            76.6,
+            80.5
+          ],
+          "gold": 1639,
+          "missed": 170,
+          "note": null,
+          "partial": 31,
+          "precision_pct": 81.4,
+          "precision_wilson_pct": [
+            79.5,
+            83.2
+          ],
+          "predicted": 1732,
+          "protected": 1438,
+          "recall_pct": 87.7,
+          "recall_wilson_pct": [
+            86.1,
+            89.2
+          ],
+          "strict_missed": 190,
+          "strict_partial": 30,
+          "strict_protected": 1419,
+          "strict_recall_pct": 86.6,
+          "strict_recall_wilson_pct": [
+            84.8,
+            88.1
+          ]
+        },
+        "PHONE": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": 0.0,
+          "exact_precision_wilson_pct": [
+            0.0,
+            43.4
+          ],
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans)",
+          "partial": 0,
+          "precision_pct": 0.0,
+          "precision_wilson_pct": [
+            0.0,
+            43.4
+          ],
+          "predicted": 5,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "POSTCODE_CITY": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "URL": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": 0.0,
+          "exact_precision_wilson_pct": [
+            0.0,
+            18.4
+          ],
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans)",
+          "partial": 0,
+          "precision_pct": 0.0,
+          "precision_wilson_pct": [
+            0.0,
+            18.4
+          ],
+          "predicted": 17,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        },
+        "VAT_ID": {
+          "correct": 0,
+          "exact_correct": 0,
+          "exact_precision_pct": null,
+          "exact_precision_wilson_pct": null,
+          "gold": 0,
+          "missed": 0,
+          "note": "not estimable (no gold spans); n/a (0 predictions)",
+          "partial": 0,
+          "precision_pct": null,
+          "precision_wilson_pct": null,
+          "predicted": 0,
+          "protected": 0,
+          "recall_pct": null,
+          "recall_wilson_pct": null,
+          "strict_missed": 0,
+          "strict_partial": 0,
+          "strict_protected": 0,
+          "strict_recall_pct": null,
+          "strict_recall_wilson_pct": null
+        }
+      },
+      "predicted_spans": 2984,
+      "records": 5100
+    }
+  },
+  "dataset": "germeval_test",
+  "gold": {
+    "LOCATION": 1706,
+    "ORG": 1150,
+    "OTHER": 697,
+    "PERSON": 1639
+  },
+  "miss_categories": [
+    {
+      "category": "no overlapping prediction",
+      "count": 372,
+      "gold_type": "ORG"
+    },
+    {
+      "category": "partial coverage by the other name type",
+      "count": 7,
+      "gold_type": "ORG"
+    },
+    {
+      "category": "partial coverage, same type, boundary differs",
+      "count": 23,
+      "gold_type": "ORG"
+    },
+    {
+      "category": "no overlapping prediction",
+      "count": 170,
+      "gold_type": "PERSON"
+    },
+    {
+      "category": "partial coverage by the other name type",
+      "count": 1,
+      "gold_type": "PERSON"
+    },
+    {
+      "category": "partial coverage, same type, boundary differs",
+      "count": 30,
+      "gold_type": "PERSON"
+    }
+  ],
+  "provenance": {
+    "b2_profile": "strict",
+    "config_sha256": "68a8b18ac97220e2df849ec9dc3014bf5113054a6a2dd87116f535857e2e6dba",
+    "environment": {
+      "faker": "40.43.0",
+      "platform": "linux-x86_64",
+      "presidio": "2.2.366",
+      "python": "3.12.3",
+      "spacy": "3.8.18",
+      "spacy_model": "de_core_news_lg-3.8.0"
+    },
+    "germeval_manifest_sha256": "9bf93fedb4b57e38a48b546d67e82f4f2d9ff3367339035e9aed83e1728389f1",
+    "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
+    "network": "blocked during scoring (after data download and cache warm-up)",
+    "prompt_envelope_sha256": "c55d2bc36196abb447920c5f5b2d746afdc8797b41ff5a0a4c0f466836a77ac5",
+    "synthetic_test_sha256": "1751adafa08dc54c7389c044651b1337f4d7d8dcc6e75ec947e7f53b3ddb133b",
+    "tldextract_cache_file": "de84b5ca2167d4c83e38fb162f2e8738.tldextract.json",
+    "tldextract_cache_sha256": "658f030ec05098967e4f1f4863a5bc8a7844af094fb224b06f079802716349b6",
+    "tldextract_version": "5.4.0"
+  },
+  "schema_version": 1,
+  "sentences": 5100
+}

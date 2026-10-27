@@ -979,10 +979,14 @@ def _append_rerun_row(
         f"| {rows + 1} | - | {run_id} | {STAGE} | {commit[:7]} | {method_sha256[:12]} | "
         f"{changed} | {reason or 'first run'} | {seen} | {approval or '-'} |\n"
     )
-    with path.open("a", encoding="utf-8") as handle:
-        handle.write(row)
-        handle.flush()
-        os.fsync(handle.fileno())
+    text = path.read_text(encoding="utf-8")
+    marker = "\n## Completion log"
+    if marker in text:
+        head, tail = text.split(marker, 1)
+        text = head.rstrip("\n") + "\n" + row + marker + tail
+    else:  # a hand-written file without the completion section
+        text = text.rstrip("\n") + "\n" + row
+    path.write_text(text, encoding="utf-8")
 
 
 def _append_completion(run_id: str, status: str) -> None:
@@ -1317,6 +1321,45 @@ def _latest_detection_run() -> Path | None:
     return sorted(candidates)[-1][1]
 
 
+def run_rerender() -> int:
+    """Re-render the report from the latest run's stored metrics.
+
+    Report wording can change without touching a measurement. This reads only
+    ``metrics.json`` (no test record), rewrites ``SUMMARY.md``, the run's
+    ``report.md`` and ``SHA256SUMS``, and refreshes the run record's artifact
+    hashes. ``make reproduce`` still has to pass afterwards.
+    """
+
+    run_dir = _latest_detection_run()
+    if run_dir is None:
+        print("rerender: no complete detection run found", file=sys.stderr)
+        return 2
+    metrics_path = run_dir / "metrics.json"
+    metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+    detection = metrics["detection"]
+    summary = report.render_summary(
+        detection["synthetic"], detection["germeval"], metrics["leak"], metrics["restore"]
+    )
+    (data.RESULTS_DIR / "SUMMARY.md").write_text(summary, encoding="utf-8")
+    (run_dir / "report.md").write_text(summary, encoding="utf-8")
+    _write_sha256sums()
+
+    run_path = run_dir / "run.json"
+    record = json.loads(run_path.read_text(encoding="utf-8"))
+    artifacts = [
+        *DETECTION_FILES,
+        run_dir / "metrics.json",
+        run_dir / "report.md",
+        *sorted(run_dir.glob("scoring/*.json")),
+    ]
+    record["artifacts_sha256"] = {
+        path.relative_to(data.REPO_ROOT).as_posix(): data.sha256_file(path) for path in artifacts
+    }
+    data.write_json(run_path, record)
+    print(f"rerender: rewrote SUMMARY.md and {run_dir.name}/report.md from stored metrics")
+    return 0
+
+
 def run_reproduce(*, rerun_reason: str | None) -> int:
     """Recompute every artifact and compare it byte for byte."""
 
@@ -1404,6 +1447,9 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     mode.add_argument("--stage", choices=(STAGE,), help="run the one detection test stage")
     mode.add_argument("--tune", action="store_true", help="choose the B2 profile on dev only")
     mode.add_argument("--reproduce", action="store_true", help="rebuild and compare result files")
+    mode.add_argument(
+        "--rerender", action="store_true", help="rewrite the report from stored run metrics"
+    )
     parser.add_argument("--run-id", default=None, help="immutable run id (default: generated)")
     parser.add_argument("--rerun-reason", default=None, help="required for a repeat of a stage")
     parser.add_argument(
@@ -1420,6 +1466,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         return run_tuning()
     if args.reproduce:
         return run_reproduce(rerun_reason=args.rerun_reason)
+    if args.rerender:
+        return run_rerender()
     try:
         return run_test_stage(
             rerun_reason=args.rerun_reason,

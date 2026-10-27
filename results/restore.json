@@ -1,0 +1,36 @@
+{
+  "dataset": "synthetic_test",
+  "draft_restoration": {
+    "reason": "the fixed 40-enquiry backend run lands with T12",
+    "status": "not measured"
+  },
+  "exact_pct": 100.0,
+  "exact_round_trips": 160,
+  "exact_wilson_pct": [
+    97.7,
+    100.0
+  ],
+  "failures": [],
+  "provenance": {
+    "b2_profile": "strict",
+    "config_sha256": "68a8b18ac97220e2df849ec9dc3014bf5113054a6a2dd87116f535857e2e6dba",
+    "environment": {
+      "faker": "40.43.0",
+      "platform": "linux-x86_64",
+      "presidio": "2.2.366",
+      "python": "3.12.3",
+      "spacy": "3.8.18",
+      "spacy_model": "de_core_news_lg-3.8.0"
+    },
+    "germeval_manifest_sha256": "9bf93fedb4b57e38a48b546d67e82f4f2d9ff3367339035e9aed83e1728389f1",
+    "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
+    "network": "blocked during scoring (after data download and cache warm-up)",
+    "prompt_envelope_sha256": "c55d2bc36196abb447920c5f5b2d746afdc8797b41ff5a0a4c0f466836a77ac5",
+    "synthetic_test_sha256": "1751adafa08dc54c7389c044651b1337f4d7d8dcc6e75ec947e7f53b3ddb133b",
+    "tldextract_cache_file": "de84b5ca2167d4c83e38fb162f2e8738.tldextract.json",
+    "tldextract_cache_sha256": "658f030ec05098967e4f1f4863a5bc8a7844af094fb224b06f079802716349b6",
+    "tldextract_version": "5.4.0"
+  },
+  "records": 160,
+  "schema_version": 1
+}

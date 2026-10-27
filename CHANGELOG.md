@@ -109,6 +109,13 @@ All notable changes to this project are documented here.
   hashes and asserts that no GermEval sentence or token run appears in
   `results/`.
 
+### Changed
+
+- `scripts/scan_forbidden.py` scans git history on `HEAD` by default, so an
+  unrelated local work-in-progress branch in a shared checkout cannot fail
+  another branch's gate; `--all-refs` restores the full local audit. A leak in a
+  merged commit is still an ancestor of `HEAD` and is still caught.
+
 ## [0.1.0] - 2026-10-27
 
 ### Added

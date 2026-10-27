@@ -1,0 +1,53 @@
+{
+  "artifacts_sha256": {
+    "results/METHOD_HASH": "0b9bdab5a7dfe8a18ee2684c0672d46fedb40a41001229d512a6abc7b9652245",
+    "results/SUMMARY.md": "ada9a826fd918113de041531130dcd5c99db257eccadedb486e5542a1ba251b8",
+    "results/detection_germeval.json": "4041bbbae71ca45f99234cb2f756fe4afbd4618a11737c7b7c227446d7fac309",
+    "results/detection_synthetic.json": "20d2fea590f602e4a65d24d140f115659f2ec0387bec4045923f0081fb4afaae",
+    "results/leak_rate.json": "a24b4184a1dd1b76d2923e3f41304e01a09f09804b0599719b694ea105ae03dd",
+    "results/restore.json": "21d7dc2b8412d81069c65c57abf2b6da31c1bc350f6460b17986fbfe97bace08",
+    "results/runs/20261027T131852Z-detection-67d6ac9/metrics.json": "f7a573c640e9d9943dbc8c0b4399220b121f239195ceed7eaa96127810e2a84c",
+    "results/runs/20261027T131852Z-detection-67d6ac9/report.md": "ada9a826fd918113de041531130dcd5c99db257eccadedb486e5542a1ba251b8",
+    "results/runs/20261027T131852Z-detection-67d6ac9/scoring/leak.json": "ac2e9fd0691e7156a179dc342033365a70c432553d120cb1a31b924d2accd04e",
+    "results/runs/20261027T131852Z-detection-67d6ac9/scoring/misses.json": "cfbdd262d00d3941e3efacb5dc4ae08e32d1c31010c314f7b6ed3af559416f85",
+    "results/runs/20261027T131852Z-detection-67d6ac9/scoring/overmask.json": "7d9eac59a73bcc05f2c21e5987ae004e9c25efbeab01a3e6d00c48b306bfcf35",
+    "results/runs/20261027T131852Z-detection-67d6ac9/scoring/restore.json": "3cfad8c5b98408e0b5cb0f5153a68e2bf2d2c508e02c181a9183157caa2751d6"
+  },
+  "command": [
+    "python",
+    "-m",
+    "eval.detection",
+    "--stage",
+    "detection",
+    "--run-id",
+    "20261027T131852Z-detection-67d6ac9"
+  ],
+  "commit": "67d6ac919416e60198daeaa82b2dbb777bc4fe9f",
+  "config_sha256": "68a8b18ac97220e2df849ec9dc3014bf5113054a6a2dd87116f535857e2e6dba",
+  "data_sha256": {
+    "germeval_manifest": "9bf93fedb4b57e38a48b546d67e82f4f2d9ff3367339035e9aed83e1728389f1",
+    "synthetic_dev": "fed4fc6f6bb146d9310ce7c20d2c63b67516dcb030fec3443de347eaa76a5100",
+    "synthetic_test": "1751adafa08dc54c7389c044651b1337f4d7d8dcc6e75ec947e7f53b3ddb133b"
+  },
+  "dirty": false,
+  "environment": {
+    "faker": "40.43.0",
+    "platform": "linux-x86_64",
+    "presidio": "2.2.366",
+    "python": "3.12.3",
+    "spacy": "3.8.18",
+    "spacy_model": "de_core_news_lg-3.8.0"
+  },
+  "finished_at": "2026-10-27T13:21:27.944216Z",
+  "method_approval": null,
+  "method_git_blob": "3fe5fc05c9c72a4708e34cba1c0506b7330f1193",
+  "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
+  "mode": "test",
+  "rerun_reason": null,
+  "run_id": "20261027T131852Z-detection-67d6ac9",
+  "schema_version": 1,
+  "stage": "detection",
+  "started_at": "2026-10-27T13:18:52.704985Z",
+  "status": "complete",
+  "supersedes": null
+}

@@ -57,6 +57,24 @@ def _int(cell: str) -> int:
     return int(cell)
 
 
+def test_run_record_matches_the_committed_artifacts() -> None:
+    run_dirs = sorted(RESULTS.glob("runs/*-detection-*"))
+    assert run_dirs
+    record = json.loads((run_dirs[-1] / "run.json").read_text(encoding="utf-8"))
+    assert record["status"] == "complete"
+    assert record["mode"] == "test"
+    assert record["stage"] == "detection"
+    assert record["method_sha256"] == (RESULTS / "METHOD_HASH").read_text(encoding="utf-8").strip()
+    assert (
+        record["config_sha256"]
+        == hashlib.sha256((REPO_ROOT / "eval" / "configs.json").read_bytes()).hexdigest()
+    )
+    for relative, digest in record["artifacts_sha256"].items():
+        path = REPO_ROOT / relative
+        assert path.is_file(), relative
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == digest, relative
+
+
 def test_method_hash_file_matches_the_protocol() -> None:
     recorded = (RESULTS / "METHOD_HASH").read_text(encoding="utf-8").strip()
     assert recorded == hashlib.sha256((REPO_ROOT / "METHOD.md").read_bytes()).hexdigest()
@@ -275,6 +293,11 @@ def test_results_contain_no_germeval_text() -> None:
         path.name: path.read_text(encoding="utf-8")
         for path in (SYNTHETIC, GERMEVAL, LEAK, RESTORE, SUMMARY)
     }
+    run_dirs = sorted(RESULTS.glob("runs/*-detection-*"))
+    if run_dirs:
+        for path in sorted(run_dirs[-1].rglob("*")):
+            if path.is_file():
+                haystacks[f"{path.parent.name}/{path.name}"] = path.read_text(encoding="utf-8")
     for sentence in sentences:
         if len(sentence) >= 20:
             for name, haystack in haystacks.items():
@@ -288,7 +311,7 @@ def test_results_contain_no_germeval_text() -> None:
 
 def test_summary_uses_the_required_wording() -> None:
     text = SUMMARY.read_text(encoding="utf-8")
-    assert "pseudonymises" in text or "Pseudonymisation" in text
+    assert "pseudonymis" in text.lower()
     assert "not legal advice" in text
     for forbidden in ("GDPR-compliant", "anonymised", "anonymized", "fully offline"):
         assert forbidden not in text

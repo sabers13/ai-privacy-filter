@@ -1,0 +1,136 @@
+{
+  "b1": [
+    {
+      "count": 137,
+      "description": "the postcode/city pair is not matched",
+      "example": "Andy Drub Bohlanderweg 839 «27333 Böblingen» E-Mail: odaebert@example.com Telefo…",
+      "example_id": "syn-test-0001",
+      "pattern": "postcode-city-not-matched",
+      "rank": 1,
+      "share_of_type_misses_pct": 100.0,
+      "type": "POSTCODE_CITY"
+    },
+    {
+      "count": 70,
+      "description": "the street shape is not matched",
+      "example": "Andy Drub «Bohlanderweg 839» 27333 Böblingen E-Mail: odaebert@ex…",
+      "example_id": "syn-test-0001",
+      "pattern": "street-not-matched",
+      "rank": 2,
+      "share_of_type_misses_pct": 51.1,
+      "type": "ADDRESS_STREET"
+    },
+    {
+      "count": 65,
+      "description": "the house number is a range (for example `2-5` or `8/8`)",
+      "example": "…wir weiter vorgehen können. Straße: «Stollstr. 34-10» PLZ/Ort: 94706 Wurzen",
+      "example_id": "syn-test-0002",
+      "pattern": "street-house-number-range",
+      "rank": 3,
+      "share_of_type_misses_pct": 47.4,
+      "type": "ADDRESS_STREET"
+    },
+    {
+      "count": 60,
+      "description": "coverage stops at a span boundary",
+      "example": "«Meral Albers B.A.» Patrizia-Röhrdanz-Ring 36 35676 Kul…",
+      "example_id": "syn-test-0008",
+      "pattern": "partial-boundary-person",
+      "rank": 4,
+      "share_of_type_misses_pct": 83.3,
+      "type": "PERSON"
+    },
+    {
+      "count": 52,
+      "description": "a legal form is present, but the organisation is not anchored",
+      "example": "…Mit freundlichen Grüßen Geza Dörr «Weitblick Medien GmbH» Gerfried-Hiller-Gasse 907 98248 Gör…",
+      "example_id": "syn-test-0003",
+      "pattern": "org-legal-form-not-anchored",
+      "rank": 5,
+      "share_of_type_misses_pct": 54.7,
+      "type": "ORG"
+    },
+    {
+      "count": 40,
+      "description": "coverage stops at a span boundary",
+      "example": "…efon: +49(0)1008 32324 Unternehmen: «Weitblick Medien GmbH» Nachricht: Bei der Anmeldung im Kun…",
+      "example_id": "syn-test-0002",
+      "pattern": "partial-boundary-org",
+      "rank": 6,
+      "share_of_type_misses_pct": 42.1,
+      "type": "ORG"
+    },
+    {
+      "count": 22,
+      "description": "the IBAN is wrapped across a line break",
+      "example": "…E-Mail: leonid96@example.com IBAN: «DE76 7794 4898 0223 9735 58»",
+      "example_id": "syn-test-0007",
+      "pattern": "iban-wrapped-across-lines",
+      "rank": 7,
+      "share_of_type_misses_pct": 100.0,
+      "type": "IBAN"
+    },
+    {
+      "count": 16,
+      "description": "coverage stops at a span boundary",
+      "example": "…l: salzphilipp@example.org Telefon: «+49(0)1008 32324» Unternehmen: Weitblick Medien GmbH…",
+      "example_id": "syn-test-0002",
+      "pattern": "partial-boundary-phone",
+      "rank": 8,
+      "share_of_type_misses_pct": 44.4,
+      "type": "PHONE"
+    },
+    {
+      "count": 10,
+      "description": "the number shape is not matched",
+      "example": "…zallee 5817 89841 Miesbach Telefon: «00411 90712»",
+      "example_id": "syn-test-0011",
+      "pattern": "phone-not-matched",
+      "rank": 9,
+      "share_of_type_misses_pct": 27.8,
+      "type": "PHONE"
+    },
+    {
+      "count": 10,
+      "description": "a +49/0049 prefix or bracket form defeats the rule",
+      "example": "…l: ekruschwitz@example.net Telefon: «+49(0)0177 258033»",
+      "example_id": "syn-test-0026",
+      "pattern": "phone-with-prefix-or-brackets",
+      "rank": 10,
+      "share_of_type_misses_pct": 27.8,
+      "type": "PHONE"
+    }
+  ],
+  "b2": [
+    {
+      "count": 3,
+      "description": "the postcode/city pair is not matched",
+      "example": "…nung bitte an: van der Dussenring 7 «00523 Eisleben» IBAN: DE45474642234746224345",
+      "example_id": "syn-test-0006",
+      "pattern": "postcode-city-not-matched",
+      "rank": 1,
+      "share_of_type_misses_pct": 100.0,
+      "type": "POSTCODE_CITY"
+    },
+    {
+      "count": 1,
+      "description": "coverage stops at a span boundary",
+      "example": "…en Mikhail Vogel Vogel Systeme GmbH «van der Dussenplatz 62» 46519 Nürtingen Telefon: +49 (0)64…",
+      "example_id": "syn-test-0014",
+      "pattern": "partial-boundary-address_street",
+      "rank": 2,
+      "share_of_type_misses_pct": 50.0,
+      "type": "ADDRESS_STREET"
+    },
+    {
+      "count": 1,
+      "description": "the street name contains a space before the suffix",
+      "example": "…ieferzeiten zu. Rechnung bitte an: «van der Dussenring 7» 00523 Eisleben IBAN: DE454746422347…",
+      "example_id": "syn-test-0006",
+      "pattern": "street-name-with-space",
+      "rank": 3,
+      "share_of_type_misses_pct": 50.0,
+      "type": "ADDRESS_STREET"
+    }
+  ]
+}

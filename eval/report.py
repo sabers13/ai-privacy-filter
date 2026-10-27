@@ -328,12 +328,17 @@ def _answer_leaked(leak: dict[str, Any]) -> str:
         other.append(f"{name} {payload['leaked_enquiries']}/{payload['records']}")
     types = ", ".join(f"{name} ({count})" for name, count in b2["leaked_types"].items())
     types_text = types or "no type"
+    missed = b2["missed_gold_spans"]
+    partial = b2["partial_gold_spans"]
+    missed_text = "1 gold span was missed" if missed == 1 else f"{missed} gold spans were missed"
+    partial_text = (
+        "1 was only partly covered" if partial == 1 else f"{partial} were only partly covered"
+    )
     return (
         f"**2. Leaked.** B2 leaked {b2['leaked_enquiries']} of {b2['records']} synthetic "
         f"test enquiries ({b2['leak_rate_pct']:.1f}%, 95 % CI "
         f"{format_interval(b2['leak_wilson_pct'])}, upper bound "
-        f"{b2['leak_wilson_pct'][1]:.1f}%). {b2['missed_gold_spans']} gold spans were "
-        f"missed and {b2['partial_gold_spans']} were only partly covered; leaked types: "
+        f"{b2['leak_wilson_pct'][1]:.1f}%). {missed_text} and {partial_text}; leaked types: "
         f"{types_text}. The production guard blocked {b2['guard_blocks']} enquiries; the "
         f"difference between leaks and blocks is the missed-value path. Baselines: "
         f"{'; '.join(other)}."
@@ -654,10 +659,11 @@ def render_summary(
             f"{share} | {row['example_id']}: {row['example']} |"
         )
     if len(b2_patterns) < 10:
+        pattern_word = "pattern" if len(b2_patterns) == 1 else "patterns"
         lines += [
             "",
-            f"B2 produced {len(b2_patterns)} distinct miss pattern(s) on this corpus, short "
-            "of ten. To keep the ten-pattern deliverable without inventing product misses, "
+            f"B2 produced {len(b2_patterns)} distinct miss {pattern_word} on this corpus, "
+            "short of ten. To keep the ten-pattern deliverable without inventing product misses, "
             "the table below lists B1's ten most common miss patterns on the same synthetic "
             "records. They are an untuned baseline's failures, not B2's; they show where a "
             "simpler detector breaks, and no value in them is real.",

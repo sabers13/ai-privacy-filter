@@ -48,8 +48,10 @@ The GermEval 2014 evaluation data is optional. Fetch and verify it with
 Re-run `make setup` after changing dependencies: `uv sync` owns the virtual
 environment and installs the separately pinned model again.
 
-Other targets (`reproduce`, `live`, `e2e`, `page-data`) are honest stubs until
-their tasks land; they exit non-zero with a message.
+`make reproduce` rebuilds the committed detection results from the corpus and the
+verified GermEval download, with the network blocked during scoring, and compares
+them byte for byte. The remaining targets (`live`, `e2e`, `page-data`) are honest
+stubs until their tasks land; they exit non-zero with a message.
 
 ## HTTP service
 

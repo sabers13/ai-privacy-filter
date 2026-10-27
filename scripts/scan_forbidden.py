@@ -153,11 +153,18 @@ def scan_worktree(root: Path, rules: Sequence[Rule]) -> list[str]:
     return reports
 
 
-def scan_history(root: Path, rules: Sequence[Rule]) -> list[str]:
-    """Scan added lines in ``git log -p``; return ``history <commit>:<path>:<line>`` reports."""
+def scan_history(root: Path, rules: Sequence[Rule], *, all_refs: bool = False) -> list[str]:
+    """Scan added lines in ``git log -p``; return ``history <commit>:<path>:<line>`` reports.
+
+    The default scope is ``HEAD``: the gate checks the branch under review, not
+    unrelated local work-in-progress branches in a shared checkout. Pass
+    ``all_refs`` for a full audit of every local branch and tag.
+    """
+
+    revision = ["--all"] if all_refs else ["HEAD"]
     try:
         completed = subprocess.run(
-            ["git", "-C", str(root), "log", "-p", "--all", "--no-color", "--no-ext-diff"],
+            ["git", "-C", str(root), "log", "-p", *revision, "--no-color", "--no-ext-diff"],
             capture_output=True,
             text=True,
             check=False,
@@ -203,6 +210,11 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
         help="skip the git log scan (used by tests and non-git directories)",
     )
     parser.add_argument("--quiet", action="store_true", help="suppress the clean banner")
+    parser.add_argument(
+        "--all-refs",
+        action="store_true",
+        help="scan history on every local branch and tag instead of HEAD only",
+    )
     return parser.parse_args(argv)
 
 
@@ -232,7 +244,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     reports = scan_worktree(root, rules)
     if not args.no_history:
-        reports.extend(scan_history(root, rules))
+        reports.extend(scan_history(root, rules, all_refs=args.all_refs))
 
     for report in reports:
         print(report)

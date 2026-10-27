@@ -1,0 +1,5320 @@
+{
+  "baselines": {
+    "B0": [
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0001",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0002",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0003",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0004",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0005",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0006",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0007",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0008",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0009",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0010",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0011",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0012",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0013",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0014",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0015",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0016",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0017",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0018",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0019",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0020",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0021",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0022",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0023",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0024",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0025",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0026",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0027",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0028",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0029",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0030",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0031",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0032",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0033",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0034",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0035",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0036",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0037",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0038",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0039",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0040",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0041",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0042",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0043",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0044",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0045",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0046",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0047",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0048",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0049",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0050",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0051",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0052",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0053",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0054",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0055",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0056",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0057",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0058",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0059",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0060",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0061",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0062",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0063",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0064",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0065",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0066",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0067",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0068",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0069",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0070",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0071",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0072",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0073",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0074",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0075",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0076",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0077",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0078",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0079",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0080",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0081",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0082",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0083",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0084",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0085",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0086",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0087",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0088",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0089",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0090",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0091",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0092",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0093",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0094",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0095",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0096",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0097",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0098",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0099",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0100",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0101",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0102",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0103",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0104",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0105",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0106",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0107",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0108",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0109",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0110",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0111",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0112",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0113",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0114",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0115",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0116",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0117",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0118",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0119",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0120",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0121",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0122",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0123",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0124",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0125",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0126",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0127",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0128",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0129",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0130",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0131",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0132",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0133",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0134",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0135",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0136",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0137",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0138",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0139",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0140",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0141",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0142",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0143",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0144",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0145",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0146",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0147",
+        "leaked": true,
+        "leaked_types": [
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0148",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0149",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0150",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0151",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0152",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0153",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0154",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "IBAN",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0155",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0156",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0157",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0158",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0159",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0160",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      }
+    ],
+    "B1": [
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0001",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0002",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0003",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0004",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0005",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0006",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0007",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0008",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0009",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0010",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0011",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0012",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0013",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PERSON",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0014",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0015",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0016",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 3
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0017",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0018",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0019",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0020",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0021",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0022",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0023",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0024",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0025",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0026",
+        "leaked": true,
+        "leaked_types": [
+          "PHONE"
+        ],
+        "missed_gold_spans": 1,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0027",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0028",
+        "leaked": true,
+        "leaked_types": [
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0029",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0030",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0031",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0032",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0033",
+        "leaked": true,
+        "leaked_types": [
+          "PHONE"
+        ],
+        "missed_gold_spans": 1,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0034",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0035",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 5,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0036",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0037",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0038",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0039",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0040",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0041",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0042",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "IBAN",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [
+          "PERSON"
+        ],
+        "guard_blocked": true,
+        "id": "syn-test-0043",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0044",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0045",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0046",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0047",
+        "leaked": true,
+        "leaked_types": [
+          "PHONE"
+        ],
+        "missed_gold_spans": 1,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0048",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0049",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0050",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0051",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0052",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0053",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0054",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0055",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0056",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "IBAN",
+          "ORG",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 5,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0057",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0058",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0059",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0060",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0061",
+        "leaked": true,
+        "leaked_types": [
+          "PHONE"
+        ],
+        "missed_gold_spans": 1,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0062",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0063",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "IBAN",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0064",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0065",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0066",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0067",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0068",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0069",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0070",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0071",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0072",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0073",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0074",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0075",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 1,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0076",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0077",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0078",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0079",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0080",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0081",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0082",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 1,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0083",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0084",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0085",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0086",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0087",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0088",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0089",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0090",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0091",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0092",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0093",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0094",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0095",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0096",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0097",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0098",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0099",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0100",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0101",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0102",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0103",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0104",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0105",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0106",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PERSON",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0107",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0108",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0109",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0110",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0111",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0112",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [
+          "PERSON"
+        ],
+        "guard_blocked": true,
+        "id": "syn-test-0113",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0114",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0115",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0116",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0117",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0118",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 3
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0119",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0120",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0121",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0122",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0123",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0124",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0125",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0126",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0127",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0128",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0129",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0130",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0131",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0132",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0133",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0134",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0135",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0136",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0137",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0138",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0139",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0140",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0141",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0142",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0143",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0144",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0145",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0146",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PERSON",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0147",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0148",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0149",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0150",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0151",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "PERSON",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0152",
+        "leaked": true,
+        "leaked_types": [
+          "PERSON"
+        ],
+        "missed_gold_spans": 1,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0153",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0154",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "PHONE",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 4,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0155",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0156",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0157",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "ORG",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 3,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0158",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0159",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0160",
+        "leaked": true,
+        "leaked_types": [
+          "ADDRESS_STREET",
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 2
+      }
+    ],
+    "B2": [
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0001",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0002",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0003",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0004",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0005",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0006",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 2,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0007",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0008",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0009",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0010",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0011",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0012",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0013",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0014",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 1
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0015",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0016",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0017",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0018",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0019",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0020",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0021",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0022",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0023",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0024",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0025",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0026",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0027",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0028",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0029",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0030",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0031",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0032",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0033",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0034",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0035",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0036",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0037",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0038",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0039",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0040",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0041",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0042",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0043",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0044",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0045",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0046",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0047",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0048",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0049",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0050",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0051",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0052",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0053",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0054",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0055",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0056",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0057",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0058",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0059",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0060",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0061",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0062",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0063",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0064",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0065",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0066",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0067",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0068",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0069",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0070",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0071",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0072",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0073",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0074",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0075",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0076",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0077",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0078",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 1,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0079",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0080",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0081",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0082",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0083",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0084",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0085",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0086",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0087",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0088",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0089",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0090",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0091",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0092",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0093",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0094",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0095",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0096",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0097",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0098",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0099",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0100",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0101",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0102",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0103",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0104",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0105",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0106",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0107",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0108",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0109",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0110",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0111",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0112",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0113",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0114",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0115",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0116",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0117",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0118",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0119",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0120",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0121",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0122",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0123",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0124",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0125",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0126",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0127",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0128",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0129",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0130",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0131",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0132",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0133",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0134",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0135",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0136",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0137",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0138",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0139",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0140",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0141",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0142",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0143",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0144",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0145",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0146",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0147",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0148",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0149",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0150",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0151",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0152",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0153",
+        "leaked": true,
+        "leaked_types": [
+          "POSTCODE_CITY"
+        ],
+        "missed_gold_spans": 1,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0154",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0155",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0156",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0157",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0158",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0159",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      },
+      {
+        "guard_block_types": [],
+        "guard_blocked": false,
+        "id": "syn-test-0160",
+        "leaked": false,
+        "leaked_types": [],
+        "missed_gold_spans": 0,
+        "partial_gold_spans": 0
+      }
+    ]
+  }
+}
