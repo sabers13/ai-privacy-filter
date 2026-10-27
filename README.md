@@ -50,8 +50,13 @@ environment and installs the separately pinned model again.
 
 `make reproduce` rebuilds the committed detection results from the corpus and the
 verified GermEval download, with the network blocked during scoring, and compares
-them byte for byte. The remaining targets (`live`, `e2e`, `page-data`) are honest
-stubs until their tasks land; they exit non-zero with a message.
+them byte for byte; it then rebuilds the triage metrics and report from the
+stored responses with no network and no model call. `make live` runs the fixed
+40-enquiry triage subset against the real backends and holds the shared live-LLM
+lock; set `AIPF_LOCK_DIR` to the mission state directory so lanes serialise.
+`make page-data` writes `results/page/examples.json` and
+`results/page/results.json` from the latest accepted run. `make e2e` is still a
+stub until T13.
 
 ## HTTP service
 

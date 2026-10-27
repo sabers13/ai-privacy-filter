@@ -17,10 +17,10 @@ help:
 	@echo "make test            run the test suite (live and e2e markers excluded)"
 	@echo "make test-local      prove the local filter path needs no network (sockets disabled)"
 	@echo "make lint            ruff check, ruff format --check, mypy --strict on src"
-	@echo "make reproduce       rebuild and byte-compare the committed detection results"
-	@echo "make live            make real LLM calls (stub until T12; takes the live-llm lock)"
+	@echo "make reproduce       rebuild detection results and triage metrics from stored data"
+	@echo "make live            make real LLM calls (takes the live-llm lock; set AIPF_LOCK_DIR)"
 	@echo "make e2e             run the end-to-end check (stub until T13)"
-	@echo "make page-data       export page JSON from results (stub until T12)"
+	@echo "make page-data       export results/page/{examples,results}.json from the latest run"
 	@echo "make release-check   local release gates: lint, test, forbidden scan, secrets"
 	@echo "make secrets         run gitleaks over the working tree and git history"
 	@echo "make secrets-install install pinned gitleaks $(GITLEAKS_VERSION) into ~/.local/bin"
@@ -43,18 +43,17 @@ lint:
 
 reproduce:
 	$(PY) -m eval.detection --reproduce
+	$(PY) scripts/reproduce.py
 
 live:
-	@echo "live: stub only; real LLM runs land in T12 (needs the live-llm lock)" >&2
-	@exit 1
+	$(PY) scripts/run_triage.py --live
 
 e2e:
 	@echo "e2e: stub only; the n8n end-to-end run lands in T13" >&2
 	@exit 1
 
 page-data:
-	@echo "page-data: stub only; export lands with T12/T14" >&2
-	@exit 1
+	$(PY) scripts/page_export.py
 
 release-check: lint test test-local scan-forbidden secrets
 	@if git ls-files --error-unmatch data/external >/dev/null 2>&1; then \

@@ -6,6 +6,33 @@ All notable changes to this project are documented here.
 
 ### Added
 
+- T12 live triage stage: `triage.build_prompt`, `parse_triage` and `classify`
+  run the full detect -> pseudonymise -> guard -> backend -> restore pipeline
+  over the fixed 40-enquiry subset from `METHOD.md` section 8. `make live`
+  takes the shared live-LLM lock, calls `claude-cli`, `codex-cli` and `byok`
+  once each per enquiry, stores every response with placeholders only and a
+  SHA-256 hash under `results/runs/<backend>/`, and writes the run record,
+  metrics, report and text-free scoring under `results/runs/<run-id>/`.
+  `make reproduce` rebuilds every number from the stored responses with no
+  network and no model call. An optional Ollama stage uses the T07 tunnel, the
+  server lock and a 90-minute time box.
+- T12 leak handling: the outbound prompt is audited against gold values before
+  the call, and the reply is audited again before storage. A leaking prompt or
+  reply is never written to disk; the response record keeps the error kind,
+  latency and leaked types only. The production guard still runs first and
+  blocks mapped values.
+- T12 page export: `scripts/page_export.py` writes
+  `results/page/examples.json` (15 synthetic examples, three per category, two
+  or three deliberate detection misses from the fixed subset) and
+  `results/page/results.json` (`mock: false`) from the latest accepted triage
+  run and the T11 detection block.
+- T12 manual rubric: `scripts/rubric_sheet.py` writes the label-free,
+  seed-shuffled 10-draft sheet outside the repository and joins the scores back
+  into `rubric.json` without a combined score.
+- T12 evaluation helpers: Wilson intervals, median and nearest-rank p95,
+  directory locks for the live-LLM and server stages, and the deterministic
+  corpus/subset loader. `tests/test_evaluation.py` covers the subset, metrics,
+  reproduction, page selection and the dev-mode run.
 - T08 HTTP service: `create_app` serves `GET /health`, `POST /redact`,
   `POST /restore` and `POST /process` over the frozen contracts. `/redact`
   returns a short-lived ticket instead of the placeholder mapping, `/restore`

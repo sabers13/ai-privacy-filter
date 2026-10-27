@@ -1,30 +1,20 @@
-"""Every remaining T01 stub raises NotImplementedError with a useful message.
+"""Contract-level checks that no T01 stub is left behind.
 
 The real backends and quota classification land in T06 and are covered by the
-backend test modules. ``api`` and ``cli`` are implemented in T08 and are covered
-by ``test_api`` and ``test_cli``; the detector (T02) and the triage glue
-(T06/T12) are still stubs.
+backend test modules. ``api`` and ``cli`` are implemented in T08, the detector
+in T02 and the triage glue in T12; each has its own test module.
 """
 
 from __future__ import annotations
 
 import pytest
 
-from ai_privacy_filter import api, cli, triage
+from ai_privacy_filter import api, cli
 from ai_privacy_filter.backends import registry
 from ai_privacy_filter.backends.byok import BYOKBackend
 from ai_privacy_filter.backends.claude_cli import ClaudeCLIBackend
 from ai_privacy_filter.backends.codex_cli import CodexCLIBackend
 from ai_privacy_filter.backends.fake import FakeBackend
-
-
-def test_triage_functions_are_stubs() -> None:
-    with pytest.raises(NotImplementedError):
-        triage.build_prompt("Synthetic text")
-    with pytest.raises(NotImplementedError):
-        triage.parse_triage({}, backend="fake", model=None, latency_ms=0)
-    with pytest.raises(NotImplementedError):
-        triage.classify("Synthetic text", FakeBackend())
 
 
 def test_api_and_cli_are_implemented() -> None:

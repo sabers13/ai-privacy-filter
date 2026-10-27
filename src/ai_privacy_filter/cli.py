@@ -35,6 +35,7 @@ from ai_privacy_filter.pipeline import (
     summarise_spans,
 )
 from ai_privacy_filter.pseudonymise import restore
+from ai_privacy_filter.triage import TriageError
 
 COMMANDS: dict[str, str] = {
     "redact": "pseudonymise a text and show the placeholder mapping",
@@ -156,6 +157,12 @@ def _process(args: argparse.Namespace) -> int:
             file=sys.stderr,
         )
         return EXIT_REFUSED
+    except TriageError as exc:
+        print(
+            f"aipf process: backend {args.backend} failed ({exc.error_kind})",
+            file=sys.stderr,
+        )
+        return EXIT_ERROR
     triage = outcome.triage.model_dump(mode="json")
     if args.restore:
         triage["reply_draft"] = restore(outcome.triage.reply_draft, outcome.mapping).text
