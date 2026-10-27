@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:09:47Z",
+  "draft_sha256": "a3233c4187e0397c6045d69597017242caf53d75a73a74f6d6c93233bd0f07ae",
+  "enquiry_id": "syn-test-0123",
+  "error_kind": null,
+  "latency_ms": 6172,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Guten Tag [PERSON_2], vielen Dank für Ihre Bewerbung als Datenanalystin und Ihr Interesse an unserem Unternehmen. Wir bestätigen den Eingang Ihrer Nachricht und leiten sie an die zuständige Stelle weiter. Wir melden uns bei Ihnen, sobald wir Ihre Unterlagen geprüft haben. Mit freundlichen Grüßen",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "5e91a23fd83a0877361650a4645848427b36424d20299de36686ec5f62136e89",
+  "response_sha256": "c6b75a24546f13f1091428103653ff3dac26e987d0990e28c3494aa88fea8129",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"JOB_APPLICATION\", \"urgency\": \"HIGH\", \"reply_draft\": \"Guten Tag [PERSON_2], vielen Dank für Ihre Bewerbung als Datenanalystin und Ihr Interesse an unserem Unternehmen. Wir bestätigen den Eingang Ihrer Nachricht und leiten sie an die zuständige Stelle weiter. Wir melden uns bei Ihnen, sobald wir Ihre Unterlagen geprüft haben. Mit freundlichen Grüßen\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 433,
+    "reasoning_tokens": null,
+    "total_tokens": 435
+  }
+}

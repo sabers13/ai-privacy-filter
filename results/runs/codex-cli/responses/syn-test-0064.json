@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:18:42Z",
+  "draft_sha256": "f713e4bdf48aada0d9c16307bb1f44e918b034af4fd038636a4bbc65bad0d1c4",
+  "enquiry_id": "syn-test-0064",
+  "error_kind": null,
+  "latency_ms": 8667,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "PARTNERSHIP",
+    "reply_draft": "Vielen Dank für Ihr Interesse an einer gemeinsamen Workshop-Reihe für Ihre und unsere Teams. Bitte teilen Sie uns kurz mit, welche Themen und Ziele Sie sich vorstellen und welche Zeitfenster für ein erstes Gespräch für Sie passen würden.",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "595653fa8fe4516873b8c8a6e72cb9b18371d19f9a4f980594ba9198ccdd824a",
+  "response_sha256": "b74a0c5f7fe77b2fb1d5fb74c9ad2ff2e7a9ba1cf1afa653724d8a4445f813cb",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"PARTNERSHIP\",\"reply_draft\":\"Vielen Dank für Ihr Interesse an einer gemeinsamen Workshop-Reihe für Ihre und unsere Teams. Bitte teilen Sie uns kurz mit, welche Themen und Ziele Sie sich vorstellen und welche Zeitfenster für ein erstes Gespräch für Sie passen würden.\",\"urgency\":\"NORMAL\"}",
+  "usage": {
+    "cached_tokens": 16128,
+    "input_tokens": 17483,
+    "output_tokens": 71,
+    "reasoning_tokens": 0,
+    "total_tokens": 17554
+  }
+}

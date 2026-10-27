@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:23:20Z",
+  "draft_sha256": "51e7af26bce45577b4492d56f0490dfbd7eab4562d8df6f9e5637bdafd201ea9",
+  "enquiry_id": "syn-test-0125",
+  "error_kind": null,
+  "latency_ms": 4299,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Wir senden Ihnen gern weitere Informationen zu, ohne dass Sie sich damit bereits anmelden müssen. Bitte lassen Sie uns wissen, welche Themen für Sie besonders relevant sind.",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "f3901d2f518786ecd20abff39797c1109fe9557a0d730ddfe854b28e1251dd9b",
+  "response_sha256": "f10306d4e3690b76a5b30bb75e45ba9f100ea1749006f0dfa50c8738638e69a5",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"LOW\", \"reply_draft\": \"Vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Wir senden Ihnen gern weitere Informationen zu, ohne dass Sie sich damit bereits anmelden müssen. Bitte lassen Sie uns wissen, welche Themen für Sie besonders relevant sind.\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 436,
+    "output_tokens": 387,
+    "reasoning_tokens": 314,
+    "total_tokens": 823
+  }
+}

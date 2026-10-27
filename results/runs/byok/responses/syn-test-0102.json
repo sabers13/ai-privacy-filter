@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:21:17Z",
+  "draft_sha256": "203076d523f509f4eb37580f7ad44dc57603a7d630b6e4129019be3f52a9cb1a",
+  "enquiry_id": "syn-test-0102",
+  "error_kind": null,
+  "latency_ms": 3949,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht. Wir bedauern, dass der Zugang zum Kundenportal seit gestern nicht möglich ist. Wir prüfen den geschilderten Fehler und melden uns mit einer kurzen Rückmeldung bei Ihnen.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "5e6f884f480c08a2bef66b34b1b98356db3d26ac5eee8efa4bc24d955046e241",
+  "response_sha256": "714eb3b4f75cc14d05699cd6178ccef11d8109a754a4e4ed97c13ee41201616b",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"HIGH\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht. Wir bedauern, dass der Zugang zum Kundenportal seit gestern nicht möglich ist. Wir prüfen den geschilderten Fehler und melden uns mit einer kurzen Rückmeldung bei Ihnen.\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 467,
+    "output_tokens": 425,
+    "reasoning_tokens": 343,
+    "total_tokens": 892
+  }
+}

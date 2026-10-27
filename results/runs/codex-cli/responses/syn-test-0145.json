@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:20:00Z",
+  "draft_sha256": "70666177cf81eaba21ce8fbb7b7b4e78f03e683b6cbeeb991eb6188ee6b41200",
+  "enquiry_id": "syn-test-0145",
+  "error_kind": null,
+  "latency_ms": 6214,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Hallo [PERSON_2], vielen Dank für deine Nachricht und dein Interesse am Schulungsprogramm. Welche Frage hast du dazu?",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "97376419bc29a4fdb7f6dfed5741e61884fe91e1ba31739dcf5936faa6f3acde",
+  "response_sha256": "9db132bc3357562050ec23a4c7a0ec9fdf835a952db56ac39e64bc1e197fc6e0",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"SUPPORT\",\"reply_draft\":\"Hallo [PERSON_2], vielen Dank für deine Nachricht und dein Interesse am Schulungsprogramm. Welche Frage hast du dazu?\",\"urgency\":\"LOW\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 18797,
+    "output_tokens": 51,
+    "reasoning_tokens": 0,
+    "total_tokens": 18848
+  }
+}

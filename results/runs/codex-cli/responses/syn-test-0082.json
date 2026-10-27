@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:17:06Z",
+  "draft_sha256": "a035679fbbf160e8a9e1bc84f0024d5aae1ff90fb488440b91e3b987e282963c",
+  "enquiry_id": "syn-test-0082",
+  "error_kind": null,
+  "latency_ms": 7083,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Hallo [PERSON_2], vielen Dank für deine Nachricht. Bitte schicke uns den genauen Wortlaut der Fehlermeldung und beschreibe kurz, bei welchem Schritt sie erscheint. Damit können wir das Problem besser eingrenzen.",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "34bab3e51382011ad60462f7021d14fff8e39bbdad68e27b632e1c001c42c02c",
+  "response_sha256": "652b24a47ae6ec455aae59cb588032ee60a0c5209f887aca88f95861806e5c0d",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"SUPPORT\",\"reply_draft\":\"Hallo [PERSON_2], vielen Dank für deine Nachricht. Bitte schicke uns den genauen Wortlaut der Fehlermeldung und beschreibe kurz, bei welchem Schritt sie erscheint. Damit können wir das Problem besser eingrenzen.\",\"urgency\":\"NORMAL\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 17466,
+    "output_tokens": 73,
+    "reasoning_tokens": 0,
+    "total_tokens": 17539
+  }
+}

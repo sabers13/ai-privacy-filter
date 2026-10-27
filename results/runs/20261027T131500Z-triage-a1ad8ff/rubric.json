@@ -1,0 +1,93 @@
+{
+  "backend": "claude-cli",
+  "dimensions": [
+    "relevance",
+    "placeholder_handling",
+    "german_quality"
+  ],
+  "invented_fact_drafts": 1,
+  "means": {
+    "german_quality": 1.6,
+    "placeholder_handling": 2.0,
+    "relevance": 2.0
+  },
+  "n": 10,
+  "ranges": {
+    "german_quality": [
+      1,
+      2
+    ],
+    "placeholder_handling": [
+      2,
+      2
+    ],
+    "relevance": [
+      2,
+      2
+    ]
+  },
+  "reviewer": "single reviewer (T12 worker)",
+  "scores": {
+    "syn-test-0001": {
+      "german_quality": 1,
+      "invented_fact": false,
+      "placeholder_handling": 2,
+      "relevance": 2
+    },
+    "syn-test-0002": {
+      "german_quality": 1,
+      "invented_fact": true,
+      "placeholder_handling": 2,
+      "relevance": 2
+    },
+    "syn-test-0003": {
+      "german_quality": 2,
+      "invented_fact": false,
+      "placeholder_handling": 2,
+      "relevance": 2
+    },
+    "syn-test-0004": {
+      "german_quality": 2,
+      "invented_fact": false,
+      "placeholder_handling": 2,
+      "relevance": 2
+    },
+    "syn-test-0005": {
+      "german_quality": 2,
+      "invented_fact": false,
+      "placeholder_handling": 2,
+      "relevance": 2
+    },
+    "syn-test-0081": {
+      "german_quality": 2,
+      "invented_fact": false,
+      "placeholder_handling": 2,
+      "relevance": 2
+    },
+    "syn-test-0082": {
+      "german_quality": 2,
+      "invented_fact": false,
+      "placeholder_handling": 2,
+      "relevance": 2
+    },
+    "syn-test-0083": {
+      "german_quality": 1,
+      "invented_fact": false,
+      "placeholder_handling": 2,
+      "relevance": 2
+    },
+    "syn-test-0084": {
+      "german_quality": 2,
+      "invented_fact": false,
+      "placeholder_handling": 2,
+      "relevance": 2
+    },
+    "syn-test-0085": {
+      "german_quality": 1,
+      "invented_fact": false,
+      "placeholder_handling": 2,
+      "relevance": 2
+    }
+  },
+  "seed": 20261027
+}

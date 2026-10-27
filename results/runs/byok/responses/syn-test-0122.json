@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:21:23Z",
+  "draft_sha256": "05727292dd1fd02d43cb0c2346618f0ad0d3e12afd3a11cc4796762d23f9d517",
+  "enquiry_id": "syn-test-0122",
+  "error_kind": null,
+  "latency_ms": 5837,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihren Hinweis zur Störung im Kundenportal. Wir prüfen den Fall und melden uns zeitnah mit den nächsten Schritten bei Ihnen. Bitte senden Sie uns falls möglich die genaue Fehlermeldung und den Zeitpunkt Ihres Anmeldeversuchs.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "6a20cee5545a4cbfb59840f73aa4e2b8dd1786bfa6e4a3a8b4ca094c2e6a4ba0",
+  "response_sha256": "187c20ea375bc52015adde77d5a8b9e9e8c0423142c8f7a43f076baaaba024b0",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"HIGH\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank für Ihren Hinweis zur Störung im Kundenportal. Wir prüfen den Fall und melden uns zeitnah mit den nächsten Schritten bei Ihnen. Bitte senden Sie uns falls möglich die genaue Fehlermeldung und den Zeitpunkt Ihres Anmeldeversuchs.\"}",
+  "usage": {
+    "cached_tokens": 384,
+    "input_tokens": 452,
+    "output_tokens": 504,
+    "reasoning_tokens": 408,
+    "total_tokens": 956
+  }
+}

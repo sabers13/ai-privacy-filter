@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:23:04Z",
+  "draft_sha256": "6811549e3adb4c3cdb4d6f4f5389473c24bbdb4c3acd72b7bf3dddfd9f3d5528",
+  "enquiry_id": "syn-test-0045",
+  "error_kind": null,
+  "latency_ms": 4300,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Wir senden Ihnen gern weitere allgemeine Informationen zu, ohne dass Sie sich bereits anmelden müssen. Teilen Sie uns bei Bedarf gern mit, welche Inhalte für [ORG_1] besonders relevant sind.",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "80001b8e8e54072ea62894e0742eaf1a2fdc6a71a565372aaa57e14ee2e77ea9",
+  "response_sha256": "7dad7de39094718cb8002c90103ad66d6712d25fe0fb0256767ac4b7bc4e693b",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"LOW\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Wir senden Ihnen gern weitere allgemeine Informationen zu, ohne dass Sie sich bereits anmelden müssen. Teilen Sie uns bei Bedarf gern mit, welche Inhalte für [ORG_1] besonders relevant sind.\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 434,
+    "output_tokens": 440,
+    "reasoning_tokens": 349,
+    "total_tokens": 874
+  }
+}

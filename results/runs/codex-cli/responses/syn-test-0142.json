@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:17:24Z",
+  "draft_sha256": "5e10ec9ee419e514c74e792b9ec57128e6a066fcd0a14720388f76c131be6a08",
+  "enquiry_id": "syn-test-0142",
+  "error_kind": null,
+  "latency_ms": 6262,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihren Hinweis zum Zugangsproblem im Kundenportal. Welche Fehlermeldung wird Ihnen beim Öffnen angezeigt? Diese Information hilft uns bei der Prüfung.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "f705c777de251d8d38b1f8a4dbdbb72d3d67c53aaa5cf5148be8a39aa82d65ce",
+  "response_sha256": "7236555520b11d34bedc351709e2bea98bbc143e71b00fdc1b4253ac59875ec7",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"SUPPORT\",\"reply_draft\":\"Guten Tag [PERSON_1], vielen Dank für Ihren Hinweis zum Zugangsproblem im Kundenportal. Welche Fehlermeldung wird Ihnen beim Öffnen angezeigt? Diese Information hilft uns bei der Prüfung.\",\"urgency\":\"HIGH\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 17489,
+    "output_tokens": 66,
+    "reasoning_tokens": 0,
+    "total_tokens": 17555
+  }
+}

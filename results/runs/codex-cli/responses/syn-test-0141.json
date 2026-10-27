@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:16:28Z",
+  "draft_sha256": "9b7e829eb1a359166d84c85c04323f1120528af2e28a19f36b964334f9fae42f",
+  "enquiry_id": "syn-test-0141",
+  "error_kind": null,
+  "latency_ms": 23223,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Vielen Dank für Ihre Anfrage zur technischen Ausstattung Ihrer zwei neuen Besprechungsräume. Bitte teilen Sie uns die Raumgrößen und Ihre Anforderungen mit, etwa zu Videokonferenzen, Bildschirmen und Audiotechnik. Diese Angaben helfen uns, ein passendes Angebot mit Preisen und Lieferzeiten zu erstellen.",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "22ae43503c363071c892ac8f79316def0e5b7ef309c7852b9a25f572ed952d94",
+  "response_sha256": "f831d1c42e56f361acc6dd614c553e6f62ad67f54078fad68e2e422e81bed99b",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"QUOTE_REQUEST\",\"reply_draft\":\"Vielen Dank für Ihre Anfrage zur technischen Ausstattung Ihrer zwei neuen Besprechungsräume. Bitte teilen Sie uns die Raumgrößen und Ihre Anforderungen mit, etwa zu Videokonferenzen, Bildschirmen und Audiotechnik. Diese Angaben helfen uns, ein passendes Angebot mit Preisen und Lieferzeiten zu erstellen.\",\"urgency\":\"NORMAL\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 17485,
+    "output_tokens": 87,
+    "reasoning_tokens": 0,
+    "total_tokens": 17572
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:20:49Z",
+  "draft_sha256": "cfd5f86eb4cf191dcd9dca069a73b64b72869c2923ae908551d3124c8ebcb238",
+  "enquiry_id": "syn-test-0002",
+  "error_kind": null,
+  "latency_ms": 5416,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht. Wir bedauern die Fehlermeldung bei der Anmeldung im Kundenportal und prüfen den geschilderten Fall. Wir melden uns bei Ihnen über [EMAIL_1] mit Informationen zum weiteren Vorgehen.",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "1887c03b3b5714c6104b83d9c9f4647c62fd7bb6644cea389deb6267347bb3a9",
+  "response_sha256": "b8dbb177445d4e2caa2444f77179f0584a81d3a2b2cd8ff70e3616e201a341a5",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"NORMAL\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht. Wir bedauern die Fehlermeldung bei der Anmeldung im Kundenportal und prüfen den geschilderten Fall. Wir melden uns bei Ihnen über [EMAIL_1] mit Informationen zum weiteren Vorgehen.\"}",
+  "usage": {
+    "cached_tokens": 256,
+    "input_tokens": 437,
+    "output_tokens": 521,
+    "reasoning_tokens": 433,
+    "total_tokens": 958
+  }
+}

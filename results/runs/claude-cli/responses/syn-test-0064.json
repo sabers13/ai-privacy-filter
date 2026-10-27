@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:10:12Z",
+  "draft_sha256": "9932cf95bd6e78327271ef37e00d0937818349ee02eaadf0ccf75f5ae6684e51",
+  "enquiry_id": "syn-test-0064",
+  "error_kind": null,
+  "latency_ms": 4952,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "PARTNERSHIP",
+    "reply_draft": "Sehr geehrte/r [PERSON_1],\n\nvielen Dank für Ihre Nachricht und Ihr Interesse an einer gemeinsamen Workshop-Reihe für Ihre Teams. Wir prüfen Ihre Anfrage gerne und melden uns zeitnah bei Ihnen, um einen passenden Termin für ein erstes Gespräch abzustimmen.\n\nMit freundlichen Grüßen",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "595653fa8fe4516873b8c8a6e72cb9b18371d19f9a4f980594ba9198ccdd824a",
+  "response_sha256": "641ed8b7802e5e6e1a26e1ea541c93ac69fcbb23d8f70de436b51575b72c7161",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"PARTNERSHIP\", \"urgency\": \"NORMAL\", \"reply_draft\": \"Sehr geehrte/r [PERSON_1],\\n\\nvielen Dank für Ihre Nachricht und Ihr Interesse an einer gemeinsamen Workshop-Reihe für Ihre Teams. Wir prüfen Ihre Anfrage gerne und melden uns zeitnah bei Ihnen, um einen passenden Termin für ein erstes Gespräch abzustimmen.\\n\\nMit freundlichen Grüßen\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 284,
+    "reasoning_tokens": null,
+    "total_tokens": 286
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:07:09Z",
+  "draft_sha256": "097a2d1fbff945e7ccd90b4ee62f63f9eed2bcce3acb92fdda6ce0a34193ae48",
+  "enquiry_id": "syn-test-0002",
+  "error_kind": null,
+  "latency_ms": 5212,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Nachricht und den Hinweis auf die Fehlermeldung bei der Anmeldung im Kundenportal. Wir haben Ihre Anfrage an unser Support-Team weitergeleitet und prüfen den Fall. Damit wir das Problem schneller eingrenzen können, senden Sie uns bitte nach Möglichkeit den genauen Wortlaut der Fehlermeldung oder einen Screenshot. Wir melden uns bei Ihnen, sobald wir weitere Informationen zum weiteren Vorgehen haben.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "1887c03b3b5714c6104b83d9c9f4647c62fd7bb6644cea389deb6267347bb3a9",
+  "response_sha256": "4b4a10d5fbd0285001fa3090b9bfc54da53ab0e9b6102040e1b994d9177fe029",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"HIGH\", \"reply_draft\": \"Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Nachricht und den Hinweis auf die Fehlermeldung bei der Anmeldung im Kundenportal. Wir haben Ihre Anfrage an unser Support-Team weitergeleitet und prüfen den Fall. Damit wir das Problem schneller eingrenzen können, senden Sie uns bitte nach Möglichkeit den genauen Wortlaut der Fehlermeldung oder einen Screenshot. Wir melden uns bei Ihnen, sobald wir weitere Informationen zum weiteren Vorgehen haben.\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 342,
+    "reasoning_tokens": null,
+    "total_tokens": 344
+  }
+}

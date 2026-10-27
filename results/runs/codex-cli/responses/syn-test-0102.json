@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:17:12Z",
+  "draft_sha256": "cf45d6fd77dc79575f903b5d4f02263b4b7e0aed515f422ee37294fc45d2abde",
+  "enquiry_id": "syn-test-0102",
+  "error_kind": null,
+  "latency_ms": 6177,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Vielen Dank für Ihre Nachricht zur Störung im Kundenportal. Welche Fehlermeldung wird beim Öffnen des Zugangs angezeigt? Diese Information hilft bei der Prüfung des Problems.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "5e6f884f480c08a2bef66b34b1b98356db3d26ac5eee8efa4bc24d955046e241",
+  "response_sha256": "38b6b9721cecb1d466a5b397009431da2fa1523a85647c86220fe809849c1e9c",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"SUPPORT\",\"reply_draft\":\"Vielen Dank für Ihre Nachricht zur Störung im Kundenportal. Welche Fehlermeldung wird beim Öffnen des Zugangs angezeigt? Diese Information hilft bei der Prüfung des Problems.\",\"urgency\":\"HIGH\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 17514,
+    "output_tokens": 60,
+    "reasoning_tokens": 0,
+    "total_tokens": 17574
+  }
+}

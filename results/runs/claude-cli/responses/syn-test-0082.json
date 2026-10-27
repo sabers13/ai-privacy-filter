@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:07:58Z",
+  "draft_sha256": "2a3da1a95721ecbc427712cdc90d4bbf6c4dfa6a844391e94a13e9cb0f1c32b1",
+  "enquiry_id": "syn-test-0082",
+  "error_kind": null,
+  "latency_ms": 32349,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Hallo [PERSON_2], danke für deine Nachricht und den Hinweis auf die Fehlermeldung im Kundenportal. Damit wir uns das genauer anschauen können, schick uns bitte den genauen Wortlaut der Meldung oder einen Screenshot sowie eine kurze Beschreibung, bei welchem Schritt sie auftritt. Wir melden uns dann schnellstmöglich mit einer Rückmeldung bei dir. Viele Grüße, [PERSON_1]",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "34bab3e51382011ad60462f7021d14fff8e39bbdad68e27b632e1c001c42c02c",
+  "response_sha256": "8a2097736caba063932a2001b5ca6d0f94cb29e4c3d8d46164a8466b92779b64",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"NORMAL\", \"reply_draft\": \"Hallo [PERSON_2], danke für deine Nachricht und den Hinweis auf die Fehlermeldung im Kundenportal. Damit wir uns das genauer anschauen können, schick uns bitte den genauen Wortlaut der Meldung oder einen Screenshot sowie eine kurze Beschreibung, bei welchem Schritt sie auftritt. Wir melden uns dann schnellstmöglich mit einer Rückmeldung bei dir. Viele Grüße, [PERSON_1]\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 359,
+    "reasoning_tokens": null,
+    "total_tokens": 361
+  }
+}

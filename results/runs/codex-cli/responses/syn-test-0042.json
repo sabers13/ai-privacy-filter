@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:16:53Z",
+  "draft_sha256": "841a4f770433ab2ca490f5f6c13980afb94cdaed35fc6ccd73b3c2bc6ef28596",
+  "enquiry_id": "syn-test-0042",
+  "error_kind": null,
+  "latency_ms": 8203,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihren Hinweis zur Störung bei der Anmeldung im Kundenportal. Bitte senden Sie uns den genauen Wortlaut der Fehlermeldung und nennen Sie den verwendeten Browser, damit wir den Fall näher eingrenzen können. Bitte übermitteln Sie dabei keine Passwörter oder sonstigen Zugangsdaten.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "6a20cee5545a4cbfb59840f73aa4e2b8dd1786bfa6e4a3a8b4ca094c2e6a4ba0",
+  "response_sha256": "5638dff80df3ed09b2379a382c01a848380626b6c68d79c379673e6adb3b0f24",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"SUPPORT\",\"reply_draft\":\"Guten Tag [PERSON_1], vielen Dank für Ihren Hinweis zur Störung bei der Anmeldung im Kundenportal. Bitte senden Sie uns den genauen Wortlaut der Fehlermeldung und nennen Sie den verwendeten Browser, damit wir den Fall näher eingrenzen können. Bitte übermitteln Sie dabei keine Passwörter oder sonstigen Zugangsdaten.\",\"urgency\":\"HIGH\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 17508,
+    "output_tokens": 96,
+    "reasoning_tokens": 0,
+    "total_tokens": 17604
+  }
+}

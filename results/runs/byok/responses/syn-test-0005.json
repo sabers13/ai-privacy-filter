@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:22:54Z",
+  "draft_sha256": "0138754f97a604e74689277159c7b36f5dbedf0782a9ac0e3fd323c2aabd5f32",
+  "enquiry_id": "syn-test-0005",
+  "error_kind": null,
+  "latency_ms": 8806,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_2], vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Wir senden Ihnen gern unverbindliche Informationen zu; eine Anmeldung ist dafür nicht erforderlich. Bei Rückfragen erreichen Sie uns unter [EMAIL_1] oder [PHONE_1].",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "f581cfc86d613996f8afacbd25def519d582f117d903816e58d29f75790fe822",
+  "response_sha256": "bd0fe38c3cfd0001049504a96f9091a85c1e88fe8cbfafc2a46d4e41a0f4cb13",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"LOW\", \"reply_draft\": \"Guten Tag [PERSON_2], vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Wir senden Ihnen gern unverbindliche Informationen zu; eine Anmeldung ist dafür nicht erforderlich. Bei Rückfragen erreichen Sie uns unter [EMAIL_1] oder [PHONE_1].\"}",
+  "usage": {
+    "cached_tokens": 256,
+    "input_tokens": 391,
+    "output_tokens": 858,
+    "reasoning_tokens": 766,
+    "total_tokens": 1249
+  }
+}

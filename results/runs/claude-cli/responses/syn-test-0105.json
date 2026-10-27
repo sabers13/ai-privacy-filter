@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:11:46Z",
+  "draft_sha256": "b448eb189f62767acaa5a8fb0e84bc93bc2e4d6a1b8c35a64704f6e0afddbb0f",
+  "enquiry_id": "syn-test-0105",
+  "error_kind": null,
+  "latency_ms": 4131,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "OTHER",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Gerne lassen wir Ihnen weitere Informationen dazu zukommen. Teilen Sie uns gerne mit, welche Aspekte für Sie besonders interessant sind, damit wir Ihnen gezielt antworten können. Mit freundlichen Grüßen",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "80001b8e8e54072ea62894e0742eaf1a2fdc6a71a565372aaa57e14ee2e77ea9",
+  "response_sha256": "33b2bdac9275763ffc2362e97361de8bda2d5c1efbf313a7d2fc16a2f0a5a9fa",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"OTHER\", \"urgency\": \"LOW\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Gerne lassen wir Ihnen weitere Informationen dazu zukommen. Teilen Sie uns gerne mit, welche Aspekte für Sie besonders interessant sind, damit wir Ihnen gezielt antworten können. Mit freundlichen Grüßen\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 170,
+    "reasoning_tokens": null,
+    "total_tokens": 172
+  }
+}

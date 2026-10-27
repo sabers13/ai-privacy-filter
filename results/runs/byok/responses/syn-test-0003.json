@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:21:32Z",
+  "draft_sha256": "3f2749bcf970853d4329653d5f4d4bae92d0f967793b11725ab99a6957251cf1",
+  "enquiry_id": "syn-test-0003",
+  "error_kind": null,
+  "latency_ms": 4242,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihre Bewerbung als Datenanalystin. Wir haben Ihre Unterlagen erhalten und leiten sie an die zuständige Stelle weiter. Da Sie auf die Frist am Freitag hingewiesen haben, wird Ihr Anliegen vorrangig bearbeitet; eine Rückmeldung erhalten Sie nach Prüfung.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "d26a6bc231deb655ff6eaadbf9558eb98a18c783cee35c9f4bdcba5089660624",
+  "response_sha256": "812599456e31976432adcff419a9874137c41a04cb39eff318b509ce84fe58e2",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"JOB_APPLICATION\", \"urgency\": \"HIGH\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank für Ihre Bewerbung als Datenanalystin. Wir haben Ihre Unterlagen erhalten und leiten sie an die zuständige Stelle weiter. Da Sie auf die Frist am Freitag hingewiesen haben, wird Ihr Anliegen vorrangig bearbeitet; eine Rückmeldung erhalten Sie nach Prüfung.\"}",
+  "usage": {
+    "cached_tokens": 256,
+    "input_tokens": 451,
+    "output_tokens": 343,
+    "reasoning_tokens": 240,
+    "total_tokens": 794
+  }
+}

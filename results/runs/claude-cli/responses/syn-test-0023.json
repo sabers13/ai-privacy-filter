@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:09:22Z",
+  "draft_sha256": "47a57a31134da713ef8add6839e288f33e13dff9b65daf135bf91efe9bbd7546",
+  "enquiry_id": "syn-test-0023",
+  "error_kind": null,
+  "latency_ms": 33243,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Bewerbung auf die Stelle als Datenanalyst. Hiermit bestätigen wir Ihnen den Eingang Ihrer Unterlagen. Wir prüfen Ihre Bewerbung sorgfältig und melden uns bei Ihnen, sobald wir Neuigkeiten haben. Mit freundlichen Grüßen",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "76f77bfc7e1b9778f875cf344d5208fd176dcd81f473a100d5c960a5f46aae99",
+  "response_sha256": "dbf8ca98c1c01766ae2c264d900fb02b8f4b52a568c4bf8ab9f497b15d941d7f",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"JOB_APPLICATION\", \"urgency\": \"HIGH\", \"reply_draft\": \"Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Bewerbung auf die Stelle als Datenanalyst. Hiermit bestätigen wir Ihnen den Eingang Ihrer Unterlagen. Wir prüfen Ihre Bewerbung sorgfältig und melden uns bei Ihnen, sobald wir Neuigkeiten haben. Mit freundlichen Grüßen\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 189,
+    "reasoning_tokens": null,
+    "total_tokens": 191
+  }
+}

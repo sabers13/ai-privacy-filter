@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:20:17Z",
+  "draft_sha256": "c550eef5f3cc3a7abc3d16709f820b93f710cac7db7a9a58f39e581bd90ca4f8",
+  "enquiry_id": "syn-test-0041",
+  "error_kind": null,
+  "latency_ms": 3229,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Vielen Dank für Ihre Anfrage. Gerne erstellen wir Ihnen ein Angebot für die Technik für zwei neue Besprechungsräume mit Preisen und Lieferzeiten. Sollten wir hierfür noch Rückfragen haben, kommen wir auf Sie zu.",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "a761403513da287acff1d48d70b6765c10efe3e66068db3077086fc6a9966343",
+  "response_sha256": "e61a6431994f21e5631418e03daf39d8ebbeb325f5f7324971acd49990e9ae37",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"QUOTE_REQUEST\", \"urgency\": \"NORMAL\", \"reply_draft\": \"Vielen Dank für Ihre Anfrage. Gerne erstellen wir Ihnen ein Angebot für die Technik für zwei neue Besprechungsräume mit Preisen und Lieferzeiten. Sollten wir hierfür noch Rückfragen haben, kommen wir auf Sie zu.\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 445,
+    "output_tokens": 295,
+    "reasoning_tokens": 215,
+    "total_tokens": 740
+  }
+}

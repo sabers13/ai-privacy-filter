@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:10:28Z",
+  "draft_sha256": "ba4689e81c45d71b7c325d50c1fd40f3c4b7b63646f75a341c9736ac9266550c",
+  "enquiry_id": "syn-test-0124",
+  "error_kind": null,
+  "latency_ms": 6141,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "PARTNERSHIP",
+    "reply_draft": "Hallo [PERSON_2],\n\nvielen Dank für deine Nachricht und dein Interesse an einer Zusammenarbeit bei Workshops. Wir freuen uns über deine Anfrage und melden uns zeitnah bei dir, um einen passenden Termin für ein kurzes Gespräch abzustimmen.\n\nLG\n[PERSON_1]",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "db42b2792307b56ea41cc529008da8dd7c2457a19f72f52b7f4b8deb585543ee",
+  "response_sha256": "3682f32004a6cf761d88a6b120758d192547d48c4022a09b158eb85efcca5447",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"PARTNERSHIP\", \"urgency\": \"NORMAL\", \"reply_draft\": \"Hallo [PERSON_2],\\n\\nvielen Dank für deine Nachricht und dein Interesse an einer Zusammenarbeit bei Workshops. Wir freuen uns über deine Anfrage und melden uns zeitnah bei dir, um einen passenden Termin für ein kurzes Gespräch abzustimmen.\\n\\nLG\\n[PERSON_1]\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 170,
+    "reasoning_tokens": null,
+    "total_tokens": 172
+  }
+}

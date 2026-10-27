@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:21:45Z",
+  "draft_sha256": "a4a6e37eb39c371a7eb823c546027a09d1c85a079b5cbc41e259bfe9b09218b9",
+  "enquiry_id": "syn-test-0063",
+  "error_kind": null,
+  "latency_ms": 4895,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Vielen Dank für Ihre Bewerbung als Datenanalystin, [PERSON_1]. Wir haben Ihre Unterlagen erhalten und werden sie im Rahmen des Auswahlverfahrens prüfen. Sobald uns weitere Informationen vorliegen, melden wir uns bei Ihnen.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "d26a6bc231deb655ff6eaadbf9558eb98a18c783cee35c9f4bdcba5089660624",
+  "response_sha256": "18c529616d8dfd11a0396c792dc1a46fcd65489dcddffef098609bdc6aa7cecc",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"JOB_APPLICATION\", \"urgency\": \"HIGH\", \"reply_draft\": \"Vielen Dank für Ihre Bewerbung als Datenanalystin, [PERSON_1]. Wir haben Ihre Unterlagen erhalten und werden sie im Rahmen des Auswahlverfahrens prüfen. Sobald uns weitere Informationen vorliegen, melden wir uns bei Ihnen.\"}",
+  "usage": {
+    "cached_tokens": 384,
+    "input_tokens": 451,
+    "output_tokens": 421,
+    "reasoning_tokens": 339,
+    "total_tokens": 872
+  }
+}

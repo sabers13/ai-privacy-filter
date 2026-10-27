@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:19:47Z",
+  "draft_sha256": "5f938384bee432ea663fe03495e8fae50666862963d1ed897434127fbb5f7ec9",
+  "enquiry_id": "syn-test-0105",
+  "error_kind": null,
+  "latency_ms": 5101,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Welche Informationen wünschen Sie dazu? Eine Anmeldung ist für Ihre Anfrage nicht erforderlich.",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "80001b8e8e54072ea62894e0742eaf1a2fdc6a71a565372aaa57e14ee2e77ea9",
+  "response_sha256": "4d2a0d04171b143ff9c9cd1cac9b89133587d572c39275f2c5b1913448b9295a",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"SUPPORT\",\"reply_draft\":\"Guten Tag [PERSON_1], vielen Dank für Ihr Interesse an unserem Schulungsprogramm. Welche Informationen wünschen Sie dazu? Eine Anmeldung ist für Ihre Anfrage nicht erforderlich.\",\"urgency\":\"LOW\"}",
+  "usage": {
+    "cached_tokens": 16128,
+    "input_tokens": 17498,
+    "output_tokens": 59,
+    "reasoning_tokens": 0,
+    "total_tokens": 17557
+  }
+}

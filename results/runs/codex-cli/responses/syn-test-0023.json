@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:17:36Z",
+  "draft_sha256": "b6ed401496bf224bc1c837ce9973899bc85a728641f9b22740426e03c5a83d28",
+  "enquiry_id": "syn-test-0023",
+  "error_kind": null,
+  "latency_ms": 6084,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihre Bewerbung auf die Stelle als Datenanalyst. Hiermit bestätigen wir den Eingang Ihrer Nachricht.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "76f77bfc7e1b9778f875cf344d5208fd176dcd81f473a100d5c960a5f46aae99",
+  "response_sha256": "f3d650a149f8c6585286a2fa649989c938e6c6ea6e781ead408c926b101cf159",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"JOB_APPLICATION\",\"reply_draft\":\"Guten Tag [PERSON_1], vielen Dank für Ihre Bewerbung auf die Stelle als Datenanalyst. Hiermit bestätigen wir den Eingang Ihrer Nachricht.\",\"urgency\":\"HIGH\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 17493,
+    "output_tokens": 55,
+    "reasoning_tokens": 0,
+    "total_tokens": 17548
+  }
+}

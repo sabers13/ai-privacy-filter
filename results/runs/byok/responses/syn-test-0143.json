@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:22:08Z",
+  "draft_sha256": "3cd7f30628c563fc6b099de5f71462b91b8a9045d6fa23bc8e75b41d9f7210fd",
+  "enquiry_id": "syn-test-0143",
+  "error_kind": null,
+  "latency_ms": 4881,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihre dringende Bewerbung als Datenanalystin. Hiermit bestätigen wir den Eingang Ihrer Unterlagen. Die weitere Prüfung erfolgt im üblichen Verfahren.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "d1a48dab92b4cd96ea9c992125dcdcbb043fb3f3667d926acd2692e58031b8da",
+  "response_sha256": "25cb836cdff13229cf8a9be7632af63d190611da2afd2da491275f76ffdedb1b",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"JOB_APPLICATION\", \"urgency\": \"HIGH\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank für Ihre dringende Bewerbung als Datenanalystin. Hiermit bestätigen wir den Eingang Ihrer Unterlagen. Die weitere Prüfung erfolgt im üblichen Verfahren.\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 451,
+    "output_tokens": 445,
+    "reasoning_tokens": 367,
+    "total_tokens": 896
+  }
+}

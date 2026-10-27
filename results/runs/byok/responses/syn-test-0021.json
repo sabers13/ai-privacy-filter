@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:20:14Z",
+  "draft_sha256": "93731837a55c2ce91b901709a90824a44f354dde898d7ebbafb63d04c72a9232",
+  "enquiry_id": "syn-test-0021",
+  "error_kind": null,
+  "latency_ms": 3913,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "QUOTE_REQUEST",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihre Anfrage zur Ausstattung von zwei Besprechungsräumen. Wir prüfen Ihre Angaben und senden Ihnen gern ein Angebot einschließlich der Lieferzeiten zu. Bei Rückfragen erreichen Sie uns unter [PHONE_1] oder [EMAIL_1].",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "53ae16d58e02c4ab5c3228cb4680b3bfd14ac0fa2befec8c83e0e53ce42c9ddd",
+  "response_sha256": "275793fd302863061637e376e3892cae0a8e691009f6e821010917b00fc1e87b",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"QUOTE_REQUEST\", \"urgency\": \"NORMAL\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank für Ihre Anfrage zur Ausstattung von zwei Besprechungsräumen. Wir prüfen Ihre Angaben und senden Ihnen gern ein Angebot einschließlich der Lieferzeiten zu. Bei Rückfragen erreichen Sie uns unter [PHONE_1] oder [EMAIL_1].\"}",
+  "usage": {
+    "cached_tokens": 256,
+    "input_tokens": 455,
+    "output_tokens": 350,
+    "reasoning_tokens": 251,
+    "total_tokens": 805
+  }
+}

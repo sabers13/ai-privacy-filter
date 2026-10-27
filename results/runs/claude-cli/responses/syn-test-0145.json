@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:12:06Z",
+  "draft_sha256": "17f2a8fbb2608ab1441be2ce35ff42a1df06570cf91606b808ebc7bd8c9e3437",
+  "enquiry_id": "syn-test-0145",
+  "error_kind": null,
+  "latency_ms": 5473,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Hallo [PERSON_2],\n\nvielen Dank für deine Nachricht und dein Interesse an unserem Schulungsprogramm. Schreib mir gern, worum es bei deiner Frage genau geht, dann melde ich mich so bald wie möglich mit einer Antwort bei dir.\n\nLiebe Grüße\n[PERSON_1]",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "97376419bc29a4fdb7f6dfed5741e61884fe91e1ba31739dcf5936faa6f3acde",
+  "response_sha256": "8fbe5f45a6f14b90c5af1d754abb9787e07818c3acafba7c0989e4b837b3c1cc",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"LOW\", \"reply_draft\": \"Hallo [PERSON_2],\\n\\nvielen Dank für deine Nachricht und dein Interesse an unserem Schulungsprogramm. Schreib mir gern, worum es bei deiner Frage genau geht, dann melde ich mich so bald wie möglich mit einer Antwort bei dir.\\n\\nLiebe Grüße\\n[PERSON_1]\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 261,
+    "reasoning_tokens": null,
+    "total_tokens": 263
+  }
+}

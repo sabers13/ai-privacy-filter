@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:22:26Z",
+  "draft_sha256": "0851159d30975e16696f277fb4a799d8e431c7fb2e70775f4a64a8bae44bf05d",
+  "enquiry_id": "syn-test-0064",
+  "error_kind": null,
+  "latency_ms": 4749,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "PARTNERSHIP",
+    "reply_draft": "Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Anfrage zu einer möglichen gemeinsamen Workshop-Reihe. Gerne prüfen wir, ob eine Kooperation für uns passt, und würden uns über ein erstes Gespräch freuen. Bitte nennen Sie uns hierfür einige Terminvorschläge.",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "595653fa8fe4516873b8c8a6e72cb9b18371d19f9a4f980594ba9198ccdd824a",
+  "response_sha256": "4c4b2db97f943a08fa54404280aa87b668ee0a684f07064f37bc1df15d447996",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"PARTNERSHIP\", \"urgency\": \"NORMAL\", \"reply_draft\": \"Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Anfrage zu einer möglichen gemeinsamen Workshop-Reihe. Gerne prüfen wir, ob eine Kooperation für uns passt, und würden uns über ein erstes Gespräch freuen. Bitte nennen Sie uns hierfür einige Terminvorschläge.\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 427,
+    "output_tokens": 446,
+    "reasoning_tokens": 348,
+    "total_tokens": 873
+  }
+}

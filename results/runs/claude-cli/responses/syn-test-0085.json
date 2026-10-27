@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:11:42Z",
+  "draft_sha256": "f95095e3001124232bdca908bf2ec2c82d52f466affa3522f81647bc780f848c",
+  "enquiry_id": "syn-test-0085",
+  "error_kind": null,
+  "latency_ms": 41414,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Nachricht und Ihr Interesse an unserem Schulungsprogramm. Bitte teilen Sie uns Ihre konkrete Frage mit, damit wir Ihnen gezielt weiterhelfen können. Wir melden uns anschließend gerne bei Ihnen. Mit freundlichen Grüßen",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "8caee5ff53ad309e18c369abeec93ad610d34e7fc28a92b8a23af89f67576f85",
+  "response_sha256": "01a11002f194a8798e2abf252fbc53e5a5f75fa141214f5977de2ea5049c3ce4",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"LOW\", \"reply_draft\": \"Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Nachricht und Ihr Interesse an unserem Schulungsprogramm. Bitte teilen Sie uns Ihre konkrete Frage mit, damit wir Ihnen gezielt weiterhelfen können. Wir melden uns anschließend gerne bei Ihnen. Mit freundlichen Grüßen\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 174,
+    "reasoning_tokens": null,
+    "total_tokens": 176
+  }
+}

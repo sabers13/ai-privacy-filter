@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:10:39Z",
+  "draft_sha256": "8912ce71dd55f869a1484846be624a9572c27dc59bacc45f3f84d2434a795850",
+  "enquiry_id": "syn-test-0005",
+  "error_kind": null,
+  "latency_ms": 6242,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "OTHER",
+    "reply_draft": "Hallo [PERSON_2],\n\nvielen Dank für dein Interesse an unserem Schulungsprogramm. Gerne senden wir dir weitere Informationen zu, damit du dir in Ruhe einen Überblick verschaffen kannst. Wenn du bestimmte Fragen hast, melde dich jederzeit bei uns.\n\nViele Grüße\n[PERSON_1]",
+    "urgency": "LOW"
+  },
+  "prompt_sha256": "f581cfc86d613996f8afacbd25def519d582f117d903816e58d29f75790fe822",
+  "response_sha256": "f55e5f5140a47fc910c21b16719e3ae341dbed0e6fa652bcb7c82be6dfc82828",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"OTHER\", \"urgency\": \"LOW\", \"reply_draft\": \"Hallo [PERSON_2],\\n\\nvielen Dank für dein Interesse an unserem Schulungsprogramm. Gerne senden wir dir weitere Informationen zu, damit du dir in Ruhe einen Überblick verschaffen kannst. Wenn du bestimmte Fragen hast, melde dich jederzeit bei uns.\\n\\nViele Grüße\\n[PERSON_1]\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 323,
+    "reasoning_tokens": null,
+    "total_tokens": 325
+  }
+}

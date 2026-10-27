@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:18:33Z",
+  "draft_sha256": "e846598671600acecc24487017951d9b881519f052aa335f2e33bce07f15065d",
+  "enquiry_id": "syn-test-0044",
+  "error_kind": null,
+  "latency_ms": 6413,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "PARTNERSHIP",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihr Interesse an einer gemeinsamen Workshop-Reihe für Ihre Teams. Welche Themen und Ziele möchten Sie dabei in einem ersten Gespräch besprechen?",
+    "urgency": "NORMAL"
+  },
+  "prompt_sha256": "843e6cadc63006abc17abb7694b9df3c35cdc42a091218e318ae194f7fcc4613",
+  "response_sha256": "4049a4aa4597c900aa6d06bca8d0c3b339b8fe9bc120415890fbce488802c9d4",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"PARTNERSHIP\",\"reply_draft\":\"Guten Tag [PERSON_1], vielen Dank für Ihr Interesse an einer gemeinsamen Workshop-Reihe für Ihre Teams. Welche Themen und Ziele möchten Sie dabei in einem ersten Gespräch besprechen?\",\"urgency\":\"NORMAL\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 17488,
+    "output_tokens": 64,
+    "reasoning_tokens": 0,
+    "total_tokens": 17552
+  }
+}

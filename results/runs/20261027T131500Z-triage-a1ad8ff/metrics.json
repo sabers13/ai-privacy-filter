@@ -1,0 +1,734 @@
+{
+  "commit": "d994a11b88ab1393b33c420fb92beee5fc56835a",
+  "generated_at": "2026-10-27T13:24:49Z",
+  "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
+  "mode": "test",
+  "notes": [
+    "Denominator is the full subset for every available backend (intention-to-treat).",
+    "Urgency is tied to category in this corpus, so urgency-only accuracy is not independent evidence.",
+    "Latency is one machine and one network path, not a benchmark.",
+    "No pass thresholds; these are descriptive measurements."
+  ],
+  "per_backend": {
+    "byok": {
+      "availability_reason": null,
+      "available": true,
+      "calls": 40,
+      "category_only": {
+        "k": 32,
+        "lower": 0.652426936536005,
+        "n": 40,
+        "rate": 0.8,
+        "upper": 0.895000102745623
+      },
+      "confusion_category": {
+        "labels": [
+          "QUOTE_REQUEST",
+          "SUPPORT",
+          "JOB_APPLICATION",
+          "PARTNERSHIP",
+          "OTHER"
+        ],
+        "matrix": [
+          [
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            8,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            0,
+            0
+          ]
+        ],
+        "scored": 40
+      },
+      "confusion_urgency": {
+        "labels": [
+          "LOW",
+          "NORMAL",
+          "HIGH"
+        ],
+        "matrix": [
+          [
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            19,
+            5
+          ],
+          [
+            0,
+            0,
+            8
+          ]
+        ],
+        "scored": 40
+      },
+      "draft": {
+        "gold_value_in_draft": 0,
+        "mapped_occurrences": 44,
+        "median_length": 246,
+        "no_placeholder": 7,
+        "non_empty": 40,
+        "restore_exact": 40,
+        "restore_exact_rate": {
+          "k": 40,
+          "lower": 0.9123783988027135,
+          "n": 40,
+          "rate": 1.0,
+          "upper": 1.0
+        },
+        "scored": 40,
+        "unknown_placeholder_drafts": 0,
+        "unresolved_mapped_occurrences": 0,
+        "with_input_placeholder": 33
+      },
+      "error_kinds": {},
+      "errors": 0,
+      "expected": 40,
+      "guard_blocks": 0,
+      "joint": {
+        "k": 27,
+        "lower": 0.5201774618987768,
+        "n": 40,
+        "rate": 0.675,
+        "upper": 0.799154977682173
+      },
+      "latency_ms": {
+        "max": 8806.0,
+        "median": 4785.5,
+        "min": 2829.0,
+        "n": 40,
+        "p95": 6657.0
+      },
+      "leaks": 0,
+      "rubric": {
+        "backend": "claude-cli",
+        "dimensions": [
+          "relevance",
+          "placeholder_handling",
+          "german_quality"
+        ],
+        "invented_fact_drafts": 1,
+        "means": {
+          "german_quality": 1.6,
+          "placeholder_handling": 2.0,
+          "relevance": 2.0
+        },
+        "n": 10,
+        "ranges": {
+          "german_quality": [
+            1,
+            2
+          ],
+          "placeholder_handling": [
+            2,
+            2
+          ],
+          "relevance": [
+            2,
+            2
+          ]
+        },
+        "reviewer": "single reviewer (T12 worker)",
+        "scores": {
+          "syn-test-0001": {
+            "german_quality": 1,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0002": {
+            "german_quality": 1,
+            "invented_fact": true,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0003": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0004": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0005": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0081": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0082": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0083": {
+            "german_quality": 1,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0084": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0085": {
+            "german_quality": 1,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          }
+        },
+        "seed": 20261027
+      },
+      "schema_invalid": 0,
+      "success": 40,
+      "urgency_only": {
+        "k": 35,
+        "lower": 0.738878801611489,
+        "n": 40,
+        "rate": 0.875,
+        "upper": 0.945404997490546
+      }
+    },
+    "claude-cli": {
+      "availability_reason": null,
+      "available": true,
+      "calls": 40,
+      "category_only": {
+        "k": 35,
+        "lower": 0.738878801611489,
+        "n": 40,
+        "rate": 0.875,
+        "upper": 0.945404997490546
+      },
+      "confusion_category": {
+        "labels": [
+          "QUOTE_REQUEST",
+          "SUPPORT",
+          "JOB_APPLICATION",
+          "PARTNERSHIP",
+          "OTHER"
+        ],
+        "matrix": [
+          [
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            8,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            0,
+            3
+          ]
+        ],
+        "scored": 40
+      },
+      "confusion_urgency": {
+        "labels": [
+          "LOW",
+          "NORMAL",
+          "HIGH"
+        ],
+        "matrix": [
+          [
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            17,
+            7
+          ],
+          [
+            0,
+            0,
+            8
+          ]
+        ],
+        "scored": 40
+      },
+      "draft": {
+        "gold_value_in_draft": 0,
+        "mapped_occurrences": 59,
+        "median_length": 297,
+        "no_placeholder": 1,
+        "non_empty": 40,
+        "restore_exact": 40,
+        "restore_exact_rate": {
+          "k": 40,
+          "lower": 0.9123783988027135,
+          "n": 40,
+          "rate": 1.0,
+          "upper": 1.0
+        },
+        "scored": 40,
+        "unknown_placeholder_drafts": 0,
+        "unresolved_mapped_occurrences": 0,
+        "with_input_placeholder": 39
+      },
+      "error_kinds": {},
+      "errors": 0,
+      "expected": 40,
+      "guard_blocks": 0,
+      "joint": {
+        "k": 28,
+        "lower": 0.5456998118185507,
+        "n": 40,
+        "rate": 0.7,
+        "upper": 0.8192515477025347
+      },
+      "latency_ms": {
+        "max": 56766.0,
+        "median": 5222.0,
+        "min": 4056.0,
+        "n": 40,
+        "p95": 33243.0
+      },
+      "leaks": 0,
+      "rubric": {
+        "backend": "claude-cli",
+        "dimensions": [
+          "relevance",
+          "placeholder_handling",
+          "german_quality"
+        ],
+        "invented_fact_drafts": 1,
+        "means": {
+          "german_quality": 1.6,
+          "placeholder_handling": 2.0,
+          "relevance": 2.0
+        },
+        "n": 10,
+        "ranges": {
+          "german_quality": [
+            1,
+            2
+          ],
+          "placeholder_handling": [
+            2,
+            2
+          ],
+          "relevance": [
+            2,
+            2
+          ]
+        },
+        "reviewer": "single reviewer (T12 worker)",
+        "scores": {
+          "syn-test-0001": {
+            "german_quality": 1,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0002": {
+            "german_quality": 1,
+            "invented_fact": true,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0003": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0004": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0005": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0081": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0082": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0083": {
+            "german_quality": 1,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0084": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0085": {
+            "german_quality": 1,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          }
+        },
+        "seed": 20261027
+      },
+      "schema_invalid": 0,
+      "success": 40,
+      "urgency_only": {
+        "k": 33,
+        "lower": 0.6805000966821229,
+        "n": 40,
+        "rate": 0.825,
+        "upper": 0.9125458625396408
+      }
+    },
+    "codex-cli": {
+      "availability_reason": null,
+      "available": true,
+      "calls": 40,
+      "category_only": {
+        "k": 32,
+        "lower": 0.652426936536005,
+        "n": 40,
+        "rate": 0.8,
+        "upper": 0.895000102745623
+      },
+      "confusion_category": {
+        "labels": [
+          "QUOTE_REQUEST",
+          "SUPPORT",
+          "JOB_APPLICATION",
+          "PARTNERSHIP",
+          "OTHER"
+        ],
+        "matrix": [
+          [
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            8,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            0,
+            0
+          ]
+        ],
+        "scored": 40
+      },
+      "confusion_urgency": {
+        "labels": [
+          "LOW",
+          "NORMAL",
+          "HIGH"
+        ],
+        "matrix": [
+          [
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            17,
+            7
+          ],
+          [
+            0,
+            0,
+            8
+          ]
+        ],
+        "scored": 40
+      },
+      "draft": {
+        "gold_value_in_draft": 0,
+        "mapped_occurrences": 29,
+        "median_length": 214,
+        "no_placeholder": 11,
+        "non_empty": 40,
+        "restore_exact": 40,
+        "restore_exact_rate": {
+          "k": 40,
+          "lower": 0.9123783988027135,
+          "n": 40,
+          "rate": 1.0,
+          "upper": 1.0
+        },
+        "scored": 40,
+        "unknown_placeholder_drafts": 0,
+        "unresolved_mapped_occurrences": 0,
+        "with_input_placeholder": 29
+      },
+      "error_kinds": {},
+      "errors": 0,
+      "expected": 40,
+      "guard_blocks": 0,
+      "joint": {
+        "k": 25,
+        "lower": 0.47032439137301096,
+        "n": 40,
+        "rate": 0.625,
+        "upper": 0.7577702083276673
+      },
+      "latency_ms": {
+        "max": 41377.0,
+        "median": 6667.5,
+        "min": 4868.0,
+        "n": 40,
+        "p95": 32949.0
+      },
+      "leaks": 0,
+      "rubric": {
+        "backend": "claude-cli",
+        "dimensions": [
+          "relevance",
+          "placeholder_handling",
+          "german_quality"
+        ],
+        "invented_fact_drafts": 1,
+        "means": {
+          "german_quality": 1.6,
+          "placeholder_handling": 2.0,
+          "relevance": 2.0
+        },
+        "n": 10,
+        "ranges": {
+          "german_quality": [
+            1,
+            2
+          ],
+          "placeholder_handling": [
+            2,
+            2
+          ],
+          "relevance": [
+            2,
+            2
+          ]
+        },
+        "reviewer": "single reviewer (T12 worker)",
+        "scores": {
+          "syn-test-0001": {
+            "german_quality": 1,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0002": {
+            "german_quality": 1,
+            "invented_fact": true,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0003": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0004": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0005": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0081": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0082": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0083": {
+            "german_quality": 1,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0084": {
+            "german_quality": 2,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          },
+          "syn-test-0085": {
+            "german_quality": 1,
+            "invented_fact": false,
+            "placeholder_handling": 2,
+            "relevance": 2
+          }
+        },
+        "seed": 20261027
+      },
+      "schema_invalid": 0,
+      "success": 40,
+      "urgency_only": {
+        "k": 33,
+        "lower": 0.6805000966821229,
+        "n": 40,
+        "rate": 0.825,
+        "upper": 0.9125458625396408
+      }
+    }
+  },
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "stage": "triage",
+  "subset": {
+    "count": 40,
+    "ids": [
+      "syn-test-0001",
+      "syn-test-0021",
+      "syn-test-0041",
+      "syn-test-0061",
+      "syn-test-0081",
+      "syn-test-0101",
+      "syn-test-0121",
+      "syn-test-0141",
+      "syn-test-0002",
+      "syn-test-0022",
+      "syn-test-0042",
+      "syn-test-0062",
+      "syn-test-0082",
+      "syn-test-0102",
+      "syn-test-0122",
+      "syn-test-0142",
+      "syn-test-0003",
+      "syn-test-0023",
+      "syn-test-0043",
+      "syn-test-0063",
+      "syn-test-0083",
+      "syn-test-0103",
+      "syn-test-0123",
+      "syn-test-0143",
+      "syn-test-0004",
+      "syn-test-0024",
+      "syn-test-0044",
+      "syn-test-0064",
+      "syn-test-0084",
+      "syn-test-0104",
+      "syn-test-0124",
+      "syn-test-0144",
+      "syn-test-0005",
+      "syn-test-0025",
+      "syn-test-0045",
+      "syn-test-0065",
+      "syn-test-0085",
+      "syn-test-0105",
+      "syn-test-0125",
+      "syn-test-0145"
+    ]
+  }
+}

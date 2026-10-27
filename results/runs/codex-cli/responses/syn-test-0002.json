@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:16:39Z",
+  "draft_sha256": "08f42c3c679c1bc6f35e86af3e88faf6b57785fce2132c0f8da2a90292144f79",
+  "enquiry_id": "syn-test-0002",
+  "error_kind": null,
+  "latency_ms": 10543,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht zur Fehlermeldung bei der Anmeldung im Kundenportal. Bitte senden Sie uns den genauen Wortlaut der Fehlermeldung und teilen Sie uns mit, welchen Browser Sie verwenden. Diese Angaben helfen bei der Prüfung und der Klärung des weiteren Vorgehens.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "1887c03b3b5714c6104b83d9c9f4647c62fd7bb6644cea389deb6267347bb3a9",
+  "response_sha256": "47151b1de7157de9d3b2d9835f4cf86571e69feacf68111e460ca19963fb6cdb",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"SUPPORT\",\"reply_draft\":\"Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht zur Fehlermeldung bei der Anmeldung im Kundenportal. Bitte senden Sie uns den genauen Wortlaut der Fehlermeldung und teilen Sie uns mit, welchen Browser Sie verwenden. Diese Angaben helfen bei der Prüfung und der Klärung des weiteren Vorgehens.\",\"urgency\":\"HIGH\"}",
+  "usage": {
+    "cached_tokens": 0,
+    "input_tokens": 18833,
+    "output_tokens": 131,
+    "reasoning_tokens": 38,
+    "total_tokens": 18964
+  }
+}

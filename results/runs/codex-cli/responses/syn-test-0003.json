@@ -1,0 +1,29 @@
+{
+  "backend": "codex-cli",
+  "created_at": "2026-10-27T13:17:30Z",
+  "draft_sha256": "82b53d0cd56fcc17cae1693d3523be25e215b2e18b7dd1204b8e34ea3c6fe1a3",
+  "enquiry_id": "syn-test-0003",
+  "error_kind": null,
+  "latency_ms": 5626,
+  "leaked_types": [],
+  "model": null,
+  "model_hashed": false,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihre Bewerbung auf die ausgeschriebene Stelle als Datenanalystin. Wir haben Ihren Hinweis auf die Bewerbungsfrist am Freitag zur Kenntnis genommen.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "d26a6bc231deb655ff6eaadbf9558eb98a18c783cee35c9f4bdcba5089660624",
+  "response_sha256": "a8fa47765ad17c99821626d941327b85beb9d162a983802fb5ff678669a120b2",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"JOB_APPLICATION\",\"reply_draft\":\"Guten Tag [PERSON_1], vielen Dank für Ihre Bewerbung auf die ausgeschriebene Stelle als Datenanalystin. Wir haben Ihren Hinweis auf die Bewerbungsfrist am Freitag zur Kenntnis genommen.\",\"urgency\":\"HIGH\"}",
+  "usage": {
+    "cached_tokens": 16128,
+    "input_tokens": 17511,
+    "output_tokens": 67,
+    "reasoning_tokens": 0,
+    "total_tokens": 17578
+  }
+}

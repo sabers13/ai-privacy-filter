@@ -1,0 +1,29 @@
+{
+  "backend": "claude-cli",
+  "created_at": "2026-10-27T13:08:36Z",
+  "draft_sha256": "18ac699d9aa9e80a9091e544b1a61203313e9cd80e8727494e95ca80a3520cf1",
+  "enquiry_id": "syn-test-0142",
+  "error_kind": null,
+  "latency_ms": 4697,
+  "leaked_types": [],
+  "model": "claude-opus-5-5",
+  "model_hashed": false,
+  "parsed": {
+    "category": "SUPPORT",
+    "reply_draft": "Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht und den Hinweis, dass sich der Zugang von [ORG_1] zum Kundenportal seit gestern nicht mehr öffnen lässt. Wir haben Ihre Anfrage an unser Support-Team weitergeleitet, das den Fehler prüfen wird. Sobald uns ein Ergebnis vorliegt, melden wir uns bei Ihnen unter [EMAIL_1]. Mit freundlichen Grüßen",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "f705c777de251d8d38b1f8a4dbdbb72d3d67c53aaa5cf5148be8a39aa82d65ce",
+  "response_sha256": "b40a4a6f95d35f25d4c362c9e8fe2b9da3478d1acc89f6dff686cf491531be78",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\": \"SUPPORT\", \"urgency\": \"HIGH\", \"reply_draft\": \"Guten Tag [PERSON_1], vielen Dank für Ihre Nachricht und den Hinweis, dass sich der Zugang von [ORG_1] zum Kundenportal seit gestern nicht mehr öffnen lässt. Wir haben Ihre Anfrage an unser Support-Team weitergeleitet, das den Fehler prüfen wird. Sobald uns ein Ergebnis vorliegt, melden wir uns bei Ihnen unter [EMAIL_1]. Mit freundlichen Grüßen\"}",
+  "usage": {
+    "cached_tokens": 649,
+    "input_tokens": 2,
+    "output_tokens": 258,
+    "reasoning_tokens": null,
+    "total_tokens": 260
+  }
+}

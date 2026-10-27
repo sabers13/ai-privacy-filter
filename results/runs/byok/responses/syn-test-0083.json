@@ -1,0 +1,29 @@
+{
+  "backend": "byok",
+  "created_at": "2026-10-27T13:21:51Z",
+  "draft_sha256": "139f06ae46ab7bfe799f3fe494f9aff71863c3f7e9a2e8f98d7d573919ab1236",
+  "enquiry_id": "syn-test-0083",
+  "error_kind": null,
+  "latency_ms": 6506,
+  "leaked_types": [],
+  "model": "sha256:eb1394ac7fc4",
+  "model_hashed": true,
+  "parsed": {
+    "category": "JOB_APPLICATION",
+    "reply_draft": "Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Bewerbung als Datenanalyst und die dringende Zusendung Ihrer Unterlagen. Wir bestätigen den Eingang Ihrer Bewerbung. Die Unterlagen werden zeitnah geprüft; eine nähere Auskunft zum weiteren Verfahren können wir derzeit noch nicht geben.",
+    "urgency": "HIGH"
+  },
+  "prompt_sha256": "0b86cdf9e421d4d7037dbe86695c0532fc10ee8ff0f6ee71f361e3d0e08fa45b",
+  "response_sha256": "603f56fbcdeb557f15d5f32e78e5b7d8259859b350439dbc39f0fd2224a406ec",
+  "run_id": "20261027T131500Z-triage-a1ad8ff",
+  "schema_version": 1,
+  "status": "ok",
+  "text": "{\"category\":\"JOB_APPLICATION\",\"urgency\":\"HIGH\",\"reply_draft\":\"Sehr geehrte/r [PERSON_1], vielen Dank für Ihre Bewerbung als Datenanalyst und die dringende Zusendung Ihrer Unterlagen. Wir bestätigen den Eingang Ihrer Bewerbung. Die Unterlagen werden zeitnah geprüft; eine nähere Auskunft zum weiteren Verfahren können wir derzeit noch nicht geben.\"}",
+  "usage": {
+    "cached_tokens": 256,
+    "input_tokens": 453,
+    "output_tokens": 608,
+    "reasoning_tokens": 514,
+    "total_tokens": 1061
+  }
+}
