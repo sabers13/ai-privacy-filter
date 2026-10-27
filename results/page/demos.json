@@ -127,6 +127,11 @@
       "response_sha256": "4b8ccb20bc1dd2efd5e9d0e5257e78e95f1d436100ba14b6e6c1ff2bb288c1d8"
     }
   ],
+  "notes": [
+    "deliberate misses are chosen from the detector's miss patterns",
+    "a blocked example made no model call: the outbound audit found the missed gold value",
+    "category and urgency are the enquiry's gold labels; drafts are backend output"
+  ],
   "run_id": "20261027T131500Z-triage-a1ad8ff",
   "schema_version": 1
 }

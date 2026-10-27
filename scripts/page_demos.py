@@ -243,6 +243,12 @@ def main(argv: list[str] | None = None) -> int:
             "fallback_backend": str(args.fallback_backend),
             "count": len(items),
             "deliberate_misses": sum(1 for item in items if item["deliberate_miss"]),
+            "notes": [
+                "deliberate misses are chosen from the detector's miss patterns",
+                "a blocked example made no model call: the outbound audit found "
+                "the missed gold value",
+                "category and urgency are the enquiry's gold labels; drafts are backend output",
+            ],
             "items": items,
         },
     )
