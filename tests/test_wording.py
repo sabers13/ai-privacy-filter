@@ -14,6 +14,7 @@ PUBLIC_DOCS = [
     REPO_ROOT / "CHANGELOG.md",
     REPO_ROOT / "docs" / "contracts.md",
     REPO_ROOT / "docs" / "task-notes" / "T01.md",
+    REPO_ROOT / "docs" / "task-notes" / "T02.md",
     REPO_ROOT / "docs" / "task-notes" / "T03.md",
 ]
 

@@ -9,7 +9,7 @@ this file.
 | Microsoft Presidio (analyzer, anonymizer) | MIT | detection and anonymisation primitives |
 | spaCy | MIT | NLP pipeline |
 | spaCy model `de_core_news_lg` 3.8.0 | MIT | German NER and tokenisation |
-| Faker | MIT | synthetic enquiry generation (planned, T04) |
+| Faker | MIT | synthetic enquiry generation (T04) and the German first-name gazetteer (T02) |
 | FastAPI | MIT | local HTTP service (planned, T08) |
 | uvicorn | BSD-3-Clause | ASGI server (planned, T08) |
 | pydantic | MIT | contracts |

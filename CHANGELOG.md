@@ -24,6 +24,20 @@ All notable changes to this project are documented here.
 - T08 privacy guards in the service: logs carry lengths, entity counts and
   backend names only, validation errors do not echo the request body, and CORS
   is not enabled.
+- T02 detection core: Presidio `AnalyzerEngine` configured with the German
+  `de_core_news_lg` model and language `de`, plus `detect(text, profile=...)`
+  returning merged, non-overlapping `Span` values with a `strict` and a
+  `balanced` profile.
+- German recognizers in `src/ai_privacy_filter/recognizers/`: phone (international,
+  national, spaced, slashed), IBAN with mod-97 checksum, postcode with city,
+  street with house number, VAT ID, date of birth (context only), person names
+  from salutations, titles, signatures and form labels, a first-name gazetteer
+  from Faker `de_DE`, and organisation names anchored on German legal forms.
+  Email and URL use Presidio's patterns; email validation is local so detection
+  never fetches the public-suffix list.
+- Unit tests per recognizer with positive and negative cases, hypothesis property
+  tests that every span offset slices to `span.text`, merge determinism tests and
+  an offline test that blocks sockets while detecting.
 - T03 pseudonymisation: `pseudonymise.redact` replaces `Span` values with
   `[TYPE_n]` placeholders numbered per type in order of first appearance, reuses
   one placeholder for values equal after case and whitespace normalisation, and
@@ -39,7 +53,8 @@ All notable changes to this project are documented here.
   character-exact spans for round-trip and guard tests.
 - `tests/test_local_only.py` and `make test-local`: the local filter path runs
   with sockets disabled, as evidence for the "runs entirely on your machine"
-  claim. The detector leg is skipped until T02 lands.
+  claim. The detector leg exercises `detect.detect` under the same blocked
+  sockets.
 - CI runs the no-network module with `--disable-socket` as a separate step.
 - T05 GermEval 2014 loader: `data/get_germeval.py` downloads the CC BY 4.0
   train/dev/test TSVs into git-ignored `data/external/germeval/`, verifies pinned

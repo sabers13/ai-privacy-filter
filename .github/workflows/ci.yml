@@ -18,6 +18,8 @@ jobs:
           enable-cache: true
       - name: Install dependencies
         run: uv sync --locked --all-groups
+      - name: German spaCy model
+        run: uv pip install --no-deps "https://github.com/explosion/spacy-models/releases/download/de_core_news_lg-3.8.0/de_core_news_lg-3.8.0-py3-none-any.whl"
       - name: Ruff lint
         run: uv run ruff check .
       - name: Ruff format

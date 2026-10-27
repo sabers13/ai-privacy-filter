@@ -4,16 +4,16 @@ The filter pseudonymises personal data in customer enquiries on your machine
 before the text reaches an AI model. The model drafts a reply with placeholders
 in it; the filter puts the details back for a human to review.
 
-**Status: foundation (T01), pseudonymisation (T03), synthetic corpus (T04),
-GermEval loader (T05), real LLM backends (T06) and the HTTP service with the CLI
-(T08).** The package layout, the pydantic contracts, placeholder mapping,
-restoration, the outbound guard, the deterministic fake backend, the dataset
-loaders, the four LLM backends, the FastAPI service, the `aipf` command line, CI
-and the local checks exist. The detector (T02) and the triage prompt (T06/T12)
-are still typed stubs that raise `NotImplementedError` until their tasks land, so
-`/redact` and `/process` answer 501 with the owning task while `/health` and
-`/restore` work today. Detection numbers have not been measured yet, so nothing
-here has been evaluated yet.
+**Status: foundation (T01), detection core (T02), pseudonymisation (T03),
+synthetic corpus (T04), GermEval loader (T05), real LLM backends (T06), optional
+Ollama runtime (T07) and the HTTP service with the CLI (T08).** The package
+layout, the pydantic contracts, detection, placeholder mapping, restoration, the
+outbound guard, the deterministic fake backend, the dataset loaders, the four LLM
+backends, the FastAPI service, the `aipf` command line, CI and the local checks
+exist. The triage prompt (T06/T12) is still a typed stub that raises
+`NotImplementedError` until its task lands, so `/process` answers 501 with the
+owning task while `/health`, `/redact` and `/restore` work today. Detection
+numbers have not been measured yet, so nothing here has been evaluated yet.
 
 ## How it is meant to work
 
@@ -96,7 +96,8 @@ for the original values back. Exit codes: 0 success, 1 runtime failure, 2 refuse
 ## Layout
 
 ```text
-src/ai_privacy_filter/   package source (contracts, filter, service, CLI, backends)
+src/ai_privacy_filter/   package source (contracts, detection, filter, service, CLI, backends)
+src/ai_privacy_filter/recognizers/  German pattern and gazetteer recognizers
 data/                    dataset loaders and source provenance; data/external/ is git-ignored
 docs/contracts.md        contract reference
 docs/backends.md         backend isolation, exact CLI argv and error kinds

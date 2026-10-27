@@ -6,8 +6,8 @@ the synthetic fixture corpus: gold spans from the ``Span`` contract, then
 redaction, the guard, the fake model and restoration. Any accidental socket use
 raises ``SocketBlockedError`` and fails the module.
 
-The detector is T02's; it is called only through ``detect.detect`` and is
-skipped while that module is still a stub.
+The detector is T02's; it is called only through ``detect.detect`` and runs
+with the same blocked sockets.
 """
 
 from __future__ import annotations
@@ -83,11 +83,12 @@ def test_full_local_path_with_the_fake_model_needs_no_network() -> None:
 
 
 def test_detect_path_runs_with_sockets_disabled() -> None:
-    """The detector leg of the proof; skips until T02 replaces the stub."""
-    text = RECORDS[0]["text"]
-    try:
-        spans = detect.detect(text)
-    except NotImplementedError:
-        pytest.skip("T02 detector not landed yet; redaction and guard are covered above")
+    """The detector leg of the proof: T02's engine runs with sockets off."""
+    record = RECORDS[0]
+    text: str = record["text"]
+    spans = detect.detect(text)
+    assert spans, "detection should find personal data in the first synthetic text"
+    gold_texts = {raw["text"] for raw in record["spans"]}
+    assert gold_texts & {span.text for span in spans}
     for span in spans:
         assert text[span.start : span.end] == span.text

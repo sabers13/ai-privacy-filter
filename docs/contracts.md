@@ -221,7 +221,30 @@ Shape:
 }
 ```
 
-## Stub status after T06
+## Detection
+
+`detect.detect(text: str, *, profile: "strict" | "balanced" = "balanced") -> list[Span]`
+runs the Presidio `AnalyzerEngine` with the German spaCy model
+(`de_core_news_lg`, language `de`) and the recognizers in
+`ai_privacy_filter/recognizers/`. It makes no network call.
+
+Returned spans are sorted by `(start, end)` and never overlap. Overlaps are
+resolved deterministically: higher `score`, then longer span, then entity
+priority (email, IBAN, URL, VAT ID, phone, street, postcode/city, date of birth,
+person, organisation), then start, end and source. `text[start:end]` equals
+`span.text` for every returned span.
+
+`profile="balanced"` is the default and avoids over-masking on ambiguous
+evidence. `profile="strict"` favours recall: lower score threshold, shorter phone
+numbers accepted, IBAN groups may use hyphens or dots, and a lone German first
+name from the bundled gazetteer is reported.
+
+A `PERSON` span covers the whole mention the way the synthetic corpus annotates
+it: an optional salutation (`Herr`, `Frau`), academic titles (`Dr.`, `Prof.`,
+`Dipl.-Ing.`, `Univ.Prof.`, `Ing.`, `Mag.`), the name and post-nominal titles
+(`B.Sc.`, `M.Eng.`, `MBA.`, `LL.M.`). A title without a name is never a span.
+
+## Module status after T08
 
 | module | state | lands in |
 |---|---|---|
@@ -230,11 +253,11 @@ Shape:
 | `backends/registry.py` | complete: registered backends, no probing | T01/T06 |
 | `backends/byok.py`, `claude_cli.py`, `codex_cli.py` | complete | T06 |
 | `backends/env.py`, `isolation.py`, `schema.py`, `quota.py` | complete | T06 |
-| `detect.py` | raises `NotImplementedError` | T02 |
+| `detect.py`, `recognizers/` | complete | T02 |
 | `pseudonymise.py`, `guard.py` | complete | T03 |
 | `triage.py` | schema fixed, functions raise `NotImplementedError` | T06/T12 |
-| `api.py` | raises `NotImplementedError` | T08 |
-| `cli.py` | parser works, execution raises `NotImplementedError` | T08/T13 |
+| `api.py`, `tickets.py`, `pipeline.py` | complete | T08 |
+| `cli.py` | complete for `redact`, `process`, `eval`, `serve` | T08 |
 
 ## Wording rules
 

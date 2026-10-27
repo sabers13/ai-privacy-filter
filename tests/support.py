@@ -1,9 +1,10 @@
 """Synthetic text and deterministic stand-ins shared by the T08 tests.
 
-The detector and the classifier stand in for T02's ``detect.detect`` and T06's
-``triage.classify`` while those are still stubs on ``main``. The classifier calls
-the real fake backend, so every test exercises the shipped backend and the
-frozen ``TRIAGE_SCHEMA``. All text here is synthetic.
+The detector stand-in provides fixed spans, so service and CLI tests do not load
+the German model or depend on detection quality. The classifier calls the real
+fake backend, so every test exercises the shipped backend and the frozen
+``TRIAGE_SCHEMA``; the triage prompt itself is still a stub until T12. All text
+here is synthetic.
 """
 
 from __future__ import annotations
@@ -11,9 +12,12 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Final
 
+from presidio_analyzer import EntityRecognizer, RecognizerResult
+
 from ai_privacy_filter.backends.base import LLMBackend
 from ai_privacy_filter.models import Category, EntityType, Span, TriageResult, Urgency
 from ai_privacy_filter.pipeline import Detector, Pipeline
+from ai_privacy_filter.recognizers.base import Settings, settings_for
 from ai_privacy_filter.triage import TRIAGE_SCHEMA
 
 TEXT: Final = (
@@ -102,3 +106,30 @@ class Harness:
             pipeline=Pipeline(detector=detector, classifier=classifier),
             classifier=classifier,
         )
+
+
+# Helpers for the T02 recognizer tests.
+
+
+def analyze(recognizer: EntityRecognizer, text: str) -> list[RecognizerResult]:
+    """Run one recognizer over ``text`` without a full Presidio engine."""
+
+    return recognizer.analyze(text, [])
+
+
+def texts(recognizer: EntityRecognizer, text: str) -> list[str]:
+    """Return the matched substrings of one recognizer."""
+
+    return [text[result.start : result.end] for result in analyze(recognizer, text)]
+
+
+def balanced() -> Settings:
+    """Settings of the default profile."""
+
+    return settings_for("balanced")
+
+
+def strict() -> Settings:
+    """Settings of the recall-first profile."""
+
+    return settings_for("strict")
