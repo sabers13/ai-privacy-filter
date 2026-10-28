@@ -3,7 +3,7 @@
 Local-only release. No remote, no push, no pull request and no deployment.
 
 - Date: 2026-10-27
-- Base: `main` at `898bdc2`
+- Base: `main` at `2cbd181`
 - Release tag: `v1.0.0` (annotated, local only)
 - Page repository: `sabers13.github.io`, local `main`, unpublished
 - Environment: Linux x86_64, Python 3.12.3, uv, gitleaks 8.30.1

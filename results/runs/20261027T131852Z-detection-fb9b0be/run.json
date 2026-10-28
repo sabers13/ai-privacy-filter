@@ -6,12 +6,12 @@
     "results/detection_synthetic.json": "20d2fea590f602e4a65d24d140f115659f2ec0387bec4045923f0081fb4afaae",
     "results/leak_rate.json": "a24b4184a1dd1b76d2923e3f41304e01a09f09804b0599719b694ea105ae03dd",
     "results/restore.json": "6ddbccfc083cce6e5c97317c3d54464fb93d024906e290bf52f32a08fd8d4b2f",
-    "results/runs/20261027T131852Z-detection-67d6ac9/metrics.json": "426fac1ffb6de638ed3f845b77219abca4d88f84d589795239d707c17e4a8580",
-    "results/runs/20261027T131852Z-detection-67d6ac9/report.md": "c02f0a73d0611223c8f82b0a468d5571a34ace7781d571a7d9b3203f338bf6a5",
-    "results/runs/20261027T131852Z-detection-67d6ac9/scoring/leak.json": "ac2e9fd0691e7156a179dc342033365a70c432553d120cb1a31b924d2accd04e",
-    "results/runs/20261027T131852Z-detection-67d6ac9/scoring/misses.json": "cfbdd262d00d3941e3efacb5dc4ae08e32d1c31010c314f7b6ed3af559416f85",
-    "results/runs/20261027T131852Z-detection-67d6ac9/scoring/overmask.json": "7d9eac59a73bcc05f2c21e5987ae004e9c25efbeab01a3e6d00c48b306bfcf35",
-    "results/runs/20261027T131852Z-detection-67d6ac9/scoring/restore.json": "3cfad8c5b98408e0b5cb0f5153a68e2bf2d2c508e02c181a9183157caa2751d6"
+    "results/runs/20261027T131852Z-detection-fb9b0be/metrics.json": "426fac1ffb6de638ed3f845b77219abca4d88f84d589795239d707c17e4a8580",
+    "results/runs/20261027T131852Z-detection-fb9b0be/report.md": "c02f0a73d0611223c8f82b0a468d5571a34ace7781d571a7d9b3203f338bf6a5",
+    "results/runs/20261027T131852Z-detection-fb9b0be/scoring/leak.json": "ac2e9fd0691e7156a179dc342033365a70c432553d120cb1a31b924d2accd04e",
+    "results/runs/20261027T131852Z-detection-fb9b0be/scoring/misses.json": "cfbdd262d00d3941e3efacb5dc4ae08e32d1c31010c314f7b6ed3af559416f85",
+    "results/runs/20261027T131852Z-detection-fb9b0be/scoring/overmask.json": "7d9eac59a73bcc05f2c21e5987ae004e9c25efbeab01a3e6d00c48b306bfcf35",
+    "results/runs/20261027T131852Z-detection-fb9b0be/scoring/restore.json": "3cfad8c5b98408e0b5cb0f5153a68e2bf2d2c508e02c181a9183157caa2751d6"
   },
   "command": [
     "python",
@@ -20,9 +20,9 @@
     "--stage",
     "detection",
     "--run-id",
-    "20261027T131852Z-detection-67d6ac9"
+    "20261027T131852Z-detection-fb9b0be"
   ],
-  "commit": "67d6ac919416e60198daeaa82b2dbb777bc4fe9f",
+  "commit": "fb9b0befd7296e518f56588fdd94e9ab6b2b547c",
   "config_sha256": "68a8b18ac97220e2df849ec9dc3014bf5113054a6a2dd87116f535857e2e6dba",
   "data_sha256": {
     "germeval_manifest": "9bf93fedb4b57e38a48b546d67e82f4f2d9ff3367339035e9aed83e1728389f1",
@@ -44,7 +44,7 @@
   "method_sha256": "f76b5b8ada0f3f31666aae7abc00d6fb7d845a0ba3f4056c41c6a6ade67d2f86",
   "mode": "test",
   "rerun_reason": null,
-  "run_id": "20261027T131852Z-detection-67d6ac9",
+  "run_id": "20261027T131852Z-detection-fb9b0be",
   "schema_version": 1,
   "stage": "detection",
   "started_at": "2026-10-27T13:18:52.704985Z",
