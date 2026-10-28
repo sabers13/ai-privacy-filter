@@ -1,6 +1,6 @@
 # Live canary logs
 
-One canary per backend, run once during T06 under the shared live-LLM lock.
+One canary per backend, run once under the shared live-LLM lock.
 These files are the redacted record; nothing here is hand-written.
 
 | file | backend | what it proves |

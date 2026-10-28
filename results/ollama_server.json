@@ -1,5 +1,5 @@
 {
-  "task": "T07",
+  "stage": "ollama-remote",
   "generated_at": "2026-10-27T12:55:00Z",
   "outcome": "ok",
   "host": {
@@ -67,7 +67,7 @@
     ]
   },
   "backend_check": {
-    "description": "the same request driven through ai_privacy_filter.backends.byok.BYOKBackend.for_ollama after T06 landed, not just curl",
+    "description": "the same request driven through ai_privacy_filter.backends.byok.BYOKBackend.for_ollama against the live backend, not just curl",
     "available": true,
     "error_kind": null,
     "model": "qwen2.5:1.5b",
@@ -82,9 +82,9 @@
       "reply_draft_omitted": "transcript not quoted here: it mixed German, one Chinese sentence and invented placeholders"
     },
     "quality_notes": [
-      "The backend path works end to end for T12: availability true, no error kind, schema-valid JSON in 9.2 s.",
+      "The backend path works end to end: availability true, no error kind, schema-valid JSON in 9.2 s.",
       "Answer quality is poor: wrong category again (SUPPORT for a quote request), LOW urgency, invented placeholders ([Buero_Reinigung_Erstellung_Genossenschaft], [Triage-Assistent Name]) and one Chinese sentence.",
-      "The restore step must reject unknown placeholders, and T12 should not treat local-model categories as trustworthy without scoring."
+      "The restore step must reject unknown placeholders, and local-model categories must not be treated as trustworthy without scoring."
     ]
   },
   "memory": {

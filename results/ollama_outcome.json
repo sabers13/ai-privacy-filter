@@ -61,7 +61,7 @@
   ],
   "response_sha256_combined": "63d995c4683532fde9149f49782a8c67f4b6bc5c0814b9ed3775a75bd913fb32",
   "run_id": "20261027T131500Z-triage-a1ad8ff",
-  "task": "T12",
+  "stage": "triage",
   "time_box_minutes": 90,
   "time_box_outcome": "complete inside the box",
   "tunnel": "127.0.0.1:11435 -> model host 127.0.0.1:11434",

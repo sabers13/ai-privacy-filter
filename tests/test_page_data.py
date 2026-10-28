@@ -1,4 +1,4 @@
-"""Page data files follow the T01 schemas."""
+"""Page data files follow the shared schemas."""
 
 from __future__ import annotations
 

@@ -1,8 +1,8 @@
 """HTTP service tests: every endpoint, the guard, expiry, logs and CORS.
 
 The service is exercised through ``TestClient`` against the fake backend, with a
-deterministic detector and classifier stand-in because T02 and T06 are still
-stubs on ``main``. All text is synthetic.
+deterministic detector and classifier stand-in, so the tests do not load the
+German model or call a model. All text is synthetic.
 """
 
 from __future__ import annotations
@@ -202,9 +202,9 @@ def test_stub_pipeline_answers_501_naming_the_owner() -> None:
         redact_response = client.post("/redact", json={"text": TEXT})
         process_response = client.post("/process", json={"text": TEXT})
     assert redact_response.status_code == 501
-    assert "T02" in redact_response.json()["detail"]
+    assert "detection" in redact_response.json()["detail"]
     assert process_response.status_code == 501
-    assert "T02" in process_response.json()["detail"]
+    assert "detection" in process_response.json()["detail"]
 
 
 def test_default_app_wires_the_real_detector_and_classifier() -> None:

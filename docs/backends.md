@@ -229,7 +229,7 @@ backend = BYOKBackend.for_ollama("qwen2.5:3b")  # 127.0.0.1:11435/v1, 300 tokens
 
 `for_ollama` uses `OLLAMA_BASE_URL` (`http://127.0.0.1:11435/v1`), a 300-token
 ceiling, no bearer key and a JSON-schema `response_format`. Ollama is reached
-through the server tunnel (T07), never from CI.
+through the SSH tunnel, never from CI.
 
 ## Honest limitations
 
@@ -264,7 +264,7 @@ The CLI canaries create a `CANARY.txt` with a random token in the parent of the
 fresh working directory. A passing canary means: schema-valid JSON, no tool
 event, and the token absent from the answer and parsed payload.
 
-### T06 result
+### Canary result
 
 One run on 2026-10-27 under the shared lock, private env loaded, 3 passed in
 24.75 s:
@@ -284,7 +284,7 @@ itself redacted. No rerun was needed, so there is exactly one run per backend.
 `scripts/run_triage.py` is the live entry point behind `make live`. It reads the
 fixed 40-enquiry subset from `METHOD.md` section 8 and calls each requested
 backend once per enquiry, in the listed order. `claude-cli`, `codex-cli` and
-`byok` are the primary set; `ollama` is optional and runs last through the T07
+`byok` are the primary set; `ollama` is optional and runs last through the SSH
 tunnel.
 
 ```sh

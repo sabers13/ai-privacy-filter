@@ -1,4 +1,4 @@
-"""Tests for the T04 seeded synthetic enquiry corpus."""
+"""Tests for the seeded synthetic enquiry corpus."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ SCRIPT = REPO_ROOT / "data" / "make_synthetic.py"
 DATA_DIR = REPO_ROOT / "data" / "synthetic"
 SEED = 20261027
 
-# Per-type minimums for the test split, from the T04 brief.
+# Per-type minimums for the test split.
 TEST_MINIMUMS: dict[EntityType, int] = {
     EntityType.PERSON: 100,
     EntityType.EMAIL: 60,

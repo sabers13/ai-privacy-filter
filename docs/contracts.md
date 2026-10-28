@@ -132,7 +132,7 @@ prompt, prompt never in argv).
 
 ### Fake backend
 
-`FakeBackend` is fully implemented in T01. It reads the SHA-256 digest of the
+`FakeBackend` is fully implemented. It reads the SHA-256 digest of the
 prompt, picks a category and urgency from it, fills a German template with the
 first placeholder found in the prompt (or `Ihnen`), and returns JSON matching
 `TRIAGE_SCHEMA`. The same prompt always yields the same result, including
@@ -170,7 +170,7 @@ Written by `scripts/page_export.py` in a later task and read by the site page.
 | `category` | `Category` |
 | `urgency` | `Urgency` |
 | `backend` | `str` |
-| `mock` | `bool \| None` (`true` for T09 mock data, `false` for real results) |
+| `mock` | `bool \| None` (`true` for mock page data, `false` for real results) |
 
 Shape:
 
@@ -244,20 +244,20 @@ it: an optional salutation (`Herr`, `Frau`), academic titles (`Dr.`, `Prof.`,
 `Dipl.-Ing.`, `Univ.Prof.`, `Ing.`, `Mag.`), the name and post-nominal titles
 (`B.Sc.`, `M.Eng.`, `MBA.`, `LL.M.`). A title without a name is never a span.
 
-## Module status after T08
+## Module status
 
-| module | state | lands in |
-|---|---|---|
-| `models.py` | complete | T01 |
-| `backends/fake.py` | complete | T01 |
-| `backends/registry.py` | complete: registered backends, no probing | T01/T06 |
-| `backends/byok.py`, `claude_cli.py`, `codex_cli.py` | complete | T06 |
-| `backends/env.py`, `isolation.py`, `schema.py`, `quota.py` | complete | T06 |
-| `detect.py`, `recognizers/` | complete | T02 |
-| `pseudonymise.py`, `guard.py` | complete | T03 |
-| `triage.py` | schema fixed, functions raise `NotImplementedError` | T06/T12 |
-| `api.py`, `tickets.py`, `pipeline.py` | complete | T08 |
-| `cli.py` | complete for `redact`, `process`, `eval`, `serve` | T08 |
+| module | state |
+|---|---|
+| `models.py` | complete |
+| `backends/fake.py` | complete |
+| `backends/registry.py` | complete: registered backends, no probing |
+| `backends/byok.py`, `claude_cli.py`, `codex_cli.py` | complete |
+| `backends/env.py`, `isolation.py`, `schema.py`, `quota.py` | complete |
+| `detect.py`, `recognizers/` | complete |
+| `pseudonymise.py`, `guard.py` | complete |
+| `triage.py` | complete |
+| `api.py`, `tickets.py`, `pipeline.py` | complete |
+| `cli.py` | complete for `redact`, `process`, `eval`, `serve` |
 
 ## Wording rules
 

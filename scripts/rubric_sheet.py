@@ -7,7 +7,7 @@ are removed and the drafts are shuffled with seed ``20261027``.
 
 Two steps:
 
-1. ``--mode sheet`` writes ``rubric_sheet.json`` (anonymised drafts plus the
+1. ``--mode sheet`` writes ``rubric_sheet.json`` (blinded drafts plus the
    redacted enquiry) and ``rubric_key.json`` (token -> enquiry id) into a
    directory outside the repository.
 2. ``--mode join`` reads the scored sheet and the key, writes
@@ -141,7 +141,7 @@ def _join(run_dir: Path, backend: str, out_dir: Path) -> int:
             "backend": backend,
             "seed": SEED,
             "n": len(scores),
-            "reviewer": "single reviewer (T12 worker)",
+            "reviewer": "single reviewer",
             "dimensions": list(DIMENSIONS),
             "means": means,
             "ranges": ranges,

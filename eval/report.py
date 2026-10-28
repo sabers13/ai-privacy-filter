@@ -372,7 +372,8 @@ def _answer_backend(restore: dict[str, Any]) -> str:
     draft = restore["draft_restoration"]
     return (
         "**4. Backend quality.** Not measured in this stage: the fixed 40-enquiry backend "
-        f"run belongs to T12 and is currently {draft['status']} ({draft['reason']})."
+        f"run belongs to the triage stage and is currently {draft['status']} "
+        f"({draft['reason']})."
     )
 
 
@@ -633,7 +634,7 @@ def render_summary(
         f"{restore['exact_pct']:.1f}% | {format_interval(restore['exact_wilson_pct'])} | "
         f"{len(restore['failures'])} |",
         "",
-        "Draft restoration is per backend and belongs to the T12 run: "
+        "Draft restoration is per backend and belongs to the triage run: "
         f"{restore['draft_restoration']['status']} ({restore['draft_restoration']['reason']}).",
         "",
         "## Ten most common miss patterns (synthetic test)",

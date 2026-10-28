@@ -1,8 +1,8 @@
-"""Contract-level checks that no T01 stub is left behind.
+"""Contract-level checks that no stub is left behind.
 
-The real backends and quota classification land in T06 and are covered by the
-backend test modules. ``api`` and ``cli`` are implemented in T08, the detector
-in T02 and the triage glue in T12; each has its own test module.
+The real backends and quota classification are covered by the backend test
+modules; the detector, the service, the CLI and the triage glue have their own
+test modules.
 """
 
 from __future__ import annotations
@@ -18,7 +18,7 @@ from ai_privacy_filter.backends.fake import FakeBackend
 
 
 def test_api_and_cli_are_implemented() -> None:
-    """T08 replaced the T01 stubs; the service and the CLI must build."""
+    """The stubs were replaced; the service and the CLI must build."""
     assert api.create_app() is not None
     assert cli.build_parser().prog == "aipf"
 

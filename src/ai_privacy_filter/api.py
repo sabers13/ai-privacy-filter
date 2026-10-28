@@ -27,9 +27,9 @@ Privacy invariants
 * Default bind is ``127.0.0.1:8765``; ``AIPF_BIND=host:port`` overrides it for a
   container that has to reach the service from outside.
 
-T08 wires the pipeline against the frozen contracts. Detection (T02) and triage
-(T06/T12) are still stubs on ``main``, so ``/redact`` and ``/process`` answer 501
-with the owning task until those land; tests inject deterministic stand-ins.
+The pipeline is wired against the frozen contracts. If a leg is missing from
+a build, ``/redact`` and ``/process`` answer 501 with a plain reason; tests
+inject deterministic stand-ins.
 """
 
 from __future__ import annotations

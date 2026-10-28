@@ -1,4 +1,4 @@
-"""Contract shape and validation tests for T01."""
+"""Contract shape and validation tests for the shared models."""
 
 from __future__ import annotations
 

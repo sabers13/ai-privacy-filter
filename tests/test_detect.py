@@ -1,8 +1,8 @@
 """Whole-pipeline detection over hand-written synthetic enquiries.
 
-T04 will generate synthetic enquiries with the same shape (text plus
-character-exact gold spans). Until that data is on ``main``, these fixtures are
-written by hand and use Faker-style German names only.
+The synthetic corpus uses enquiries with the same shape (text plus
+character-exact gold spans). These fixtures are written by hand and use
+Faker-style German names only.
 """
 
 from __future__ import annotations
@@ -252,7 +252,7 @@ def test_offsets_property_for_arbitrary_text(text: str) -> None:
 
 
 def test_dev_corpus_gold_spans_are_all_found_and_offsets_hold() -> None:
-    """T04's dev split is the tuning input; every gold span is detected there.
+    """The dev split is the tuning input; every gold span is detected there.
 
     This is a dev regression gate, not an evaluation number: the test split is
     untouched until the evaluation task runs it once.

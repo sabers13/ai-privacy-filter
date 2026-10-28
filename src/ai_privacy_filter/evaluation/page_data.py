@@ -126,7 +126,7 @@ def select_examples(
 ) -> tuple[list[Enquiry], list[str], dict[str, list[Span]]]:
     """Return ``(examples, notes, misses_by_id)`` in page order.
 
-    ``pattern_ids`` are the example ids from T11's miss-pattern table. When one
+    ``pattern_ids`` are the example ids from the detection miss-pattern table. When one
     is inside the fixed subset and the detector still misses its gold span, it is
     chosen first so the page shows a documented miss pattern rather than an
     arbitrary one.
@@ -194,7 +194,7 @@ def select_examples(
             "the page shows it as-is"
         )
     else:
-        source = "T11 miss patterns" if pattern_ids else "the fixed subset"
+        source = "detection miss patterns" if pattern_ids else "the fixed subset"
         notes.append(f"{found_misses} deliberate detection misses from {source}")
     notes.append(
         "examples are three per category from the fixed 40-enquiry subset; "
@@ -357,9 +357,9 @@ def _detection_block(payload: Mapping[str, Any]) -> dict[str, Any] | None:
 
 
 def load_detection(root: Path, explicit: Path | None = None) -> dict[str, Any]:
-    """Load the T11 detection blocks.
+    """Load the detection blocks.
 
-    T11 writes ``results/detection_synthetic.json`` and
+    The detection stage writes ``results/detection_synthetic.json`` and
     ``results/detection_germeval.json`` (and copies them into its run
     directory). A single page-shaped file with a ``detection`` object or the two
     top-level keys is also accepted.
@@ -402,8 +402,8 @@ def load_detection(root: Path, explicit: Path | None = None) -> dict[str, Any]:
             if block is not None:
                 return block
     raise FileNotFoundError(
-        "no detection metrics found; T11 must land detection_synthetic.json and "
-        "detection_germeval.json under results/"
+        "no detection metrics found; run the detection stage to write "
+        "detection_synthetic.json and detection_germeval.json under results/"
     )
 
 

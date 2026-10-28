@@ -4,10 +4,10 @@ The HTTP service and the CLI share this module instead of wiring the steps
 themselves, so the guard cannot be skipped by a caller that forgets it.
 
 Detection and triage are injected: :func:`default_detector` and
-:func:`default_classifier` call T02's ``detect.detect`` and T06's
-``triage.classify``, and tests pass deterministic stand-ins while those tasks are
-still stubs. A stub upstream raises :class:`PipelineNotReadyError` with the task
-that owns it, so the service can answer 501 instead of a traceback.
+:func:`default_classifier` call ``detect.detect`` and ``triage.classify``,
+and tests pass deterministic stand-ins for either leg. A missing leg raises
+:class:`PipelineNotReadyError` with a plain reason, so the service can answer
+501 instead of a traceback.
 
 Privacy: the mapping produced by pseudonymisation stays in this object and in the
 ticket store. Nothing here logs a value; only lengths, counts and entity types
@@ -30,12 +30,12 @@ from ai_privacy_filter.pseudonymise import redact
 Detector = Callable[[str], Sequence[Span]]
 Classifier = Callable[[str, LLMBackend], TriageResult]
 
-DETECTION_OWNER: Final = "detection lands with T02"
-TRIAGE_OWNER: Final = "the triage pipeline lands with T06/T12"
+DETECTION_OWNER: Final = "the detection stage is not available"
+TRIAGE_OWNER: Final = "the triage stage is not available"
 
 
 class PipelineNotReadyError(RuntimeError):
-    """Raised when a pipeline leg is still a stub that owns a later task."""
+    """Raised when a pipeline leg is not available."""
 
 
 class ProcessResult(ContractModel):
@@ -61,12 +61,12 @@ def summarise_spans(spans: Sequence[Span]) -> dict[str, int]:
 
 
 def default_detector(text: str) -> Sequence[Span]:
-    """Run the local detector. T02 owns the implementation."""
+    """Run the local detector."""
     return detect.detect(text)
 
 
 def default_classifier(text: str, backend: LLMBackend) -> TriageResult:
-    """Classify already-pseudonymised ``text``. T06/T12 own the implementation."""
+    """Classify already-pseudonymised ``text``."""
     return triage.classify(text, backend)
 
 

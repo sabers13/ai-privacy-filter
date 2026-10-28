@@ -1,9 +1,9 @@
-"""Synthetic text and deterministic stand-ins shared by the T08 tests.
+"""Synthetic text and deterministic stand-ins shared by the service and CLI tests.
 
 The detector stand-in provides fixed spans, so service and CLI tests do not load
 the German model or depend on detection quality. The classifier calls the real
 fake backend, so every test exercises the shipped backend and the frozen
-``TRIAGE_SCHEMA``; the triage prompt itself is still a stub until T12. All text
+``TRIAGE_SCHEMA``. All text
 here is synthetic.
 """
 
@@ -108,7 +108,7 @@ class Harness:
         )
 
 
-# Helpers for the T02 recognizer tests.
+# Helpers for the recognizer tests.
 
 
 def analyze(recognizer: EntityRecognizer, text: str) -> list[RecognizerResult]:

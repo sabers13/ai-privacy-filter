@@ -50,7 +50,7 @@ The daemon is tuned for a small host (measured on 4 vCPU, 3.3 GiB RAM, no GPU):
 - Expect roughly 20–40 s per call on hardware like this with longer prompts; keep
   prompts short and `max_tokens` at 300 for triage.
 
-## What was measured (T07)
+## What was measured
 
 `results/ollama_server.json` holds the full record: service active, checksum
 verified against the published `sha256sum.txt`, `/v1/models` reachable through the

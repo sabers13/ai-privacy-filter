@@ -3,7 +3,7 @@
 Local-only release. No remote, no push, no pull request and no deployment.
 
 - Date: 2026-10-27
-- Project branch: `fm/aipf-t15`, based on `main` `898bdc2`
+- Base: `main` at `898bdc2`
 - Release tag: `v1.0.0` (annotated, local only)
 - Page repository: `sabers13.github.io`, local `main`, unpublished
 - Environment: Linux x86_64, Python 3.12.3, uv, gitleaks 8.30.1
@@ -182,8 +182,8 @@ The annotated tag is local only. It is not pushed. Use
 - The page repository is a shared local repository. Its history was not
   rewritten; the single page-subtree historical name collision above is
   reported rather than hidden.
-- The page's GitHub link returns HTTP 404 until the captain publishes the
-  repository. This is recorded in the page checks and is not a release failure.
+- The page's GitHub link returns HTTP 404 until the repository is
+  published. This is recorded in the page checks and is not a release failure.
 - The optional GermEval test is skipped in the clean clone before `make
   reproduce` downloads the data; reproduction then verifies the full GermEval
   result file.

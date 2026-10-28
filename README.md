@@ -122,8 +122,10 @@ pipeline. The exact argv, environment allowlist and error kinds are in
 
 The `byok` route is also how a local Ollama endpoint is used: point the backend
 at `http://127.0.0.1:11435/v1`, keep the 300-token ceiling and JSON-schema
-response format, and no bearer key is sent. The T07 tunnel and its server lock
-are documented in [`ops/ollama-remote/`](ops/ollama-remote/).
+response format, and no bearer key is sent. Ollama stays on the model host's
+loopback, an SSH tunnel forwards it to `127.0.0.1:11435` here, and a lock keeps
+only one live model run active at a time; the setup is in
+[`ops/ollama-remote/`](ops/ollama-remote/).
 
 ## Human review in n8n
 

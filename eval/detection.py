@@ -112,7 +112,7 @@ PROMPT_SUFFIX: Final = "\n\nAntwort (JSON):"
 
 #: The prompt envelope is constant and contains no data. Leak audit therefore
 #: depends only on the pseudonymised message body, which is exactly what leaves
-#: the machine. T12 owns the final triage wording; the envelope hash below makes
+#: the machine. The triage wording is fixed; the envelope hash below makes
 #: any change visible.
 PROMPT_ENVELOPE_SHA256: Final = hashlib.sha256(
     (PROMPT_PREFIX + PROMPT_SUFFIX).encode("utf-8")
@@ -446,7 +446,7 @@ def restore_round_trip(
         "failures": failures,
         "draft_restoration": {
             "status": "not measured",
-            "reason": "the fixed 40-enquiry backend run lands with T12",
+            "reason": "the triage stage measures it separately",
         },
     }
     return payload, records
@@ -1455,7 +1455,7 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     parser.add_argument(
         "--method-approval",
         default=None,
-        help="captain approval reference when METHOD.md changed after test access",
+        help="approval reference when METHOD.md changed after test access",
     )
     return parser.parse_args(argv)
 

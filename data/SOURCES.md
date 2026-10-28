@@ -98,7 +98,7 @@ the licence terms that apply. Accessed 2026-10-27.
   (`ollama-linux-amd64.tar.zst`, `sha256sum.txt`).
 - Licence: MIT.
 - Use here: optional local model runtime on a separate host, reached over an SSH
-  tunnel (T07). The binary is downloaded on that host at install time, not
+  tunnel. The binary is downloaded on that host at install time, not
   redistributed with this repository.
 - Checksum recorded at install time:
   `7bedab90dd122661be78798e9f0edf37fccf0cccf2699d2c58ea1a3afdc04b6d`
@@ -117,4 +117,4 @@ the licence terms that apply. Accessed 2026-10-27.
   optional Ollama path. Apache-2.0 permits this use, including commercial use,
   without a separate agreement.
 - Fallback considered: `qwen2.5:0.5b`, same licence family and Apache-2.0. Not
-  needed in the T07 measurement.
+  needed in the local measurement.

@@ -121,7 +121,7 @@ def test_method_change_needs_reason_then_approval(tmp_path: Path) -> None:
 
     no_approval = _guard(
         root,
-        *_test_args("triage", "run-2", "--rerun-reason", "captain requested correction"),
+        *_test_args("triage", "run-2", "--rerun-reason", "review requested correction"),
     )
     assert no_approval.returncode == 4
     assert "approval" in no_approval.stderr
@@ -132,14 +132,14 @@ def test_method_change_needs_reason_then_approval(tmp_path: Path) -> None:
             "triage",
             "run-2",
             "--rerun-reason",
-            "captain requested correction",
+            "review requested correction",
             "--method-approval",
-            "captain-note-17",
+            "release-note-17",
         ),
     )
     assert allowed.returncode == 0, allowed.stderr
     assert json.loads(allowed.stdout)["decision"] == "method-change-new-stage"
-    assert _claim(root, "run-2")["method_approval"] == "captain-note-17"
+    assert _claim(root, "run-2")["method_approval"] == "release-note-17"
 
 
 def test_same_run_id_is_idempotent(tmp_path: Path) -> None:

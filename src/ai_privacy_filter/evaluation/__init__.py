@@ -1,6 +1,7 @@
 """Evaluation helpers for the triage stage.
 
-The modules here implement the parts of ``METHOD.md`` that belong to T12:
+The modules here implement the parts of ``METHOD.md`` that drive the triage
+measurements:
 the fixed 40-enquiry subset, the per-backend run and its stored responses, the
 triage metrics, the deterministic rebuild and the page export.
 

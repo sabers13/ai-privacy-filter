@@ -6,7 +6,7 @@ the synthetic fixture corpus: gold spans from the ``Span`` contract, then
 redaction, the guard, the fake model and restoration. Any accidental socket use
 raises ``SocketBlockedError`` and fails the module.
 
-The detector is T02's; it is called only through ``detect.detect`` and runs
+The detector is the shipped one; it is called only through ``detect.detect`` and runs
 with the same blocked sockets.
 """
 
@@ -83,7 +83,7 @@ def test_full_local_path_with_the_fake_model_needs_no_network() -> None:
 
 
 def test_detect_path_runs_with_sockets_disabled() -> None:
-    """The detector leg of the proof: T02's engine runs with sockets off."""
+    """The detector leg of the proof: the real engine runs with sockets off."""
     record = RECORDS[0]
     text: str = record["text"]
     spans = detect.detect(text)

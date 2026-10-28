@@ -166,7 +166,7 @@ class Compose:
         binary = shutil.which("docker")
         if binary is None:
             raise E2EError("docker (or the podman docker wrapper) was not found")
-        self.command = [binary, "compose", "--project-name", "aipf-t13", "-f", str(COMPOSE_FILE)]
+        self.command = [binary, "compose", "--project-name", "aipf-e2e", "-f", str(COMPOSE_FILE)]
         if not self._usable_docker_host():
             self._start_private_socket()
 
@@ -197,7 +197,7 @@ class Compose:
                 "no Docker socket is available and podman is not installed; "
                 "set DOCKER_HOST to a running daemon"
             )
-        self._tempdir = Path(tempfile.mkdtemp(prefix="aipf-t13-"))
+        self._tempdir = Path(tempfile.mkdtemp(prefix="aipf-e2e-"))
         socket_path = self._tempdir / "podman.sock"
         log("starting a private podman service for this run")
         self._service = subprocess.Popen(
@@ -268,7 +268,7 @@ def playwright_env(prefix: Path) -> dict[str, str]:
 
 class Browser:
     def __init__(self) -> None:
-        prefix = Path(os.environ.get("AIPF_PLAYWRIGHT_PREFIX", "/tmp/opencode/aipf-t13-playwright"))
+        prefix = Path(os.environ.get("AIPF_PLAYWRIGHT_PREFIX", "/tmp/opencode/aipf-playwright"))
         self.env = playwright_env(prefix)
 
     def call(self, *arguments: str, timeout: float = 600) -> None:
@@ -552,7 +552,7 @@ def main() -> int:
 
         plan = approval_plan(answers)
         with tempfile.NamedTemporaryFile(
-            "w", suffix=".json", prefix="aipf-t13-plan-", delete=False, encoding="utf-8"
+            "w", suffix=".json", prefix="aipf-e2e-plan-", delete=False, encoding="utf-8"
         ) as handle:
             json.dump(plan, handle)
             plan_path = Path(handle.name)
@@ -605,8 +605,12 @@ def main() -> int:
 
 
 def static_default_lock() -> str:
-    """The mission-wide live-LLM lock, kept outside the repository."""
-    return str(Path.home() / "Projects" / "firstmate" / "state" / "aipf-lock-live-llm")
+    """The shared live-LLM lock, kept outside the repository."""
+    root = os.environ.get("AIPF_LOCK_DIR")
+    base = (
+        Path(root).expanduser() if root else Path.home() / ".local" / "state" / "ai-privacy-filter"
+    )
+    return str(base / "aipf-lock-live-llm")
 
 
 if __name__ == "__main__":

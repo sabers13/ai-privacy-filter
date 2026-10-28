@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Synthetic German enquiry texts for T03 round-trip and guard tests. Values come from Faker de_DE with a fixed seed; no real people, companies or infrastructure.",
+  "note": "Synthetic German enquiry texts for round-trip and guard tests. Values come from Faker de_DE with a fixed seed; no real people, companies or infrastructure.",
   "texts": [
     {
       "id": "syn-01-01",

@@ -16,7 +16,7 @@ This is one test-split run at stage `detection`. The run id, commit, timestamps 
 
 **3. Over-masked.** 0 of 160 synthetic test enquiries had at least one extra character (0.0%, 95 % CI 0.0-2.3); 0 of 19824 replaced characters were extra, and 0.0% of replaced characters were outside a gold span (cluster bootstrap 0.0-0.0). The worst type is no type.
 
-**4. Backend quality.** Not measured in this stage: the fixed 40-enquiry backend run belongs to T12 and is currently not measured (the fixed 40-enquiry backend run lands with T12).
+**4. Backend quality.** Not measured in this stage: the fixed 40-enquiry backend run belongs to the triage stage and is currently not measured (the triage stage measures it separately).
 
 ## Synthetic test — recall (primary, compatible-type coverage)
 
@@ -229,7 +229,7 @@ Extra characters are inside a prediction but outside every gold span of any type
 |---|---|---|---|---|
 | 160 | 160 | 100.0% | 97.7-100.0 | 0 |
 
-Draft restoration is per backend and belongs to the T12 run: not measured (the fixed 40-enquiry backend run lands with T12).
+Draft restoration is per backend and belongs to the triage run: not measured (the triage stage measures it separately).
 
 ## Ten most common miss patterns (synthetic test)
 

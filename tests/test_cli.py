@@ -129,7 +129,7 @@ def test_stub_pipeline_exits_with_an_error(
     code, out, err = _run(monkeypatch, capsys, ["redact", TEXT], Harness.build(not_ready))
     assert code == cli.EXIT_ERROR
     assert out == ""
-    assert "T02" in err
+    assert "detection" in err
 
 
 def test_eval_reports_missing_results(

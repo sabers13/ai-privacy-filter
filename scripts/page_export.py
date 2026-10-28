@@ -2,7 +2,7 @@
 """Export ``results/page/examples.json`` and ``results/page/results.json``.
 
 The examples come from a completed test-mode triage run. The detection block
-comes from the T11 detection run; pass ``--detection-metrics`` when it is not in
+comes from the detection run; pass ``--detection-metrics`` when it is not in
 the default location.
 
 Exit codes: 0 written, 1 failure, 2 usage error.
@@ -41,7 +41,7 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument(
         "--detection-metrics",
         default=None,
-        help="T11 metrics file (default: newest results/runs/*-detection-*/metrics.json)",
+        help="detection metrics file (default: newest results/runs/*-detection-*/metrics.json)",
     )
     parser.add_argument(
         "--output-dir",

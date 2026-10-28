@@ -1,6 +1,6 @@
 {
   "artifacts_sha256": {
-    "metrics.json": "ba52ddb8f4f29f838d13c6eafeca1550a3ad1a6165433efbfd53c120b91ba817",
+    "metrics.json": "fc9045a1a41ba17b10f084fbd9e9ead1cda31f8ebcd8197e3c169b5d0b39511f",
     "report.md": "9bb4aa2f4d8d43e07abdf35c7b37bed573fff0d2af9f03c3304e2ea8c5636e60"
   },
   "backends": {

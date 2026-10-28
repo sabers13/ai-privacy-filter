@@ -26,7 +26,7 @@
       2
     ]
   },
-  "reviewer": "single reviewer (T12 worker)",
+  "reviewer": "single reviewer",
   "scores": {
     "syn-test-0001": {
       "german_quality": 1,

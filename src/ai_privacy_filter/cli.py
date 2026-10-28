@@ -179,7 +179,7 @@ def _eval(args: argparse.Namespace) -> int:
     path = Path(args.results)
     if not path.is_file():
         print(
-            f"aipf eval: no stored results at {path}; the recompute lands with T11/T13",
+            f"aipf eval: no stored results at {path}; run make reproduce first",
             file=sys.stderr,
         )
         return EXIT_ERROR

@@ -14,7 +14,7 @@ test access is checked against those claims and against the run records in
 * a new stage under the same METHOD.md hash: allowed;
 * a repeat of a stage: needs ``--rerun-reason``;
 * any access after METHOD.md changed: needs ``--rerun-reason`` and
-  ``--method-approval`` (the captain decision required by the protocol);
+  ``--method-approval`` (the approval decision required by the protocol);
 * a malformed prior record fails closed;
 * an uncommitted or untracked tree fails closed, except for untracked result
   files.
@@ -430,7 +430,7 @@ def check_access(
             raise GuardError(
                 EXIT_NEED_APPROVAL,
                 "method_guard: METHOD.md changed since test access "
-                f"{prior_any.run_id}; the captain approval reference is required",
+                f"{prior_any.run_id}; the approval reference is required",
             )
         decision = "method-change-rerun" if prior_stage is not None else "method-change-new-stage"
     elif prior_stage is not None:

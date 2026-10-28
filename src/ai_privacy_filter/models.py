@@ -177,7 +177,7 @@ class PageExample(ContractModel):
     backend: str = Field(min_length=1)
     mock: bool | None = Field(
         default=None,
-        description="True for the T09 mock page data, False for real results.",
+        description="True for mock page data, False for real results.",
     )
 
 

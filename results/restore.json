@@ -1,7 +1,7 @@
 {
   "dataset": "synthetic_test",
   "draft_restoration": {
-    "reason": "the fixed 40-enquiry backend run lands with T12",
+    "reason": "the triage stage measures it separately",
     "status": "not measured"
   },
   "exact_pct": 100.0,
