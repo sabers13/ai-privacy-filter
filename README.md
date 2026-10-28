@@ -145,6 +145,12 @@ and backend name come from the container environment. See
 [`docs/n8n.md`](docs/n8n.md) and the canvas screenshot at
 [`results/page/n8n-workflow.png`](results/page/n8n-workflow.png).
 
+To try the stack yourself, `make demo` starts the same services, seeds three
+synthetic dev-split enquiries and prints the n8n URL with a review-form URL per
+enquiry. Nothing is submitted for you and the stack keeps running, so you can
+approve, edit or reject each draft in the browser. `make demo-down` stops the
+stack and removes the throwaway `.n8n-data/` directory.
+
 This is a demonstration queue, not a production service: no webhook
 authentication, no retry policy and one form per enquiry.
 
@@ -301,7 +307,7 @@ docs/backends.md         exact CLI argv, isolation, error kinds and Codex read l
 docs/n8n.md              local review stack and end-to-end check
 METHOD.md                evaluation protocol, splits, baselines and rerun rules
 results/                 measured results, page data and the release check
-scripts/                 clean-clone, forbidden-string, reproduction and e2e helpers
+scripts/                 clean-clone, forbidden-string, reproduction, e2e and demo helpers
 tests/                   contract, service, CLI, evaluation and scan tests
 compose.yaml             gate and n8n stack
 workflows/               exported n8n workflow

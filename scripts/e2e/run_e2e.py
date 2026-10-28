@@ -56,8 +56,17 @@ class E2EError(RuntimeError):
     """A failed assertion with a human-readable reason."""
 
 
+_LOG_PREFIX = "e2e"
+
+
+def set_log_prefix(prefix: str) -> None:
+    """Label progress lines, so the demo can reuse this harness as itself."""
+    global _LOG_PREFIX
+    _LOG_PREFIX = prefix
+
+
 def log(message: str) -> None:
-    print(f"e2e: {message}", flush=True)
+    print(f"{_LOG_PREFIX}: {message}", flush=True)
 
 
 def run(
@@ -131,6 +140,17 @@ def remove_n8n_data(*, required: bool) -> None:
         shutil.rmtree(N8N_DATA, ignore_errors=True)
     if required and N8N_DATA.exists():
         raise E2EError("could not remove .n8n-data")
+
+
+def reset_data_dirs() -> None:
+    """Start from an empty, container-writable ``.n8n-data`` tree."""
+    log("resetting .n8n-data")
+    remove_n8n_data(required=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    PENDING_DIR.mkdir(parents=True, exist_ok=True)
+    N8N_DATA.chmod(0o777)
+    OUT_DIR.chmod(0o777)
+    PENDING_DIR.chmod(0o777)
 
 
 def acquire_lock(path: Path, *, timeout_s: float) -> None:
@@ -236,6 +256,45 @@ class Compose:
                 self._service.kill()
         if self._tempdir is not None:
             shutil.rmtree(self._tempdir, ignore_errors=True)
+
+
+def start_stack(compose: Compose) -> None:
+    """Build and start gate and n8n, then wait for a healthy n8n."""
+    compose.must("down", "--remove-orphans", timeout=120)
+    compose.must("up", "-d", "--build", timeout=900)
+    wait_n8n(timeout_s=240)
+    log("n8n is ready")
+
+
+def activate_workflow(compose: Compose) -> None:
+    """Import the exported workflow and register its production webhook."""
+    compose.must(
+        "exec",
+        "-T",
+        "n8n",
+        "n8n",
+        "import:workflow",
+        "--input=/workflows/enquiry-triage.json",
+        timeout=180,
+    )
+    compose.must(
+        "exec",
+        "-T",
+        "n8n",
+        "n8n",
+        "update:workflow",
+        f"--id={WORKFLOW_ID}",
+        "--active=true",
+        timeout=180,
+    )
+    # n8n only loads an active workflow at process start. Stop and start
+    # (rather than restart) so the new version is definitely the one that
+    # registers the production webhook, then give registration a moment.
+    compose.must("stop", "n8n", timeout=120)
+    compose.must("start", "n8n", timeout=120)
+    wait_n8n(timeout_s=240)
+    time.sleep(15.0)
+    log("workflow imported and activated")
 
 
 def playwright_env(prefix: Path) -> dict[str, str]:
@@ -494,52 +553,16 @@ def main() -> int:
         acquire_lock(lock_path, timeout_s=args.lock_wait_s)
         locked = True
 
-        log("resetting .n8n-data")
-        remove_n8n_data(required=True)
-        OUT_DIR.mkdir(parents=True, exist_ok=True)
-        PENDING_DIR.mkdir(parents=True, exist_ok=True)
-        N8N_DATA.chmod(0o777)
-        OUT_DIR.chmod(0o777)
-        PENDING_DIR.chmod(0o777)
+        reset_data_dirs()
 
         compose = Compose()
-        compose.must("down", "--remove-orphans", timeout=120)
-        compose.must("up", "-d", "--build", timeout=900)
-
-        wait_n8n(timeout_s=240)
-        log("n8n is ready")
+        start_stack(compose)
 
         browser = Browser()
         browser.call("setup", timeout=180)
         log("n8n owner is ready")
 
-        compose.must(
-            "exec",
-            "-T",
-            "n8n",
-            "n8n",
-            "import:workflow",
-            "--input=/workflows/enquiry-triage.json",
-            timeout=180,
-        )
-        compose.must(
-            "exec",
-            "-T",
-            "n8n",
-            "n8n",
-            "update:workflow",
-            f"--id={WORKFLOW_ID}",
-            "--active=true",
-            timeout=180,
-        )
-        # n8n only loads an active workflow at process start. Stop and start
-        # (rather than restart) so the new version is definitely the one that
-        # registers the production webhook, then give registration a moment.
-        compose.must("stop", "n8n", timeout=120)
-        compose.must("start", "n8n", timeout=120)
-        wait_n8n(timeout_s=240)
-        time.sleep(15.0)
-        log("workflow imported and activated")
+        activate_workflow(compose)
 
         records = load_records(args.records)
         answers: list[dict[str, Any]] = []

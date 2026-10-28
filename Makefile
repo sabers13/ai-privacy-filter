@@ -9,7 +9,7 @@ SPACY_MODEL_URL := https://github.com/explosion/spacy-models/releases/download/$
 GITLEAKS_VERSION := 8.30.1
 GITLEAKS := $(HOME)/.local/bin/gitleaks
 
-.PHONY: help setup test test-local coverage lint reproduce live e2e page-data \
+.PHONY: help setup test test-local coverage lint reproduce live e2e demo demo-down page-data \
 	release-check clean-clone secrets secrets-install scan-forbidden
 
 help:
@@ -21,6 +21,8 @@ help:
 	@echo "make reproduce       rebuild detection results and triage metrics from stored data"
 	@echo "make live            make real LLM calls (takes the live-llm lock; set AIPF_LOCK_DIR)"
 	@echo "make e2e             run the n8n end-to-end check (compose, live-LLM lock)"
+	@echo "make demo            start the n8n review stack and post three enquiries, leave it up"
+	@echo "make demo-down       stop the demo stack and delete .n8n-data"
 	@echo "make page-data       export results/page/{examples,results}.json from the latest run"
 	@echo "make release-check   local release gates: lint, test, forbidden scan, secrets"
 	@echo "make clean-clone     clone locally and prove setup/test/reproduce from a clean tree"
@@ -56,6 +58,12 @@ live:
 
 e2e:
 	scripts/e2e/run.sh
+
+demo:
+	scripts/demo/run.sh up
+
+demo-down:
+	scripts/demo/run.sh down
 
 page-data:
 	$(PY) scripts/page_export.py

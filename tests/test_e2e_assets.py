@@ -24,6 +24,8 @@ WORKFLOW = ROOT / "workflows" / "enquiry-triage.json"
 SCREENSHOT = ROOT / "results" / "page" / "n8n-workflow.png"
 E2E_SCRIPT = ROOT / "scripts" / "e2e" / "run_e2e.py"
 BROWSER_SCRIPT = ROOT / "scripts" / "e2e" / "n8n_browser.cjs"
+DEMO_SCRIPT = ROOT / "scripts" / "e2e" / "run_demo.py"
+DEMO_RUNNER = ROOT / "scripts" / "demo" / "run.sh"
 
 
 def _nodes() -> dict[str, dict[str, Any]]:
@@ -126,6 +128,32 @@ def test_make_e2e_runs_the_harness() -> None:
     assert (ROOT / "scripts" / "e2e" / "run_e2e.py").stat().st_mode & 0o111
 
 
+def test_make_demo_reuses_the_stack_and_leaves_no_results() -> None:
+    makefile = (ROOT / "Makefile").read_text(encoding="utf-8")
+    assert re.search(r"^demo:\n\tscripts/demo/run\.sh up$", makefile, re.MULTILINE)
+    assert re.search(r"^demo-down:\n\tscripts/demo/run\.sh down$", makefile, re.MULTILINE)
+    assert DEMO_RUNNER.stat().st_mode & 0o111
+    assert DEMO_SCRIPT.stat().st_mode & 0o111
+
+    text = DEMO_SCRIPT.read_text(encoding="utf-8")
+    # One stack definition: the demo drives the e2e helpers, it does not copy them.
+    assert "from run_e2e import" in text
+    assert "Compose(" in text
+    assert "load_records(DEMO_RECORDS)" in text
+    assert "compose.yaml" not in text
+    assert "results/" not in text
+
+
+def test_make_demo_uses_three_dev_split_enquiries() -> None:
+    text = DEMO_SCRIPT.read_text(encoding="utf-8")
+    assert "DEMO_RECORDS: Final = 3" in text
+    # The corpus path lives in run_e2e and points at the dev split only.
+    assert "test.jsonl" not in text
+    e2e = E2E_SCRIPT.read_text(encoding="utf-8")
+    assert 'data" / "synthetic" / "dev.jsonl"' in e2e
+    assert "test.jsonl" not in e2e
+
+
 def test_harness_holds_the_live_lock_and_checks_the_hash() -> None:
     text = E2E_SCRIPT.read_text(encoding="utf-8")
     assert "aipf-lock-live-llm" in text
@@ -146,7 +174,15 @@ def test_canvas_screenshot_is_1280_pixels_wide() -> None:
 
 
 def test_public_files_do_not_carry_private_identifiers() -> None:
-    paths = [COMPOSE, WORKFLOW, E2E_SCRIPT, BROWSER_SCRIPT, ROOT / "docs" / "n8n.md"]
+    paths = [
+        COMPOSE,
+        WORKFLOW,
+        E2E_SCRIPT,
+        BROWSER_SCRIPT,
+        DEMO_SCRIPT,
+        DEMO_RUNNER,
+        ROOT / "docs" / "n8n.md",
+    ]
     home_prefix = "/" + "home" + "/"
     patterns = (
         re.compile(re.escape(home_prefix)),

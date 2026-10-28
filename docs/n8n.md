@@ -58,6 +58,28 @@ The screenshot at `results/page/n8n-workflow.png` is written by the same run at
 1280 px in the light theme. It shows the canvas only, no review data and no
 local paths.
 
+## Trying it by hand
+
+```sh
+make demo
+```
+
+starts the same stack and stops before any review: it builds the gate image,
+starts gate and n8n, creates the throwaway owner, imports and activates the
+workflow and posts three synthetic dev-split enquiries through the normal
+webhook. It then prints the n8n URL and one review-form URL per enquiry; open
+each form, choose `approve`, `edit` or `reject` and submit it, and n8n writes
+`/data/out/<id>.json` next to the other scratch state. The demo holds the
+live-LLM lock only while it posts the enquiries, then leaves the stack running
+so the forms stay reachable in the browser.
+
+```sh
+make demo-down
+```
+
+stops the stack and deletes `.n8n-data/`. Nothing is written to the repository:
+the forms, pending records and outputs live only in that throwaway directory.
+
 ## Files and state
 
 | path | purpose |
@@ -67,6 +89,7 @@ local paths.
 | `workflows/enquiry-triage.json` | the exported, active workflow |
 | `.n8n-data/` | n8n's home, review URLs and output files; git-ignored |
 | `scripts/e2e/` | compose driver, headless-browser steps, input corpus loading |
+| `scripts/demo/` | `make demo` / `make demo-down` entry point over the same driver |
 
 The n8n data directory is world-writable for the duration of the run because
 the rootless container user has to write the bind mount. It is disposable and
