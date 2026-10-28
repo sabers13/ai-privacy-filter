@@ -413,6 +413,7 @@ def build_results(
     run_dir: Path,
     triage_metrics: Mapping[str, Any],
     detection: Mapping[str, Any],
+    generated_at: str | None = None,
 ) -> dict[str, Any]:
     """Build the page results document from the triage run and detection block."""
     record = _read_json(run_dir / "run.json")
@@ -429,7 +430,7 @@ def build_results(
             "meta": {
                 "version": __version__,
                 "commit": str(record.get("commit") or ""),
-                "generated_at": utc_now(),
+                "generated_at": generated_at if generated_at is not None else utc_now(),
                 "sha256": sha256_text(canonical_json(body)),
                 "mock": False,
             },
@@ -445,6 +446,7 @@ def export_page(
     backend: str,
     detection_path: Path | None,
     output_dir: Path,
+    generated_at: str | None = None,
 ) -> tuple[Path, Path, list[str]]:
     """Write ``examples.json`` and ``results.json``; return their paths and notes."""
     record = _read_json(run_dir / "run.json")
@@ -456,6 +458,10 @@ def export_page(
     if not metrics_path.is_file():
         raise FileNotFoundError("run has no metrics.json")
     triage_metrics = _read_json(metrics_path)
+    if generated_at is None:
+        stored_time = triage_metrics.get("generated_at")
+        if isinstance(stored_time, str) and stored_time:
+            generated_at = stored_time
     detection = load_detection(root, detection_path)
     synthetic = detection.get("synthetic")
     pattern_ids: list[str] = []
@@ -482,6 +488,7 @@ def export_page(
         run_dir=run_dir,
         triage_metrics=triage_metrics,
         detection=detection,
+        generated_at=generated_at,
     )
     output_dir.mkdir(parents=True, exist_ok=True)
     examples_path = output_dir / "examples.json"

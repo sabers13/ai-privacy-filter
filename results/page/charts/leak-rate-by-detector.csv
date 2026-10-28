@@ -1,0 +1,4 @@
+chart_id,row_en,row_de,series,value,numerator,denominator,n,ci_low,ci_high,source_file,source_path
+leak-rate-by-detector,B0 — regex only,B0 — nur Regex,leak_rate,100,160,160,160,97.7,100,results/leak_rate.json,baselines.B0
+leak-rate-by-detector,B1 — Presidio defaults,B1 — Presidio-Standard,leak_rate,90.6,145,160,160,85.1,94.2,results/leak_rate.json,baselines.B1
+leak-rate-by-detector,B2 — full configuration,B2 — volle Konfiguration,leak_rate,1.9,3,160,160,0.6,5.4,results/leak_rate.json,baselines.B2

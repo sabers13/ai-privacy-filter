@@ -1,0 +1,61 @@
+{
+  "columns": {
+    "original": "Andy Drub\nBohlanderweg 839\n27333 Böblingen\nE-Mail: odaebert@example.com\nTelefon: (03419) 565816\n\nSehr geehrte Damen und Herren,\n\nwir planen die Ausstattung von zwei Besprechungsräumen und benötigen dafür ein Angebot. Bitte senden Sie uns Ihre Preisliste und die Lieferzeiten zu.\n\nMit freundlichen Grüßen\nAndy Drub",
+    "redacted": "[PERSON_1]\n[ADDRESS_STREET_1]\n[POSTCODE_CITY_1]\nE-Mail: [EMAIL_1]\nTelefon: [PHONE_1]\n\nSehr geehrte Damen und Herren,\n\nwir planen die Ausstattung von zwei Besprechungsräumen und benötigen dafür ein Angebot. Bitte senden Sie uns Ihre Preisliste und die Lieferzeiten zu.\n\nMit freundlichen Grüßen\n[PERSON_1]",
+    "reply_draft_restored": "Sehr geehrte/r Andy Drub,\n\nvielen Dank für Ihre Anfrage zur Ausstattung Ihrer zwei Besprechungsräume. Wir prüfen Ihr Anliegen und senden Ihnen unsere Preisliste sowie Informationen zu den Lieferzeiten zu. Falls Sie bereits konkrete Vorstellungen zu Ausstattung oder Umfang haben, teilen Sie uns diese gerne mit, damit wir Ihnen ein passendes Angebot erstellen können.\n\nMit freundlichen Grüßen"
+  },
+  "id": "syn-test-0001",
+  "misses": [],
+  "schema_version": 1,
+  "source_example": "results/page/examples.json",
+  "spans": [
+    {
+      "end": 9,
+      "score": 0.85,
+      "source": "SpacyRecognizer",
+      "start": 0,
+      "text": "Andy Drub",
+      "type": "PERSON"
+    },
+    {
+      "end": 26,
+      "score": 0.85,
+      "source": "DeStreetRecognizer",
+      "start": 10,
+      "text": "Bohlanderweg 839",
+      "type": "ADDRESS_STREET"
+    },
+    {
+      "end": 42,
+      "score": 0.8,
+      "source": "DePostcodeCityRecognizer",
+      "start": 27,
+      "text": "27333 Böblingen",
+      "type": "POSTCODE_CITY"
+    },
+    {
+      "end": 71,
+      "score": 1.0,
+      "source": "DeEmailRecognizer",
+      "start": 51,
+      "text": "odaebert@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "end": 95,
+      "score": 0.88,
+      "source": "DePhoneRecognizer",
+      "start": 81,
+      "text": "(03419) 565816",
+      "type": "PHONE"
+    },
+    {
+      "end": 313,
+      "score": 0.9,
+      "source": "NamesContextRecognizer",
+      "start": 304,
+      "text": "Andy Drub",
+      "type": "PERSON"
+    }
+  ]
+}

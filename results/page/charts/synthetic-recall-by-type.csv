@@ -1,0 +1,15 @@
+chart_id,row_en,row_de,series,value,numerator,denominator,n,ci_low,ci_high,source_file,source_path
+synthetic-recall-by-type,PERSON,PERSON,B1,71.4,180,252,252,65.6,76.7,results/detection_synthetic.json,baselines.B1.per_type.PERSON
+synthetic-recall-by-type,PERSON,PERSON,B2,100,252,252,252,98.5,100,results/detection_synthetic.json,baselines.B2.per_type.PERSON
+synthetic-recall-by-type,ORG,ORG,B1,16.7,19,114,114,10.9,24.6,results/detection_synthetic.json,baselines.B1.per_type.ORG
+synthetic-recall-by-type,ORG,ORG,B2,100,114,114,114,96.7,100,results/detection_synthetic.json,baselines.B2.per_type.ORG
+synthetic-recall-by-type,EMAIL,EMAIL,B1,100,206,206,206,98.2,100,results/detection_synthetic.json,baselines.B1.per_type.EMAIL
+synthetic-recall-by-type,EMAIL,EMAIL,B2,100,206,206,206,98.2,100,results/detection_synthetic.json,baselines.B2.per_type.EMAIL
+synthetic-recall-by-type,PHONE,PHONE,B1,77.5,124,160,160,70.4,83.3,results/detection_synthetic.json,baselines.B1.per_type.PHONE
+synthetic-recall-by-type,PHONE,PHONE,B2,100,160,160,160,97.7,100,results/detection_synthetic.json,baselines.B2.per_type.PHONE
+synthetic-recall-by-type,IBAN,IBAN,B1,67.6,46,68,68,55.8,77.6,results/detection_synthetic.json,baselines.B1.per_type.IBAN
+synthetic-recall-by-type,IBAN,IBAN,B2,100,68,68,68,94.7,100,results/detection_synthetic.json,baselines.B2.per_type.IBAN
+synthetic-recall-by-type,ADDRESS_STREET,ADDRESS_STREET,B1,0,0,137,137,0,2.7,results/detection_synthetic.json,baselines.B1.per_type.ADDRESS_STREET
+synthetic-recall-by-type,ADDRESS_STREET,ADDRESS_STREET,B2,98.5,135,137,137,94.8,99.6,results/detection_synthetic.json,baselines.B2.per_type.ADDRESS_STREET
+synthetic-recall-by-type,POSTCODE_CITY,POSTCODE_CITY,B1,0,0,137,137,0,2.7,results/detection_synthetic.json,baselines.B1.per_type.POSTCODE_CITY
+synthetic-recall-by-type,POSTCODE_CITY,POSTCODE_CITY,B2,97.8,134,137,137,93.8,99.3,results/detection_synthetic.json,baselines.B2.per_type.POSTCODE_CITY

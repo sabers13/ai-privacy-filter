@@ -1,0 +1,13 @@
+chart_id,row_en,row_de,series,value,numerator,denominator,n,ci_low,ci_high,source_file,source_path
+triage-accuracy-by-backend,Claude (CLI),Claude (CLI),joint,70,28,40,40,54.6,81.9,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.claude-cli.joint
+triage-accuracy-by-backend,Claude (CLI),Claude (CLI),category_only,87.5,35,40,40,73.9,94.5,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.claude-cli.category_only
+triage-accuracy-by-backend,Claude (CLI),Claude (CLI),urgency_only,82.5,33,40,40,68.1,91.3,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.claude-cli.urgency_only
+triage-accuracy-by-backend,Codex (CLI),Codex (CLI),joint,62.5,25,40,40,47,75.8,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.codex-cli.joint
+triage-accuracy-by-backend,Codex (CLI),Codex (CLI),category_only,80,32,40,40,65.2,89.5,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.codex-cli.category_only
+triage-accuracy-by-backend,Codex (CLI),Codex (CLI),urgency_only,82.5,33,40,40,68.1,91.3,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.codex-cli.urgency_only
+triage-accuracy-by-backend,BYOK (OpenCode Go),BYOK (OpenCode Go),joint,67.5,27,40,40,52,79.9,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.byok.joint
+triage-accuracy-by-backend,BYOK (OpenCode Go),BYOK (OpenCode Go),category_only,80,32,40,40,65.2,89.5,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.byok.category_only
+triage-accuracy-by-backend,BYOK (OpenCode Go),BYOK (OpenCode Go),urgency_only,87.5,35,40,40,73.9,94.5,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.byok.urgency_only
+triage-accuracy-by-backend,Ollama (local),Ollama (lokal),joint,37.5,15,40,40,24.2,53,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.ollama.joint
+triage-accuracy-by-backend,Ollama (local),Ollama (lokal),category_only,57.5,23,40,40,42.2,71.5,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.ollama.category_only
+triage-accuracy-by-backend,Ollama (local),Ollama (lokal),urgency_only,57.5,23,40,40,42.2,71.5,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.ollama.urgency_only

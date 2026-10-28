@@ -23,7 +23,7 @@ help:
 	@echo "make e2e             run the n8n end-to-end check (compose, live-LLM lock)"
 	@echo "make demo            start the n8n review stack and post three enquiries, leave it up"
 	@echo "make demo-down       stop the demo stack and delete .n8n-data"
-	@echo "make page-data       export results/page/{examples,results}.json from the latest run"
+	@echo "make page-data       rebuild the results/page bundle from the committed results"
 	@echo "make release-check   local release gates: lint, test, forbidden scan, secrets"
 	@echo "make clean-clone     clone locally and prove setup/test/reproduce from a clean tree"
 	@echo "make secrets         run gitleaks over the working tree and git history"

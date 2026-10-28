@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Export ``results/page/examples.json`` and ``results/page/results.json``.
+"""Rebuild the whole ``results/page/`` bundle from the committed results.
 
-The examples come from a completed test-mode triage run. The detection block
-comes from the detection run; pass ``--detection-metrics`` when it is not in
-the default location.
+The bundle holds ``kpis.json``, ``charts/*.json`` with their CSV twins,
+``examples.json``, ``demos.json``, the demo material (worked example, try-it
+samples and the three ``make demo`` enquiries), the screenshots and
+``MANIFEST.md``. It is deterministic: the page timestamp comes from the stored
+triage metrics and every number keeps its source file and JSON path.
 
 Exit codes: 0 written, 1 failure, 2 usage error.
 """
@@ -15,19 +17,13 @@ import sys
 from pathlib import Path
 from typing import Final
 
-from ai_privacy_filter.evaluation.page_data import export_page
-from ai_privacy_filter.evaluation.triage_eval import latest_run_dir
+from ai_privacy_filter.evaluation.page_bundle import export_bundle
 
 ROOT: Final = Path(__file__).resolve().parents[1]
 
 
 def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument(
-        "--run-dir",
-        default=None,
-        help="triage run directory (default: the newest triage run)",
-    )
     parser.add_argument(
         "--backend",
         default="claude-cli",
@@ -41,7 +37,7 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument(
         "--detection-metrics",
         default=None,
-        help="detection metrics file (default: newest results/runs/*-detection-*/metrics.json)",
+        help="detection metrics file (default: the committed results/)",
     )
     parser.add_argument(
         "--output-dir",
@@ -52,25 +48,23 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
+def _run(root: Path, output_dir: Path, backend: str, detection: Path | None) -> dict[str, Path]:
+    return export_bundle(
+        root=root,
+        output_dir=output_dir,
+        backend=backend,
+        detection_path=detection,
+    )
+
+
 def main(argv: list[str] | None = None) -> int:
     args = _parse_args(argv)
     root = Path(args.root).resolve()
-    try:
-        run_dir = Path(args.run_dir).resolve() if args.run_dir else latest_run_dir(root)
-    except FileNotFoundError as exc:
-        print(f"page_export: {exc}", file=sys.stderr)
-        return 2
     output_dir = Path(args.output_dir).resolve() if args.output_dir else root / "results" / "page"
     detection = Path(args.detection_metrics).resolve() if args.detection_metrics else None
     backend = str(args.backend)
     try:
-        examples_path, results_path, notes = export_page(
-            root=root,
-            run_dir=run_dir,
-            backend=backend,
-            detection_path=detection,
-            output_dir=output_dir,
-        )
+        written = _run(root, output_dir, backend, detection)
     except (FileNotFoundError, ValueError) as exc:
         if backend != args.fallback_backend:
             print(
@@ -79,13 +73,7 @@ def main(argv: list[str] | None = None) -> int:
                 file=sys.stderr,
             )
             try:
-                examples_path, results_path, notes = export_page(
-                    root=root,
-                    run_dir=run_dir,
-                    backend=str(args.fallback_backend),
-                    detection_path=detection,
-                    output_dir=output_dir,
-                )
+                written = _run(root, output_dir, str(args.fallback_backend), detection)
             except (FileNotFoundError, ValueError) as second:
                 print(f"page_export: {second}", file=sys.stderr)
                 return 1
@@ -99,9 +87,8 @@ def main(argv: list[str] | None = None) -> int:
         except ValueError:
             return path.name
 
-    print(f"page_export: wrote {_display(examples_path)} and {_display(results_path)}")
-    for note in notes:
-        print(f"page_export: {note}")
+    print(f"page_export: wrote {_display(written['kpis'])} and {_display(written['manifest'])}")
+    print(f"page_export: bundle root {_display(output_dir)}")
     return 0
 
 

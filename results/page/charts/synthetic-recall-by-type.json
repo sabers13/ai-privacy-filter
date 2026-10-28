@@ -1,0 +1,545 @@
+{
+  "id": "synthetic-recall-by-type",
+  "rows": [
+    {
+      "label": {
+        "de": "PERSON",
+        "en": "PERSON"
+      },
+      "segments": [
+        {
+          "ci95": [
+            65.6,
+            76.7
+          ],
+          "denominator": 252,
+          "n": 252,
+          "numerator": 180,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.per_type.PERSON",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 71.4
+        },
+        {
+          "ci95": [
+            98.5,
+            100.0
+          ],
+          "denominator": 252,
+          "n": 252,
+          "numerator": 252,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.per_type.PERSON",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "ORG",
+        "en": "ORG"
+      },
+      "segments": [
+        {
+          "ci95": [
+            10.9,
+            24.6
+          ],
+          "denominator": 114,
+          "n": 114,
+          "numerator": 19,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.per_type.ORG",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 16.7
+        },
+        {
+          "ci95": [
+            96.7,
+            100.0
+          ],
+          "denominator": 114,
+          "n": 114,
+          "numerator": 114,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.per_type.ORG",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "EMAIL",
+        "en": "EMAIL"
+      },
+      "segments": [
+        {
+          "ci95": [
+            98.2,
+            100.0
+          ],
+          "denominator": 206,
+          "n": 206,
+          "numerator": 206,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.per_type.EMAIL",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 100.0
+        },
+        {
+          "ci95": [
+            98.2,
+            100.0
+          ],
+          "denominator": 206,
+          "n": 206,
+          "numerator": 206,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.per_type.EMAIL",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "PHONE",
+        "en": "PHONE"
+      },
+      "segments": [
+        {
+          "ci95": [
+            70.4,
+            83.3
+          ],
+          "denominator": 160,
+          "n": 160,
+          "numerator": 124,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.per_type.PHONE",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 77.5
+        },
+        {
+          "ci95": [
+            97.7,
+            100.0
+          ],
+          "denominator": 160,
+          "n": 160,
+          "numerator": 160,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.per_type.PHONE",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "IBAN",
+        "en": "IBAN"
+      },
+      "segments": [
+        {
+          "ci95": [
+            55.8,
+            77.6
+          ],
+          "denominator": 68,
+          "n": 68,
+          "numerator": 46,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.per_type.IBAN",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 67.6
+        },
+        {
+          "ci95": [
+            94.7,
+            100.0
+          ],
+          "denominator": 68,
+          "n": 68,
+          "numerator": 68,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.per_type.IBAN",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "ADDRESS_STREET",
+        "en": "ADDRESS_STREET"
+      },
+      "segments": [
+        {
+          "ci95": [
+            0.0,
+            2.7
+          ],
+          "denominator": 137,
+          "n": 137,
+          "numerator": 0,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.per_type.ADDRESS_STREET",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 0.0
+        },
+        {
+          "ci95": [
+            94.8,
+            99.6
+          ],
+          "denominator": 137,
+          "n": 137,
+          "numerator": 135,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.per_type.ADDRESS_STREET",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 98.5
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "POSTCODE_CITY",
+        "en": "POSTCODE_CITY"
+      },
+      "segments": [
+        {
+          "ci95": [
+            0.0,
+            2.7
+          ],
+          "denominator": 137,
+          "n": 137,
+          "numerator": 0,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.per_type.POSTCODE_CITY",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 0.0
+        },
+        {
+          "ci95": [
+            93.8,
+            99.3
+          ],
+          "denominator": 137,
+          "n": 137,
+          "numerator": 134,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_synthetic.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.per_type.POSTCODE_CITY",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 97.8
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "series": [
+    {
+      "key": "B1",
+      "label": {
+        "de": "B1 — Presidio-Standard",
+        "en": "B1 — Presidio defaults"
+      }
+    },
+    {
+      "key": "B2",
+      "label": {
+        "de": "B2 — volle Konfiguration",
+        "en": "B2 — full configuration"
+      }
+    }
+  ],
+  "title": {
+    "de": "Recall je Datentyp, B1 vs B2 (synthetischer Test)",
+    "en": "Recall per personal-data type, B1 vs B2 (synthetic test)"
+  },
+  "unit": "percent"
+}

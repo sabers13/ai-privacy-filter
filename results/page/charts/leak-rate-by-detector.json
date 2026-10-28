@@ -1,0 +1,143 @@
+{
+  "id": "leak-rate-by-detector",
+  "rows": [
+    {
+      "label": {
+        "de": "B0 — nur Regex",
+        "en": "B0 — regex only"
+      },
+      "segments": [
+        {
+          "ci95": [
+            97.7,
+            100.0
+          ],
+          "denominator": 160,
+          "n": 160,
+          "numerator": 160,
+          "series": "leak_rate",
+          "source": {
+            "ci": {
+              "field": "leak_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "records",
+              "mode": "field"
+            },
+            "file": "results/leak_rate.json",
+            "numerator": {
+              "field": "leaked_enquiries",
+              "mode": "field"
+            },
+            "path": "baselines.B0",
+            "value": {
+              "field": "leak_rate_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 100.0
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "B1 — Presidio-Standard",
+        "en": "B1 — Presidio defaults"
+      },
+      "segments": [
+        {
+          "ci95": [
+            85.1,
+            94.2
+          ],
+          "denominator": 160,
+          "n": 160,
+          "numerator": 145,
+          "series": "leak_rate",
+          "source": {
+            "ci": {
+              "field": "leak_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "records",
+              "mode": "field"
+            },
+            "file": "results/leak_rate.json",
+            "numerator": {
+              "field": "leaked_enquiries",
+              "mode": "field"
+            },
+            "path": "baselines.B1",
+            "value": {
+              "field": "leak_rate_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 90.6
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "B2 — volle Konfiguration",
+        "en": "B2 — full configuration"
+      },
+      "segments": [
+        {
+          "ci95": [
+            0.6,
+            5.4
+          ],
+          "denominator": 160,
+          "n": 160,
+          "numerator": 3,
+          "series": "leak_rate",
+          "source": {
+            "ci": {
+              "field": "leak_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "records",
+              "mode": "field"
+            },
+            "file": "results/leak_rate.json",
+            "numerator": {
+              "field": "leaked_enquiries",
+              "mode": "field"
+            },
+            "path": "baselines.B2",
+            "value": {
+              "field": "leak_rate_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 1.9
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "series": [
+    {
+      "key": "leak_rate",
+      "label": {
+        "de": "Anfragen mit geleaktem Gold-Wert",
+        "en": "Enquiries with a leaked gold value"
+      }
+    }
+  ],
+  "title": {
+    "de": "Leckrate je Detektor (synthetischer Test, niedriger ist besser)",
+    "en": "Leak rate by detector (synthetic test, lower is better)"
+  },
+  "unit": "percent"
+}

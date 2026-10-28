@@ -1,0 +1,5 @@
+chart_id,row_en,row_de,series,value,numerator,denominator,n,ci_low,ci_high,source_file,source_path
+triage-latency-by-backend,Claude (CLI),Claude (CLI),median_latency,5222,,,40,,,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.claude-cli.latency_ms
+triage-latency-by-backend,Codex (CLI),Codex (CLI),median_latency,6667.5,,,40,,,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.codex-cli.latency_ms
+triage-latency-by-backend,BYOK (OpenCode Go),BYOK (OpenCode Go),median_latency,4785.5,,,40,,,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.byok.latency_ms
+triage-latency-by-backend,Ollama (local),Ollama (lokal),median_latency,4295,,,40,,,results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json,per_backend.ollama.latency_ms

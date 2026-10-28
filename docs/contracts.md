@@ -154,7 +154,21 @@ latency. It makes no network call and needs no model download.
 
 ## Page data
 
-Written by `scripts/page_export.py` in a later task and read by the site page.
+Written by `make page-data` (`scripts/page_export.py`) and read by the site
+page. The bundle is rebuilt from the committed result files only; the page
+timestamp comes from the stored triage metrics, so two runs write identical
+bytes.
+
+`results/page/` holds `examples.json`, `results.json`, `kpis.json`,
+`charts/*.json` with a `.csv` twin for each chart, the demo material
+(`demos.json`, `worked-example.json`, `tryit-samples.json`,
+`demo-enquiries.json`), the review-stack screenshots and `MANIFEST.md`.
+
+`kpis.json` is `{"schema_version": 1, "kpis": [...]}`. Each entry has `id`,
+`value`, `unit`, `numerator`, `denominator`, `ci95`, an EN/DE `label`, and a
+`source` object with the source file, JSON path and the fields read. Chart
+documents follow the same idea: every row segment carries its own `source`.
+
 
 `examples.json` is an array of `PageExample`:
 

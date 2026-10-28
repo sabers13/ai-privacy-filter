@@ -1,0 +1,851 @@
+{
+  "kpis": [
+    {
+      "ci95": [
+        98.9,
+        99.8
+      ],
+      "denominator": 1074,
+      "id": "synthetic_recall_b2",
+      "label": {
+        "de": "Synthetische Gold-Spans geschützt (B2)",
+        "en": "Synthetic gold spans protected (B2)"
+      },
+      "numerator": 1069,
+      "source": {
+        "ci": {
+          "mode": "wilson"
+        },
+        "denominator": {
+          "field": "gold",
+          "mode": "sum"
+        },
+        "file": "results/detection_synthetic.json",
+        "numerator": {
+          "field": "protected",
+          "mode": "sum"
+        },
+        "path": "baselines.B2.per_type",
+        "value": {
+          "denominator_field": "gold",
+          "mode": "sum_ratio",
+          "numerator_field": "protected",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 99.5
+    },
+    {
+      "ci95": [
+        0.6,
+        5.4
+      ],
+      "denominator": 160,
+      "id": "leak_rate_b2",
+      "label": {
+        "de": "Synthetische Testeranfragen mit geleaktem Gold-Wert (B2)",
+        "en": "Synthetic test enquiries that leaked a gold value (B2)"
+      },
+      "numerator": 3,
+      "source": {
+        "ci": {
+          "field": "leak_wilson_pct",
+          "mode": "list",
+          "scale": 1.0
+        },
+        "denominator": {
+          "field": "records",
+          "mode": "field"
+        },
+        "file": "results/leak_rate.json",
+        "numerator": {
+          "field": "leaked_enquiries",
+          "mode": "field"
+        },
+        "path": "baselines.B2",
+        "value": {
+          "field": "leak_rate_pct",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "percent",
+      "value": 1.9
+    },
+    {
+      "ci95": [
+        0.0,
+        2.3
+      ],
+      "denominator": 160,
+      "id": "over_masking_b2",
+      "label": {
+        "de": "Synthetische Anfragen mit zusätzlich maskiertem Text (B2)",
+        "en": "Synthetic enquiries with extra text masked (B2)"
+      },
+      "numerator": 0,
+      "source": {
+        "ci": {
+          "field": "enquiry_wilson_pct",
+          "mode": "list",
+          "scale": 1.0
+        },
+        "denominator": {
+          "field": "records",
+          "mode": "field"
+        },
+        "file": "results/detection_synthetic.json",
+        "numerator": {
+          "field": "enquiries_with_extra",
+          "mode": "field"
+        },
+        "path": "baselines.B2.over_masking",
+        "value": {
+          "field": "enquiry_rate_pct",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "percent",
+      "value": 0.0
+    },
+    {
+      "ci95": [
+        97.7,
+        100.0
+      ],
+      "denominator": 160,
+      "id": "restore_exact",
+      "label": {
+        "de": "Exakte Redaktion-/Restaurierungs-Rundläufe (B2)",
+        "en": "Redaction/restoration exact round-trips (B2)"
+      },
+      "numerator": 160,
+      "source": {
+        "ci": {
+          "field": "exact_wilson_pct",
+          "mode": "list",
+          "scale": 1.0
+        },
+        "denominator": {
+          "field": "records",
+          "mode": "field"
+        },
+        "file": "results/restore.json",
+        "numerator": {
+          "field": "exact_round_trips",
+          "mode": "field"
+        },
+        "path": ".",
+        "value": {
+          "field": "exact_pct",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "percent",
+      "value": 100.0
+    },
+    {
+      "ci95": [
+        86.1,
+        89.2
+      ],
+      "denominator": 1639,
+      "id": "germeval_person_recall_b2",
+      "label": {
+        "de": "GermEval-PERSON-Recall (B2)",
+        "en": "GermEval PERSON recall (B2)"
+      },
+      "numerator": 1438,
+      "source": {
+        "ci": {
+          "field": "recall_wilson_pct",
+          "mode": "list",
+          "scale": 1.0
+        },
+        "denominator": {
+          "field": "gold",
+          "mode": "field"
+        },
+        "file": "results/detection_germeval.json",
+        "numerator": {
+          "field": "protected",
+          "mode": "field"
+        },
+        "path": "baselines.B2.per_type.PERSON",
+        "value": {
+          "field": "recall_pct",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "percent",
+      "value": 87.7
+    },
+    {
+      "ci95": [
+        62.2,
+        67.7
+      ],
+      "denominator": 1150,
+      "id": "germeval_org_recall_b2",
+      "label": {
+        "de": "GermEval-ORG-Recall (B2)",
+        "en": "GermEval ORG recall (B2)"
+      },
+      "numerator": 748,
+      "source": {
+        "ci": {
+          "field": "recall_wilson_pct",
+          "mode": "list",
+          "scale": 1.0
+        },
+        "denominator": {
+          "field": "gold",
+          "mode": "field"
+        },
+        "file": "results/detection_germeval.json",
+        "numerator": {
+          "field": "protected",
+          "mode": "field"
+        },
+        "path": "baselines.B2.per_type.ORG",
+        "value": {
+          "field": "recall_pct",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "percent",
+      "value": 65.0
+    },
+    {
+      "ci95": [
+        76.8,
+        79.9
+      ],
+      "denominator": 2789,
+      "id": "germeval_combined_recall_b2",
+      "label": {
+        "de": "GermEval-PERSON+ORG-Recall (B2)",
+        "en": "GermEval PERSON+ORG recall (B2)"
+      },
+      "numerator": 2186,
+      "source": {
+        "ci": {
+          "field": "recall_wilson_pct",
+          "mode": "list",
+          "scale": 1.0
+        },
+        "denominator": {
+          "field": "gold",
+          "mode": "field"
+        },
+        "file": "results/detection_germeval.json",
+        "numerator": {
+          "field": "protected",
+          "mode": "field"
+        },
+        "path": "baselines.B2.micro_primary",
+        "value": {
+          "field": "recall_pct",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "percent",
+      "value": 78.4
+    },
+    {
+      "ci95": [
+        73.9,
+        94.5
+      ],
+      "denominator": 40,
+      "id": "triage_category_only_claude-cli",
+      "label": {
+        "de": "Triage-Kategorie-Genauigkeit — Claude (CLI)",
+        "en": "Triage category accuracy — Claude (CLI)"
+      },
+      "numerator": 35,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.claude-cli.category_only",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 87.5
+    },
+    {
+      "ci95": [
+        68.1,
+        91.3
+      ],
+      "denominator": 40,
+      "id": "triage_urgency_only_claude-cli",
+      "label": {
+        "de": "Triage-Dringlichkeits-Genauigkeit — Claude (CLI)",
+        "en": "Triage urgency accuracy — Claude (CLI)"
+      },
+      "numerator": 33,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.claude-cli.urgency_only",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 82.5
+    },
+    {
+      "ci95": [
+        54.6,
+        81.9
+      ],
+      "denominator": 40,
+      "id": "triage_joint_claude-cli",
+      "label": {
+        "de": "Triage-gemeinsame Genauigkeit — Claude (CLI)",
+        "en": "Triage joint category+urgency accuracy — Claude (CLI)"
+      },
+      "numerator": 28,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.claude-cli.joint",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 70.0
+    },
+    {
+      "ci95": [
+        65.2,
+        89.5
+      ],
+      "denominator": 40,
+      "id": "triage_category_only_codex-cli",
+      "label": {
+        "de": "Triage-Kategorie-Genauigkeit — Codex (CLI)",
+        "en": "Triage category accuracy — Codex (CLI)"
+      },
+      "numerator": 32,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.codex-cli.category_only",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 80.0
+    },
+    {
+      "ci95": [
+        68.1,
+        91.3
+      ],
+      "denominator": 40,
+      "id": "triage_urgency_only_codex-cli",
+      "label": {
+        "de": "Triage-Dringlichkeits-Genauigkeit — Codex (CLI)",
+        "en": "Triage urgency accuracy — Codex (CLI)"
+      },
+      "numerator": 33,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.codex-cli.urgency_only",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 82.5
+    },
+    {
+      "ci95": [
+        47.0,
+        75.8
+      ],
+      "denominator": 40,
+      "id": "triage_joint_codex-cli",
+      "label": {
+        "de": "Triage-gemeinsame Genauigkeit — Codex (CLI)",
+        "en": "Triage joint category+urgency accuracy — Codex (CLI)"
+      },
+      "numerator": 25,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.codex-cli.joint",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 62.5
+    },
+    {
+      "ci95": [
+        65.2,
+        89.5
+      ],
+      "denominator": 40,
+      "id": "triage_category_only_byok",
+      "label": {
+        "de": "Triage-Kategorie-Genauigkeit — BYOK (OpenCode Go)",
+        "en": "Triage category accuracy — BYOK (OpenCode Go)"
+      },
+      "numerator": 32,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.byok.category_only",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 80.0
+    },
+    {
+      "ci95": [
+        73.9,
+        94.5
+      ],
+      "denominator": 40,
+      "id": "triage_urgency_only_byok",
+      "label": {
+        "de": "Triage-Dringlichkeits-Genauigkeit — BYOK (OpenCode Go)",
+        "en": "Triage urgency accuracy — BYOK (OpenCode Go)"
+      },
+      "numerator": 35,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.byok.urgency_only",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 87.5
+    },
+    {
+      "ci95": [
+        52.0,
+        79.9
+      ],
+      "denominator": 40,
+      "id": "triage_joint_byok",
+      "label": {
+        "de": "Triage-gemeinsame Genauigkeit — BYOK (OpenCode Go)",
+        "en": "Triage joint category+urgency accuracy — BYOK (OpenCode Go)"
+      },
+      "numerator": 27,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.byok.joint",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 67.5
+    },
+    {
+      "ci95": [
+        42.2,
+        71.5
+      ],
+      "denominator": 40,
+      "id": "triage_category_only_ollama",
+      "label": {
+        "de": "Triage-Kategorie-Genauigkeit — Ollama (lokal)",
+        "en": "Triage category accuracy — Ollama (local)"
+      },
+      "numerator": 23,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.ollama.category_only",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 57.5
+    },
+    {
+      "ci95": [
+        42.2,
+        71.5
+      ],
+      "denominator": 40,
+      "id": "triage_urgency_only_ollama",
+      "label": {
+        "de": "Triage-Dringlichkeits-Genauigkeit — Ollama (lokal)",
+        "en": "Triage urgency accuracy — Ollama (local)"
+      },
+      "numerator": 23,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.ollama.urgency_only",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 57.5
+    },
+    {
+      "ci95": [
+        24.2,
+        53.0
+      ],
+      "denominator": 40,
+      "id": "triage_joint_ollama",
+      "label": {
+        "de": "Triage-gemeinsame Genauigkeit — Ollama (lokal)",
+        "en": "Triage joint category+urgency accuracy — Ollama (local)"
+      },
+      "numerator": 15,
+      "source": {
+        "ci": {
+          "lower": "lower",
+          "mode": "fields",
+          "scale": 100.0,
+          "upper": "upper"
+        },
+        "denominator": {
+          "field": "n",
+          "mode": "field"
+        },
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": {
+          "field": "k",
+          "mode": "field"
+        },
+        "path": "per_backend.ollama.joint",
+        "value": {
+          "field": "rate",
+          "mode": "field",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 37.5
+    },
+    {
+      "ci95": null,
+      "denominator": null,
+      "id": "triage_latency_claude-cli",
+      "label": {
+        "de": "Mediane Triage-Latenz — Claude (CLI)",
+        "en": "Median triage latency — Claude (CLI)"
+      },
+      "numerator": null,
+      "source": {
+        "ci": null,
+        "denominator": null,
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": null,
+        "path": "per_backend.claude-cli.latency_ms",
+        "value": {
+          "field": "median",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "milliseconds",
+      "value": 5222.0
+    },
+    {
+      "ci95": null,
+      "denominator": null,
+      "id": "triage_latency_codex-cli",
+      "label": {
+        "de": "Mediane Triage-Latenz — Codex (CLI)",
+        "en": "Median triage latency — Codex (CLI)"
+      },
+      "numerator": null,
+      "source": {
+        "ci": null,
+        "denominator": null,
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": null,
+        "path": "per_backend.codex-cli.latency_ms",
+        "value": {
+          "field": "median",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "milliseconds",
+      "value": 6667.5
+    },
+    {
+      "ci95": null,
+      "denominator": null,
+      "id": "triage_latency_byok",
+      "label": {
+        "de": "Mediane Triage-Latenz — BYOK (OpenCode Go)",
+        "en": "Median triage latency — BYOK (OpenCode Go)"
+      },
+      "numerator": null,
+      "source": {
+        "ci": null,
+        "denominator": null,
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": null,
+        "path": "per_backend.byok.latency_ms",
+        "value": {
+          "field": "median",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "milliseconds",
+      "value": 4785.5
+    },
+    {
+      "ci95": null,
+      "denominator": null,
+      "id": "triage_latency_ollama",
+      "label": {
+        "de": "Mediane Triage-Latenz — Ollama (lokal)",
+        "en": "Median triage latency — Ollama (local)"
+      },
+      "numerator": null,
+      "source": {
+        "ci": null,
+        "denominator": null,
+        "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+        "numerator": null,
+        "path": "per_backend.ollama.latency_ms",
+        "value": {
+          "field": "median",
+          "mode": "field",
+          "scale": 1.0
+        }
+      },
+      "unit": "milliseconds",
+      "value": 4295.0
+    },
+    {
+      "ci95": [
+        20.1,
+        48.0
+      ],
+      "denominator": 40,
+      "id": "ollama_invented_placeholders",
+      "label": {
+        "de": "Ollama-Entwürfe mit erfundenem Platzhalter",
+        "en": "Ollama drafts that invented a placeholder"
+      },
+      "numerator": 13,
+      "source": {
+        "ci": {
+          "mode": "wilson"
+        },
+        "denominator": {
+          "field": "scored",
+          "mode": "sum"
+        },
+        "file": "results/ollama_outcome.json",
+        "numerator": {
+          "field": "unknown_placeholder_drafts",
+          "mode": "sum"
+        },
+        "path": "metrics.draft",
+        "value": {
+          "denominator_field": "scored",
+          "mode": "ratio",
+          "numerator_field": "unknown_placeholder_drafts",
+          "scale": 100.0
+        }
+      },
+      "unit": "percent",
+      "value": 32.5
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,10 @@
+chart_id,row_en,row_de,series,value,numerator,denominator,n,ci_low,ci_high,source_file,source_path
+germeval-recall-by-detector,PERSON,PERSON,B0,0,0,1639,1639,0,0.2,results/detection_germeval.json,baselines.B0.per_type.PERSON
+germeval-recall-by-detector,PERSON,PERSON,B1,86.6,1419,1639,1639,84.8,88.1,results/detection_germeval.json,baselines.B1.per_type.PERSON
+germeval-recall-by-detector,PERSON,PERSON,B2,87.7,1438,1639,1639,86.1,89.2,results/detection_germeval.json,baselines.B2.per_type.PERSON
+germeval-recall-by-detector,ORG,ORG,B0,0,0,1150,1150,0,0.3,results/detection_germeval.json,baselines.B0.per_type.ORG
+germeval-recall-by-detector,ORG,ORG,B1,64.8,745,1150,1150,62,67.5,results/detection_germeval.json,baselines.B1.per_type.ORG
+germeval-recall-by-detector,ORG,ORG,B2,65,748,1150,1150,62.2,67.7,results/detection_germeval.json,baselines.B2.per_type.ORG
+germeval-recall-by-detector,PERSON+ORG (micro),PERSON+ORG (micro),B0,0,0,2789,2789,0,0.1,results/detection_germeval.json,baselines.B0.micro_primary
+germeval-recall-by-detector,PERSON+ORG (micro),PERSON+ORG (micro),B1,77.6,2164,2789,2789,76,79.1,results/detection_germeval.json,baselines.B1.micro_primary
+germeval-recall-by-detector,PERSON+ORG (micro),PERSON+ORG (micro),B2,78.4,2186,2789,2789,76.8,79.9,results/detection_germeval.json,baselines.B2.micro_primary

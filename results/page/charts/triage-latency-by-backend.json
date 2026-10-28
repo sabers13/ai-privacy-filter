@@ -1,0 +1,132 @@
+{
+  "id": "triage-latency-by-backend",
+  "rows": [
+    {
+      "label": {
+        "de": "Claude (CLI)",
+        "en": "Claude (CLI)"
+      },
+      "segments": [
+        {
+          "ci95": null,
+          "denominator": null,
+          "n": 40,
+          "numerator": null,
+          "series": "median_latency",
+          "source": {
+            "ci": null,
+            "denominator": null,
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": null,
+            "path": "per_backend.claude-cli.latency_ms",
+            "value": {
+              "field": "median",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 5222.0
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "Codex (CLI)",
+        "en": "Codex (CLI)"
+      },
+      "segments": [
+        {
+          "ci95": null,
+          "denominator": null,
+          "n": 40,
+          "numerator": null,
+          "series": "median_latency",
+          "source": {
+            "ci": null,
+            "denominator": null,
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": null,
+            "path": "per_backend.codex-cli.latency_ms",
+            "value": {
+              "field": "median",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 6667.5
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "BYOK (OpenCode Go)",
+        "en": "BYOK (OpenCode Go)"
+      },
+      "segments": [
+        {
+          "ci95": null,
+          "denominator": null,
+          "n": 40,
+          "numerator": null,
+          "series": "median_latency",
+          "source": {
+            "ci": null,
+            "denominator": null,
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": null,
+            "path": "per_backend.byok.latency_ms",
+            "value": {
+              "field": "median",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 4785.5
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "Ollama (lokal)",
+        "en": "Ollama (local)"
+      },
+      "segments": [
+        {
+          "ci95": null,
+          "denominator": null,
+          "n": 40,
+          "numerator": null,
+          "series": "median_latency",
+          "source": {
+            "ci": null,
+            "denominator": null,
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": null,
+            "path": "per_backend.ollama.latency_ms",
+            "value": {
+              "field": "median",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 4295.0
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "series": [
+    {
+      "key": "median_latency",
+      "label": {
+        "de": "Mediane Latenz (ms)",
+        "en": "Median latency (ms)"
+      }
+    }
+  ],
+  "title": {
+    "de": "Mediane Triage-Latenz je Backend",
+    "en": "Median triage latency by backend"
+  },
+  "unit": "milliseconds"
+}

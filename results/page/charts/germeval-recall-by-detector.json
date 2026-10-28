@@ -1,0 +1,355 @@
+{
+  "id": "germeval-recall-by-detector",
+  "rows": [
+    {
+      "label": {
+        "de": "PERSON",
+        "en": "PERSON"
+      },
+      "segments": [
+        {
+          "ci95": [
+            0.0,
+            0.2
+          ],
+          "denominator": 1639,
+          "n": 1639,
+          "numerator": 0,
+          "series": "B0",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_germeval.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B0.per_type.PERSON",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 0.0
+        },
+        {
+          "ci95": [
+            84.8,
+            88.1
+          ],
+          "denominator": 1639,
+          "n": 1639,
+          "numerator": 1419,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_germeval.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.per_type.PERSON",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 86.6
+        },
+        {
+          "ci95": [
+            86.1,
+            89.2
+          ],
+          "denominator": 1639,
+          "n": 1639,
+          "numerator": 1438,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_germeval.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.per_type.PERSON",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 87.7
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "ORG",
+        "en": "ORG"
+      },
+      "segments": [
+        {
+          "ci95": [
+            0.0,
+            0.3
+          ],
+          "denominator": 1150,
+          "n": 1150,
+          "numerator": 0,
+          "series": "B0",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_germeval.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B0.per_type.ORG",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 0.0
+        },
+        {
+          "ci95": [
+            62.0,
+            67.5
+          ],
+          "denominator": 1150,
+          "n": 1150,
+          "numerator": 745,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_germeval.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.per_type.ORG",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 64.8
+        },
+        {
+          "ci95": [
+            62.2,
+            67.7
+          ],
+          "denominator": 1150,
+          "n": 1150,
+          "numerator": 748,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_germeval.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.per_type.ORG",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 65.0
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "PERSON+ORG (micro)",
+        "en": "PERSON+ORG (micro)"
+      },
+      "segments": [
+        {
+          "ci95": [
+            0.0,
+            0.1
+          ],
+          "denominator": 2789,
+          "n": 2789,
+          "numerator": 0,
+          "series": "B0",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_germeval.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B0.micro_primary",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 0.0
+        },
+        {
+          "ci95": [
+            76.0,
+            79.1
+          ],
+          "denominator": 2789,
+          "n": 2789,
+          "numerator": 2164,
+          "series": "B1",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_germeval.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B1.micro_primary",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 77.6
+        },
+        {
+          "ci95": [
+            76.8,
+            79.9
+          ],
+          "denominator": 2789,
+          "n": 2789,
+          "numerator": 2186,
+          "series": "B2",
+          "source": {
+            "ci": {
+              "field": "recall_wilson_pct",
+              "mode": "list",
+              "scale": 1.0
+            },
+            "denominator": {
+              "field": "gold",
+              "mode": "field"
+            },
+            "file": "results/detection_germeval.json",
+            "numerator": {
+              "field": "protected",
+              "mode": "field"
+            },
+            "path": "baselines.B2.micro_primary",
+            "value": {
+              "field": "recall_pct",
+              "mode": "field",
+              "scale": 1.0
+            }
+          },
+          "value": 78.4
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "series": [
+    {
+      "key": "B0",
+      "label": {
+        "de": "B0 — nur Regex",
+        "en": "B0 — regex only"
+      }
+    },
+    {
+      "key": "B1",
+      "label": {
+        "de": "B1 — Presidio-Standard",
+        "en": "B1 — Presidio defaults"
+      }
+    },
+    {
+      "key": "B2",
+      "label": {
+        "de": "B2 — volle Konfiguration",
+        "en": "B2 — full configuration"
+      }
+    }
+  ],
+  "title": {
+    "de": "GermEval-PERSON- und ORG-Recall je Detektor",
+    "en": "GermEval PERSON and ORG recall by detector"
+  },
+  "unit": "percent"
+}

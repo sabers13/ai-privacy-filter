@@ -1,0 +1,189 @@
+{
+  "count": 3,
+  "enquiries": [
+    {
+      "gold_category": "QUOTE_REQUEST",
+      "gold_spans": [
+        {
+          "end": 30,
+          "score": 1.0,
+          "source": "gold",
+          "start": 0,
+          "text": "Univ.Prof. Zdravko Keudel MBA.",
+          "type": "PERSON"
+        },
+        {
+          "end": 58,
+          "score": 1.0,
+          "source": "gold",
+          "start": 31,
+          "text": "Irmingard-Stolze-Straße 2-5",
+          "type": "ADDRESS_STREET"
+        },
+        {
+          "end": 74,
+          "score": 1.0,
+          "source": "gold",
+          "start": 59,
+          "text": "26382 Karlsruhe",
+          "type": "POSTCODE_CITY"
+        },
+        {
+          "end": 106,
+          "score": 1.0,
+          "source": "gold",
+          "start": 83,
+          "text": "wirthingolf@example.org",
+          "type": "EMAIL"
+        },
+        {
+          "end": 127,
+          "score": 1.0,
+          "source": "gold",
+          "start": 116,
+          "text": "04376338811",
+          "type": "PHONE"
+        },
+        {
+          "end": 349,
+          "score": 1.0,
+          "source": "gold",
+          "start": 319,
+          "text": "Univ.Prof. Zdravko Keudel MBA.",
+          "type": "PERSON"
+        }
+      ],
+      "gold_urgency": "NORMAL",
+      "id": "syn-dev-0001",
+      "split": "dev",
+      "style": "formal_letter",
+      "text": "Univ.Prof. Zdravko Keudel MBA.\nIrmingard-Stolze-Straße 2-5\n26382 Karlsruhe\nE-Mail: wirthingolf@example.org\nTelefon: 04376338811\n\nSehr geehrte Damen und Herren,\n\nfür zwei neue Besprechungsräume suchen wir noch passende Technik. Können Sie uns ein Angebot mit Preisen und Lieferzeiten erstellen?\n\nMit freundlichen Grüßen\nUniv.Prof. Zdravko Keudel MBA."
+    },
+    {
+      "gold_category": "SUPPORT",
+      "gold_spans": [
+        {
+          "end": 23,
+          "score": 1.0,
+          "source": "gold",
+          "start": 6,
+          "text": "Frau Janna Schenk",
+          "type": "PERSON"
+        },
+        {
+          "end": 55,
+          "score": 1.0,
+          "source": "gold",
+          "start": 32,
+          "text": "pieperdiane@example.net",
+          "type": "EMAIL"
+        },
+        {
+          "end": 78,
+          "score": 1.0,
+          "source": "gold",
+          "start": 65,
+          "text": "(04675) 27742",
+          "type": "PHONE"
+        },
+        {
+          "end": 113,
+          "score": 1.0,
+          "source": "gold",
+          "start": 92,
+          "text": "Blauwerk Technik GmbH",
+          "type": "ORG"
+        },
+        {
+          "end": 315,
+          "score": 1.0,
+          "source": "gold",
+          "start": 292,
+          "text": "Heinz-Söding-Straße 7/3",
+          "type": "ADDRESS_STREET"
+        },
+        {
+          "end": 337,
+          "score": 1.0,
+          "source": "gold",
+          "start": 325,
+          "text": "86979 Luckau",
+          "type": "POSTCODE_CITY"
+        }
+      ],
+      "gold_urgency": "NORMAL",
+      "id": "syn-dev-0002",
+      "split": "dev",
+      "style": "web_form",
+      "text": "Name: Frau Janna Schenk\nE-Mail: pieperdiane@example.net\nTelefon: (04675) 27742\nUnternehmen: Blauwerk Technik GmbH\nNachricht:\nBei der Anmeldung im Kundenportal erscheint seit gestern eine Fehlermeldung. Bitte prüfen Sie den Fall und teilen Sie uns mit, wie wir weiter vorgehen können.\nStraße: Heinz-Söding-Straße 7/3\nPLZ/Ort: 86979 Luckau"
+    },
+    {
+      "gold_category": "JOB_APPLICATION",
+      "gold_spans": [
+        {
+          "end": 262,
+          "score": 1.0,
+          "source": "gold",
+          "start": 236,
+          "text": "Ing. Gertraud Kallert B.A.",
+          "type": "PERSON"
+        },
+        {
+          "end": 284,
+          "score": 1.0,
+          "source": "gold",
+          "start": 263,
+          "text": "Sonnenhof Handel GmbH",
+          "type": "ORG"
+        },
+        {
+          "end": 302,
+          "score": 1.0,
+          "source": "gold",
+          "start": 285,
+          "text": "Heserstraße 76-59",
+          "type": "ADDRESS_STREET"
+        },
+        {
+          "end": 317,
+          "score": 1.0,
+          "source": "gold",
+          "start": 303,
+          "text": "84206 Schmölln",
+          "type": "POSTCODE_CITY"
+        },
+        {
+          "end": 338,
+          "score": 1.0,
+          "source": "gold",
+          "start": 327,
+          "text": "07386 82375",
+          "type": "PHONE"
+        },
+        {
+          "end": 372,
+          "score": 1.0,
+          "source": "gold",
+          "start": 347,
+          "text": "rosenowpietro@example.com",
+          "type": "EMAIL"
+        },
+        {
+          "end": 401,
+          "score": 1.0,
+          "source": "gold",
+          "start": 379,
+          "text": "DE82121033991158671432",
+          "type": "IBAN"
+        }
+      ],
+      "gold_urgency": "HIGH",
+      "id": "syn-dev-0003",
+      "split": "dev",
+      "style": "email_signature",
+      "text": "Betreff: Bewerbung als Datenanalystin\n\nGuten Tag,\n\nich bewerbe mich auf die ausgeschriebene Stelle als Datenanalystin. Die Bewerbungsfrist endet am Freitag, daher reiche ich meine Unterlagen dringend heute ein.\n\nMit freundlichen Grüßen\nIng. Gertraud Kallert B.A.\nSonnenhof Handel GmbH\nHeserstraße 76-59\n84206 Schmölln\nTelefon: 07386 82375\nE-Mail: rosenowpietro@example.com\nIBAN: DE82121033991158671432"
+    }
+  ],
+  "schema_version": 1,
+  "source": "data/synthetic/dev.jsonl"
+}

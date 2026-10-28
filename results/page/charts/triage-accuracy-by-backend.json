@@ -1,0 +1,474 @@
+{
+  "id": "triage-accuracy-by-backend",
+  "rows": [
+    {
+      "label": {
+        "de": "Claude (CLI)",
+        "en": "Claude (CLI)"
+      },
+      "segments": [
+        {
+          "ci95": [
+            54.6,
+            81.9
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 28,
+          "series": "joint",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.claude-cli.joint",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 70.0
+        },
+        {
+          "ci95": [
+            73.9,
+            94.5
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 35,
+          "series": "category_only",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.claude-cli.category_only",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 87.5
+        },
+        {
+          "ci95": [
+            68.1,
+            91.3
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 33,
+          "series": "urgency_only",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.claude-cli.urgency_only",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 82.5
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "Codex (CLI)",
+        "en": "Codex (CLI)"
+      },
+      "segments": [
+        {
+          "ci95": [
+            47.0,
+            75.8
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 25,
+          "series": "joint",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.codex-cli.joint",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 62.5
+        },
+        {
+          "ci95": [
+            65.2,
+            89.5
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 32,
+          "series": "category_only",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.codex-cli.category_only",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 80.0
+        },
+        {
+          "ci95": [
+            68.1,
+            91.3
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 33,
+          "series": "urgency_only",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.codex-cli.urgency_only",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 82.5
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "BYOK (OpenCode Go)",
+        "en": "BYOK (OpenCode Go)"
+      },
+      "segments": [
+        {
+          "ci95": [
+            52.0,
+            79.9
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 27,
+          "series": "joint",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.byok.joint",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 67.5
+        },
+        {
+          "ci95": [
+            65.2,
+            89.5
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 32,
+          "series": "category_only",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.byok.category_only",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 80.0
+        },
+        {
+          "ci95": [
+            73.9,
+            94.5
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 35,
+          "series": "urgency_only",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.byok.urgency_only",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 87.5
+        }
+      ]
+    },
+    {
+      "label": {
+        "de": "Ollama (lokal)",
+        "en": "Ollama (local)"
+      },
+      "segments": [
+        {
+          "ci95": [
+            24.2,
+            53.0
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 15,
+          "series": "joint",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.ollama.joint",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 37.5
+        },
+        {
+          "ci95": [
+            42.2,
+            71.5
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 23,
+          "series": "category_only",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.ollama.category_only",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 57.5
+        },
+        {
+          "ci95": [
+            42.2,
+            71.5
+          ],
+          "denominator": 40,
+          "n": 40,
+          "numerator": 23,
+          "series": "urgency_only",
+          "source": {
+            "ci": {
+              "lower": "lower",
+              "mode": "fields",
+              "scale": 100.0,
+              "upper": "upper"
+            },
+            "denominator": {
+              "field": "n",
+              "mode": "field"
+            },
+            "file": "results/runs/20261027T131500Z-triage-a1ad8ff/metrics.json",
+            "numerator": {
+              "field": "k",
+              "mode": "field"
+            },
+            "path": "per_backend.ollama.urgency_only",
+            "value": {
+              "field": "rate",
+              "mode": "field",
+              "scale": 100.0
+            }
+          },
+          "value": 57.5
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "series": [
+    {
+      "key": "joint",
+      "label": {
+        "de": "Kategorie und Dringlichkeit gemeinsam",
+        "en": "Joint category + urgency"
+      }
+    },
+    {
+      "key": "category_only",
+      "label": {
+        "de": "Nur Kategorie",
+        "en": "Category only"
+      }
+    },
+    {
+      "key": "urgency_only",
+      "label": {
+        "de": "Nur Dringlichkeit",
+        "en": "Urgency only"
+      }
+    }
+  ],
+  "title": {
+    "de": "Triage-Genauigkeit je Backend (40-Anfragen-Teilmenge)",
+    "en": "Triage accuracy by backend (40-enquiry subset)"
+  },
+  "unit": "percent"
+}

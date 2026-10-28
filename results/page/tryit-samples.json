@@ -1,0 +1,24 @@
+{
+  "samples": [
+    {
+      "id": "tryit-1",
+      "label": {
+        "de": "Beispielanfrage",
+        "en": "Sample enquiry"
+      },
+      "source_example_id": "syn-test-0001",
+      "text": "Andy Drub\nBohlanderweg 839\n27333 Böblingen\nE-Mail: odaebert@example.com\nTelefon: (03419) 565816\n\nSehr geehrte Damen und Herren,\n\nwir planen die Ausstattung von zwei Besprechungsräumen und benötigen dafür ein Angebot. Bitte senden Sie uns Ihre Preisliste und die Lieferzeiten zu.\n\nMit freundlichen Grüßen\nAndy Drub"
+    },
+    {
+      "id": "tryit-2",
+      "label": {
+        "de": "Zweite Beispielanfrage",
+        "en": "Second sample enquiry"
+      },
+      "source_example_id": "syn-test-0002",
+      "text": "Name: Lina Metz-Ehlert\nE-Mail: salzphilipp@example.org\nTelefon: +49(0)1008 32324\nUnternehmen: Weitblick Medien GmbH\nNachricht:\nBei der Anmeldung im Kundenportal erscheint seit gestern eine Fehlermeldung. Bitte prüfen Sie den Fall und teilen Sie uns mit, wie wir weiter vorgehen können.\nStraße: Stollstr. 34-10\nPLZ/Ort: 94706 Wurzen"
+    }
+  ],
+  "schema_version": 1,
+  "source": "results/page/examples.json"
+}
