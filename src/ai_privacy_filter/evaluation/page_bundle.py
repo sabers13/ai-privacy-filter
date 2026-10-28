@@ -889,15 +889,21 @@ def _purpose(relative: str, charts: Mapping[str, Mapping[str, Any]]) -> tuple[st
     if relative.startswith("screenshots/"):
         name = Path(relative).stem
         purposes = {
-            "n8n-execution-success": "Workflow canvas of one finished demo execution.",
+            "n8n-execution-success": (
+                "Workflow canvas of one finished demo execution, zoom to fit, "
+                "both branches and item counts visible."
+            ),
             "n8n-executions-list": "Executions list with the successful demo runs.",
-            "n8n-review-form": "Review form for one synthetic demo enquiry.",
-            "n8n-result": "Rendered card of the approved reply record.",
+            "n8n-review-form": (
+                "Review form for one synthetic demo enquiry, with the edit decision "
+                "selected and the corrected draft filled in before submit."
+            ),
+            "n8n-result": "Rendered card of the edited reply record.",
         }
         return (
             purposes.get(name, "Review-stack screenshot."),
             "`make demo` review stack (headless Chromium)",
-            "make demo (headless screenshot capture)",
+            "scripts/demo/capture_shots.py (after make demo)",
         )
     return ("Bundle file.", "committed input", "make page-data")
 
