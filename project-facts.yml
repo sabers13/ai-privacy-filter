@@ -1,4 +1,4 @@
-# project-facts.yml — what CareerOps reads back. Commit it at the ROOT of the project repository.
+# project-facts.yml — the project summary and its published numbers, each traced to a committed file.
 # Every number in a bullet is listed under numbers with the committed results file that proves it.
 
 title: "AI Privacy Filter"
@@ -14,7 +14,7 @@ tags: [python, nlp, llm, automation, api, testing, ci]
 keywords: "data protection, PII, pseudonymisation, n8n, Claude, GDPR, NLP, German"
 claim_limits: "Independent project. Pseudonymisation, not anonymisation; not legal advice; detection rates measured on GermEval 2014 and synthetic data, not on real customer mail."
 
-# 3 bullets for the CV: outcome, technical, stack. **bold** marks the numbers.
+# 3 summary bullets: outcome, technical, stack. **bold** marks the numbers.
 bullets:
   - kind: outcome
     text: "Caught **99.5%** of the personal-data spans in the synthetic German test set and held the leak rate on that set to **1.9%**; every detection rate was measured on synthetic enquiries and GermEval 2014, not on real customer mail."

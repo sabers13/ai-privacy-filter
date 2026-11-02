@@ -81,7 +81,6 @@ headline number, its 95% interval and the protocol behind it are in
   problem, the pipeline, measured results and their intervals, the backend
   and data-handling table, honest limits and credits; `project-facts.yml` as
   the machine-readable summary; `results/SHA256SUMS` over the result files;
-  `results/RELEASE_CHECK.md` with the release gates and their outputs;
   `scripts/scan_forbidden.py` for privacy and secret patterns; gitleaks for
   the working tree and history; an 85% branch-coverage floor on `src/`; and
   `make clean-clone` to prove setup, tests and reproduction from a fresh

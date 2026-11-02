@@ -216,7 +216,7 @@ make lint         # ruff + mypy --strict
 - The evaluation protocol in [`METHOD.md`](METHOD.md) was written and hashed
   before the test data was scored.
 - A fresh clone reproduces all results with identical checksums
-  ([`results/RELEASE_CHECK.md`](results/RELEASE_CHECK.md)).
+  (`make clean-clone`, checked against [`results/SHA256SUMS`](results/SHA256SUMS)).
 - 650+ tests, including one that runs the whole local filter with networking
   disabled.
 - CI runs lint, tests and the coverage floor on every push.
@@ -228,7 +228,7 @@ make lint         # ruff + mypy --strict
 ```text
 src/ai_privacy_filter/   detection, placeholders, guard, backends, API, CLI
 data/                    synthetic email generator and dataset loaders
-results/                 measured results, page data, screenshots, release check
+results/                 measured results, page data, screenshots, checksums
 workflows/               n8n workflow export
 docs/                    backends, n8n setup, data contracts
 ops/ollama-remote/       optional scripts for a local model on another machine
